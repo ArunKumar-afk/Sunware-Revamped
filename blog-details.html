@@ -183,6 +183,24 @@
 		}
 	}
 	</style>
+
+	<!-- Footer Reveal CSS -->
+	<style>
+	.main-content-wrapper {
+		position: relative;
+		z-index: 2;
+		background: #fff; /* Ensures reveal behaves on scroll overlap */
+		box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Adds premium visual lift */
+	}
+	.site-footer {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		z-index: 1; /* Sits behind content stack */
+		visibility: hidden; /* Prevent early flashes */
+	}
+	</style>
 </head>
     
 <body>
@@ -471,9 +489,11 @@
     </div>     
     <!-- Blog Details Area End -->
 
+</div>
 <!-- Footer -->
 <!-- Footer Area Start -->
-<div class="footer__cta">
+<footer class="site-footer">
+		<div class="footer__cta">
 		<div class="container">
 			<div class="row">
 				<div class="col-xl-12">
@@ -589,6 +609,40 @@
 		</div>
 	</div>
 	<!-- Footer Area End -->
+</footer>
+
+	<!-- Dynamic Footer Reveal Height Calculation -->
+	<script>
+	document.addEventListener("DOMContentLoaded", function () {
+		const footer = document.querySelector('.site-footer');
+		const mainWrapper = document.querySelector('.main-content-wrapper');
+
+		function adjustFooterReveal() {
+			if (!footer || !mainWrapper) return;
+			
+			// 1. Measure Footer Height
+			const footerHeight = footer.offsetHeight;
+			
+			// On small screens, fixed reveal can feel crowded, we disable or keep it based on preference
+			if (window.innerWidth < 992) {
+				footer.style.position = 'relative';
+				footer.style.zIndex = 'auto';
+				footer.style.visibility = 'visible';
+				mainWrapper.style.marginBottom = '0px';
+			} else {
+				footer.style.position = 'fixed';
+				footer.style.zIndex = '1';
+				footer.style.visibility = 'visible';
+				// 2. Set margin on main block to reveal it correctly
+				mainWrapper.style.marginBottom = footerHeight + 'px';
+			}
+		}
+
+		// Run on Load + Resize
+		adjustFooterReveal();
+		window.addEventListener('resize', adjustFooterReveal);
+	});
+	</script>
 <!-- Layout Bottom -->
     	<!-- Scroll Btn Start -->
 	<div class="scroll-up scroll-one">
