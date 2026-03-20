@@ -30,6 +30,159 @@
 	<link rel="stylesheet" href="assets/css/magnific-popup.css">
 	<!-- Custom CSS -->
 	<link rel="stylesheet" href="assets/css/style.css">  
+
+	<!-- Fullscreen Nav CSS -->
+	<style>
+	/* ── Hamburger ─────────────────────────────────── */
+	.menu {
+		background: none;
+		border: none;
+		cursor: pointer;
+		padding: 8px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 0;
+		z-index: 999999;
+		position: relative;
+	}
+	.menu span {
+		display: block;
+		width: 26px;
+		height: 2px;
+		background: var(--text-heading-color);
+		margin: 5px 0;
+		transition: 0.3s;
+		transform-origin: center;
+	}
+	.menu.active span:nth-child(1) {
+		transform: rotate(45deg) translate(5px, 5px);
+	}
+	.menu.active span:nth-child(2) {
+		opacity: 0;
+	}
+	.menu.active span:nth-child(3) {
+		transform: rotate(-45deg) translate(6px, -6px);
+	}
+
+	/* ── Fullscreen Nav ────────────────────────────── */
+	.js-nav {
+		position: fixed;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 99990;
+		background: #0a0f1e;
+		transform: translateX(100%);
+		pointer-events: none;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		padding: 80px 8vw;
+		will-change: transform;
+	}
+
+	/* Logo inside nav */
+	.js-nav .nav-brand {
+		position: absolute;
+		top: 28px;
+		left: 8vw;
+	}
+	.js-nav .nav-brand img { height: 44px; width: auto; }
+
+	/* Nav list */
+	.js-nav ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+	.nav-item {
+		opacity: 0;
+		transform: translateY(20px);
+		margin-bottom: 4px;
+	}
+	.nav-item a {
+		display: inline-block;
+		font-family: var(--heading-font);
+		font-size: clamp(2.5rem, 5.5vw, 5.5rem);
+		font-weight: 700;
+		color: rgba(255, 255, 255, 0.18);
+		line-height: 1.1;
+		text-decoration: none;
+		padding: 4px 0;
+		position: relative;
+		transition: color 0.25s ease;
+		letter-spacing: -0.02em;
+	}
+	.nav-item a::after {
+		content: '';
+		position: absolute;
+		bottom: -2px;
+		left: 0;
+		width: 0;
+		height: 3px;
+		background: #EF7F1A;
+		transition: width 0.3s ease;
+	}
+	.nav-item a:hover { color: #ffffff; }
+	.nav-item a:hover::after { width: 100%; }
+
+	/* Social + CTA row */
+	.js-nav .nav-footer {
+		position: absolute;
+		bottom: 48px;
+		left: 8vw;
+		display: flex;
+		align-items: center;
+		gap: 24px;
+	}
+	.js-nav .nav-footer-social { display: flex; gap: 16px; }
+	.js-nav .nav-footer-social a {
+		color: rgba(255,255,255,0.4);
+		font-size: 18px;
+		transition: color 0.2s;
+	}
+	.js-nav .nav-footer-social a:hover { color: #EF7F1A; }
+
+	/* ── Hide old mobile structures ────────────────── */
+	.menu__bar-popup,
+	.menu__bar-popup-overlay,
+	.header__area-menubar-right-sidebar-popup,
+	.sidebar-overlay,
+	.header__area-menubar-right-search-box,
+	#sw-nav-overlay {
+		display: none !important;
+	}
+	}
+	
+	/* ── Fullscreen Nav scroll capability ── */
+	.js-nav {
+		overflow-y: auto;
+	}
+
+	/* ── Mobile Responsive Overlay Fixes ── */
+	@media (max-width: 575px) {
+		.js-nav {
+			padding-top: 120px;
+			justify-content: flex-start;
+		}
+		.nav-item a {
+			font-size: 2.3rem; /* Tighter sizing on mobile */
+		}
+		.js-nav .nav-footer {
+			position: relative;
+			bottom: auto;
+			left: auto;
+			margin-top: 40px;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 16px;
+		}
+	}
+	</style>
 </head>
     
 <body>
@@ -127,32 +280,7 @@
 	</div>
 	<div class="menu__bar-popup-overlay"></div>
 	<!-- Mobile Menu End -->
-	<!-- TopBar Area Start -->
-	<div class="top__bar">
-		<div class="container">
-			<div class="row al-center">
-				<div class="col-md-8">
-					<div class="top__bar-left md-t-center">
-						<ul>
-							<li><a href="https://www.google.com/maps" target="_blank"><i class="fas fa-map-marker-alt"></i>4321 Birch Ln. Austin, 73301</a></li>
-							<li><a href="mailto:info@example.com"><i class="fas fa-envelope"></i>info@example.com</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="top__bar-right t-right md-t-center">
-						<ul>
-							<li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-							<li><a href="https://twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
-							<li><a href="https://behance.net" target="_blank"><i class="fab fa-behance"></i></a></li>
-							<li><a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- TopBar Area End -->
+
 	<!-- Header Area Start -->
 	<div class="header__area">
 		<div class="container">
@@ -167,73 +295,22 @@
 						<div class="header__area-menubar-center">
 							<div class="header__area-menubar-center-menu">
 								<ul id="mobilemenu">
-	<li class="menu-item-has-children"><a href="#">Home</a>
-		<ul class="sub-menu">
-			<li><a href="index.html">Home 01</a></li>
-			<li><a href="index-two.html">Home 02</a></li>
-			<li><a href="index-three.html">Home 03</a></li>
-		</ul>
-	</li>
-	<li class="menu-item-has-children"><a href="#">Pages</a>
-		<ul class="sub-menu">
-			<li><a href="about.html">About Us</a></li>
-			<li><a href="history.html">Company History</a></li>
-			<li class="menu-item-has-children"><a href="#">Services</a>
-				<ul class="sub-menu">
-					<li><a href="services.html">Service 01</a></li>
-					<li><a href="services-details.html">Services Details</a></li>
-				</ul>
-			</li>
-			<li><a href="testimonial.html">Testimonials</a></li>
-			<li><a href="pricing.html">Price Plans</a></li>
-			<li><a href="faq.html">FAQ's</a></li>
-			<li><a href="team.html">Team</a></li>
-			<li><a href="request-quote.html">Request Quote</a></li>
-			<li><a href="404-error.html">404 Page</a></li>
-		</ul>
-	</li>
-	<li class="menu-item-has-children"><a href="#">Portfolio</a>
-		<ul class="sub-menu">
-			<li><a href="gallery.html">Filterable Gallery</a></li>
-			<li class="menu-item-has-children"><a href="#">Portfolio Grid</a>
-				<ul class="sub-menu">
-					<li><a href="portfolio-two.html">2 Columns</a></li>
-					<li><a href="portfolio-three.html">3 Columns</a></li>
-					<li><a href="portfolio-four.html">4 Columns</a></li>
-				</ul>
-			</li>
-			<li><a href="portfolio-details.html">Portfolio Details</a></li>
-		</ul>
-	</li>
-	<li class="menu-item-has-children"><a href="#">Blog</a>
-		<ul class="sub-menu">
-			<li><a href="blog.html">Blog Grid</a></li>
-			<li><a href="blog-standard.html">Blog Standard</a></li>
-			<li><a href="blog-details.html">Blog Details</a></li>
-		</ul>
-	</li>
-	<li><a href="contact.html">Contact Us</a></li>
-</ul>
+									<li><a href="index.html">Home</a></li>
+									<li><a href="about.html">About Us</a></li>
+									<li><a href="services.html">Services</a></li>
+									<li><a href="blog.html">Blog</a></li>
+								</ul>
 							</div>
 						</div>
-						<div class="header__area-menubar-right">
-							<div class="header__area-menubar-right-search xl-display-n">
-								<div class="search">	
-									<span class="header__area-menubar-right-search-icon open"><i class="flaticon-search-1"></i></span>
-								</div>
-							</div>
+												<div class="header__area-menubar-right">
 							<div class="header__area-menubar-right-tel lg-display-n">
-								<div class="header__area-menubar-right-tel-icon">
-									<i class="flaticon-phone-call"></i>
-								</div>
-								<div class="header__area-menubar-right-tel-info">
-									<span>Call Us Now</span>
-									<h6><a href="tel:(415)755-7890">(415) 755-7890</a></h6>
-								</div>
+								<a class="default_button" href="mailto:sales@sunware.in">Enquire Now<i class="flaticon-right-up"></i></a>
 							</div>
-							<div class="header__area-menubar-right-responsive-menu menu__bar">
-								<i class="flaticon-menu-3"></i>
-							</div>
+							<button class="menu js-menu" aria-label="Toggle Navigation">
+								<span></span>
+								<span></span>
+								<span></span>
+							</button>
 						</div>
 					</div>
 				</div>
@@ -456,11 +533,11 @@
 						<h5>Quick links</h5>
 						<div class="footer-widget-menu">
 							<ul>
+								<li><a href="index.html">Home</a></li>
 								<li><a href="about.html">About Us</a></li>
 								<li><a href="services.html">Services</a></li>
-								<li><a href="testimonial.html">Testimonials</a></li>
 								<li><a href="blog.html">Blog</a></li>
-								<li><a href="contact.html">Contact Us</a></li>
+								<li><a href="mailto:sales@sunware.in">Contact Us</a></li>
 							</ul>
 						</div>
 					</div>
@@ -468,23 +545,23 @@
 				<div class="col-lg-4 col-sm-6 lg-mt-30">
 					<div class="footer__one-widget contact ml-40 xl-ml-0">
 						<h5>Contact</h5>
-						<div class="contact-item mb-25">
-							<div class="contact-item-icon">
-								<i class="flaticon-location"></i>
-							</div>
-							<div class="contact-item-info">
-								<span>Address</span>
-								<h6><a href="https://www.google.com/maps" target="_blank">321 Data Drive, Cloud City, WA 67890</a></h6>
-							</div>
-						</div>
-						<div class="contact-item">
+						<div class="contact-item mb-15">
 							<div class="contact-item-icon">
 								<i class="flaticon-email"></i>
 							</div>
 							<div class="contact-item-info">
 								<span>Email</span>
-								<h6><a href="mailto:support@name.com">support@name.com</a></h6>
+								<h6><a href="mailto:sales@sunware.in">sales@sunware.in</a></h6>
 							</div>
+						</div>
+						<div class="contact-item-info" style="font-size:13px;line-height:1.6;color:rgba(255,255,255,0.75);">
+							<p style="margin-bottom:8px;"><strong style="color:#EF7F1A;">🇺🇸 USA</strong><br>20065 Stevens Creek Blvd, Suite B-2B,<br>Cupertino, CA 95014 | <a href="tel:+14089811878" style="color:inherit;">+1 408 981 1878</a></p>
+							<p style="margin-bottom:8px;"><strong style="color:#EF7F1A;">🇦🇪 UAE</strong><br>Unit No: 144, DMCC Business Centre, Level 5,<br>Jewellery & Gemplex 2, Dubai | <a href="tel:+971553817057" style="color:inherit;">+971 55 381 7057</a></p>
+							<p style="margin-bottom:8px;"><strong style="color:#EF7F1A;">🇬🇧 UK</strong><br>6th Floor, Forest House, 16-20 Clements Rd,<br>Ilford IG1 1BA</p>
+							<p style="margin-bottom:4px;"><strong style="color:#EF7F1A;">🇮🇳 INDIA</strong></p>
+							<p style="margin-bottom:4px;"><em>Chennai:</em> 117, KSR Nagar, Ambattur, Chennai, TN 600053 | <a href="tel:+914448534619" style="color:inherit;">+91 44 48534619</a></p>
+							<p style="margin-bottom:4px;"><em>Pune:</em> Sky Loft, Creaticity Mall, Off Airport Road, Yerawada, Pune 411006</p>
+							<p style="margin-bottom:0;"><em>Bengaluru:</em> 29/A, 27th Main Rd, Sector 5, HSR Layout, Bengaluru 560102</p>
 						</div>
 					</div>
 				</div>
@@ -493,10 +570,9 @@
 						<h5>Social Media</h5>
 						<p>Stay connected with us for the latest business updates and insights</p>
 						<ul>
-							<li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-							<li><a href="https://twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
-							<li><a href="https://behance.net" target="_blank"><i class="fab fa-behance"></i></a></li>
-							<li><a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+							<li><a href="https://www.linkedin.com/company/sunware-technologies" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+							<li><a href="https://www.youtube.com/@sunwaretechnologies" target="_blank"><i class="fab fa-youtube"></i></a></li>
+							<li><a href="https://www.instagram.com/sunwaretechnologies" target="_blank"><i class="fab fa-instagram"></i></a></li>
 						</ul>
 					</div>
 				</div>
@@ -560,5 +636,10 @@
     
 	<!-- Custom JS -->
 	<script src="assets/js/custom.js"></script>
+
+	<!-- anime.js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+	<!-- Sunware fullscreen nav -->
+	<script src="assets/js/nav-overlay.js"></script>
 </body>
 </html>
