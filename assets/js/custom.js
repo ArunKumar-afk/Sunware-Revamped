@@ -522,6 +522,86 @@
 			}
 			gsap.from(split_word.words, gsapConfig);
 		});
+
+		// 1. Continuous Scattering Position Presets ───
+		$(".diamond-item").each(function(index) {
+			let rx = (Math.random() - 0.5) * 180; // Wild scatter (Cloud effect)
+			let ry = (Math.random() - 0.5) * 180; 
+			gsap.set(this, { x: rx, y: ry, force3D: true });
+		});
+
+		// 2. Tech Stack Elastic 3D Explode Animation
+		gsap.from(".diamond-item", {
+			scrollTrigger: {
+				trigger: ".tech_stack",
+				start: "top 70%", // Trigger slightly past top title
+			},
+			opacity: 0,
+			scale: 0,
+			z: -500, // starting deep in 3D perspective space
+			rotationX: "random(-45, 45)",
+			rotationY: "random(-45, 45)",
+			rotation: "random(-180, 180)", // Random Spin
+			x: function(i, target) {
+				let $target = $(target);
+				let cx = $target.parent().width() / 2;
+				let ix = $target.position().left + $target.width() / 2;
+				return (cx - ix) * 1.6; // Scale vectors inwards past center
+			},
+			y: function(i, target) {
+				let $target = $(target);
+				let cy = $target.parent().height() / 2;
+				let iy = $target.position().top + $target.height() / 2;
+				return (cy - iy) * 1.6;
+			},
+			stagger: {
+				each: 0.05,
+				from: "center"
+			},
+			duration: 2.4, // Slower explosion
+			ease: "elastic.out(1.3, 0.6)", // Higher elastic wobble
+			onComplete: function() {
+				// ── Continuous 3D Floating Bobble Effect ───────
+				$(".diamond-item").each(function() {
+					let $this = $(this);
+					
+					// Floating interval loop
+					let floatAnim = gsap.to(this, {
+						y: "+=12",
+						x: "+=5",
+						rotationX: "+=4",
+						rotationY: "+=4",
+						duration: 3.2 + Math.random() * 2.0, // Slower floating
+						ease: "sine.inOut",
+						repeat: -1,
+						yoyo: true,
+						delay: Math.random() * 0.5
+					});
+
+					// ── Pure JS Hover Interaction ────────────────
+					$this.hover(
+						function() {
+							floatAnim.pause(); // Pause float for focused node
+							gsap.to(this, {
+								scale: 1.18,
+								z: 50, // pop forward in 3D
+								duration: 0.5, // slightly slow duration for elastic
+								ease: "elastic.out(1.4, 0.45)" // HEAVIER Wobble bouncy pop
+							});
+						},
+						function() {
+							gsap.to(this, {
+								scale: 1,
+								z: 0,
+								duration: 0.4,
+								ease: "back.out(2)", // Springy snap back
+								onComplete: () => floatAnim.resume()
+							});
+						}
+					);
+				});
+			}
+		});
     }
     
     $(document).ready(function () {
