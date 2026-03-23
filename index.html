@@ -74,7 +74,8 @@
 		width: 100%;
 		height: 100%;
 		z-index: 99990;
-		background: #0a0f1e;
+		background: rgba(10, 15, 30, 0.88); /* Premium transparent dark */
+		backdrop-filter: blur(20px) saturate(120%); /* Glassmorphism effect */
 		transform: translateX(100%);
 		pointer-events: none;
 		display: flex;
@@ -109,7 +110,7 @@
 		font-family: var(--heading-font);
 		font-size: clamp(2.5rem, 5.5vw, 5.5rem);
 		font-weight: 700;
-		color: rgba(255, 255, 255, 0.18);
+		color: rgba(255, 255, 255, 0.85); /* High contrast readable text */
 		line-height: 1.1;
 		text-decoration: none;
 		padding: 4px 0;
@@ -710,7 +711,7 @@
                 <div class="col-lg-7">
                     <div class="portfolio__one-right">
                         <div class="portfolio__one-item card_sticky" style="--card-top: 100px;">
-							<img src="assets/img/portfolio/portfolio-1.jpg" alt="image">
+							<img src="pic1.png" style="width: 100%; height: 100%; object-fit: contain;" alt="image">
                             <div class="portfolio__one-item-content">
 								<a href="portfolio-details.html"><i class="flaticon-right-up"></i></a>
                                 <span>Innovation</span>
@@ -718,7 +719,7 @@
                             </div>
                         </div>
                         <div class="portfolio__one-item mt-25 card_sticky" style="--card-top: 180px;">
-							<img src="assets/img/portfolio/portfolio-2.jpg" alt="image">
+							<img src="pic2.png" style="width: 100%; height: 100%; object-fit: contain;" alt="image">
                             <div class="portfolio__one-item-content">
 								<a href="portfolio-details.html"><i class="flaticon-right-up"></i></a>
                                 <span>Growth</span>
@@ -726,7 +727,7 @@
                             </div>
                         </div>
                         <div class="portfolio__one-item mt-25 card_sticky" style="--card-top: 260px;">
-							<img src="assets/img/portfolio/portfolio-3.jpg" alt="image">
+							<img src="pic3.png" style="width: 100%; height: 100%; object-fit: contain;" alt="image">
                             <div class="portfolio__one-item-content">
 								<a href="portfolio-details.html"><i class="flaticon-right-up"></i></a>
                                 <span>Research</span>
@@ -734,7 +735,7 @@
                             </div>
                         </div>
                         <div class="portfolio__one-item mt-25 card_sticky">
-							<img src="assets/img/portfolio/portfolio-4.jpg" alt="image">
+							<img src="pic4.png" style="width: 100%; height: 100%; object-fit: contain;" alt="image">
                             <div class="portfolio__one-item-content">
 								<a href="portfolio-details.html"><i class="flaticon-right-up"></i></a>
                                 <span>Engagement</span>
@@ -912,12 +913,12 @@
 	</div>
 	<!-- Work Process Area End -->
 	<!-- Video Area Start -->
-    <div class="video__area"  style="background-image: url('assets/img/banner/banner-2.jpg');">
+    <div style="padding: 60px 0; background: #ffffff;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 t-center">
-                    <div class="video video-pulse item_bounce">
-                        <a class="video-popup" href="https://youtube.com/watch?v=0WC-tD-njcA"><i class="fas fa-play"></i></a> 
+                    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 800px; margin: 0 auto; border-radius: 16px; box-shadow: 0 15px 45px rgba(0,0,0,0.15);">
+                        <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/1t_2QZWWz0M?si=yqlb8NxSuL-yJqVX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -1183,12 +1184,6 @@
 						<a href="${link}" target="_blank"><img src="${thumb}" alt="${title}" style="height:250px;width:100%;object-fit:cover;"></a>
 					</div>
 					<div class="blog__one-item-content">                
-						<div class="blog__one-item-content-meta">
-							<ul>
-								<li><a href="#"><i class="far fa-user"></i> Admin </a></li>
-								<li><a href="${link}" target="_blank"><i class="far fa-eye"></i> View</a></li>
-							</ul>
-						</div>
 						<h5><a href="${link}" target="_blank">${title}</a></h5>
 						<a class="more_btn" href="${link}" target="_blank">Read More<i class="flaticon flaticon-right-up"></i></a>
 					</div>
