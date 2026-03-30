@@ -108,6 +108,176 @@ END TABLE OF CONTENTS
 }
 
 /*==========================================================================
+* Brand Logo Slider CSS
+==========================================================================*/
+.brand_slider .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s;
+}
+.brand_slider .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+.brand_slider .swiper-slide img {
+  max-width: 170px;
+  max-height: 65px;
+  width: auto;
+  height: auto;
+  filter: grayscale(100%) opacity(0.85);
+  transition: all 0.4s ease;
+  object-fit: contain;
+}
+.brand_slider .swiper-slide:hover img {
+  filter: grayscale(0%) opacity(1);
+  transform: scale(1.05);
+}
+
+
+/*==========================================================================
+* Industries Area CSS
+==========================================================================*/
+.industry-nav-item {
+  padding: 24px 30px;
+  background: #FFFFFF;
+  border: 1px solid #eee;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.industry-nav-item h5 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+  transition: 0.3s;
+}
+.industry-nav-item i {
+  color: #ccc;
+  font-size: 14px;
+  transition: 0.3s;
+}
+.industry-nav-item:hover {
+  border-color: var(--primary-color-1);
+  box-shadow: 0 5px 15px rgba(0, 112, 210, 0.08);
+}
+.industry-nav-item.active {
+  background: var(--primary-color-1);
+  border-color: var(--primary-color-1);
+  box-shadow: 0 10px 25px rgba(0, 112, 210, 0.15);
+}
+.industry-nav-item.active h5,
+.industry-nav-item.active i {
+  color: #fff;
+}
+
+.industry-content-wrapper {
+  padding-left: 40px;
+}
+.industry-detail-content p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 35px;
+}
+.industry-stats-container {
+  display: flex;
+  align-items: stretch;
+  gap: 40px;
+}
+.stat-item {
+  flex: 1;
+}
+.stat-value {
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--primary-color-1);
+  margin-bottom: 5px;
+}
+.stat-year {
+  font-size: 22px;
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 15px;
+}
+.stat-desc {
+  font-size: 15px;
+  color: #777;
+  line-height: 1.4;
+  display: block;
+}
+.stat-divider {
+  width: 3px;
+  background: var(--secondary-color);
+  border-radius: 2px;
+}
+
+@media (max-width: 991px) {
+  .industry-content-wrapper {
+    padding-left: 0;
+    margin-top: 50px;
+  }
+  .stat-value { font-size: 36px; }
+}
+
+/*==========================================================================
+* SWORD Value & Ethos CSS
+==========================================================================*/
+.sword-values-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.sword-item {
+  flex: 1;
+  text-align: center;
+  min-width: 100px;
+}
+.sword-circle {
+  width: 80px;
+  height: 80px;
+  background: #79B0E4; /* Soft blue from screenshot */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px auto;
+  color: #fff;
+  font-size: 32px;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(121, 176, 228, 0.3);
+  transition: 0.3s;
+}
+.sword-item:hover .sword-circle {
+  transform: translateY(-5px);
+  background: var(--primary-color-1);
+}
+.sword-item p {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #666;
+  font-weight: 500;
+}
+.sword-item p span {
+  color: var(--primary-color-1);
+  font-weight: 700;
+}
+
+@media (max-width: 767px) {
+  .sword-values-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+/*==========================================================================
 * Common Css
 ==========================================================================*/
 body {
