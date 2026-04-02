@@ -36,10 +36,10 @@
 	
 	.main-content-wrapper { position: relative; z-index: 2; background: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: margin-bottom 0.4s ease; }
 	.site-footer { position: fixed; bottom: 0; left: 0; width: 100%; z-index: 1; visibility: hidden; }
-	.header__area { position: sticky; top: 0; left: 0; width: 100%; z-index: 99999 !important; background: #ffffff !important; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04); }
+	.header__area { position: sticky !important; top: 0; left: 0; width: 100%; z-index: 99999 !important; background: #ffffff !important; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border-bottom: 1px solid rgba(0,0,0,0.03); }
 
     /* Megamenu Styles */
-    .has-megamenu { position: static; }
+    .has-megamenu { position: static !important; }
     .megamenu { position: absolute; top: 100%; left: 0; width: 100%; background: #fff; box-shadow: 0 20px 40px rgba(0,0,0,0.05); padding: 40px 0; opacity: 0; visibility: hidden; transition: 0.4s; z-index: 1000; border-bottom: 1px solid #f0f0f0; }
     .has-megamenu:hover .megamenu { opacity: 1; visibility: visible; }
     .megamenu-content { display: flex; max-width: 1200px; margin: 0 auto; padding: 0 15px; gap: 60px; }
@@ -48,14 +48,16 @@
     .megamenu-item:hover { background: #f8faff; }
     .megamenu-item h5 { font-size: 17px; font-weight: 700; color: #EF7F1A; margin-bottom: 6px; }
     .megamenu-item p { font-size: 14px; color: #777; margin: 0; }
+    .megamenu-right { width: 400px; border-radius: 20px; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #f9fbff; }
+    .megamenu-preview-img { width: 100%; height: 100%; object-fit: cover; transition: 0.4s ease; }
 
-	.story-hero { padding: 140px 0; background: linear-gradient(rgba(10,15,30,0.8), rgba(10,15,30,0.8)), url('salesforce_crm_zigzag_1774880000004_1774877372006.png'); background-size: cover; background-position: center; color: #fff; text-align: center; }
-	.story-hero h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 800; margin-bottom: 20px; }
+	.story-hero { padding: 100px 0; background: #fff; position: relative; overflow: hidden; }
 	.story-row { display: flex; align-items: center; gap: 60px; margin-bottom: 100px; }
 	.story-row:nth-child(even) { flex-direction: row-reverse; }
 	.story-image img { width: 100%; border-radius: 20px; box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
-    .tailored-grid{padding:100px 0;background:#f9f9f9;}
-    .solution-card{background:#fff;padding:40px;border-radius:15px;height:100%;transition:0.3s;border:1px solid #eee;}.solution-card:hover{transform:translateY(-10px);border-color:#EF7F1A;}
+    .tailored-grid{padding:100px 0;background:#f9faff;}
+    .solution-card{background:#fff;padding:40px;border-radius:24px;height:100%;transition:0.3s;border:1px solid #eee;box-shadow:0 10px 30px rgba(0,0,0,0.02);}
+	.solution-card:hover{transform:translateY(-10px);border-color:#EF7F1A;box-shadow:0 20px 40px rgba(0,0,0,0.08);}
 	</style>
 </head>
     
@@ -128,13 +130,18 @@
 		</div>
 	</header>
 
-	<section class="story-hero">
-		<div class="container">
-			<a href="index.html" style="color: #EF7F1A; text-decoration: none; font-weight: 600; margin-bottom: 20px; display: inline-block;"><i class="fas fa-arrow-left"></i> Back to Home</a>
-			<h1 class="wow fadeInUp">Salesforce Implementation</h1>
-			<p class="wow fadeInUp" data-wow-delay=".2s" style="font-size: 20px; max-width: 800px; margin: 0 auto; opacity: 0.9;">Maximize your CRM potential with customized Salesforce solutions.</p>
+	<div class="banner__one" style="position: relative; overflow: hidden; background: #fff;">
+		<video autoplay loop muted playsinline style="position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; object-fit: cover; transform: translate(-50%, -50%); z-index: 0; opacity: 0.6;">
+			<source src="waves_1.mp4" type="video/mp4">
+		</video>
+		
+		<div class="banner__one-image" style="padding: 100px 0; position: relative; z-index: 1; background: transparent;">
+			<div class="container jc-center text-center">
+				<h1 style="color: var(--primary-color-1); font-size: clamp(2.5rem, 6vw, 4rem); line-height: 1.1; margin-bottom: 20px;">Salesforce Implementation</h1>
+				<p style="font-size: 20px; color: #444; margin: 0 auto; max-width: 800px;">Maximize your CRM potential with customized Salesforce solutions.</p>
+			</div>
 		</div>
-	</section>
+	</div>
 
 	<div class="container section-padding">
 		<div class="story-row al-center">
@@ -143,7 +150,7 @@
 				<p style="font-size: 18px; line-height: 1.8; color: #555;">Sunware’s certified Salesforce experts specialize in bespoke implementations and configurations that enhance your customer relationship management. We offer end-to-end services including system implementation, data migration, and third-party integration.</p>
 			</div>
 			<div class="story-image wow fadeInRight">
-				<img src="salesforce_crm_zigzag_1774880000004_1774877372006.png" alt="Salesforce Implementation">
+				<img src="https://images.unsplash.com/photo-1552581234-26120784c042?auto=format&fit=crop&w=800&q=80" alt="Salesforce Implementation">
 			</div>
 		</div>
 	</div>

@@ -38,17 +38,22 @@
 	.site-footer { position: fixed; bottom: 0; left: 0; width: 100%; z-index: 1; visibility: hidden; }
 	.header__area { position: sticky; top: 0; left: 0; width: 100%; z-index: 99999 !important; background: #ffffff !important; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04); }
 
-    /* Megamenu Styles */
-    .has-megamenu { position: static; }
-    .megamenu { position: absolute; top: 100%; left: 0; width: 100%; background: #fff; box-shadow: 0 20px 40px rgba(0,0,0,0.05); padding: 40px 0; opacity: 0; visibility: hidden; transition: 0.4s; z-index: 1000; border-bottom: 1px solid #f0f0f0; }
-    .has-megamenu:hover .megamenu { opacity: 1; visibility: visible; }
-    .megamenu-content { display: flex; max-width: 1200px; margin: 0 auto; padding: 0 15px; gap: 60px; }
-    .megamenu-left { flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-    .megamenu-item { display: block; padding: 20px; border-radius: 12px; transition: 0.3s; text-decoration: none !important; color: inherit; }
-    .megamenu-item:hover { background: #f8faff; }
-    .megamenu-item h5 { font-size: 17px; font-weight: 700; color: #EF7F1A; margin-bottom: 6px; }
-    .megamenu-item p { font-size: 14px; color: #777; margin: 0; }
-
+	/* ── Megamenu Styles ────────────────────────── */
+	.has-megamenu { position: static !important; }
+	.megamenu { position: absolute; top: 100%; left: 0; width: 100%; background: #fff; box-shadow: 0 20px 40px rgba(0,0,0,0.05); padding: 50px 0; opacity: 0; visibility: hidden; transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1); z-index: 1000; border-bottom: 1px solid #f0f0f0; border-top: 1px solid #f0f0f0; }
+	.has-megamenu:hover .megamenu { opacity: 1; visibility: visible; }
+	.megamenu-content { display: flex; max-width: 1200px; margin: 0 auto; padding: 0 20px; gap: 60px; }
+	.megamenu-left, .megamenu-right { flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+	.megamenu-item { display: block; padding: 20px; border-radius: 16px; transition: 0.3s; text-decoration: none !important; color: inherit; background: #fcfdfe; border: 1px solid transparent; }
+	.megamenu-item:hover { background: #f5f8ff; border-color: #e0e7ff; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.03); }
+	.megamenu-item h5 { font-size: 18px; font-weight: 700; color: #EF7F1A; margin-bottom: 8px; }
+	.megamenu-item p { font-size: 14px; color: #666; margin: 0; line-height: 1.5; }
+	@media (max-width: 991px) {
+		.megamenu-content { flex-direction: column; gap: 20px; }
+		.megamenu-left, .megamenu-right { grid-template-columns: 1fr; }
+	}
+	</style>
+	<style>
 	.story-hero { padding: 140px 0; background: linear-gradient(rgba(10,15,30,0.8), rgba(10,15,30,0.8)), url('banking_digital_zigzag_1774872401463.png'); background-size: cover; background-position: center; color: #fff; text-align: center; }
 	.story-hero h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 800; margin-bottom: 20px; }
 	.story-row { display: flex; align-items: center; gap: 60px; margin-bottom: 100px; }
@@ -94,21 +99,29 @@
 									<li><a href="index.html">Home</a></li>
 									<li><a href="about.html">About Us</a></li>
 									<li class="has-megamenu"><a href="services.html">Services <i class="fal fa-chevron-down" style="font-size:12px;margin-left:4px;"></i></a>
-                                        <div class="megamenu">
+										<div class="megamenu">
 											<div class="megamenu-content">
 												<div class="megamenu-left">
-													<a href="services.html" class="megamenu-item"><h5>Technology Solutions</h5><p>Scalable payment & support infrastructure</p></a>
-													<a href="services.html" class="megamenu-item"><h5>Data & AI Engineering</h5><p>Advanced data modelling and analytical Tailored algorithms</p></a>
+													<a href="cloud-solutions.html" class="megamenu-item"><h5>Cloud Solutions</h5><p>Hybrid cloud systems and scalable infrastructure</p></a>
+													<a href="automation-efficiency.html" class="megamenu-item"><h5>Automation</h5><p>Streamlining operations and process efficiency</p></a>
+													<a href="data-science-ai.html" class="megamenu-item"><h5>Data Science & AI</h5><p>Generative AI and predictive analytics solutions</p></a>
+													<a href="salesforce-expertise.html" class="megamenu-item"><h5>Salesforce</h5><p>Implementation, customization and CRM experts</p></a>
+												</div>
+												<div class="megamenu-right">
+													<a href="microsoft-solutions.html" class="megamenu-item"><h5>Microsoft Solutions</h5><p>Enterprise technology stack and Azure services</p></a>
+													<a href="iot-innovations.html" class="megamenu-item"><h5>IoT Innovations</h5><p>Connected smart device ecosystems and and data</p></a>
 												</div>
 											</div>
 										</div>
-                                    </li>
-                                    <li class="has-megamenu"><a href="#">Industries <i class="fal fa-chevron-down" style="font-size:12px;margin-left:4px;"></i></a>
+									</li>
+									<li class="has-megamenu"><a href="#" style="color:#EF7F1A">Industries <i class="fal fa-chevron-down" style="font-size:12px;margin-left:4px;"></i></a>
 										<div class="megamenu">
-											<div class="megamenu-content industries-megamenu-content">
+											<div class="megamenu-content">
 												<div class="megamenu-left">
-													<a href="healthcare-lifesciences.html" class="megamenu-item"><h5>Healthcare & Life Sciences</h5><p>Advanced data analytics and AI for pharmaceuticals</p></a>
-													<a href="banking-finance.html" class="megamenu-item"><h5>Banking & Financial Services</h5><p>Digital transformation and fintech solutions</p></a>
+													<a href="healthcare-lifesciences.html" class="megamenu-item"><h5>Healthcare & Life Sciences</h5><p>Next-gen patient care and R&D data solutions</p></a>
+													<a href="banking-finance.html" class="megamenu-item" style="background:#f5f8ff;border-color:#e0e7ff;"><h5>Banking & Finance</h5><p>Digital-first financial ecosystems and fintech</p></a>
+													<a href="retail-ecommerce.html" class="megamenu-item"><h5>Retail & E-commerce</h5><p>Scalable online shopping and customer journeys</p></a>
+													<a href="media-entertainment.html" class="megamenu-item"><h5>Media & Entertainment</h5><p>High-reach interactive digital content solutions</p></a>
 												</div>
 											</div>
 										</div>
@@ -248,8 +261,14 @@
 		@media (max-width: 575px) { .modal-content-wrapper { padding: 30px 20px; } .form-row { flex-direction: column; gap: 0; } }
 	</style>
 
-	<script src="assets/js/jquery-3.7.1.min.js"></script><script src="assets/js/bootstrap.min.js"></script><script src="assets/js/wow.min.js"></script><script src="assets/js/nav-overlay.js"></script>
-    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+	<script src="assets/js/jquery-3.7.1.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/wow.min.js"></script>
+	<script src="assets/js/gsap.js"></script>
+	<script src="assets/js/scroll-trigger.js"></script>
+	<script src="assets/js/custom.js"></script>
+	<script src="assets/js/nav-overlay.js"></script>
+	<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
     <script>
 		new WOW().init();
         const lenis = new Lenis({ duration: 1.5 }); function raf(time) { lenis.raf(time); requestAnimationFrame(raf); } requestAnimationFrame(raf);

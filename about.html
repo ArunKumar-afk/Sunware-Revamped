@@ -42,18 +42,20 @@
     .banner__one { position: relative; overflow: hidden; background: #fff; }
     .banner__one-content { visibility: visible !important; opacity: 1 !important; transform: none !important; position: relative !important; z-index: 10 !important; }
 
-    /* Megamenu Styles */
-    .has-megamenu { position: static; }
-    .megamenu { position: absolute; top: 100%; left: 0; width: 100%; background: #fff; box-shadow: 0 20px 40px rgba(0,0,0,0.05); padding: 40px 0; opacity: 0; visibility: hidden; transition: 0.4s; z-index: 1000; border-bottom: 1px solid #f0f0f0; }
-    .has-megamenu:hover .megamenu { opacity: 1; visibility: visible; }
-    .megamenu-content { display: flex; max-width: 1200px; margin: 0 auto; padding: 0 15px; gap: 60px; }
-    .megamenu-left { flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-    .megamenu-item { display: block; padding: 20px; border-radius: 12px; transition: 0.3s; text-decoration: none !important; color: inherit; }
-    .megamenu-item:hover { background: #f8faff; }
-    .megamenu-item h5 { font-size: 17px; font-weight: 700; color: #EF7F1A; margin-bottom: 6px; }
-    .megamenu-item p { font-size: 14px; color: #777; margin: 0; }
-    .megamenu-right { width: 400px; border-radius: 20px; overflow: hidden; }
-    .megamenu-right img { width: 100%; height: 100%; object-fit: cover; }
+	/* ── Megamenu Styles ────────────────────────── */
+	.has-megamenu { position: static !important; }
+	.megamenu { position: absolute; top: 100%; left: 0; width: 100%; background: #fff; box-shadow: 0 20px 40px rgba(0,0,0,0.05); padding: 50px 0; opacity: 0; visibility: hidden; transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1); z-index: 1000; border-bottom: 1px solid #f0f0f0; border-top: 1px solid #f0f0f0; }
+	.has-megamenu:hover .megamenu { opacity: 1; visibility: visible; }
+	.megamenu-content { display: flex; max-width: 1200px; margin: 0 auto; padding: 0 20px; gap: 60px; }
+	.megamenu-left, .megamenu-right { flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+	.megamenu-item { display: block; padding: 20px; border-radius: 16px; transition: 0.3s; text-decoration: none !important; color: inherit; background: #fcfdfe; border: 1px solid transparent; }
+	.megamenu-item:hover { background: #f5f8ff; border-color: #e0e7ff; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.03); }
+	.megamenu-item h5 { font-size: 18px; font-weight: 700; color: #EF7F1A; margin-bottom: 8px; }
+	.megamenu-item p { font-size: 14px; color: #666; margin: 0; line-height: 1.5; }
+	@media (max-width: 991px) {
+		.megamenu-content { flex-direction: column; gap: 20px; }
+		.megamenu-left, .megamenu-right { grid-template-columns: 1fr; }
+	}
 	</style>
 </head>
     
@@ -92,65 +94,31 @@
 							<div class="header__area-menubar-center-menu">
 								<ul id="mobilemenu">
 									<li><a href="index.html">Home</a></li>
-									<li><a href="about.html">About Us</a></li>
+									<li><a href="about.html" style="color:#EF7F1A">About Us</a></li>
 									<li class="has-megamenu"><a href="services.html">Services <i class="fal fa-chevron-down" style="font-size:12px;margin-left:4px;"></i></a>
 										<div class="megamenu">
 											<div class="megamenu-content">
 												<div class="megamenu-left">
-													<a href="services.html" class="megamenu-item">
-														<h5>Technology Solutions</h5>
-														<p>Secure, scalable payment & support infrastructure</p>
-													</a>
-													<a href="services.html" class="megamenu-item">
-														<h5>Data & AI Engineering</h5>
-														<p>Advanced data modelling and analytical Tailored algorithms</p>
-													</a>
-													<a href="services.html" class="megamenu-item">
-														<h5>Consulting & Auditing</h5>
-														<p>Scalable compliance management & risk assessments</p>
-													</a>
-													<a href="services.html" class="megamenu-item">
-														<h5>Data Pipelines & ELT</h5>
-														<p>Robust enterprise data streams and continuous processing</p>
-													</a>
+													<a href="cloud-solutions.html" class="megamenu-item"><h5>Cloud Solutions</h5><p>Hybrid cloud systems and scalable infrastructure</p></a>
+													<a href="automation-efficiency.html" class="megamenu-item"><h5>Automation</h5><p>Streamlining operations and process efficiency</p></a>
+													<a href="data-science-ai.html" class="megamenu-item"><h5>Data Science & AI</h5><p>Generative AI and predictive analytics solutions</p></a>
+													<a href="salesforce-expertise.html" class="megamenu-item"><h5>Salesforce</h5><p>Implementation, customization and CRM experts</p></a>
 												</div>
 												<div class="megamenu-right">
-													<div class="megamenu-card">
-														<img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=200&h=400&q=80" alt="Tech">
-													</div>
-													<div class="megamenu-card">
-														<img src="https://images.unsplash.com/photo-1518770662639-47a06fbed2e9?auto=format&fit=crop&w=200&h=400&q=80" alt="Data">
-													</div>
-													<div class="megamenu-card">
-														<img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=350&h=400&q=80" alt="Open road">
-													</div>
+													<a href="microsoft-solutions.html" class="megamenu-item"><h5>Microsoft Solutions</h5><p>Enterprise technology stack and Azure services</p></a>
+													<a href="iot-innovations.html" class="megamenu-item"><h5>IoT Innovations</h5><p>Connected smart device ecosystems and and data</p></a>
 												</div>
 											</div>
 										</div>
 									</li>
 									<li class="has-megamenu"><a href="#">Industries <i class="fal fa-chevron-down" style="font-size:12px;margin-left:4px;"></i></a>
 										<div class="megamenu">
-											<div class="megamenu-content industries-megamenu-content">
+											<div class="megamenu-content">
 												<div class="megamenu-left">
-													<a href="healthcare-lifesciences.html" class="megamenu-item" data-image="images/Industries/Sunware_Industries_Healthcare_and_Life_Sciences_Banner.png">
-														<h5>Healthcare & Life Sciences</h5>
-														<p>Advanced data analytics and AI for pharmaceuticals and biosciences</p>
-													</a>
-													<a href="banking-finance.html" class="megamenu-item" data-image="images/Industries/Sunware_Industries_Banking_and_Financial_Services_Banner.png">
-														<h5>Banking & Financial Services</h5>
-														<p>Digital transformation and fintech solutions for secure modern finance</p>
-													</a>
-													<a href="retail-ecommerce.html" class="megamenu-item" data-image="images/Industries/Sunware_Industries_Retail-and-E-Commerce_Banner.png">
-														<h5>Retail & E-commerce</h5>
-														<p>Optimizing customer engagement and resilient supply chain logistics</p>
-													</a>
-													<a href="media-entertainment.html" class="megamenu-item" data-image="images/Industries/Sunware_Industries_Media-and-Entertainment_Banner.png">
-														<h5>Media & Entertainment</h5>
-														<p>Next-gen content production and intelligent digital experiences</p>
-													</a>
-												</div>
-												<div class="megamenu-right">
-													<img src="images/Industries/Sunware_Industries_Healthcare_and_Life_Sciences_Banner.png" class="megamenu-preview-img" alt="Preview">
+													<a href="healthcare-lifesciences.html" class="megamenu-item"><h5>Healthcare & Life Sciences</h5><p>Next-gen patient care and R&D data solutions</p></a>
+													<a href="banking-finance.html" class="megamenu-item"><h5>Banking & Finance</h5><p>Digital-first financial ecosystems and fintech</p></a>
+													<a href="retail-ecommerce.html" class="megamenu-item"><h5>Retail & E-commerce</h5><p>Scalable online shopping and customer journeys</p></a>
+													<a href="media-entertainment.html" class="megamenu-item"><h5>Media & Entertainment</h5><p>High-reach interactive digital content solutions</p></a>
 												</div>
 											</div>
 										</div>
@@ -178,16 +146,19 @@
 		<div class="banner__one-image" style="padding: 10px 0; position: relative; z-index: 1; background: transparent;">
 			<div class="container">
 				<div class="row al-center">
-					<div class="col-xl-7 col-lg-7">
+					<div class="col-xl-6 col-lg-6">
 						<div class="banner__one-content">
-							<h1 style="color: var(--primary-color-1); font-size: clamp(2.5rem, 6vw, 4rem); line-height: 1.1; margin-bottom: 10px;">About <span style="color:#EF7F1A">Sunware</span> Technologies</h1>
-							<h3 class="subtitle wow fadeInLeft" style="color: #EF7F1A; background: none; border: none; padding: 0; font-size: 20px; font-weight: 700; margin-bottom: 15px; display: block;">Engineering Innovative Solutions</h3>
-							<p class="wow fadeInUp" data-wow-delay=".6s" style="font-size: 20px; max-width: 600px; color: #444; margin-bottom: 0;">We engineer innovative solutions to empower business with deep technical mastery and groundbreaking AI innovations.</p>
+							<h1 style="color: var(--primary-color-1); font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.1; margin-bottom: 20px;">About Sunware Technologies</h1>
+							<h3 class="subtitle wow fadeInLeft" style="color: #EF7F1A; background: none; border: none; padding: 0; font-size: 24px; font-weight: 700; margin-bottom: 25px; display: block;">Engineering Innovative Solutions</h3>
+							<p class="wow fadeInUp" data-wow-delay=".6s" style="font-size: 20px; color: #444; margin-bottom: 30px; line-height: 1.8;">We engineer innovative solutions to empower business with deep technical mastery and groundbreaking AI innovations. Our team transforms complex data challenges into strategic opportunities.</p>
+							<div class="banner__one-content-button wow fadeInUp" data-wow-delay=".8s">
+								<a class="default_button" href="services.html" style="background: #0070D2; border-radius: 50px; padding: 15px 40px; color: #fff;">Our Services</a>
+							</div>
 						</div>
 					</div>
-					<div class="col-xl-5 col-lg-5 text-end lg-display-n">
-						<div class="banner__one-hero-img wow fadeInRight">
-							<img src="about hero.png" alt="Hero" style="max-width: 280px; width: 100%; height: auto; margin-left: auto; opacity: 0.8;">
+					<div class="col-xl-6 col-lg-6">
+						<div class="about-video-container wow fadeInRight" style="position: relative; width: 100%; padding-top: 56.25%; border-radius: 32px; overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,0.15); border: 8px solid #fff;">
+							<iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/1t_2QZWWz0M?si=yqlb8NxSuL-yJqVX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 						</div>
 					</div>
 				</div>
@@ -202,7 +173,7 @@
 				<div class="col-lg-6">
 					<div class="section-title mb-40">
 						<span class="subtitle wow fadeInLeft" style="color:#EF7F1A">Our Journey</span>
-						<h2 class="wow fadeInUp" style="font-weight: 800; font-size: 48px; line-height: 1.2; color: #0a0f1e;">About <span style="color:#EF7F1A">Sunware</span> Technologies</h2>
+						<h2 class="wow fadeInUp" style="font-weight: 800; font-size: 48px; line-height: 1.2; color: var(--primary-color-1);">About Sunware Technologies</h2>
 					</div>
 					<div class="about-text wow fadeInUp" style="font-size: 18px; line-height: 1.8; color: #444;">
 						<p class="mb-25">At Sunware Technologies, we are passionate about empowering product companies in the US, UK, and UAE to unlock the transformative potential of data engineering and artificial intelligence. Founded on the principles of client-centricity, innovation, and integrity, we bring together a team of highly experienced and qualified data architects, AI specialists, and cloud experts dedicated to delivering cutting-edge solutions.</p>
@@ -445,8 +416,14 @@
 		@media (max-width: 600px) { .modal-content-wrapper { padding: 40px 25px; } .form-row { flex-direction: column; gap: 0; } .modal-header h3 { font-size: 28px; } }
 	</style>
 
-	<script src="assets/js/jquery-3.7.1.min.js"></script><script src="assets/js/bootstrap.min.js"></script><script src="assets/js/wow.min.js"></script><script src="assets/js/nav-overlay.js"></script>
-    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+	<script src="assets/js/jquery-3.7.1.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/wow.min.js"></script>
+	<script src="assets/js/gsap.js"></script>
+	<script src="assets/js/scroll-trigger.js"></script>
+	<script src="assets/js/custom.js"></script>
+	<script src="assets/js/nav-overlay.js"></script>
+	<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
     <script>
 		new WOW().init();
         const lenis = new Lenis({ duration: 1.5 }); function raf(time) { lenis.raf(time); requestAnimationFrame(raf); } requestAnimationFrame(raf);
