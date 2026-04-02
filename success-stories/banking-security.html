@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Banking Security Success Story - Sunware Technologies</title>
+	<link rel="icon" type="image/png" href="../favicon.png">
+	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../assets/css/fontawesome.css">
+	<link rel="stylesheet" href="../assets/font/flaticon_flexitype.css">
+	<link rel="stylesheet" href="../assets/css/animate.css">
+	<link rel="stylesheet" href="../assets/css/style.css">
+	<style>
+		:root {
+			--primary-color: #EF7F1A;
+			--dark-blue: #0a0f1e;
+		}
+		
+		.story-header { 
+			padding: 180px 0 100px; 
+			background: linear-gradient(rgba(10, 15, 30, 0.85), rgba(10, 15, 30, 0.85)), url('../images/Success_Stories/Success_Stories_inner_pages/Sunware_Success-Stories-01_Banner_Eradicating_Security.png'); 
+			background-size: cover;
+			background-position: center;
+			color: #fff; 
+			position: relative; 
+			overflow: hidden; 
+		}
+		
+		.story-header::after {
+			content: '';
+			position: absolute;
+			bottom: -50px;
+			right: -50px;
+			width: 300px;
+			height: 300px;
+			background: radial-gradient(circle, rgba(239, 127, 26, 0.15) 0%, transparent 70%);
+			z-index: 0;
+		}
+
+		.story-meta { 
+			display: flex; 
+			gap: 50px; 
+			margin-top: 50px; 
+			flex-wrap: wrap; 
+			position: relative;
+			z-index: 1;
+		}
+		
+		.meta-item span { 
+			display: block; 
+			font-size: 12px; 
+			text-transform: uppercase; 
+			letter-spacing: 2px; 
+			color: rgba(255,255,255,0.5);
+			margin-bottom: 8px; 
+		}
+		
+		.meta-item strong { 
+			font-size: 20px; 
+			color: var(--primary-color); 
+			font-weight: 700;
+		}
+		
+		.content-section { 
+			padding: 100px 0; 
+			background: #fff; 
+		}
+		
+		.content-grid { 
+			display: grid; 
+			grid-template-columns: 1.8fr 1.2fr; 
+			gap: 80px; 
+		}
+		
+		@media (max-width: 991px) { 
+			.content-grid { grid-template-columns: 1fr; gap: 60px; } 
+		}
+		
+		.story-body h2 {
+			font-size: 36px;
+			font-weight: 800;
+			margin-bottom: 30px;
+			color: var(--dark-blue);
+		}
+
+		.story-body h3 {
+			font-size: 24px;
+			font-weight: 700;
+			margin: 40px 0 20px;
+			color: var(--dark-blue);
+		}
+
+		.story-body p {
+			font-size: 18px;
+			line-height: 1.8;
+			color: #555;
+			margin-bottom: 20px;
+		}
+
+		.vulnerability-list {
+			margin-top: 25px;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 10px;
+		}
+
+		.vulnerability-tag { 
+			display: inline-block; 
+			padding: 8px 18px; 
+			background: #f8f9fa; 
+			color: #444; 
+			border-radius: 5px; 
+			font-size: 15px; 
+			font-weight: 600; 
+			border: 1px solid #eee;
+			transition: 0.3s;
+		}
+		
+		.vulnerability-tag:hover {
+			background: var(--primary-color);
+			color: #fff;
+			border-color: var(--primary-color);
+		}
+
+		.impact-card { 
+			background: #fcfcfc; 
+			padding: 50px; 
+			border-radius: 30px; 
+			border: 1px solid #eee;
+			position: sticky; 
+			top: 140px; 
+		}
+		
+		.impact-card h4 {
+			font-size: 26px;
+			font-weight: 800;
+			margin-bottom: 35px;
+			color: var(--dark-blue);
+		}
+
+		.impact-item { 
+			margin-bottom: 30px; 
+			display: flex; 
+			align-items: flex-start; 
+			gap: 20px; 
+		}
+		
+		.impact-item .icon { 
+			width: 32px;
+			height: 32px;
+			background: rgba(40, 167, 69, 0.1);
+			color: #28a745; 
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 14px;
+			flex-shrink: 0;
+		}
+
+		.impact-item p {
+			margin: 0;
+			font-size: 17px;
+			font-weight: 500;
+			color: #333;
+		}
+		
+		.back-btn { 
+			display: inline-flex; 
+			align-items: center; 
+			gap: 12px; 
+			color: #fff; 
+			text-decoration: none; 
+			margin-bottom: 40px; 
+			font-weight: 600; 
+			font-size: 15px;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+			opacity: 0.7; 
+			transition: 0.3s; 
+		}
+		
+		.back-btn:hover { 
+			opacity: 1; 
+			color: var(--primary-color); 
+			transform: translateX(-8px); 
+		}
+
+        .header__area { 
+			position: fixed; 
+			top: 0; 
+			width: 100%; 
+			z-index: 1000;
+			background: #fff !important; 
+			box-shadow: 0 4px 30px rgba(0,0,0,0.03); 
+		}
+
+		.tool-list {
+			display: flex;
+			gap: 15px;
+			margin-top: 20px;
+		}
+
+		.tool-item {
+			padding: 12px 25px;
+			background: #0a0f1e;
+			color: #fff;
+			border-radius: 8px;
+			font-weight: 700;
+			font-size: 14px;
+		}
+
+		footer {
+			background: #0a0f1e;
+			padding: 80px 0;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+
+    <header class="header__area">
+        <div class="container">
+            <div class="row al-center">
+                <div class="col-xl-12">
+                    <div class="header__area-menubar" style="padding: 15px 0;">
+                        <div class="header__area-menubar-left">
+                            <a href="../index.html"><img src="../main logo.png" alt="Logo" style="max-height: 40px;"></a>
+                        </div>
+                        <div class="header__area-menubar-right">
+                             <a class="default_button" href="mailto:sales@sunware.in">Enquire Now<i class="flaticon-right-up"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+	<section class="story-header">
+		<div class="container">
+			<a href="../index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+			<h1 class="wow fadeInUp" style="font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; line-height: 1.1;">Eradicating Security Threats in <span style="color:var(--primary-color)">Banking Domains</span></h1>
+			
+			<div class="story-meta wow fadeInUp" data-wow-delay=".2s">
+				<div class="meta-item">
+					<span>Client</span>
+					<strong>Financial Giant</strong>
+				</div>
+				<div class="meta-item">
+					<span>Industry</span>
+					<strong>Financial Services</strong>
+				</div>
+				<div class="meta-item">
+					<span>Location</span>
+					<strong>Global Deployment</strong>
+				</div>
+				<div class="meta-item">
+					<span>Timeline</span>
+					<strong>High Priority</strong>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="content-section">
+		<div class="container">
+			<div class="content-grid">
+				<div class="story-body wow fadeInUp">
+					<h2>Project Overview</h2>
+					<p>This initiative represents one of our most comprehensive security engagements to date. We partnered with a global financial institution to overhaul their security posture across a massive application ecosystem. The project encompassed 260 C# project repositories, necessitating a thorough and systematic approach to identify, prioritize, and address complex security vulnerabilities.</p>
+					
+					<h3>The Strategic Approach</h3>
+					<p>Each tool generated scan reports that were meticulously analyzed to identify security vulnerabilities. This involved a detailed examination of the findings to prioritize and address critical issues effectively. Remediation efforts involved implementing code fixes and configuration updates to mitigate identified vulnerabilities.</p>
+
+					<h3>Tools of Excellence</h3>
+					<p>To ensure 360-degree coverage, our engineers utilized a specialized stack of industry-leading security assessment tools:</p>
+					<div class="tool-list">
+						<div class="tool-item">SonarQube</div>
+						<div class="tool-item">Blackduck</div>
+						<div class="tool-item">Checkmarx</div>
+					</div>
+
+					<h3>Vulnerabilities Addressed</h3>
+					<p>During the remediation phase, we successfully patched and secured the following critical threat vectors:</p>
+					<div class="vulnerability-list">
+						<div class="vulnerability-tag">SQL Injection</div>
+						<div class="vulnerability-tag">Cross Site Scripting (XSS)</div>
+						<div class="vulnerability-tag">Xpath Hack</div>
+						<div class="vulnerability-tag">Weak Encryption</div>
+						<div class="vulnerability-tag">IDOR</div>
+						<div class="vulnerability-tag">SSRF</div>
+						<div class="vulnerability-tag">XML External Entity Injection</div>
+						<div class="vulnerability-tag">Remote Code Execution (RCE)</div>
+						<div class="vulnerability-tag">Security Misconfiguration</div>
+						<div class="vulnerability-tag">Insecure Deserialization</div>
+					</div>
+
+					<h3>Conclusion</h3>
+					<p>The successful completion of security vulnerability fixes for the client demonstrates our commitment to ensuring a secure environment within the banking domain. By addressing a wide range of vulnerabilities and implementing robust remediation measures, we have significantly enhanced the security posture of the systems.</p>
+				</div>
+
+				<div class="story-sidebar wow fadeInRight">
+					<div class="impact-card">
+						<h4>The Outcome</h4>
+						<div class="impact-item">
+							<div class="icon"><i class="fas fa-check"></i></div>
+							<p>Improved overall security posture across 260+ repositories</p>
+						</div>
+						<div class="impact-item">
+							<div class="icon"><i class="fas fa-check"></i></div>
+							<p>Mitigated risks of high-profile data breaches</p>
+						</div>
+						<div class="impact-item">
+							<div class="icon"><i class="fas fa-check"></i></div>
+							<p>Zero unauthorized access incidents post-remediation</p>
+						</div>
+						<div class="impact-item">
+							<div class="icon"><i class="fas fa-check"></i></div>
+							<p>Identified and cleared hundreds of false positives</p>
+						</div>
+
+						<div style="margin-top: 40px; padding-top: 30px; border-top: 1px solid #eee;">
+							<img src="../images/Success_Stories/Sunware_Success-Stories_tool_used.png" alt="Tools Used" style="width: 100%; border-radius: 15px; margin-bottom: 20px;">
+							<h5 style="margin-bottom: 20px; font-weight: 700;">Future Recommendations</h5>
+							<p style="font-size: 15px; color: #666; line-height: 1.6;">Continuous monitoring for emerging threats and ongoing training programs for development teams are critical to maintaining this secure environment.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="container">
+		<div class="footer__cta-area mb-80 wow fadeInUp">
+			<div class="row al-center">
+				<div class="col-xl-7">
+					<h2 style="font-weight: 900; font-size: 40px;">Need a Security Overhaul?<br><span style="color:var(--primary-color)">We’re Here to Help.</span></h2>
+				</div>
+				<div class="col-xl-5 text-end">
+					<a class="default_button" href="mailto:sales@sunware.in">Request Vulnerability Scan<i class="flaticon-right-up"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<div class="container text-center">
+			<img src="../white Logo.png" alt="Logo" style="height: 50px; margin-bottom: 30px;">
+			<p style="opacity: 0.5;">© 2026 Sunware Technologies. All Rights Reserved.</p>
+		</div>
+	</footer>
+
+    <script src="../assets/js/jquery-3.7.1.min.js"></script>
+    <script src="../assets/js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+</body>
+</html>
