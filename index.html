@@ -234,26 +234,69 @@
 		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
 		border-bottom: 1px solid rgba(0, 0, 0, 0.03);
 	}
-	/* ── Banner Content Override ─────────────── */
-	.banner__one-content {
-		visibility: visible !important;
-		opacity: 1 !important;
-		transform: none !important;
-		position: relative !important;
-		top: auto !important;
-		left: auto !important;
-		z-index: 10 !important;
+	/* ── Banner Slider Custom Styles ── */
+	.banner-slider {
+		width: 100%;
+		height: 100%;
+		position: relative;
 	}
-	.banner__one-content * {
-		visibility: visible !important;
+	.banner-slider .swiper-slide {
+		opacity: 0 !important;
+		transition: opacity 1.2s ease-in-out !important;
+		visibility: hidden;
+	}
+	.banner-slider .swiper-slide-active {
 		opacity: 1 !important;
-		transform: none !important;
-		animation: none !important;
+		visibility: visible !important;
+	}
+	.banner-pagination {
+		position: absolute !important;
+		bottom: 40px !important;
+		left: 0;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 12px;
+		z-index: 20 !important;
+	}
+	.banner-pagination .swiper-pagination-bullet {
+		width: 12px;
+		height: 12px;
+		background: rgba(255, 255, 255, 0.4);
+		opacity: 1;
+		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+		border-radius: 50%;
+		cursor: pointer;
+		margin: 0 !important;
+		border: 2px solid transparent;
+	}
+	.banner-pagination .swiper-pagination-bullet-active {
+		background: #EF7F1A !important;
+		width: 35px;
+		border-radius: 6px;
+		border-color: #EF7F1A;
+	}
+	/* Fix for title readability on video */
+	.banner__one-content h1 {
+		text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+	}
+	@media (max-width: 991px) {
+		.banner__one-image {
+			padding: 80px 0 !important;
+		}
+		.banner__one-content h1 {
+			font-size: 36px !important;
+			line-height: 1.2 !important;
+		}
+		.banner-pagination {
+			bottom: 30px !important;
+		}
 	}
 	</style>
 </head>
     
-<body>
+<body class="data_cursor">
 	<!-- Preloader Start -->
 	<div class="theme-loader">
 		<div class="spinner">
@@ -278,7 +321,7 @@
 		<ul>
 			<li class="nav-item"><a href="index.html">Home</a></li>
 			<li class="nav-item"><a href="about.html">About Us</a></li>
-			<li class="nav-item"><a href="services.html">Services</a></li>
+			<li class="nav-item"><a href="#">Services</a></li>
 			<li class="nav-item"><a href="healthcare-lifesciences.html">Industries</a></li>
 			<li class="nav-item"><a href="careers.html">Careers</a></li>
 			<li class="nav-item"><a href="blog.html">Blog</a></li>
@@ -316,7 +359,6 @@
 		</div>
 		<p>We ship secure, scalable payment infrastructure faster than traditional vendors—while understanding your US-regulated market deeply.</p>
 						<p>Advanced Data & AI Solutions Tailored to Your Needs.</p>
-						<p>Data. Intelligence. Engineered.</p>
 		<div class="header__area-menubar-right-sidebar-popup-contact">
 			<h4 class="mb-30">Address</h4>
 			<div class="header__area-menubar-right-sidebar-popup-contact-item">
@@ -390,7 +432,7 @@
 								<ul id="mobilemenu">
 									<li><a href="index.html" style="color:#EF7F1A">Home</a></li>
 									<li><a href="about.html">About Us</a></li>
-									<li class="has-megamenu"><a href="services.html">Services <i class="fal fa-chevron-down" style="font-size:12px;margin-left:4px;"></i></a>
+									<li class="has-megamenu"><a href="#">Services <i class="fal fa-chevron-down" style="font-size:12px;margin-left:4px;"></i></a>
 										<div class="megamenu">
 											<div class="megamenu-content">
 												<div class="megamenu-left">
@@ -448,22 +490,51 @@
 			<source src="waves_2.mp4" type="video/mp4">
 		</video>
 		
-		<div class="banner__one-image" style="padding: 120px 0; position: relative; z-index: 1; background: transparent;">
-			<div class="container">
-				<div class="row al-center">
-					<div class="col-xl-7 col-lg-7">
-						<div class="banner__one-content" style="visibility: visible; padding: 0;">
-							<h1 data-animation="fadeInUp" data-delay=".6s" style="color: var(--primary-color-1); font-size: 64px; line-height: 1.2; max-width: 100%; margin-bottom: 20px;">Advanced Data & AI Solutions Tailored to Your Needs</h1>
-							<h3 class="subtitle wow fadeInLeft" data-delay=".3s" style="color: #EF7F1A; background: none; border: none; padding: 0; font-size: 32px; font-weight: 700; margin-bottom: 35px; display: block;">Data. Intelligence. Engineered.</h3>
-							<div class="banner__one-content-button" data-animation="fadeInUp" data-delay="1.4s">
-								<a class="default_button" href="about.html" style="background: #EF7F1A; border-radius: 50px; padding: 15px 40px; color: #fff; font-weight: 700; font-size: 18px;">Get Started</a>
+		<div class="container" style="position: relative; z-index: 5; padding: 120px 0;">
+			<div class="row al-center">
+				<div class="col-xl-7 col-lg-7">
+					<div class="swiper banner-slider" style="overflow: visible;">
+						<div class="swiper-wrapper">
+							<!-- Slide 1: Sunware -->
+							<div class="swiper-slide">
+								<div class="banner__one-content">
+									<h1 data-animation="fadeInUp" data-delay=".2s" style="color: var(--primary-color-1); font-size: 64px; line-height: 1.2; max-width: 100%; margin-bottom: 20px;">Advanced Data & AI Solutions Tailored to Your Needs</h1>
+									<h3 class="subtitle" data-animation="fadeInUp" data-delay=".4s" style="color: #EF7F1A; background: none; border: none; padding: 0; font-size: 32px; font-weight: 700; margin-bottom: 35px; display: block;">Data. Intelligence. Engineered.</h3>
+									<div class="banner__one-content-button" data-animation="fadeInUp" data-delay=".6s">
+										<a class="default_button" href="about.html" style="background: #EF7F1A; border-radius: 50px; padding: 15px 40px; color: #fff; font-weight: 700; font-size: 18px;">Get Started</a>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide 2: EdgeData -->
+							<div class="swiper-slide">
+								<div class="banner__one-content">
+									<h1 data-animation="fadeInUp" data-delay=".2s" style="color: var(--primary-color-1); font-size: 64px; line-height: 1.2; max-width: 100%; margin-bottom: 20px;">Real-Time Edge Intelligence for a Smarter World</h1>
+									<h3 class="subtitle" data-animation="fadeInUp" data-delay=".4s" style="color: #EF7F1A; background: none; border: none; padding: 0; font-size: 32px; font-weight: 700; margin-bottom: 35px; display: block;">Process. Analyze. Act — at the Edge.</h3>
+									<div class="banner__one-content-button" data-animation="fadeInUp" data-delay=".6s">
+										<a class="default_button" href="https://edgedata360.com" target="_blank" style="background: #EF7F1A; border-radius: 50px; padding: 15px 40px; color: #fff; font-weight: 700; font-size: 18px;">Explore EdgeData</a>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide 3: Valutek -->
+							<div class="swiper-slide">
+								<div class="banner__one-content">
+									<h1 data-animation="fadeInUp" data-delay=".2s" style="color: var(--primary-color-1); font-size: 64px; line-height: 1.2; max-width: 100%; margin-bottom: 20px;">Autonomous Ecosystem. Intelligent Infrastructure at Scale.</h1>
+									<h3 class="subtitle" data-animation="fadeInUp" data-delay=".4s" style="color: #EF7F1A; background: none; border: none; padding: 0; font-size: 32px; font-weight: 700; margin-bottom: 35px; display: block;">Reimagining Property Intelligence for Regulated Industries.</h3>
+									<div class="banner__one-content-button" data-animation="fadeInUp" data-delay=".6s">
+										<a class="default_button" href="https://valutek.ai" target="_blank" style="background: #EF7F1A; border-radius: 50px; padding: 15px 40px; color: #fff; font-weight: 700; font-size: 18px;">Discover Valucore</a>
+									</div>
+								</div>
 							</div>
 						</div>
+						<!-- Pagination dots positioned below text area -->
+						<div class="hero-pagination swiper-pagination"></div>
 					</div>
-					<div class="col-xl-5 col-lg-5">
-						<div class="banner__one-hero-img wow fadeInRight" data-delay=".8s">
-							<img src="images/herohero.png" alt="Hero" style="width: 100%; height: auto;">
-						</div>
+				</div>
+				<div class="col-xl-5 col-lg-5">
+					<div class="banner__one-image-area wow fadeInRight" data-wow-delay=".8s" style="position: relative; z-index: 10;">
+						<img src="assets/img/banner/banner-1.jpg" alt="Sunware Services" style="width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.15); display: block;">
 					</div>
 				</div>
 			</div>
@@ -907,19 +978,7 @@
 	</div>
 	<!-- Advantages Area End -->
 
-	<!-- Video Area Start -->
-    <div style="padding: 60px 0; background: #ffffff;">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 t-center">
-                    <div style="position: relative; padding-bottom: 38%; height: 0; overflow: hidden; max-width: 750px; margin: 0 auto; border-radius: 16px; box-shadow: 0 15px 45px rgba(0,0,0,0.15);">
-                        <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/1t_2QZWWz0M?si=yqlb8NxSuL-yJqVX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-	<!-- Video Area End -->
+
 	<!-- Blog Area Start -->
 	<div class="blog__one overflow-hidden section-padding">
 		<div class="container">
@@ -986,25 +1045,23 @@
 
 <!-- Fixed Footer Area Start -->
 <footer class="site-footer">
-	<div class="footer__one" style="padding: 20px 0 50px 0;">
+	<div class="footer__one" style="padding: 15px 0; background-color: #0a0f1e;">
 		<div class="bg_shape" style="background-image: url('assets/img/shape/footer.png');"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-3 col-sm-6">
 					<div class="footer__one-widget">
-						<a class="logo" href="index.html"><img src="images/Sunware-logo-white.png" alt="Sunware Technologies"></a>
-						<p style="font-style: italic; color: #EF7F1A; margin: 15px 0 4px 0; font-size: 14px; font-weight: 500;">Advanced Data & AI Solutions Tailored to Your Needs.</p>
-						<h5 style="font-size: 16px; font-weight: 800; background: linear-gradient(90deg, #ffffff, #EF7F1A); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; margin: 0; text-transform: uppercase; letter-spacing: 0.5px;">Data. Intelligence. Engineered.</h5>
+						<a class="logo" href="index.html"><img src="white Logo.png" alt="Sunware"></a>
 					</div>
 				</div>
-				<div class="col-lg-2 col-sm-6 sm-mt-30">
+				<div class="col-lg-3 col-sm-6 sm-mt-30">
 					<div class="footer__one-widget ml-40 xl-ml-0">
 						<h5>Quick links</h5>
 						<div class="footer-widget-menu">
 							<ul>
 								<li><a href="index.html">Home</a></li>
 								<li><a href="about.html">About Us</a></li>
-								<li><a href="services.html">Services</a></li>
+								<li><a href="#">Services</a></li>
 								<li><a href="careers.html">Careers</a></li>
 								<li><a href="blog.html">Blog</a></li>
 								<li><a href="mailto:sales@sunware.in">Contact Us</a></li>
@@ -1012,7 +1069,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-4 col-sm-6 lg-mt-30">
+				<div class="col-lg-3 col-sm-6 lg-mt-30">
 					<div class="footer__one-widget contact ml-40 xl-ml-0">
 						<h5>Contact</h5>
 						<div class="contact-item mb-15">
@@ -1030,7 +1087,7 @@
 				<div class="col-lg-3 col-sm-6 lg-mt-30">
 					<div class="footer__one-widget social">
 						<h5>Social Media</h5>
-						<p>Stay connected with us for the latest business updates and insights</p>
+						<p>Stay connected with us</p>
 						<ul>
 							<li><a href="https://www.linkedin.com/company/sunware-technologies" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
 							<li><a href="https://www.youtube.com/@sunwaretechnologies" target="_blank"><i class="fab fa-youtube"></i></a></li>
@@ -1039,30 +1096,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-xl-12">
-					<div class="copyright__area" style="padding: 10px 0; margin-top: 15px; border-top: 1px solid rgba(255,255,255,0.08);">
-						<div class="row al-center">
-							<div class="col-md-7">
-								<div class="copyright__area-content md-t-center md-mb-10">
-									<p>Copyright 2026 – All Rights Reserved By <b>Sunware Technologies</b></p>
-								</div>
-							</div>
-							<div class="col-md-5">
-								<div class="footer-widget-menu">
-									<ul class="jc-end lg-jc-center">
-										<li><a href="about.html">Terms & Condition</a></li>
-										<li><a href="about.html">Privacy Policy</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
 		</div>
 	</div>
-	<!-- Footer Area End -->
 </footer>
 
 	<!-- Dynamic Footer Reveal Height Calculation -->
@@ -1153,19 +1188,21 @@
 				var title = entry.title.$t;
 				var link = entry.link.find(l => l.rel === 'alternate').href;
 				
-				// Extract Thumbnail
+				// Extract Thumbnail - Prioritize content images for higher quality
 				var thumb = "assets/img/blog/blog-1.jpg"; // fallback
-				if (entry.media$thumbnail) {
-					thumb = entry.media$thumbnail.url.replace('/s72-c/', '/s640/');
-				} else if (entry.content && entry.content.$t.includes('<img')) {
+				if (entry.content && entry.content.$t.includes('<img')) {
 					var match = entry.content.$t.match(/<img[^>]+src="([^">]+)"/);
 					if (match) thumb = match[1];
+				} else if (entry.media$thumbnail) {
+					thumb = entry.media$thumbnail.url;
 				}
+				// Robustly upgrade quality (works for s* and w* patterns)
+				thumb = thumb.replace(/\/s[0-9]+.*?\/|\/w[0-9]+.*?\//, '/s1600/');
 
 				html += `
 				<div class="blog__one-item swiper-slide">
-					<div class="blog__one-item-image">
-						<a href="blog-details.html?post=${encodeURIComponent(link)}"><img src="${thumb}" alt="${title}" style="height:250px;width:100%;object-fit:cover;"></a>
+					<div class="blog__one-item-image" style="margin-bottom: 25px;">
+						<a href="blog-details.html?post=${encodeURIComponent(link)}"><img src="${thumb}" alt="${title}" style="height:250px;width:100%;object-fit:cover;border-radius:16px;"></a>
 					</div>
 					<div class="blog__one-item-content">                
 						<h5><a href="blog-details.html?post=${encodeURIComponent(link)}">${title}</a></h5>
@@ -1222,8 +1259,6 @@
 		}
 		requestAnimationFrame(raf)
 	</script>
-
-	<!-- Enquire Now Popup Modal -->
 	<div id="enquire-modal" class="modal-overlay">
 		<div class="modal-content-wrapper">
 			<div class="modal-header">
@@ -1346,6 +1381,106 @@
 			.modal-content-wrapper { padding: 30px 20px; }
 			.form-row { flex-direction: column; gap: 0; }
 		}
+
+		/* Global Footer Reveal Fix */
+		body {
+			margin: 0 !important;
+			padding: 0 !important;
+			background: #ffffff !important;
+		}
+
+		.main-content-wrapper {
+			position: relative;
+			z-index: 10;
+			background: #ffffff !important;
+			width: 100%;
+			overflow: hidden;
+		}
+		
+		/* Direct section backgrounds */
+		.banner__one, .industries__one, .about__one, .portfolio__one, 
+		.team__one, .advantages_area, .news__one, .footer__cta, .brand__area {
+			background-color: #ffffff !important;
+			position: relative;
+			z-index: 11;
+			width: 100%;
+		}
+
+		.site-footer {
+			z-index: 1 !important;
+			width: 100%;
+		}
+		
+		/* Hero Pagination Fix */
+		.hero-pagination.swiper-pagination {
+			position: relative !important;
+			bottom: 0 !important;
+			left: 0 !important;
+			margin-top: 40px !important;
+			display: flex !important;
+			justify-content: flex-start !important;
+			gap: 12px !important;
+			width: auto !important;
+			z-index: 20 !important;
+		}
+		.hero-pagination .swiper-pagination-bullet {
+			width: 12px !important;
+			height: 12px !important;
+			background: #cccccc !important;
+			opacity: 1 !important;
+			margin: 0 !important;
+			border-radius: 50% !important;
+			transition: all 0.3s ease !important;
+			border: none !important;
+		}
+		.hero-pagination .swiper-pagination-bullet-active {
+			background: #EF7F1A !important;
+			width: 32px !important;
+			border-radius: 10px !important;
+		}
+		
+		/* Remove stray dots */
+		.swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+			background: #ccc;
+		}
+
+		/* Sticky Header Styles */
+		.header__area.sticky {
+			position: fixed !important;
+			top: 0;
+			left: 0;
+			width: 100%;
+			background: #ffffff;
+			box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+			z-index: 99999;
+			animation: slideInDown 0.4s ease;
+		}
+		@keyframes slideInDown {
+			from { transform: translateY(-100%); }
+			to { transform: translateY(0); }
+		}
+
+		/* Sticky Cards for Portfolio */
+		.portfolio__one .portfolio__one-right {
+			display: flex;
+			flex-direction: column;
+			gap: 40px;
+		}
+		.card_sticky {
+			position: sticky;
+			top: var(--card-top, 100px);
+			transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+			box-shadow: 0 -20px 40px rgba(0,0,0,0.2) !important;
+			border: 1px solid rgba(255,255,255,0.1);
+		}
+		.card_sticky:nth-child(2) { z-index: 2; }
+		.card_sticky:nth-child(3) { z-index: 3; }
+		.card_sticky:nth-child(4) { z-index: 4; }
+
+		@media (max-width: 991px) {
+			.main-content-wrapper { margin-bottom: 0 !important; }
+			.site-footer { position: relative !important; z-index: 20 !important; }
+		}
 	</style>
 
 	<!-- Modal JS -->
@@ -1353,21 +1488,39 @@
 		function openEnquireModal(e) {
 			if(e) e.preventDefault();
 			const modal = document.getElementById('enquire-modal');
-			modal.classList.add('active');
-			document.body.style.overflow = 'hidden';
+			if(modal) {
+				modal.classList.add('active');
+				document.body.style.overflow = 'hidden';
+			}
 		}
 		function closeEnquireModal() {
 			const modal = document.getElementById('enquire-modal');
-			modal.classList.remove('active');
-			document.body.style.overflow = '';
+			if(modal) {
+				modal.classList.remove('active');
+				document.body.style.overflow = '';
+			}
 		}
-		// Close on clicking overlay
-		document.getElementById('enquire-modal').addEventListener('click', function(e) {
-			if (e.target === this) closeEnquireModal();
+		
+		// Hide preloader after load
+		window.addEventListener('load', function() {
+			const loader = document.querySelector('.theme-loader');
+			if(loader) {
+				loader.style.transition = 'opacity 0.5s ease';
+				loader.style.opacity = '0';
+				setTimeout(() => { loader.style.display = 'none'; }, 500);
+			}
 		});
 
-		// Standardize all Enquire Now buttons
 		document.addEventListener('DOMContentLoaded', function() {
+			// Close on clicking overlay
+			const modal = document.getElementById('enquire-modal');
+			if(modal) {
+				modal.addEventListener('click', function(e) {
+					if (e.target === this) closeEnquireModal();
+				});
+			}
+
+			// Standardize all Enquire Now buttons
 			const enquireButtons = document.querySelectorAll('a[href^="mailto:sales@sunware.in"], a[onclick="openEnquireModal(event)"]');
 			enquireButtons.forEach(btn => {
 				btn.setAttribute('href', '#');
@@ -1375,5 +1528,73 @@
 			});
 		});
 	</script>
+	<!-- Hero Slider Init -->
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			// Initialize Hero Slider specifically
+			if (typeof Swiper !== 'undefined') {
+				const heroSlider = new Swiper('.banner-slider', {
+					loop: true,
+					slidesPerView: 1,
+					speed: 1200,
+					effect: 'fade',
+					simulateTouch: false,
+					allowTouchMove: false,
+					fadeEffect: {
+						crossFade: true
+					},
+					autoplay: {
+						delay: 5000,
+						disableOnInteraction: false,
+					},
+					pagination: {
+						el: '.hero-pagination',
+						clickable: true,
+					},
+				});
+
+				// Trigger animations on slide change
+				heroSlider.on('slideChangeTransitionStart', function() {
+					const activeSlide = heroSlider.slides[heroSlider.activeIndex];
+					$(activeSlide).find('[data-animation]').each(function() {
+						const anim = $(this).data('animation');
+						const delay = $(this).data('delay') || '0s';
+						$(this).removeClass('animated ' + anim).hide().show().addClass('animated ' + anim).css({
+							'animation-delay': delay,
+							'visibility': 'visible'
+						});
+					});
+				});
+				
+				// Initial animation for first slide
+				setTimeout(() => {
+					$('.banner-slider .swiper-slide-active [data-animation]').each(function() {
+						const anim = $(this).data('animation');
+						const delay = $(this).data('delay') || '0s';
+						$(this).addClass('animated ' + anim).css({
+							'animation-delay': delay,
+							'visibility': 'visible'
+						});
+					});
+				}, 500);
+			}
+
+			// Sticky Header logic
+			const header = document.querySelector('.header__area');
+			window.addEventListener('scroll', function() {
+				if (window.scrollY > 150) {
+					header.classList.add('sticky');
+				} else {
+					header.classList.remove('sticky');
+				}
+			});
+		});
+	</script>
 </body>
 </html>
+
+
+			
+
+			
+				
