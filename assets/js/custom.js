@@ -36,6 +36,36 @@
         });
     }
 
+    ///=============  * Desktop Megamenu Click  =============\\\
+    jQuery(document).ready(function($) {
+        $('.has-megamenu > a, .has-dropdown > a').off('click').on('click', function(e) {
+            if (window.innerWidth >= 1200) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                var $li = $(this).parent();
+                var isActive = $li.hasClass('active');
+
+                // Close all other open dropdowns
+                $('.has-megamenu, .has-dropdown').not($li).removeClass('active');
+
+                // Toggle the current one
+                if (isActive) {
+                    $li.removeClass('active');
+                } else {
+                    $li.addClass('active');
+                }
+            }
+        });
+
+        // Close when clicking anywhere else
+        $(document).on('click', function(e) {
+            if (!$(e.target).closest('.active').length) {
+                $('.has-megamenu, .has-dropdown').removeClass('active');
+            }
+        });
+    });
+
     ///=============  * Search Icon Popup  =============\\\
     function searchIconPopup() {
         $(".header__area-menubar-center-search-icon.open, .header__area-menubar-right-search-icon.open").on("click", function () {
@@ -539,19 +569,20 @@
     ///=============  * Megamenu Click Toggle  =============\\\
     function megamenuClickToggle() {
         $('.has-megamenu > a').on('click', function (e) {
-            if (window.innerWidth > 991) {
-                // On desktop, prioritize CSS hover. Just prevent default to avoid jumping
-                if ($(this).attr('href') === '#') e.preventDefault();
-                return;
-            }
             e.preventDefault();
             var $megamenu = $(this).siblings('.megamenu');
-            if ($megamenu.css('visibility') === 'visible') {
+            
+            // Toggle visibility for ANY device when clicked
+            if ($megamenu.css('opacity') === '1' || $megamenu.css('visibility') === 'visible') {
                 $megamenu.css({
                     'opacity': '0',
                     'visibility': 'hidden'
                 });
             } else {
+                $('.megamenu').css({
+                    'opacity': '0',
+                    'visibility': 'hidden'
+                });
                 $megamenu.css({
                     'opacity': '1',
                     'visibility': 'visible'
@@ -562,6 +593,16 @@
         // Close megamenu when clicking outside
         $(document).on('click', function (e) {
             if (!$(e.target).closest('.has-megamenu').length) {
+                $('.megamenu').css({
+                    'opacity': '',
+                    'visibility': ''
+                });
+            }
+        });
+
+        // Allow CSS hover to override natively by resetting JS inline styles when hovered out on desktop
+        $('.has-megamenu').on('mouseleave', function() {
+            if (window.innerWidth > 991) {
                 $('.megamenu').css({
                     'opacity': '',
                     'visibility': ''

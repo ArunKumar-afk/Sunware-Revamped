@@ -29,14 +29,8 @@
 	.main-content-wrapper { position: relative; z-index: 2; background: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
 	.site-footer { position: fixed; bottom: 0; left: 0; width: 100%; z-index: 1; visibility: hidden; }
 	.header__area { position: sticky; top: 0; left: 0; width: 100%; z-index: 99999 !important; background: #ffffff !important; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04); }
-	.has-megamenu { position: static !important; }
-	.megamenu { position: absolute; top: 100%; left: 0; width: 100%; background: #fff; box-shadow: 0 20px 40px rgba(0,0,0,0.05); padding: 50px 0; opacity: 0; visibility: hidden; transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1); z-index: 1000; border-bottom: 1px solid #f0f0f0; border-top: 1px solid #f0f0f0; }
-	.megamenu-content { display: flex; max-width: 1200px; margin: 0 auto; padding: 0 20px; gap: 60px; }
-	.megamenu-left, .megamenu-right { flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-	.megamenu-item { display: block; padding: 20px; border-radius: 16px; transition: 0.3s; text-decoration: none !important; color: inherit; background: #fcfdfe; border: 1px solid transparent; }
-	.megamenu-item:hover { background: #f5f8ff; border-color: #e0e7ff; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.03); }
-	.megamenu-item h5 { font-size: 18px; font-weight: 700; color: #EF7F1A; margin-bottom: 8px; }
-	.megamenu-item p { font-size: 14px; color: #666; margin: 0; line-height: 1.5; }
+	/* Megamenu Styles are now in assets/css/style.css */
+
     .careers-iframe { width: 100%; border: none; height: 1800px; min-height: 100vh; border-radius: 24px; box-shadow: 0 20px 50px rgba(0,0,0,0.05); background: #fff; overflow: auto; display: block; }
     .culture-card { background: #fff; padding: 40px; border-radius: 24px; box-shadow: 0 10px 40px rgba(0,0,0,0.02); height: 100%; transition: 0.3s; border: 1px solid #f0f3f7; }
     .culture-card:hover { transform: translateY(-10px); box-shadow: 0 20px 60px rgba(0,0,0,0.08); border-color: #EF7F1A; }
@@ -71,36 +65,34 @@
 								<ul id="mobilemenu">
 									<li><a href="index.html">Home</a></li>
 									<li><a href="about.html">About Us</a></li>
-									<li class="has-megamenu"><a href="#">Services <i class="fal fa-chevron-down" style="font-size:12px;margin-left:4px;"></i></a>
-										<div class="megamenu">
-											<div class="megamenu-content">
-												<div class="megamenu-left">
-													<a href="cloud-solutions.html" class="megamenu-item"><h5>Cloud Solutions</h5><p>Hybrid cloud systems and scalable infrastructure</p></a>
-													<a href="automation-efficiency.html" class="megamenu-item"><h5>Automation</h5><p>Streamlining operations and process efficiency</p></a>
-													<a href="data-science-ai.html" class="megamenu-item"><h5>Data Science & AI</h5><p>Generative AI and predictive analytics solutions</p></a>
-													<a href="salesforce-expertise.html" class="megamenu-item"><h5>Salesforce</h5><p>Implementation, customization and CRM experts</p></a>
-												</div>
-												<div class="megamenu-right">
-													<a href="microsoft-solutions.html" class="megamenu-item"><h5>Microsoft Solutions</h5><p>Enterprise technology stack and Azure services</p></a>
-													<a href="iot-innovations.html" class="megamenu-item"><h5>IoT Innovations</h5><p>Connected smart device ecosystems and and data</p></a>
-												</div>
-											</div>
-										</div>
-									</li>
-									<li class="has-megamenu"><a href="#">Industries <i class="fal fa-chevron-down" style="font-size:12px;margin-left:4px;"></i></a>
-										<div class="megamenu">
-											<div class="megamenu-content">
-												<div class="megamenu-left">
-													<a href="healthcare-lifesciences.html" class="megamenu-item"><h5>Healthcare & Life Sciences</h5><p>Next-gen patient care and R&D data solutions</p></a>
-													<a href="banking-finance.html" class="megamenu-item"><h5>Banking & Finance</h5><p>Digital-first financial ecosystems and fintech</p></a>
-													<a href="retail-ecommerce.html" class="megamenu-item"><h5>Retail & E-commerce</h5><p>Scalable online shopping and customer journeys</p></a>
-													<a href="media-entertainment.html" class="megamenu-item"><h5>Media & Entertainment</h5><p>High-reach interactive digital content solutions</p></a>
+										<li class="has-megamenu"><a href="#">Services <i class="fal fa-chevron-down" style="font-size:12px;margin-left:4px;"></i></a>
+											<div class="megamenu">
+												<div class="megamenu-content">
+													<div class="megamenu-left">
+														<a href="cloud-solutions.html" class="megamenu-item"><h5>Cloud Solutions</h5><p>Hybrid cloud systems and scalable infrastructure</p></a>
+														<a href="automation-efficiency.html" class="megamenu-item"><h5>Automation</h5><p>Streamlining operations and process efficiency</p></a>
+														<a href="data-science-ai.html" class="megamenu-item"><h5>Data Science & AI</h5><p>Generative AI and predictive analytics solutions</p></a>
+														<a href="salesforce-expertise.html" class="megamenu-item"><h5>Salesforce</h5><p>Implementation, customization and CRM experts</p></a>
+													</div>
+													<div class="megamenu-right" style="padding: 20px; display: flex; flex-direction: column; gap: 20px; align-items: flex-start; background: #f9fbff;">
+														<a href="microsoft-solutions.html" class="megamenu-item" style="width: 100%;"><h5>Microsoft Solutions</h5><p>Enterprise technology stack and Azure services</p></a>
+														<a href="iot-innovations.html" class="megamenu-item" style="width: 100%;"><h5>IoT Innovations</h5><p>Connected smart device ecosystems and data</p></a>
+													</div>
 												</div>
 											</div>
-										</div>
-									</li>
-									<li><a href="careers.html" style="color:#EF7F1A">Careers</a></li>
-									<li><a href="blog.html">Blog</a></li>
+										</li>
+										<li class="has-dropdown"><a href="#">Industries <i class="fal fa-chevron-down" style="font-size:12px;margin-left:4px;"></i></a>
+											<div class="dropdown-small">
+												<div class="megamenu-left industries-grid">
+													<a href="healthcare-lifesciences.html" class="megamenu-item"><h5>Healthcare & Life Sciences</h5><p>Next-gen patient care and R&D data</p></a>
+													<a href="banking-finance.html" class="megamenu-item"><h5>Banking & Financial Services</h5><p>Digital transformation and fintech</p></a>
+													<a href="retail-ecommerce.html" class="megamenu-item"><h5>Retail & E-commerce</h5><p>Scalable online customer journeys</p></a>
+													<a href="media-entertainment.html" class="megamenu-item"><h5>Media & Entertainment</h5><p>Interactive digital content solutions</p></a>
+												</div>
+											</div>
+										</li>
+										<li><a href="careers.html" style="color:#EF7F1A">Careers</a></li>
+										<li><a href="blog.html">Blog</a></li>
 								</ul>
 							</div>
 						</div>
