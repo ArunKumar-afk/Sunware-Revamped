@@ -59,7 +59,7 @@
 	</style>
 </head>
     
-<body>
+<body class="data_cursor">
 	<div class="theme-loader"><div class="spinner"><div class="spinner-bounce one"></div><div class="spinner-bounce two"></div><div class="spinner-bounce three"></div></div></div>
 	<div class="cursor"><div class="hide"><div id="cursor-ball"></div></div><div id="cursor-text"></div></div>
 
@@ -68,7 +68,7 @@
 		<ul>
 			<li class="nav-item"><a href="index.html">Home</a></li>
 			<li class="nav-item"><a href="about.html">About Us</a></li>
-			<li class="nav-item"><a href="services.html">Services</a></li>
+			<li class="nav-item"><a href="#">Services</a></li>
 			<li class="nav-item"><a href="healthcare-lifesciences.html">Industries</a></li>
 			<li class="nav-item"><a href="careers.html">Careers</a></li>
 			<li class="nav-item"><a href="blog.html">Blog</a></li>
@@ -95,7 +95,7 @@
 								<ul id="mobilemenu">
 									<li><a href="index.html">Home</a></li>
 									<li><a href="about.html" style="color:#EF7F1A">About Us</a></li>
-									<li class="has-megamenu"><a href="services.html">Services <i class="fal fa-chevron-down" style="font-size:12px;margin-left:4px;"></i></a>
+									<li class="has-megamenu"><a href="#">Services <i class="fal fa-chevron-down" style="font-size:12px;margin-left:4px;"></i></a>
 										<div class="megamenu">
 											<div class="megamenu-content">
 												<div class="megamenu-left">
@@ -138,27 +138,28 @@
 		</div>
 	</header>
 
+	<!-- Banner Area (About Page) -->
 	<div class="banner__one" style="position: relative; overflow: hidden; background: #fff;">
-		<video autoplay loop muted playsinline style="position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; object-fit: cover; transform: translate(-50%, -50%); z-index: 0; opacity: 0.6;">
-			<source src="waves_1.mp4" type="video/mp4">
-		</video>
-		
-		<div class="banner__one-image" style="padding: 10px 0; position: relative; z-index: 1; background: transparent;">
-			<div class="container">
-				<div class="row al-center">
-					<div class="col-xl-6 col-lg-6">
-						<div class="banner__one-content">
-							<h1 style="color: var(--primary-color-1); font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.1; margin-bottom: 20px;">About Sunware Technologies</h1>
-							<h3 class="subtitle wow fadeInLeft" style="color: #EF7F1A; background: none; border: none; padding: 0; font-size: 24px; font-weight: 700; margin-bottom: 25px; display: block;">Engineering Innovative Solutions</h3>
-							<p class="wow fadeInUp" data-wow-delay=".6s" style="font-size: 20px; color: #444; margin-bottom: 30px; line-height: 1.8;">We engineer innovative solutions to empower business with deep technical mastery and groundbreaking AI innovations. Our team transforms complex data challenges into strategic opportunities.</p>
-							<div class="banner__one-content-button wow fadeInUp" data-wow-delay=".8s">
-								<a class="default_button" href="services.html" style="background: #0070D2; border-radius: 50px; padding: 15px 40px; color: #fff;">Our Services</a>
-							</div>
+		<!-- Subtle wave background -->
+		<div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, #f0f4ff 0%, #e8f0fe 50%, #f0f7ff 100%); z-index: 0;"></div>
+
+		<div class="container" style="position: relative; z-index: 5; padding: 120px 0;">
+			<div class="row al-center">
+				<div class="col-xl-7 col-lg-7">
+					<div class="banner__one-content">
+						<h1 data-animation="fadeInUp" data-delay=".2s" style="color: var(--primary-color-1); font-size: 64px; line-height: 1.2; max-width: 100%; margin-bottom: 20px;">About Sunware Technologies</h1>
+						<h3 class="subtitle" data-animation="fadeInUp" data-delay=".4s" style="color: #EF7F1A; background: none; border: none; padding: 0; font-size: 32px; font-weight: 700; margin-bottom: 35px; display: block;">Engineering Innovative Solutions</h3>
+						<p data-animation="fadeInUp" data-delay=".5s" style="font-size: 20px; color: #444; margin-bottom: 30px; line-height: 1.8; max-width: 620px;">We engineer innovative solutions to empower businesses with deep technical mastery and groundbreaking AI innovations. Our team transforms complex data challenges into strategic opportunities.</p>
+						<div class="banner__one-content-button" data-animation="fadeInUp" data-delay=".6s" style="display: flex; gap: 16px; flex-wrap: wrap;">
+							<a class="default_button" href="#" onclick="openEnquireModal(event)" style="background: #EF7F1A; border-radius: 50px; padding: 15px 40px; color: #fff; font-weight: 700;">Get In Touch <i class="flaticon-right-up"></i></a>
+							<a class="default_button" href="cloud-solutions.html" style="background: var(--primary-color-1); border-radius: 50px; padding: 15px 40px; color: #fff; font-weight: 600;">Our Services <i class="flaticon-right-up"></i></a>
 						</div>
 					</div>
-					<div class="col-xl-6 col-lg-6">
-						<div class="about-video-container wow fadeInRight" style="position: relative; width: 100%; padding-top: 56.25%; border-radius: 32px; overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,0.15); border: 8px solid #fff;">
-							<iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/1t_2QZWWz0M?si=yqlb8NxSuL-yJqVX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</div>
+				<div class="col-xl-5 col-lg-5">
+					<div class="banner__one-image-area wow fadeInRight" data-wow-delay=".6s" style="position: relative; z-index: 10;">
+						<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.15); background-color: #000;">
+							<iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/1t_2QZWWz0M?si=0CdhguRS3kDWWQTD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 						</div>
 					</div>
 				</div>
@@ -276,7 +277,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-xl-12">
-				<div class="footer__cta-area mb-60 mt-60">
+				<div class="footer__cta-area mb-60">
 					<div class="row al-center">
 						<div class="col-xl-6 col-lg-7 lg-mb-40">
 							<div class="footer__cta-area-left lg-t-center">
@@ -297,29 +298,27 @@
 			</div>
 		</div>
 	</div>
-</div> <!-- Main Content Wrapper Closing -->
+</div> <!-- main-content-wrapper -->
 
-<!-- Fixed Footer Area Start -->
 <footer class="site-footer">
-	<div class="footer__one" style="padding: 20px 0 50px 0; background-color: #0a0f1e;">
+	<div class="footer__one" style="padding: 15px 0; background-color: #0a0f1e;">
 		<div class="bg_shape" style="background-image: url('assets/img/shape/footer.png');"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-3 col-sm-6">
 					<div class="footer__one-widget">
-						<a class="logo" href="index.html"><img src="images/Sunware-logo-white.png" alt="Sunware Technologies"></a>
+						<a class="logo" href="index.html"><img src="white Logo.png" alt="Sunware"></a>
 						<p style="font-style: italic; color: #EF7F1A; margin: 15px 0 4px 0; font-size: 14px; font-weight: 500;">Advanced Data & AI Solutions Tailored to Your Needs.</p>
-						<h5 style="font-size: 16px; font-weight: 800; background: linear-gradient(90deg, #ffffff, #EF7F1A); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; margin: 0; text-transform: uppercase; letter-spacing: 0.5px;">Data. Intelligence. Engineered.</h5>
 					</div>
 				</div>
-				<div class="col-lg-2 col-sm-6 sm-mt-30">
+				<div class="col-lg-3 col-sm-6 sm-mt-30">
 					<div class="footer__one-widget ml-40 xl-ml-0">
 						<h5>Quick links</h5>
 						<div class="footer-widget-menu">
 							<ul>
 								<li><a href="index.html">Home</a></li>
 								<li><a href="about.html">About Us</a></li>
-								<li><a href="services.html">Services</a></li>
+								<li><a href="#">Services</a></li>
 								<li><a href="careers.html">Careers</a></li>
 								<li><a href="blog.html">Blog</a></li>
 								<li><a href="mailto:sales@sunware.in">Contact Us</a></li>
@@ -327,7 +326,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-4 col-sm-6 lg-mt-30">
+				<div class="col-lg-3 col-sm-6 lg-mt-30">
 					<div class="footer__one-widget contact ml-40 xl-ml-0">
 						<h5>Contact</h5>
 						<div class="contact-item mb-15">
@@ -339,7 +338,7 @@
 				<div class="col-lg-3 col-sm-6 lg-mt-30">
 					<div class="footer__one-widget social">
 						<h5>Social Media</h5>
-						<p>Stay connected with us for latest insights</p>
+						<p>Stay connected with us</p>
 						<ul>
 							<li><a href="https://www.linkedin.com/company/sunware-technologies" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
 							<li><a href="https://www.youtube.com/@sunwaretechnologies" target="_blank"><i class="fab fa-youtube"></i></a></li>
@@ -348,108 +347,69 @@
 					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-xl-12">
-					<div class="copyright__area" style="padding: 10px 0; margin-top: 15px; border-top: 1px solid rgba(255,255,255,0.08);">
-						<div class="row al-center">
-							<div class="col-md-7"><div class="copyright__area-content md-t-center md-mb-10"><p>Copyright 2026 – All Rights Reserved By <b>Sunware Technologies</b></p></div></div>
-							<div class="col-md-5"><div class="footer-widget-menu"><ul class="jc-end lg-jc-center"><li><a href="about.html">Terms & Condition</a></li><li><a href="about.html">Privacy Policy</a></li></ul></div></div>
-						</div>
-					</div>
-				</div>
-			</div>
 		</div>
 	</div>
 </footer>
-
-	<div id="enquire-modal" class="modal-overlay">
-		<div class="modal-content-wrapper">
-			<div class="modal-header">
-				<h3>Start Your Journey</h3>
-				<p>Tell us about your project or business needs.</p>
-				<button class="modal-close" onclick="closeEnquireModal()" aria-label="Close"><i class="fal fa-times"></i></button>
-			</div>
-			<form class="enquire-form">
-				<div class="form-row">
-					<div class="form-group">
-						<label>Full Name</label>
-						<input type="text" placeholder="John Doe" required>
-					</div>
-					<div class="form-group">
-						<label>Email Address</label>
-						<input type="email" placeholder="john@company.com" required>
-					</div>
-				</div>
-				<div class="form-row">
-					<div class="form-group">
-						<label>Phone Number</label>
-						<input type="tel" placeholder="+1 234 567 890" required>
-					</div>
-					<div class="form-group">
-						<label>General Subject</label>
-						<input type="text" placeholder="Explain your inquiry title..." required>
-					</div>
-				</div>
-				<div class="form-group">
-					<label>How can we help?</label>
-					<textarea placeholder="Describe your requirements details..." rows="4" required></textarea>
-				</div>
-				<button type="submit" class="default_button" style="width: 100%; justify-content: center; margin-top: 10px;">Send Inquiry <i class="flaticon-right-up"></i></button>
-			</form>
+<!-- Standardized Modal & Scripts Block -->
+<div id="enquire-modal" class="modal-overlay">
+	<div class="modal-content-wrapper">
+		<div class="modal-header">
+			<h3>Let's Talk</h3>
+			<p>Submit your inquiry and our team will get back to you shortly.</p>
+			<button class="modal-close" onclick="closeEnquireModal()"><i class="fal fa-times"></i></button>
 		</div>
+		<form class="enquire-form">
+			<div class="form-group mb-20"><input type="text" placeholder="Full Name" required></div>
+			<div class="form-group mb-20"><input type="email" placeholder="Email Address" required></div>
+			<div class="form-group mb-20"><input type="text" placeholder="Subject" required></div>
+			<div class="form-group mb-20"><textarea placeholder="Message" rows="4" required></textarea></div>
+			<button type="submit" class="default_button" style="width: 100%; justify-content: center;">Send Inquiry <i class="flaticon-right-up"></i></button>
+		</form>
 	</div>
+</div>
 
-	<style>
-		.modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 15, 30, 0.6); backdrop-filter: blur(12px); z-index: 9999999; display: none; align-items: center; justify-content: center; padding: 20px; opacity: 0; transition: opacity 0.4s ease; }
-		.modal-overlay.active { display: flex; opacity: 1; }
-		.modal-content-wrapper { background: #ffffff; width: 100%; max-width: 700px; padding: 50px; border-radius: 32px; position: relative; transform: scale(0.9); transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); box-shadow: 0 40px 100px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.2); }
-		.modal-overlay.active .modal-content-wrapper { transform: scale(1); }
-		.modal-header h3 { font-size: 36px; font-weight: 800; margin-bottom: 10px; color: #0a0f1e; letter-spacing: -0.02em; }
-		.modal-header p { color: #666; margin-bottom: 35px; font-size: 17px; }
-		.modal-close { position: absolute; top: 24px; right: 24px; background: #f1f3f7; border: none; width: 44px; height: 44px; border-radius: 50%; font-size: 18px; color: #0a0f1e; cursor: pointer; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); display: flex; align-items: center; justify-content: center; z-index: 10; }
-		.modal-close:hover { background: #EF7F1A; color: #fff; transform: rotate(90deg) scale(1.1); box-shadow: 0 4px 12px rgba(239, 127, 26, 0.3); }
-		.form-row { display: flex; gap: 24px; margin-bottom: 24px; }
-		.form-group { flex: 1; display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
-		.form-group label { font-weight: 700; color: #1a1a1a; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; }
-		.form-group input, .form-group select, .form-group textarea { padding: 16px 20px; border-radius: 16px; border: 2px solid #edf0f3; background: #f9fbff; outline: none; transition: 0.3s; font-family: inherit; font-size: 15px; }
-		.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: #EF7F1A; background: #fff; box-shadow: 0 0 0 5px rgba(239, 127, 26, 0.15); }
-		@media (max-width: 600px) { .modal-content-wrapper { padding: 40px 25px; } .form-row { flex-direction: column; gap: 0; } .modal-header h3 { font-size: 28px; } }
-	</style>
+<style>
+	.modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 15, 30, 0.6); backdrop-filter: blur(12px); z-index: 9999999; display: none; align-items: center; justify-content: center; padding: 20px; opacity: 0; transition: opacity 0.4s ease; }
+	.modal-overlay.active { display: flex; opacity: 1; }
+	.modal-content-wrapper { background: #ffffff; width: 100%; max-width: 650px; padding: 40px; border-radius: 24px; position: relative; transform: scale(0.9); transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); box-shadow: 0 40px 100px rgba(0,0,0,0.3); }
+	.modal-overlay.active .modal-content-wrapper { transform: scale(1); }
+	.modal-header h3 { font-size: 32px; font-weight: 700; margin-bottom: 8px; color: #0a0f1e; }
+	.modal-header p { color: #666; margin-bottom: 30px; font-size: 16px; }
+	.modal-close { position: absolute; top: 24px; right: 24px; background: #f1f3f7; border: none; width: 44px; height: 44px; border-radius: 50%; font-size: 18px; color: #0a0f1e; cursor: pointer; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); display: flex; align-items: center; justify-content: center; z-index: 10; }
+	.modal-close:hover { background: #EF7F1A; color: #fff; transform: rotate(90deg) scale(1.1); box-shadow: 0 4px 12px rgba(239, 127, 26, 0.3); }
+	.form-group { flex: 1; display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
+	.form-group input, .form-group textarea { padding: 14px 20px; border-radius: 12px; border: 1px solid #ddd; background: #f8f9fa; outline: none; transition: 0.3s; font-family: inherit; width: 100%; }
+	.form-group input:focus, .form-group textarea:focus { border-color: #EF7F1A; background: #fff; box-shadow: 0 0 0 4px rgba(239, 127, 26, 0.1); }
+</style>
 
-	<script src="assets/js/jquery-3.7.1.min.js"></script>
-	<script src="assets/js/bootstrap.min.js"></script>
-	<script src="assets/js/wow.min.js"></script>
-	<script src="assets/js/gsap.js"></script>
-	<script src="assets/js/scroll-trigger.js"></script>
-	<script src="assets/js/custom.js"></script>
-	<script src="assets/js/nav-overlay.js"></script>
-	<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
-    <script>
-		new WOW().init();
-        const lenis = new Lenis({ duration: 1.5 }); function raf(time) { lenis.raf(time); requestAnimationFrame(raf); } requestAnimationFrame(raf);
-		function openEnquireModal(e) { if(e) e.preventDefault(); document.getElementById('enquire-modal').classList.add('active'); document.body.style.overflow = 'hidden'; }
-		function closeEnquireModal() { document.getElementById('enquire-modal').classList.remove('active'); document.body.style.overflow = ''; }
-        // Close on clicking overlay
-		document.getElementById('enquire-modal').addEventListener('click', function(e) { if (e.target === this) closeEnquireModal(); });
-        
-        const menuItems = document.querySelectorAll('.megamenu-item');
-        const previewImg = document.getElementById('megamenu-preview');
-        menuItems.forEach(item => { item.addEventListener('mouseenter', () => { const img = item.getAttribute('data-image'); if(img && previewImg) previewImg.src = img; }); });
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/gsap.js"></script>
+<script src="assets/js/scroll-trigger.js"></script>
+<script src="assets/js/custom.js"></script>
+<script src="assets/js/nav-overlay.js"></script>
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
 
-        window.addEventListener('load', function() {
-            const loader = document.querySelector('.theme-loader');
-            if(loader) { loader.style.transition = 'opacity 0.5s ease'; loader.style.opacity = '0'; setTimeout(() => { loader.style.display = 'none'; }, 500); }
-        });
+<script>
+	new WOW().init();
+	const lenis = new Lenis({ duration: 1.5 }); function raf(time) { lenis.raf(time); requestAnimationFrame(raf); } requestAnimationFrame(raf);
+	function openEnquireModal(e) { if(e) e.preventDefault(); document.getElementById('enquire-modal').classList.add('active'); if(document.body) document.body.style.overflow = 'hidden'; }
+	function closeEnquireModal() { document.getElementById('enquire-modal').classList.remove('active'); if(document.body) document.body.style.overflow = ''; }
+    
+    // Always hide preloader after load
+    window.addEventListener('load', function() {
+        const loader = document.querySelector('.theme-loader');
+        if(loader) { loader.style.transition = 'opacity 0.5s ease'; loader.style.opacity = '0'; setTimeout(() => { loader.style.display = 'none'; }, 500); }
+    });
 
-        document.addEventListener("DOMContentLoaded",function(){
-            const f=document.querySelector('.site-footer'),w=document.querySelector('.main-content-wrapper');
-            function a(){
-                const h=f.offsetHeight; 
-                if(window.innerWidth<992){f.style.position='relative';f.style.zIndex='auto';f.style.visibility='visible';w.style.marginBottom='0';}
-                else{f.style.position='fixed';f.style.zIndex='1';f.style.visibility='visible';w.style.marginBottom=h+'px';}
-            }
-            a();window.addEventListener('resize',a);
-        });
-	</script>
+	document.addEventListener('DOMContentLoaded', function() {
+		var modal = document.getElementById('enquire-modal');
+		if(modal) { modal.addEventListener('click', function(e) { if (e.target === this) closeEnquireModal(); }); }
+		const f=document.querySelector('.site-footer'),w=document.querySelector('.main-content-wrapper');
+		function a(){ if(!f||!w)return; const h=f.offsetHeight; if(window.innerWidth<992){f.style.position='relative';f.style.visibility='visible';w.style.marginBottom='0';} else{f.style.position='fixed';f.style.visibility='visible';w.style.marginBottom=h+'px';} }
+		a();window.addEventListener('resize',a);
+	});
+</script>
 </body>
 </html>

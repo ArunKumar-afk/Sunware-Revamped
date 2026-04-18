@@ -21,55 +21,29 @@
 	.menu.active span:nth-child(1) { transform: translateY(12px) rotate(45deg); }
 	.menu.active span:nth-child(2) { opacity: 0; }
 	.menu.active span:nth-child(3) { transform: translateY(-12px) rotate(-45deg); }
-
-    @media (max-width: 1199px) {
-        .menu { display: flex; }
-        .header__area-menubar-center { display: none !important; }
-    }
-
+    @media (max-width: 1199px) { .menu { display: flex; } .header__area-menubar-center { display: none !important; } }
 	.js-nav { position: fixed; top: 0; right: 0; width: 100%; height: 100%; z-index: 99990; background: rgba(10, 15, 30, 0.88); backdrop-filter: blur(20px) saturate(120%); transform: translateX(100%); pointer-events: none; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 110px 8vw 80px 8vw; will-change: transform; overflow-y: auto; }
 	.js-nav.active { transform: translateX(0); pointer-events: all; }
 	.nav-item { opacity: 0; transform: translateY(20px); margin-bottom: 4px; list-style: none; }
 	.nav-item a { display: inline-block; font-family: var(--heading-font); font-size: clamp(2.3rem, 5vw, 5rem); font-weight: 700; color: rgba(255, 255, 255, 0.85); line-height: 1.1; text-decoration: none; position: relative; }
-	
 	.main-content-wrapper { position: relative; z-index: 2; background: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
 	.site-footer { position: fixed; bottom: 0; left: 0; width: 100%; z-index: 1; visibility: hidden; }
 	.header__area { position: sticky; top: 0; left: 0; width: 100%; z-index: 99999 !important; background: #ffffff !important; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04); }
-
-	/* ── Megamenu Styles ────────────────────────── */
 	.has-megamenu { position: static !important; }
 	.megamenu { position: absolute; top: 100%; left: 0; width: 100%; background: #fff; box-shadow: 0 20px 40px rgba(0,0,0,0.05); padding: 50px 0; opacity: 0; visibility: hidden; transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1); z-index: 1000; border-bottom: 1px solid #f0f0f0; border-top: 1px solid #f0f0f0; }
-	.has-megamenu:hover .megamenu { opacity: 1; visibility: visible; }
 	.megamenu-content { display: flex; max-width: 1200px; margin: 0 auto; padding: 0 20px; gap: 60px; }
 	.megamenu-left, .megamenu-right { flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 	.megamenu-item { display: block; padding: 20px; border-radius: 16px; transition: 0.3s; text-decoration: none !important; color: inherit; background: #fcfdfe; border: 1px solid transparent; }
 	.megamenu-item:hover { background: #f5f8ff; border-color: #e0e7ff; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.03); }
 	.megamenu-item h5 { font-size: 18px; font-weight: 700; color: #EF7F1A; margin-bottom: 8px; }
 	.megamenu-item p { font-size: 14px; color: #666; margin: 0; line-height: 1.5; }
-	@media (max-width: 991px) {
-		.megamenu-content { flex-direction: column; gap: 20px; }
-		.megamenu-left, .megamenu-right { grid-template-columns: 1fr; }
-	}
-	</style>
-
-    /* Modal Styles */
-    .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 15, 30, 0.6); backdrop-filter: blur(12px); z-index: 9999999; display: none; align-items: center; justify-content: center; padding: 20px; opacity: 0; transition: opacity 0.4s ease; }
-    .modal-overlay.active { display: flex; opacity: 1; }
-    .modal-content-wrapper { background: #ffffff; width: 100%; max-width: 700px; padding: 50px; border-radius: 32px; position: relative; transform: scale(0.9); transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); box-shadow: 0 40px 100px rgba(0,0,0,0.3); }
-    .modal-overlay.active .modal-content-wrapper { transform: scale(1); }
-    .form-group input, .form-group textarea { padding: 16px 20px; border-radius: 16px; border: 2px solid #edf0f3; background: #f9fbff; outline: none; transition: 0.3s; width: 100%; }
-    .form-group input:focus, .form-group textarea:focus { border-color: #EF7F1A; background: #fff; box-shadow: 0 0 0 5px rgba(239, 127, 26, 0.15); }
-    .modal-close { position: absolute; top: 24px; right: 24px; background: #f1f3f7; border: none; width: 44px; height: 44px; border-radius: 50%; font-size: 18px; color: #0a0f1e; cursor: pointer; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); display: flex; align-items: center; justify-content: center; z-index: 10; }
-    .modal-close:hover { background: #EF7F1A; color: #fff; transform: rotate(90deg) scale(1.1); box-shadow: 0 4px 12px rgba(239, 127, 26, 0.3); }
-
-    .careers-iframe { width: 100%; border: none; height: 800px; border-radius: 24px; box-shadow: 0 20px 50px rgba(0,0,0,0.05); }
+    .careers-iframe { width: 100%; border: none; height: 1800px; min-height: 100vh; border-radius: 24px; box-shadow: 0 20px 50px rgba(0,0,0,0.05); background: #fff; overflow: auto; display: block; }
     .culture-card { background: #fff; padding: 40px; border-radius: 24px; box-shadow: 0 10px 40px rgba(0,0,0,0.02); height: 100%; transition: 0.3s; border: 1px solid #f0f3f7; }
     .culture-card:hover { transform: translateY(-10px); box-shadow: 0 20px 60px rgba(0,0,0,0.08); border-color: #EF7F1A; }
     .cursor { z-index: 9999999 !important; pointer-events: none; }
 	</style>
-</head>
     
-<body>
+<body class="data_cursor">
 	<div class="theme-loader"><div class="spinner"><div class="spinner-bounce one"></div><div class="spinner-bounce two"></div><div class="spinner-bounce three"></div></div></div>
 	<div class="cursor"><div class="hide"><div id="cursor-ball"></div></div><div id="cursor-text"></div></div>
 
@@ -78,7 +52,7 @@
 		<ul>
 			<li class="nav-item"><a href="index.html">Home</a></li>
 			<li class="nav-item"><a href="about.html">About Us</a></li>
-			<li class="nav-item"><a href="services.html">Services</a></li>
+			<li class="nav-item"><a href="#">Services</a></li>
 			<li class="nav-item"><a href="healthcare-lifesciences.html">Industries</a></li>
             <li class="nav-item"><a href="careers.html" style="color:#EF7F1A">Careers</a></li>
 			<li class="nav-item"><a href="blog.html">Blog</a></li>
@@ -97,7 +71,7 @@
 								<ul id="mobilemenu">
 									<li><a href="index.html">Home</a></li>
 									<li><a href="about.html">About Us</a></li>
-									<li class="has-megamenu"><a href="services.html">Services <i class="fal fa-chevron-down" style="font-size:12px;margin-left:4px;"></i></a>
+									<li class="has-megamenu"><a href="#">Services <i class="fal fa-chevron-down" style="font-size:12px;margin-left:4px;"></i></a>
 										<div class="megamenu">
 											<div class="megamenu-content">
 												<div class="megamenu-left">
@@ -262,7 +236,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-xl-12">
-				<div class="footer__cta-area mb-60 mt-60">
+				<div class="footer__cta-area mb-60">
 					<div class="row al-center">
 						<div class="col-xl-6 col-lg-7 lg-mb-40">
 							<div class="footer__cta-area-left lg-t-center">
@@ -283,35 +257,47 @@
 			</div>
 		</div>
 	</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 <footer class="site-footer">
-	<div class="footer__one" style="padding: 20px 0 50px 0; background-color: #0a0f1e;">
+	<div class="footer__one" style="padding: 15px 0; background-color: #0a0f1e;">
 		<div class="bg_shape" style="background-image: url('assets/img/shape/footer.png');"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-3 col-sm-6">
 					<div class="footer__one-widget">
-						<a class="logo" href="index.html"><img src="images/Sunware-logo-white.png" alt="Sunware"></a>
+						<a class="logo" href="index.html"><img src="white Logo.png" alt="Sunware"></a>
 						<p style="font-style: italic; color: #EF7F1A; margin: 15px 0 4px 0; font-size: 14px; font-weight: 500;">Advanced Data & AI Solutions Tailored to Your Needs.</p>
-						<h5 style="font-size: 16px; font-weight: 800; color: #fff; margin: 0; text-transform: uppercase;">Data. Intelligence. Engineered.</h5>
 					</div>
 				</div>
-				<div class="col-lg-2 col-sm-6 sm-mt-30">
+				<div class="col-lg-3 col-sm-6 sm-mt-30">
 					<div class="footer__one-widget ml-40 xl-ml-0">
 						<h5>Quick links</h5>
 						<div class="footer-widget-menu">
 							<ul>
 								<li><a href="index.html">Home</a></li>
 								<li><a href="about.html">About Us</a></li>
-								<li><a href="services.html">Services</a></li>
-                                <li><a href="careers.html">Careers</a></li>
+								<li><a href="#">Services</a></li>
+								<li><a href="careers.html">Careers</a></li>
 								<li><a href="blog.html">Blog</a></li>
+								<li><a href="mailto:sales@sunware.in">Contact Us</a></li>
 							</ul>
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-4 col-sm-6 lg-mt-30">
+				<div class="col-lg-3 col-sm-6 lg-mt-30">
 					<div class="footer__one-widget contact ml-40 xl-ml-0">
 						<h5>Contact</h5>
 						<div class="contact-item mb-15">
@@ -335,52 +321,66 @@
 		</div>
 	</div>
 </footer>
-
-	<!-- Modal -->
-	<div class="modal-overlay" id="enquire-modal">
-		<div class="modal-content-wrapper">
-			<div class="modal-header">
-				<h3>Start Your Journey</h3>
-				<p>Submit your inquiry and our team will get back to you shortly.</p>
-				<button class="modal-close" onclick="closeEnquireModal()"><i class="fal fa-times"></i></button>
-			</div>
-			<form class="enquire-form">
-				<div class="form-group mb-20"><input type="text" placeholder="Full Name" required></div>
-				<div class="form-group mb-20"><input type="email" placeholder="Email Address" required></div>
-				<div class="form-group mb-20"><input type="text" placeholder="Subject" required></div>
-				<div class="form-group mb-20"><textarea placeholder="Message" rows="4" required></textarea></div>
-				<button type="submit" class="default_button" style="width: 100%; justify-content: center;">Send Inquiry</button>
-			</form>
+<!-- Standardized Modal & Scripts Block -->
+<div id="enquire-modal" class="modal-overlay">
+	<div class="modal-content-wrapper">
+		<div class="modal-header">
+			<h3>Let's Talk</h3>
+			<p>Submit your inquiry and our team will get back to you shortly.</p>
+			<button class="modal-close" onclick="closeEnquireModal()"><i class="fal fa-times"></i></button>
 		</div>
+		<form class="enquire-form">
+			<div class="form-group mb-20"><input type="text" placeholder="Full Name" required></div>
+			<div class="form-group mb-20"><input type="email" placeholder="Email Address" required></div>
+			<div class="form-group mb-20"><input type="text" placeholder="Subject" required></div>
+			<div class="form-group mb-20"><textarea placeholder="Message" rows="4" required></textarea></div>
+			<button type="submit" class="default_button" style="width: 100%; justify-content: center;">Send Inquiry <i class="flaticon-right-up"></i></button>
+		</form>
 	</div>
+</div>
 
-	<script src="assets/js/jquery-3.7.1.min.js"></script>
-	<script src="assets/js/bootstrap.min.js"></script>
-	<script src="assets/js/wow.min.js"></script>
-	<script src="assets/js/gsap.js"></script>
-	<script src="assets/js/scroll-trigger.js"></script>
-	<script src="assets/js/custom.js"></script>
-	<script src="assets/js/nav-overlay.js"></script>
-	<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
-	<script>
-		new WOW().init();
-		function openEnquireModal(e) { if(e) e.preventDefault(); document.getElementById('enquire-modal').classList.add('active'); }
-		function closeEnquireModal() { document.getElementById('enquire-modal').classList.remove('active'); }
-        
-        window.addEventListener('load', function() {
-            const loader = document.querySelector('.theme-loader');
-            if(loader) { loader.style.opacity = '0'; setTimeout(() => { loader.style.display = 'none'; }, 500); }
-        });
+<style>
+	.modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 15, 30, 0.6); backdrop-filter: blur(12px); z-index: 9999999; display: none; align-items: center; justify-content: center; padding: 20px; opacity: 0; transition: opacity 0.4s ease; }
+	.modal-overlay.active { display: flex; opacity: 1; }
+	.modal-content-wrapper { background: #ffffff; width: 100%; max-width: 650px; padding: 40px; border-radius: 24px; position: relative; transform: scale(0.9); transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); box-shadow: 0 40px 100px rgba(0,0,0,0.3); }
+	.modal-overlay.active .modal-content-wrapper { transform: scale(1); }
+	.modal-header h3 { font-size: 32px; font-weight: 700; margin-bottom: 8px; color: #0a0f1e; }
+	.modal-header p { color: #666; margin-bottom: 30px; font-size: 16px; }
+	.modal-close { position: absolute; top: 24px; right: 24px; background: #f1f3f7; border: none; width: 44px; height: 44px; border-radius: 50%; font-size: 18px; color: #0a0f1e; cursor: pointer; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); display: flex; align-items: center; justify-content: center; z-index: 10; }
+	.modal-close:hover { background: #EF7F1A; color: #fff; transform: rotate(90deg) scale(1.1); box-shadow: 0 4px 12px rgba(239, 127, 26, 0.3); }
+	.form-group { flex: 1; display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
+	.form-group input, .form-group textarea { padding: 14px 20px; border-radius: 12px; border: 1px solid #ddd; background: #f8f9fa; outline: none; transition: 0.3s; font-family: inherit; width: 100%; }
+	.form-group input:focus, .form-group textarea:focus { border-color: #EF7F1A; background: #fff; box-shadow: 0 0 0 4px rgba(239, 127, 26, 0.1); }
+</style>
 
-        document.addEventListener("DOMContentLoaded",function(){
-            const f=document.querySelector('.site-footer'),w=document.querySelector('.main-content-wrapper');
-            function a(){
-                const h=f.offsetHeight; 
-                if(window.innerWidth<992){f.style.position='relative';f.style.visibility='visible';w.style.marginBottom='0';}
-                else{f.style.position='fixed';f.style.visibility='visible';w.style.marginBottom=h+'px';}
-            }
-            a();window.addEventListener('resize',a);
-        });
-	</script>
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/gsap.js"></script>
+<script src="assets/js/scroll-trigger.js"></script>
+<script src="assets/js/custom.js"></script>
+<script src="assets/js/nav-overlay.js"></script>
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+<script>
+	new WOW().init();
+	const lenis = new Lenis({ duration: 1.5 }); function raf(time) { lenis.raf(time); requestAnimationFrame(raf); } requestAnimationFrame(raf);
+	function openEnquireModal(e) { if(e) e.preventDefault(); document.getElementById('enquire-modal').classList.add('active'); if(document.body) document.body.style.overflow = 'hidden'; }
+	function closeEnquireModal() { document.getElementById('enquire-modal').classList.remove('active'); if(document.body) document.body.style.overflow = ''; }
+    
+    // Always hide preloader after load
+    window.addEventListener('load', function() {
+        const loader = document.querySelector('.theme-loader');
+        if(loader) { loader.style.transition = 'opacity 0.5s ease'; loader.style.opacity = '0'; setTimeout(() => { loader.style.display = 'none'; }, 500); }
+    });
+
+	document.addEventListener('DOMContentLoaded', function() {
+		var modal = document.getElementById('enquire-modal');
+		if(modal) { modal.addEventListener('click', function(e) { if (e.target === this) closeEnquireModal(); }); }
+		const f=document.querySelector('.site-footer'),w=document.querySelector('.main-content-wrapper');
+		function a(){ if(!f||!w)return; const h=f.offsetHeight; if(window.innerWidth<992){f.style.position='relative';f.style.visibility='visible';w.style.marginBottom='0';} else{f.style.position='fixed';f.style.visibility='visible';w.style.marginBottom=h+'px';} }
+		a();window.addEventListener('resize',a);
+	});
+</script>
 </body>
 </html>

@@ -97,51 +97,9 @@
         });
     }
 
-    ///=============  * Banner Slider  =============\\\
+    ///=============  * Banner Slider (Disabled - Initialized in index.html)  =============\\\
     function bannerSlider() {
-        let sliderActive1 = '.banner-slider';
-        let sliderInit1 = new Swiper(sliderActive1, {
-            loop: true,
-            slidesPerView: 1,
-            speed: 1000,
-            effect: 'fade',
-            autoplay: {
-                delay: 5500,
-                reverseDirection: false,
-                disableOnInteraction: false,
-            },
-            navigation: {
-                nextEl: '.banner-button-next',
-                prevEl: '.banner-button-prev',
-            },		
-            pagination: {
-                el: ".banner-pagination",
-                clickable: true,
-            },
-        });
-        function animated_swiper(selector, init) {
-            let animated = function animated() {
-                $(selector + ' [data-animation]').each(function() {
-                    let anim = $(this).data('animation');
-                    let delay = $(this).data('delay');
-                    let duration = $(this).data('duration');
-                    $(this).removeClass('anim' + anim).addClass(anim + ' animated').css({
-                        webkitAnimationDelay: delay,
-                        animationDelay: delay,
-                        webkitAnimationDuration: duration,
-                        animationDuration: duration
-                    }).one('animationend', function() {
-                        $(this).removeClass(anim + ' animated');
-                    });
-                });
-            };
-            animated();
-            init.on('slideChange', function() {
-                $(sliderActive1 + ' [data-animation]').removeClass('animated');
-            });
-            init.on('slideChange', animated);
-        }
-        animated_swiper(sliderActive1, sliderInit1);
+        // Initialization moved to index.html for better integration with page-specific animations
     }
 
     ///=============  * Blog Slider  =============\\\
@@ -353,50 +311,65 @@
     function customCursor() {
         var ball = document.getElementById("cursor-ball");
         var cursorText = document.getElementById("cursor-text");
-        var hoverAreas = document.querySelectorAll('.data_cursor');
+        var hoverAreas = document.querySelectorAll('.data_cursor:not(body)');
         var lastHoveredElement = null;
         var mouseX = 0, mouseY = 0;
         var ballX = 0, ballY = 0;
-        var speed = 0.1;
+        var speed = 0.15; // Increased speed for snappier feel
+        
         function updateCursor() {
+            // Smoothly interpolate position
             ballX += (mouseX - ballX) * speed;
             ballY += (mouseY - ballY) * speed;
-            ball.style.left = ballX + "px";
-            ball.style.top = ballY + "px";
-            cursorText.style.left = ballX + "px";
-            cursorText.style.top = ballY + "px";
+            
+            // Use translate3d for GPU acceleration (smoother)
+            const transform = `translate3d(${ballX}px, ${ballY}px, 0)`;
+            ball.style.transform = transform + " translate(-50%, -50%)";
+            cursorText.style.transform = transform + " translate(-50%, -50%)";
+            
             if (lastHoveredElement === null) {
-                ball.style.display = 'block';
-                ball.style.height = "12px";
-                ball.style.width = "12px";
+                ball.style.display = 'none';
                 cursorText.style.opacity = '0';
+            } else {
+                ball.style.display = 'block';
             }
             requestAnimationFrame(updateCursor);
         }
+        
         function handleMouseMove(e) {
-            var scrollX = window.pageXOffset || document.documentElement.scrollLeft;
-            var scrollY = window.pageYOffset || document.documentElement.scrollTop;
-            mouseX = e.clientX + scrollX;
-            mouseY = e.clientY + scrollY;
+            // Use clientX/Y for fixed positioning (smoother, no scroll jump)
+            mouseX = e.clientX;
+            mouseY = e.clientY;
         }
+        
         function handleHoverEnter(e) {
-            cursorText.innerHTML = e.target.getAttribute('data-cursor-text');
+            cursorText.innerHTML = e.target.getAttribute("data-cursor-text") || 'Drag';
             cursorText.style.opacity = '1';
-            ball.style.height = "90px";
-            ball.style.width = "90px";
+            ball.style.height = "60px";
+            ball.style.width = "60px";
+            ball.style.backgroundColor = "#000000"; // Solid black circle
+            ball.style.border = "none";
             lastHoveredElement = e.target;
         }
+        
         function handleHoverLeave(e) {
             cursorText.style.opacity = '0';
-            ball.style.display = 'block';
+            ball.style.height = "12px";
+            ball.style.width = "12px";
+            ball.style.backgroundColor = "var(--color-1)"; // Restore solid ball
+            ball.style.border = "none";
             lastHoveredElement = null;
         }
+        
         document.addEventListener('mousemove', handleMouseMove);
+        
         hoverAreas.forEach(function (elem) {
             elem.addEventListener('mouseenter', handleHoverEnter);
             elem.addEventListener('mouseleave', handleHoverLeave);
         });
+        
         updateCursor();
+        
         $(document).ready(function () {
             toggleCursor($('#cursor_style button.active').data('cursor'));
             $('#cursor_style button').on('click', function () {
@@ -563,27 +536,140 @@
         });
     }
 
+    ///=============  * Megamenu Click Toggle  =============\\\
+    function megamenuClickToggle() {
+        $('.has-megamenu > a').on('click', function (e) {
+            if (window.innerWidth > 991) {
+                // On desktop, prioritize CSS hover. Just prevent default to avoid jumping
+                if ($(this).attr('href') === '#') e.preventDefault();
+                return;
+            }
+            e.preventDefault();
+            var $megamenu = $(this).siblings('.megamenu');
+            if ($megamenu.css('visibility') === 'visible') {
+                $megamenu.css({
+                    'opacity': '0',
+                    'visibility': 'hidden'
+                });
+            } else {
+                $megamenu.css({
+                    'opacity': '1',
+                    'visibility': 'visible'
+                });
+            }
+        });
+
+        // Close megamenu when clicking outside
+        $(document).on('click', function (e) {
+            if (!$(e.target).closest('.has-megamenu').length) {
+                $('.megamenu').css({
+                    'opacity': '',
+                    'visibility': ''
+                });
+            }
+        });
+    }
+
     $(document).ready(function () {
-        themeLoader();
-        menuBarPopup();
-        searchIconPopup();
-        sidebarPopup();
-        counterUp();
-        skillBar();
-        videoPopup();
-        bannerSlider();
-        blogSlider();
-        portfolioTwoSlider();
-        pricingPlan();
-        achievements();
-        teamSlider();
-        testimonialSlider();
-        wowAnimation();
-        portfolioFilter();
-        darkLightSwitch();
-        customCursor();
-        scrollToTop();
-        gsapAnimations();
-        industriesNav();
+        if (typeof themeLoader === 'function') themeLoader();
+        if (typeof menuBarPopup === 'function') menuBarPopup();
+        if (typeof searchIconPopup === 'function') searchIconPopup();
+        if (typeof sidebarPopup === 'function') sidebarPopup();
+        
+        if ($('.counter').length && typeof $.fn.counterUp === 'function') {
+            counterUp();
+        }
+        
+        if ($('.skill__area-item-bar').length && typeof $.fn.appear === 'function') {
+            skillBar();
+        }
+        
+        if ($('.video-popup').length && typeof $.fn.magnificPopup === 'function') {
+            videoPopup();
+        }
+        
+        if ($('.banner-slider').length && typeof Swiper !== 'undefined') {
+            bannerSlider();
+        }
+        
+        if ($('.blog_slider').length && typeof Swiper !== 'undefined') {
+            blogSlider();
+        }
+        
+        if ($('.portfolio_two_slider').length && typeof Swiper !== 'undefined') {
+            portfolioTwoSlider();
+        }
+        
+        if (typeof pricingPlan === 'function') pricingPlan();
+        if (typeof achievements === 'function') achievements();
+        
+        if ($('.team_slider').length && typeof Swiper !== 'undefined') {
+            teamSlider();
+        }
+        
+        if ($('.testimonial_slide').length && typeof Swiper !== 'undefined') {
+            testimonialSlider();
+        }
+        
+        if ($(".wow").length && typeof WOW !== 'undefined') {
+            wowAnimation();
+        }
+        
+        if ($('.gallery__area-active').length && typeof $.fn.isotope === 'function') {
+            portfolioFilter();
+        }
+        
+        if (typeof darkLightSwitch === 'function') darkLightSwitch();
+        if (typeof customCursor === 'function') customCursor();
+        if (typeof scrollToTop === 'function') scrollToTop();
+        
+        if (typeof gsap !== 'undefined') {
+            gsapAnimations();
+        }
+        
+        if (typeof industriesNav === 'function') industriesNav();
+        if (typeof megamenuClickToggle === 'function') megamenuClickToggle();
+        if (typeof stickyHeaderBehavior === 'function') stickyHeaderBehavior();
     });
+
+    ///=============  * Sticky Header Hide/Show Behavior  =============\\\
+    function stickyHeaderBehavior() {
+        const header = document.querySelector('.header__area');
+        if (!header) return;
+        
+        // Add CSS transition for smooth hiding/showing
+        header.style.transition = 'transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1)';
+        header.style.top = '0'; // Keep top constant, use transform for better performance
+        
+        let lastScrollTop = 0;
+        let isScrolling = false;
+        // Pre-calculate to avoid layout thrashing
+        const headerHeight = header.offsetHeight || 100;
+        
+        window.addEventListener('scroll', function() {
+            if (!isScrolling) {
+                window.requestAnimationFrame(function() {
+                    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                    
+                    if (scrollTop > headerHeight * 1.5) {
+                        if (scrollTop > lastScrollTop) {
+                            // Scrolling down - hide header using GPU-accelerated transform
+                            header.style.transform = `translateY(-100%)`;
+                        } else {
+                            // Scrolling up - show header
+                            header.style.transform = 'translateY(0)';
+                        }
+                    } else {
+                        // At the very top
+                        header.style.transform = 'translateY(0)';
+                    }
+                    
+                    lastScrollTop = Math.max(0, scrollTop);
+                    isScrolling = false;
+                });
+                isScrolling = true;
+            }
+        }, { passive: true });
+    }
+
 })(jQuery);
