@@ -38,18 +38,10 @@
 	.site-footer { position: fixed; bottom: 0; left: 0; width: 100%; z-index: 1; visibility: hidden; }
 	.header__area { position: sticky; top: 0; left: 0; width: 100%; z-index: 99999 !important; background: #ffffff !important; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04); }
 
-    /* Megamenu Styles */
-    .has-megamenu { position: static; }
-    .megamenu { position: absolute; top: 100%; left: 0; width: 100%; background: #fff; box-shadow: 0 20px 40px rgba(0,0,0,0.05); padding: 40px 0; opacity: 0; visibility: hidden; transition: 0.4s; z-index: 1000; border-bottom: 1px solid #f0f0f0; }
-    .has-megamenu:hover .megamenu { opacity: 1; visibility: visible; }
-    .megamenu-content { display: flex; max-width: 1200px; margin: 0 auto; padding: 0 15px; gap: 60px; }
-    .megamenu-left { flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-    .megamenu-item { display: block; padding: 20px; border-radius: 12px; transition: 0.3s; text-decoration: none !important; color: inherit; }
-    .megamenu-item:hover { background: #f8faff; }
-    .megamenu-item h5 { font-size: 17px; font-weight: 700; color: #EF7F1A; margin-bottom: 6px; }
-    .megamenu-item p { font-size: 14px; color: #777; margin: 0; }
+    /* Megamenu Styles are now in assets/css/style.css */
 
-	.story-hero { padding: 140px 0; background: linear-gradient(rgba(10,15,30,0.8), rgba(10,15,30,0.8)), url('retail_ecommerce_zigzag_1774872386114.png'); background-size: cover; background-position: center; color: #fff; text-align: center; }
+
+	.story-hero { padding: 140px 0; background: linear-gradient(rgba(10,15,30,0.8), rgba(10,15,30,0.8)), url('images/Industries/Sunware_Industries_Retail-and-E-Commerce_Banner.png'); background-size: cover; background-position: center; color: #fff; text-align: center; }
 	.story-hero h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 800; margin-bottom: 20px; }
 	.story-row { display: flex; align-items: center; gap: 60px; margin-bottom: 100px; }
 	.story-row:nth-child(even) { flex-direction: row-reverse; }
@@ -106,37 +98,32 @@
 								<ul id="mobilemenu">
 									<li><a href="index.html">Home</a></li>
 									<li><a href="about.html">About Us</a></li>
-									<li class="has-megamenu"><a href="#">Services <i class="fal fa-chevron-down" style="font-size:12px;margin-left:4px;"></i></a>
-										<div class="megamenu">
-											<div class="megamenu-content">
-												<div class="megamenu-left">
-													<a href="cloud-solutions.html" class="megamenu-item"><h5>Cloud Solutions</h5><p>Hybrid cloud systems and scalable infrastructure</p></a>
-													<a href="automation-efficiency.html" class="megamenu-item"><h5>Automation</h5><p>Streamlining operations and process efficiency</p></a>
-													<a href="data-science-ai.html" class="megamenu-item"><h5>Data Science & AI</h5><p>Generative AI and predictive analytics solutions</p></a>
-													<a href="salesforce-expertise.html" class="megamenu-item"><h5>Salesforce</h5><p>Implementation, customization and CRM experts</p></a>
-												</div>
-												<div class="megamenu-right" style="width: 400px; border-radius: 20px; display: flex; flex-direction: column; gap: 20px; align-items: flex-start; padding: 20px;">
-													<a href="microsoft-solutions.html" class="megamenu-item" style="width: 100%;"><h5>Microsoft Solutions</h5><p>Enterprise technology stack and Azure services</p></a>
-													<a href="iot-innovations.html" class="megamenu-item" style="width: 100%;"><h5>IoT Innovations</h5><p>Connected smart device ecosystems and data</p></a>
+										<li class="has-dropdown"><a href="#">Services <i class="fal fa-chevron-down" style="font-size:12px;margin-left:4px;"></i></a>
+											<div class="dropdown-small dropdown-align-left" style="width: 680px;">
+												<div class="services-grid">
+													<a href="cloud-solutions.html" class="megamenu-item"><h5>Cloud Solutions</h5><p>Hybrid cloud systems and scalability</p></a>
+													<a href="automation-efficiency.html" class="megamenu-item"><h5>Automation</h5><p>Streamlining operations and efficiency</p></a>
+													<a href="data-science-ai.html" class="megamenu-item"><h5>Data Science & AI</h5><p>Generative AI and analytics</p></a>
+													<a href="salesforce-expertise.html" class="megamenu-item"><h5>Salesforce</h5><p>Implementation and CRM experts</p></a>
+													<a href="microsoft-solutions.html" class="megamenu-item"><h5>Microsoft Solutions</h5><p>Enterprise stack and Azure</p></a>
+													<a href="iot-innovations.html" class="megamenu-item"><h5>IoT Innovations</h5><p>Connected smart device ecosystems</p></a>
 												</div>
 											</div>
-										</div>
-									</li>
-									<li class="has-megamenu"><a href="#" style="color:#EF7F1A">Industries <i class="fal fa-chevron-down" style="font-size:12px;margin-left:4px;"></i></a>
-										<div class="megamenu">
-											<div class="megamenu-content" style="justify-content: center; align-items: center;">
-												<div class="megamenu-left" style="flex: 0 0 1000px; display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+										</li>
+										<li class="has-dropdown"><a href="#" style="color:#EF7F1A">Industries <i class="fal fa-chevron-down" style="font-size:12px;margin-left:4px;"></i></a>
+											<div class="dropdown-small dropdown-align-right" style="width: 550px;">
+												<div class="megamenu-left industries-grid" style="grid-template-columns: 1fr 1fr; width: 550px;">
 													<a href="healthcare-lifesciences.html" class="megamenu-item"><h5>Healthcare & Life Sciences</h5><p>Next-gen patient care and R&D data</p></a>
 													<a href="banking-finance.html" class="megamenu-item"><h5>Banking & Financial Services</h5><p>Digital transformation and fintech</p></a>
 													<a href="retail-ecommerce.html" class="megamenu-item"><h5>Retail & E-commerce</h5><p>Scalable online customer journeys</p></a>
 													<a href="media-entertainment.html" class="megamenu-item"><h5>Media & Entertainment</h5><p>Interactive digital content solutions</p></a>
 												</div>
 											</div>
-										</div>
-									</li>
+										</li>
 									<li><a href="careers.html">Careers</a></li>
 									<li><a href="blog.html">Blog</a></li>
 								</ul>
+
 							</div>
 						</div>
 						<div class="header__area-menubar-right">
@@ -150,14 +137,19 @@
 	</header>
 
 	<section class="story-hero" style="background: linear-gradient(rgba(10,15,30,0.7), rgba(10,15,30,0.8)), url('images/Industries/Sunware_Industries_Retail-and-E-Commerce_Banner.png'); background-size: cover; background-position: center; padding: 40px 0 100px 0;">
-		<div class="container">
-			<div style="text-align: left; margin-bottom: 40px;">
-				<a href="index.html" style="color: #EF7F1A; text-decoration: none; font-weight: 700; font-size: 15px; text-transform: uppercase; letter-spacing: 1px;"><i class="fas fa-arrow-left"></i> Back to Home</a>
+		<div class="container text-center">
+			<div class="wow fadeInUp" data-wow-delay=".2s" style="margin-bottom: 30px;">
+				<a href="index.html" class="default_button" style="padding: 10px 25px; font-size: 14px; background: transparent; border: 1px solid #fff; color: #fff;">
+					<i class="fal fa-long-arrow-left" style="margin-right: 8px;"></i> Back to Home
+				</a>
 			</div>
-			<h1 class="wow fadeInUp" style="color: #ffffff !important; text-shadow: 0 4px 20px rgba(0,0,0,0.5);">Retail & E-Commerce</h1>
-			<p class="wow fadeInUp" data-wow-delay=".2s" style="font-size: 24px; max-width: 900px; margin: 0 auto; color: #ffffff !important; text-shadow: 0 2px 10px rgba(0,0,0,0.4);">Transforming online shopping into personalized journeys through scalable technology.</p>
+			<div class="wow fadeInUp" data-wow-delay=".4s">
+				<h1 style="color: #fff; font-size: clamp(2.5rem, 6vw, 4rem); margin-bottom: 20px;">Retail & E-commerce</h1>
+			</div>
+			<p class="wow fadeInUp" data-wow-delay=".6s" style="font-size: 24px; max-width: 900px; margin: 0 auto; color: #ffffff !important; text-shadow: 0 2px 10px rgba(0,0,0,0.4);">Transforming online shopping into personalized journeys through scalable technology.</p>
 		</div>
 	</section>
+
 
 	<div class="container section-padding">
 		<div class="story-row al-center">
@@ -166,10 +158,11 @@
 				<p style="font-size: 18px; line-height: 1.8; color: #555;">With online sales projected to account for 24% of total retail by 2026, the landscape is shifting rapidly. We empower retailers to not only survive but thrive by delivering unified shopping experiences across all devices.</p>
 			</div>
 			<div class="story-image wow fadeInRight">
-				<img src="retail_ecommerce_zigzag_1774872386114.png" alt="Retail Transformation">
+				<img src="images/Industries/Sunware_Industries_Retail-and-E-Commerce_Our_Tailored_Solutions.png" alt="Retail Transformation">
 			</div>
 		</div>
 	</div>
+
 
 	<div class="container">
 		<div class="row">
@@ -278,19 +271,7 @@
 	</div>
 </div>
 
-<style>
-	.modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 15, 30, 0.6); backdrop-filter: blur(12px); z-index: 9999999; display: none; align-items: center; justify-content: center; padding: 20px; opacity: 0; transition: opacity 0.4s ease; }
-	.modal-overlay.active { display: flex; opacity: 1; }
-	.modal-content-wrapper { background: #ffffff; width: 100%; max-width: 650px; padding: 40px; border-radius: 24px; position: relative; transform: scale(0.9); transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); box-shadow: 0 40px 100px rgba(0,0,0,0.3); }
-	.modal-overlay.active .modal-content-wrapper { transform: scale(1); }
-	.modal-header h3 { font-size: 32px; font-weight: 700; margin-bottom: 8px; color: #0a0f1e; }
-	.modal-header p { color: #666; margin-bottom: 30px; font-size: 16px; }
-	.modal-close { position: absolute; top: 24px; right: 24px; background: #f1f3f7; border: none; width: 44px; height: 44px; border-radius: 50%; font-size: 18px; color: #0a0f1e; cursor: pointer; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); display: flex; align-items: center; justify-content: center; z-index: 10; }
-	.modal-close:hover { background: #EF7F1A; color: #fff; transform: rotate(90deg) scale(1.1); box-shadow: 0 4px 12px rgba(239, 127, 26, 0.3); }
-	.form-group { flex: 1; display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
-	.form-group input, .form-group textarea { padding: 14px 20px; border-radius: 12px; border: 1px solid #ddd; background: #f8f9fa; outline: none; transition: 0.3s; font-family: inherit; width: 100%; }
-	.form-group input:focus, .form-group textarea:focus { border-color: #EF7F1A; background: #fff; box-shadow: 0 0 0 4px rgba(239, 127, 26, 0.1); }
-</style>
+
 
 <script src="assets/js/jquery-3.7.1.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
