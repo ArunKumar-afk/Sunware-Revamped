@@ -12,223 +12,62 @@
 	<link rel="stylesheet" href="../assets/css/animate.css">
 	<link rel="stylesheet" href="../assets/css/style.css">
 	<style>
-		:root {
-			--primary-color: #EF7F1A;
-			--dark-blue: #0a0f1e;
-		}
-		
-		.story-header { 
-			padding: 180px 0 100px; 
-			background: linear-gradient(rgba(10, 15, 30, 0.85), rgba(10, 15, 30, 0.85)), url('../images/Success_Stories/Success_Stories_inner_pages/Sunware_Success-Stories-05_Banner_From_Labs_to_Lives.png'); 
-			background-size: cover;
-			background-position: center;
-			color: #fff; 
-			position: relative; 
-			overflow: hidden; 
-		}
-
-		.story-meta { 
-			display: flex; 
-			gap: 50px; 
-			margin-top: 50px; 
-			flex-wrap: wrap; 
-			position: relative;
-			z-index: 1;
-		}
-		
-		.meta-item span { 
-			display: block; 
-			font-size: 12px; 
-			text-transform: uppercase; 
-			letter-spacing: 2px; 
-			color: rgba(255,255,255,0.5);
-			margin-bottom: 8px; 
-		}
-		
-		.meta-item strong { 
-			font-size: 20px; 
-			color: var(--primary-color); 
-			font-weight: 700;
-		}
-		
-		.content-section { 
-			padding: 100px 0; 
-			background: #fff; 
-		}
-		
-		.content-grid { 
-			display: grid; 
-			grid-template-columns: 1.8fr 1.2fr; 
-			gap: 80px; 
-		}
-		
-		@media (max-width: 991px) { 
-			.content-grid { grid-template-columns: 1fr; gap: 60px; } 
-		}
-		
-		.story-body h2 {
-			font-size: 36px;
-			font-weight: 800;
-			margin-bottom: 30px;
-			color: var(--dark-blue);
-		}
-
-		.story-body h3 {
-			font-size: 24px;
-			font-weight: 700;
-			margin: 40px 0 20px;
-			color: var(--dark-blue);
-		}
-
-		.story-body p {
-			font-size: 18px;
-			line-height: 1.8;
-			color: #555;
-			margin-bottom: 20px;
-		}
-
-		.tag-list {
-			margin-top: 25px;
-			display: flex;
-			flex-wrap: wrap;
-			gap: 10px;
-		}
-
-		.tag-item { 
-			display: inline-block; 
-			padding: 8px 18px; 
-			background: #f8f9fa; 
-			color: #444; 
-			border-radius: 50px; 
-			font-size: 14px; 
-			font-weight: 600; 
-			border: 1px solid #eee;
-		}
-		
-		.impact-card { 
-			background: #fcfcfc; 
-			padding: 50px; 
-			border-radius: 30px; 
-			border: 1px solid #eee;
-			position: sticky; 
-			top: 140px; 
-		}
-		
-		.impact-card h4 {
-			font-size: 26px;
-			font-weight: 800;
-			margin-bottom: 35px;
-			color: var(--dark-blue);
-		}
-
-		.impact-item { 
-			margin-bottom: 30px; 
-			display: flex; 
-			align-items: flex-start; 
-			gap: 20px; 
-		}
-		
-		.impact-item .icon { 
-			width: 32px;
-			height: 32px;
-			background: rgba(40, 167, 69, 0.1);
-			color: #28a745; 
-			border-radius: 50%;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			font-size: 14px;
-			flex-shrink: 0;
-		}
-
-		.impact-item p {
-			margin: 0;
-			font-size: 17px;
-			font-weight: 500;
-			color: #333;
-		}
-		
-		.back-btn { 
-			display: inline-flex; 
-			align-items: center; 
-			gap: 12px; 
-			color: #fff; 
-			text-decoration: none; 
-			margin-bottom: 40px; 
-			font-weight: 600; 
-			font-size: 15px;
-			letter-spacing: 1px;
-			text-transform: uppercase;
-			opacity: 0.7; 
-			transition: 0.3s; 
-		}
-		
-		.back-btn:hover { 
-			opacity: 1; 
-			color: var(--primary-color); 
-			transform: translateX(-8px); 
-		}
-
-        .header__area { 
-			position: fixed; 
-			top: 0; 
-			width: 100%; 
-			z-index: 1000;
-			background: #fff !important; 
-			box-shadow: 0 4px 30px rgba(0,0,0,0.03); 
-		}
-
-		footer {
-			background: #0a0f1e;
-			padding: 40px 0;
-			color: #fff;
-		}
+		.story-header { background-image: url('../images/Success_Stories/Success_Stories_inner_pages/Sunware_Success-Stories-05_Banner_From_Labs_to_Lives.png'); }
 	</style>
 </head>
 <body>
 
-    <header class="header__area">
-        <div class="container">
-            <div class="row al-center">
-                <div class="col-xl-12">
-                    <div class="header__area-menubar" style="padding: 15px 0;">
-                        <div class="header__area-menubar-left">
-                            <a href="../index.html"><img src="../main logo.png" alt="Logo" style="max-height: 40px;"></a>
-                        </div>
-                        <div class="header__area-menubar-right">
-                             <a class="default_button" href="mailto:sales@sunware.in" style="border-radius: 50px;">Enquire Now<i class="flaticon-right-up"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-	<section class="story-header">
-		<div class="container">
-			<a href="../index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
-			<h1 class="wow fadeInUp" style="font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; line-height: 1.1;">Secure the Cure: <span style="color:var(--primary-color)">Clinical Data Analytics</span> Revolution</h1>
-			
-			<div class="story-meta wow fadeInUp" data-wow-delay=".2s">
-				<div class="meta-item">
-					<span>Client</span>
-					<strong>Pharma Giant</strong>
+	<header class="header__area">
+		<div class="container custom-container">
+			<div class="header__area-menubar">
+				<div class="header__area-menubar-left">
+					<div class="header__area-menubar-left-logo">
+						<a href="../index.html"><img src="../assets/img/logo.png" alt="Logo"></a>
+					</div>
 				</div>
-				<div class="meta-item">
-					<span>Industry</span>
-					<strong>Life Sciences</strong>
+				<div class="header__area-menubar-center">
+					<div class="header__area-menubar-center-menu">
+						<ul id="mobilemenu">
+							<li><a href="../index.html">Home</a></li>
+							<li><a href="../about.html">About Us</a></li>
+							<li class="menu-item-has-children"><a href="#">Services</a>
+								<ul class="sub-menu">
+									<li><a href="../services-details.html">Cloud Computing</a></li>
+									<li><a href="../services-details.html">Cyber Security</a></li>
+									<li><a href="../services-details.html">Data Science</a></li>
+								</ul>
+							</li>
+							<li><a href="../careers.html">Careers</a></li>
+							<li><a href="../blog.html">Blog</a></li>
+						</ul>
+					</div>
 				</div>
-				<div class="meta-item">
-					<span>Security</span>
-					<strong>Ironclad patient data</strong>
-				</div>
-				<div class="meta-item">
-					<span>Deployment</span>
-					<strong>Global Multi-tool integration</strong>
+				<div class="header__area-menubar-right">
+					<div class="header__area-menubar-right-box">
+						<div class="header__area-menubar-right-box-btn">
+							<a class="default_button" href="#" onclick="openEnquireModal(event)">Enquire Now<i class="flaticon-right-up"></i></a>
+						</div>
+						<button class="menu js-menu"><span></span><span></span><span></span></button>
+					</div>
 				</div>
 			</div>
 		</div>
-	</section>
+	</header>
+
+	<div class="main-content-wrapper">
+		<section class="story-header">
+			<div class="container">
+				<a href="../index.html#portfolio" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Stories</a>
+				<h1 class="wow fadeInUp" style="font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; line-height: 1.1;">Secure the Cure: <span class="accent-color">Clinical Data Analytics</span></h1>
+				
+				<div class="story-meta wow fadeInUp" data-wow-delay=".2s">
+					<div class="meta-item"><span>Client</span><strong>Pharma Giant</strong></div>
+					<div class="meta-item"><span>Industry</span><strong>Life Sciences</strong></div>
+					<div class="meta-item"><span>Security</span><strong>Ironclad Protection</strong></div>
+					<div class="meta-item"><span>Deployment</span><strong>Global Integration</strong></div>
+				</div>
+			</div>
+		</section>
 
 	<section class="content-section">
 		<div class="container">

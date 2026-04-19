@@ -30,170 +30,15 @@
 	<link rel="stylesheet" href="assets/css/style.css">  
 
 	<!-- Fullscreen Nav CSS -->
+	<!-- Navigation and Layout styles migrated to assets/css/style.css -->
 	<style>
-	/* ── Hamburger ─────────────────────────────────── */
-	.menu {
-		background: none;
-		border: none;
-		cursor: pointer;
-		padding: 8px;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		gap: 0;
-		z-index: 999999;
-		position: relative;
-	}
-	.menu span {
-		display: block;
-		width: 26px;
-		height: 2px;
-		background: var(--text-heading-color);
-		margin: 5px 0;
-		transition: 0.3s;
-		transform-origin: center;
-	}
-	.menu.active span {
-		background: #ffffff; /* Make white when menu is open */
-	}
-	.menu.active span:nth-child(1) {
-		transform: translateY(12px) rotate(45deg);
-	}
-	.menu.active span:nth-child(2) {
-		opacity: 0;
-	}
-	.menu.active span:nth-child(3) {
-		transform: translateY(-12px) rotate(-45deg);
-	}
-
-	/* ── Fullscreen Nav ────────────────────────────── */
-	.js-nav {
-		position: fixed;
-		top: 0;
-		right: 0;
-		width: 100%;
-		height: 100%;
-		z-index: 99990;
-		background: rgba(10, 15, 30, 0.88); /* Premium transparent dark */
-		backdrop-filter: blur(20px) saturate(120%); /* Glassmorphism effect */
-		transform: translateX(100%);
-		pointer-events: none;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: flex-start;
-		padding: 110px 8vw 80px 8vw;
-		will-change: transform;
-	}
-
-	/* Logo inside nav */
-	.js-nav .nav-brand {
-		position: absolute;
-		top: 28px;
-		left: 8vw;
-	}
-	.js-nav .nav-brand img { height: 50px; width: auto; }
-
-	/* Nav list */
-	.js-nav ul {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-	}
-	.nav-item {
-		opacity: 0;
-		transform: translateY(20px);
-		margin-bottom: 4px;
-	}
-	.nav-item a {
-		display: inline-block;
-		font-family: var(--heading-font);
-		font-size: clamp(2.5rem, 5.5vw, 5.5rem);
-		font-weight: 700;
-		color: rgba(255, 255, 255, 0.85); /* High contrast readable text */
-		line-height: 1.1;
-		text-decoration: none;
-		padding: 4px 0;
-		position: relative;
-		transition: color 0.25s ease;
-		letter-spacing: -0.02em;
-	}
-	.nav-item a::after {
-		content: '';
-		position: absolute;
-		bottom: -2px;
-		left: 0;
-		width: 0;
-		height: 3px;
-		background: #EF7F1A;
-		transition: width 0.3s ease;
-	}
-	.nav-item a:hover { color: #ffffff; }
-	.nav-item a:hover::after { width: 100%; }
-
-	/* Social + CTA row */
-	.js-nav .nav-footer {
-		position: absolute;
-		bottom: 48px;
-		left: 8vw;
-		display: flex;
-		align-items: center;
-		gap: 24px;
-	}
-	.js-nav .nav-footer-social { display: flex; gap: 16px; }
-	.js-nav .nav-footer-social a {
-		color: rgba(255,255,255,0.4);
-		font-size: 18px;
-		transition: color 0.2s;
-	}
-	.js-nav .nav-footer-social a:hover { color: #EF7F1A; }
-
-	/* ── Hide old mobile structures ────────────────── */
-	.menu__bar-popup,
-	.menu__bar-popup-overlay,
-	.header__area-menubar-right-sidebar-popup,
-	.sidebar-overlay,
-	.header__area-menubar-right-search-box,
-	#sw-nav-overlay {
-		display: none !important;
-	}
-
-	
-	/* ── Fullscreen Nav scroll capability ── */
-	.js-nav {
-		overflow-y: auto;
-	}
-
-	/* ── Mobile Responsive Overlay Fixes ── */
-	@media (max-width: 575px) {
-		.js-nav {
-			padding-top: 120px;
-			justify-content: flex-start;
-		}
-		.nav-item a {
-			font-size: 2.3rem; /* Tighter sizing on mobile */
-		}
-		.js-nav .nav-footer {
-			position: relative;
-			bottom: auto;
-			left: auto;
-			margin-top: 40px;
-			flex-direction: column;
-			align-items: flex-start;
-			gap: 16px;
-		}
-	}
-	/* ── Tablet/Mobile Hamburger visibility ── */
-	.menu.js-menu { display: none; }
-	@media (max-width: 1199px) {
-		.menu.js-menu { display: flex; }
-		.header-menu { display: none !important; }
-	}
-
-	/* Megamenu Styles are now in assets/css/style.css */
-
+	/* ── Banner Slider Custom Styles ── */
+	.banner-slider { width: 100%; height: 100%; position: relative; }
+	.banner-slider .swiper-slide { opacity: 0 !important; transition: opacity 1.2s ease-in-out !important; visibility: hidden; }
+	.banner-slider .swiper-slide-active { opacity: 1 !important; visibility: visible !important; }
+	.banner-pagination { position: absolute !important; bottom: 40px !important; left: 0; width: 100%; display: flex; justify-content: center; align-items: center; gap: 12px; z-index: 20 !important; }
 	</style>
+
 
 	<!-- Footer Reveal CSS -->
 	<style>
@@ -1127,7 +972,7 @@
 	<!-- Counter up -->
 	<script src="assets/js/jquery.counterup.min.js"></script>
 	<!-- Popper JS -->
-	<script src="assets/js/popper.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 	<!-- Progressbar JS -->
 	<script src="assets/js/progressbar.min.js"></script>
 	<!-- Magnific JS -->
@@ -1221,26 +1066,7 @@
 		});
 	});
 	</script>
-	<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script> 
-	<script>
-		const lenis = new Lenis({
-			duration: 2.0,
-			easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
-			orientation: 'vertical',
-			gestureOrientation: 'vertical',
-			smoothWheel: true,
-			wheelMultiplier: 1.1,
-			smoothTouch: false,
-			touchMultiplier: 2,
-			infinite: false,
-		})
 
-		function raf(time) {
-			lenis.raf(time)
-			requestAnimationFrame(raf)
-		}
-		requestAnimationFrame(raf)
-	</script>
 	<div id="enquire-modal" class="modal-overlay">
 		<div class="modal-content-wrapper">
 			<div class="modal-header">
@@ -1409,148 +1235,83 @@
 		}
 	</style>
 
-	<!-- Stack Cards GSAP Script -->
+	<!-- Core Scripts -->
+	<script src="assets/js/jquery-3.7.1.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/wow.min.js"></script>
+	<script src="assets/js/swiper-bundle.min.js"></script>
+	<script src="assets/js/gsap.js"></script>
+	<script src="assets/js/scroll-trigger.js"></script>
+	<script src="assets/js/custom.js"></script>
+	<script src="assets/js/nav-overlay.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+	<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
 	<script>
-	document.addEventListener('DOMContentLoaded', function() {
-		if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
-		gsap.registerPlugin(ScrollTrigger);
-
-		const cards = document.querySelectorAll('.stack-card');
-		const numCards = cards.length;
-
-		cards.forEach(function(card, i) {
-			// Scale down cards as the next card scrolls over them
-			if (i < numCards - 1) {
-				gsap.to(card, {
-					scale: 0.94,
-					opacity: 0.6,
-					ease: 'none',
-					scrollTrigger: {
-						trigger: cards[i + 1],
-						start: 'top 60%',
-						end: 'top 20%',
-						scrub: true,
-					}
-				});
-			}
-		});
-	});
-	</script>
-
-	<!-- Modal JS -->
-	<script>
-		function openEnquireModal(e) {
-			if(e) e.preventDefault();
-			const modal = document.getElementById('enquire-modal');
-			if(modal) {
-				modal.classList.add('active');
-				document.body.style.overflow = 'hidden';
-			}
-		}
-		function closeEnquireModal() {
-			const modal = document.getElementById('enquire-modal');
-			if(modal) {
-				modal.classList.remove('active');
-				document.body.style.overflow = '';
-			}
-		}
+		new WOW().init();
 		
-		// Hide preloader after load
-		window.addEventListener('load', function() {
-			const loader = document.querySelector('.theme-loader');
-			if(loader) {
-				loader.style.transition = 'opacity 0.5s ease';
-				loader.style.opacity = '0';
-				setTimeout(() => { loader.style.display = 'none'; }, 500);
-			}
-		});
+		// Lenis Smooth Scroll
+		const lenis = new Lenis({ duration: 1.5 });
+		function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+		requestAnimationFrame(raf);
 
 		document.addEventListener('DOMContentLoaded', function() {
-			// Close on clicking overlay
-			const modal = document.getElementById('enquire-modal');
-			if(modal) {
-				modal.addEventListener('click', function(e) {
-					if (e.target === this) closeEnquireModal();
-				});
+			// Footer Reveal Logic
+			const footer = document.querySelector('.site-footer');
+			const mainWrapper = document.querySelector('.main-content-wrapper');
+			function adjustFooterReveal() {
+				if (!footer || !mainWrapper) return;
+				const h = footer.offsetHeight;
+				if (window.innerWidth < 992) {
+					footer.style.position = 'relative';
+					footer.style.visibility = 'visible';
+					mainWrapper.style.marginBottom = '0';
+				} else {
+					footer.style.position = 'fixed';
+					footer.style.visibility = 'visible';
+					mainWrapper.style.marginBottom = h + 'px';
+				}
 			}
+			adjustFooterReveal();
+			window.addEventListener('resize', adjustFooterReveal);
 
-			// Standardize all Enquire Now buttons
-			const enquireButtons = document.querySelectorAll('a[href^="mailto:sales@sunware.in"], a[onclick="openEnquireModal(event)"]');
-			enquireButtons.forEach(btn => {
-				btn.setAttribute('href', '#');
-				btn.addEventListener('click', openEnquireModal);
-			});
-		});
-	</script>
-	<!-- Hero Slider Init -->
-	<script>
-		document.addEventListener("DOMContentLoaded", function() {
-			// Initialize Hero Slider specifically
+			// Hero Slider Init
 			if (typeof Swiper !== 'undefined') {
 				const heroSlider = new Swiper('.banner-slider', {
 					loop: true,
 					slidesPerView: 1,
-					speed: 800,
+					speed: 1000,
 					effect: 'fade',
 					simulateTouch: false,
-					allowTouchMove: false,
-					fadeEffect: {
-						crossFade: true
-					},
-					autoplay: {
-						delay: 3500,
-						disableOnInteraction: false,
-					},
-					pagination: {
-						el: '.hero-pagination',
-						clickable: true,
-					},
+					fadeEffect: { crossFade: true },
+					autoplay: { delay: 4500, disableOnInteraction: false },
+					pagination: { el: '.hero-pagination', clickable: true },
 				});
-
-				// Trigger animations on slide change
 				heroSlider.on('slideChangeTransitionStart', function() {
-					// Apply fadeOut to all elements in the slider during the transition
-					$('.banner-slider .swiper-slide').find('[data-animation]').each(function() {
-						$(this).removeClass('animated fadeIn').addClass('animated fadeOut');
-					});
-					
+					$('.banner-slider .swiper-slide [data-animation]').removeClass('animated fadeIn').addClass('animated fadeOut');
 					setTimeout(() => {
 						const activeSlide = heroSlider.slides[heroSlider.activeIndex];
 						$(activeSlide).find('[data-animation]').each(function() {
 							const anim = $(this).data('animation');
 							const delay = $(this).data('delay') || '0s';
-							$(this).removeClass('animated fadeOut').addClass('animated ' + anim).css({
-								'animation-delay': delay,
-								'visibility': 'visible'
-							});
+							$(this).removeClass('animated fadeOut').addClass('animated ' + anim).css({ 'animation-delay': delay, 'visibility': 'visible' });
 						});
-					}, 300); // Small delay to let fadeOut breathe
+					}, 300);
 				});
-				
-				// Initial animation for first slide
-				setTimeout(() => {
-					$('.banner-slider .swiper-slide-active [data-animation]').each(function() {
-						const anim = $(this).data('animation');
-						const delay = $(this).data('delay') || '0s';
-						$(this).addClass('animated ' + anim).css({
-							'animation-delay': delay,
-							'visibility': 'visible'
-						});
-					});
-				}, 500);
 			}
 
-			// Sticky Header logic
-			const header = document.querySelector('.header__area');
-			window.addEventListener('scroll', function() {
-				if (window.scrollY > 150) {
-					header.classList.add('sticky');
-				} else {
-					header.classList.remove('sticky');
-				}
+			// Custom Cursor Track
+			document.addEventListener('mousemove', (e) => {
+				const cursor = document.querySelector('.cursor-follower');
+				if(cursor) { cursor.style.left = e.clientX + 'px'; cursor.style.top = e.clientY + 'px'; }
 			});
 		});
+
+		// Modal Logic
+		function openEnquireModal(e) { if(e) e.preventDefault(); document.getElementById('enquire-modal').classList.add('active'); document.body.style.overflow = 'hidden'; }
+		function closeEnquireModal() { document.getElementById('enquire-modal').classList.remove('active'); document.body.style.overflow = ''; }
 	</script>
+
 </body>
 </html>
 

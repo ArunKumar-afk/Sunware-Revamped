@@ -10,192 +10,26 @@
 	<link rel="stylesheet" href="../assets/css/fontawesome.css">
 	<link rel="stylesheet" href="../assets/font/flaticon_flexitype.css">
 	<link rel="stylesheet" href="../assets/css/animate.css">
+	<link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
 	<link rel="stylesheet" href="../assets/css/style.css">
 	<style>
-		:root {
-			--primary-color: #EF7F1A;
-			--dark-blue: #0a0f1e;
-		}
-		
-		.story-header { 
-			padding: 180px 0 100px; 
-			background: linear-gradient(rgba(10, 15, 30, 0.85), rgba(10, 15, 30, 0.85)), url('../images/Success_Stories/Success_Stories_inner_pages/Sunware_Success-Stories-02_Banner_Unifying_Data.png'); 
-			background-size: cover;
-			background-position: center;
-			color: #fff; 
-			position: relative; 
-			overflow: hidden; 
-		}
-
-		.story-meta { 
-			display: flex; 
-			gap: 50px; 
-			margin-top: 50px; 
-			flex-wrap: wrap; 
-			position: relative;
-			z-index: 1;
-		}
-		
-		.meta-item span { 
-			display: block; 
-			font-size: 12px; 
-			text-transform: uppercase; 
-			letter-spacing: 2px; 
-			color: rgba(255,255,255,0.5);
-			margin-bottom: 8px; 
-		}
-		
-		.meta-item strong { 
-			font-size: 20px; 
-			color: var(--primary-color); 
-			font-weight: 700;
-		}
-		
-		.content-section { 
-			padding: 100px 0; 
-			background: #fff; 
-		}
-		
-		.content-grid { 
-			display: grid; 
-			grid-template-columns: 1.8fr 1.2fr; 
-			gap: 80px; 
-		}
-		
-		@media (max-width: 991px) { 
-			.content-grid { grid-template-columns: 1fr; gap: 60px; } 
-		}
-		
-		.story-body h2 {
-			font-size: 36px;
-			font-weight: 800;
-			margin-bottom: 30px;
-			color: var(--dark-blue);
-		}
-
-		.story-body h3 {
-			font-size: 24px;
-			font-weight: 700;
-			margin: 40px 0 20px;
-			color: var(--dark-blue);
-		}
-
-		.story-body p {
-			font-size: 18px;
-			line-height: 1.8;
-			color: #555;
-			margin-bottom: 20px;
-		}
-
-		.tag-list {
-			margin-top: 25px;
-			display: flex;
-			flex-wrap: wrap;
-			gap: 10px;
-		}
-
-		.tag-item { 
-			display: inline-block; 
-			padding: 8px 18px; 
-			background: #f8f9fa; 
-			color: #444; 
-			border-radius: 50px; 
-			font-size: 14px; 
-			font-weight: 600; 
-			border: 1px solid #eee;
-		}
-		
-		.impact-card { 
-			background: #fcfcfc; 
-			padding: 50px; 
-			border-radius: 30px; 
-			border: 1px solid #eee;
-			position: sticky; 
-			top: 140px; 
-		}
-		
-		.impact-card h4 {
-			font-size: 26px;
-			font-weight: 800;
-			margin-bottom: 35px;
-			color: var(--dark-blue);
-		}
-
-		.impact-item { 
-			margin-bottom: 30px; 
-			display: flex; 
-			align-items: flex-start; 
-			gap: 20px; 
-		}
-		
-		.impact-item .icon { 
-			width: 32px;
-			height: 32px;
-			background: rgba(40, 167, 69, 0.1);
-			color: #28a745; 
-			border-radius: 50%;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			font-size: 14px;
-			flex-shrink: 0;
-		}
-
-		.impact-item p {
-			margin: 0;
-			font-size: 17px;
-			font-weight: 500;
-			color: #333;
-		}
-		
-		.back-btn { 
-			display: inline-flex; 
-			align-items: center; 
-			gap: 12px; 
-			color: #fff; 
-			text-decoration: none; 
-			margin-bottom: 40px; 
-			font-weight: 600; 
-			font-size: 15px;
-			letter-spacing: 1px;
-			text-transform: uppercase;
-			opacity: 0.7; 
-			transition: 0.3s; 
-		}
-		
-		.back-btn:hover { 
-			opacity: 1; 
-			color: var(--primary-color); 
-			transform: translateX(-8px); 
-		}
-
-        .header__area { 
-			position: fixed; 
-			top: 0; 
-			width: 100%; 
-			z-index: 1000;
-			background: #fff !important; 
-			box-shadow: 0 4px 30px rgba(0,0,0,0.03); 
-		}
-
-		footer {
-			background: #0a0f1e;
-			padding: 40px 0;
-			color: #fff;
-		}
+		.story-header { background-image: url('../images/Success_Stories/Success_Stories_inner_pages/Sunware_Success-Stories-02_Banner_Unifying_Data.png'); }
 	</style>
+
 </head>
 <body>
 
-	<div class="js-nav" role="dialog" aria-modal="true" aria-label="Site Navigation">
+	<!-- Cursor Follower -->
+	<div class="cursor-follower"></div>
+
+	<div class="js-nav">
 		<div class="nav-brand"><a href="../index.html"><img src="../white Logo.png" alt="Sunware"></a></div>
 		<ul>
 			<li class="nav-item"><a href="../index.html">Home</a></li>
 			<li class="nav-item"><a href="../about.html">About Us</a></li>
-			<li class="nav-item"><a href="#">Services</a></li>
-			<li class="nav-item"><a href="../healthcare-lifesciences.html">Industries</a></li>
-			<li class="nav-item"><a href="../careers.html">Careers</a></li>
 			<li class="nav-item"><a href="../blog.html">Blog</a></li>
+			<li class="nav-item"><a href="../careers.html">Careers</a></li>
+			<li class="nav-item"><a href="mailto:sales@sunware.in">Contact</a></li>
 		</ul>
 		<div class="nav-footer">
 			<div class="nav-footer-social">
@@ -203,157 +37,214 @@
 				<a href="https://www.youtube.com/@sunwaretechnologies" target="_blank"><i class="fab fa-youtube"></i></a>
 				<a href="https://www.instagram.com/sunwaretechnologies" target="_blank"><i class="fab fa-instagram"></i></a>
 			</div>
-			<a class="default_button" href="mailto:sales@sunware.in" style="background:#EF7F1A;color:#fff;">Enquire Now <i class="flaticon-right-up"></i></a>
+			<a class="default_button" href="#" onclick="openEnquireModal(event)">Enquire Now <i class="flaticon-right-up"></i></a>
 		</div>
 	</div>
 
-    <header class="header__area">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="header__area-menubar">
-                        <div class="header__area-menubar-left one"><a href="../index.html"><img src="../main logo.png" alt="Sunware" style="height:45px;"></a></div>
-                        <div class="header__area-menubar-center">
-                            <div class="header__area-menubar-center-menu">
-                                <ul>
-                                    <li><a href="../index.html">Home</a></li>
-                                    <li><a href="../about.html">About Us</a></li>
-                                    <li class="has-megamenu"><a href="#">Services <i class="fal fa-chevron-down" style="font-size:12px;margin-left:4px;"></i></a>
-                                        <div class="megamenu">
-                                            <div class="megamenu-content">
-                                                <div class="megamenu-left">
-                                                    <a href="../cloud-solutions.html" class="megamenu-item"><h5>Cloud Solutions</h5><p>Hybrid cloud systems and scalable infrastructure</p></a>
-                                                    <a href="../automation-efficiency.html" class="megamenu-item"><h5>Automation</h5><p>Streamlining operations and process efficiency</p></a>
-                                                    <a href="../data-science-ai.html" class="megamenu-item"><h5>Data Science & AI</h5><p>Generative AI and predictive analytics solutions</p></a>
-                                                    <a href="../salesforce-expertise.html" class="megamenu-item"><h5>Salesforce</h5><p>Implementation, customization and CRM experts</p></a>
-                                                </div>
-                                                <div class="megamenu-right" style="width: 400px; border-radius: 20px; display: flex; flex-direction: column; gap: 20px; align-items: flex-start; padding: 20px;">
-                                                    <a href="../microsoft-solutions.html" class="megamenu-item" style="width: 100%;"><h5>Microsoft Solutions</h5><p>Enterprise technology stack and Azure services</p></a>
-                                                    <a href="../iot-innovations.html" class="megamenu-item" style="width: 100%;"><h5>IoT Innovations</h5><p>Connected smart device ecosystems and data</p></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="has-megamenu"><a href="#">Industries <i class="fal fa-chevron-down" style="font-size:12px;margin-left:4px;"></i></a>
-                                        <div class="megamenu">
-                                            <div class="megamenu-content" style="justify-content: center; align-items: center;">
-                                                <div class="megamenu-left" style="flex: 0 0 1000px; display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
-                                                    <a href="../healthcare-lifesciences.html" class="megamenu-item"><h5>Healthcare & Life Sciences</h5><p>Next-gen patient care and R&D data</p></a>
-                                                    <a href="../banking-finance.html" class="megamenu-item"><h5>Banking & Financial Services</h5><p>Digital transformation and fintech</p></a>
-                                                    <a href="../retail-ecommerce.html" class="megamenu-item"><h5>Retail & E-commerce</h5><p>Scalable online customer journeys</p></a>
-                                                    <a href="../media-entertainment.html" class="megamenu-item"><h5>Media & Entertainment</h5><p>Interactive digital content solutions</p></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li><a href="../careers.html">Careers</a></li>
-                                    <li><a href="../blog.html">Blog</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="header__area-menubar-right">
-                            <div class="header__area-menubar-right-tel lg-display-n"><a class="default_button" href="mailto:sales@sunware.in">Enquire Now<i class="flaticon-right-up"></i></a></div>
-                            <button class="menu js-menu"><span></span><span></span><span></span></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-	<section class="story-header">
+	<header class="header__area">
 		<div class="container">
-			<a href="../index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
-			<h1 class="wow fadeInUp" style="font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; line-height: 1.1;">Unifying Data, <span style="color:var(--primary-color)">Empowering Analytics</span> across Diverse Industries</h1>
-			
-			<div class="story-meta wow fadeInUp" data-wow-delay=".2s">
-				<div class="meta-item">
-					<span>Client</span>
-					<strong>Information Tech</strong>
-				</div>
-				<div class="meta-item">
-					<span>Deployment</span>
-					<strong>Multi-tenant Framework</strong>
-				</div>
-				<div class="meta-item">
-					<span>Capacity</span>
-					<strong>260 C# repositories</strong>
-				</div>
-				<div class="meta-item">
-					<span>Outcome</span>
-					<strong>AI-Driven Workflows</strong>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="content-section">
-		<div class="container">
-			<div class="content-grid">
-				<div class="story-body wow fadeInUp">
-					<h2>The Challenge</h2>
-					<p>Our primary objective was to create a robust solution addressing complex data integration challenges that spanned 260 distinct project repositories. The client required a platform that could seamlessly connect to a wide range of disparate data sources—including databases, APIs, SFTPs, and SCADA systems—while facilitating efficient transformation and workflow orchestration.</p>
-					
-					<h3>Our Solution: Next-Gen Analytics Stack</h3>
-					<p>We engineered a groundbreaking multi-tenant platform using a Java and JavaScript baseline, supported by AWS EKS and Athena. The platform empowers users through dynamic JavaScript generation for transformation rules and leverages OpenAI Llama3 for intelligent data mapping and natural language querying.</p>
-
-					<h3>Technical Stack</h3>
-					<div class="tag-list">
-						<div class="tag-item">Spring Boot</div>
-						<div class="tag-item">AWS Glue</div>
-						<div class="tag-item">PostgreSQL</div>
-						<div class="tag-item">React.JS</div>
-						<div class="tag-item">OpenAI Llama3</div>
-						<div class="tag-item">SFTP / SCADA</div>
-						<div class="tag-item">SFDC Modernization</div>
-					</div>
-
-					<h3>Critical Features</h3>
-					<p>The solution offers effortless data connectivity to third-party systems like PI and SCADA, enabling users to easily configure target destinations. High-fidelity visualizations suggest optimal chart types automatically (with override options), allowing for intuitive data-driven decision making across the organization.</p>
-
-					<h3>Project Conclusion</h3>
-					<p>This implementation represents a paradigm shift in data handling. By simplifying the entire lifecycle from collection to analysis, the platform delivers scalable solutions and intelligent insights that unlock organizational potential and drive superior business outcomes.</p>
-				</div>
-
-				<div class="story-sidebar wow fadeInRight">
-					<div class="impact-card">
-						<h4>Measurable Impact</h4>
-						<div class="impact-item">
-							<div class="icon"><i class="fas fa-check"></i></div>
-							<p>Streamlined data management lifecycle (collection to analysis)</p>
+			<div class="row">
+				<div class="col-xl-12">
+					<div class="header__area-menubar">
+						<div class="header__area-menubar-left one">
+							<div class="header__area-menubar-left-logo">
+								<a href="../index.html"><img src="../white Logo.png" alt="Sunware" class="logo-white" style="height:45px;"></a>
+								<a href="../index.html"><img src="../main logo.png" alt="Sunware" class="logo-dark" style="height:45px; display:none;"></a>
+							</div>
 						</div>
-						<div class="impact-item">
-							<div class="icon"><i class="fas fa-check"></i></div>
-							<p>Effortless configuration of targets and SFTP destinations</p>
+						<div class="header__area-menubar-center">
+							<div class="header__area-menubar-center-menu">
+								<ul>
+									<li><a href="../index.html">Home</a></li>
+									<li><a href="../about.html">About Us</a></li>
+									<li class="has-dropdown"><a href="#">Services <i class="fal fa-chevron-down" style="font-size:12px;margin-left:4px;"></i></a>
+										<div class="dropdown-small dropdown-align-left" style="width: 680px;">
+											<div class="services-grid">
+												<a href="../cloud-solutions.html" class="megamenu-item"><h5>Cloud Solutions</h5><p>Hybrid cloud systems and scalability</p></a>
+												<a href="../automation-efficiency.html" class="megamenu-item"><h5>Automation</h5><p>Streamlining operations and efficiency</p></a>
+												<a href="../data-science-ai.html" class="megamenu-item"><h5>Data Science & AI</h5><p>Generative AI and analytics</p></a>
+												<a href="../salesforce-expertise.html" class="megamenu-item"><h5>Salesforce</h5><p>Implementation and CRM experts</p></a>
+												<a href="../microsoft-solutions.html" class="megamenu-item"><h5>Microsoft Solutions</h5><p>Enterprise stack and Azure</p></a>
+												<a href="../iot-innovations.html" class="megamenu-item"><h5>IoT Innovations</h5><p>Connected smart device ecosystems</p></a>
+											</div>
+										</div>
+									</li>
+									<li><a href="../careers.html">Careers</a></li>
+									<li><a href="../blog.html">Blog</a></li>
+								</ul>
+							</div>
 						</div>
-						<div class="icon-group" style="display:flex; gap:10px; margin-bottom: 20px;">
-							<img src="../images/Success_Stories/Success_Stories_inner_pages/Sunware_Success-Stories-Unifying_Data.png" alt="Data Unification" style="width: 100%; border-radius: 15px;">
-						</div>
-						<div class="impact-item">
-							<div class="icon"><i class="fas fa-check"></i></div>
-							<p>AI-assisted mapping for complex standardized data structures</p>
-						</div>
-						<div class="impact-item">
-							<div class="icon"><i class="fas fa-check"></i></div>
-							<p>High scalability to accommodate rapidly growing data volumes</p>
+						<div class="header__area-menubar-right">
+							<div class="header__area-menubar-right-tel lg-display-n">
+								<a class="default_button" href="#" onclick="openEnquireModal(event)">Enquire Now<i class="flaticon-right-up"></i></a>
+							</div>
+							<button class="menu js-menu"><span></span><span></span><span></span></button>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</section>
+	</header>
 
-	<footer>
-		<div class="container text-center">
-			<img src="../white Logo.png" alt="Logo" style="height: 50px; margin-bottom: 30px;">
-			<p style="opacity: 0.5;">© 2026 Sunware Technologies. All Rights Reserved.</p>
+	<div class="main-content-wrapper">
+		<section class="story-header">
+			<div class="container">
+				<a href="../index.html#portfolio" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Stories</a>
+				<h1 class="wow fadeInUp" style="font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; line-height: 1.1;">Unifying Data, <span class="accent-color">Empowering Analytics</span> across the Enterprise</h1>
+				
+				<div class="story-meta wow fadeInUp" data-wow-delay=".2s">
+					<div class="meta-item"><span>Client</span><strong>Global Enterprise</strong></div>
+					<div class="meta-item"><span>Scale</span><strong>260+ Repositories</strong></div>
+					<div class="meta-item"><span>Stack</span><strong>AWS & Snowflake</strong></div>
+					<div class="meta-item"><span>Outcome</span><strong>Real-Time Insights</strong></div>
+				</div>
+			</div>
+		</section>
+
+		<section class="content-section">
+			<div class="container">
+				<div class="content-grid">
+					<div class="story-body wow fadeInUp">
+						<h2>The Challenge</h2>
+						<p>Our primary objective was to create a robust solution addressing complex data integration challenges that spanned 260 distinct project repositories. The client required a platform that could seamlessly connect to a wide range of disparate data sources—including databases, APIs, SFTPs, and SCADA systems—while facilitating efficient transformation and workflow orchestration.</p>
+						
+						<h3>Our Solution: Next-Gen Analytics Stack</h3>
+						<p>We engineered a groundbreaking multi-tenant platform using a Java and JavaScript baseline, supported by AWS EKS and Athena. The platform empowers users through dynamic JavaScript generation for transformation rules and leverages GenAI for intelligent data mapping and natural language querying.</p>
+
+						<h3>Technical Stack</h3>
+						<div class="tag-list">
+							<div class="tag-item">Java</div><div class="tag-item">AWS EKS</div><div class="tag-item">Athena</div><div class="tag-item">OpenAI</div><div class="tag-item">Kafka</div><div class="tag-item">Snowflake</div><div class="tag-item">Airflow</div><div class="tag-item">React.js</div>
+						</div>
+					</div>
+
+					<div class="story-sidebar wow fadeInRight">
+						<div class="impact-card">
+							<h4>Measurable Impact</h4>
+							<div class="impact-item"><div class="icon"><i class="fas fa-link"></i></div><p>Consolidated 260+ silos into one unified lake</p></div>
+							<div class="impact-item"><div class="icon"><i class="fas fa-bolt"></i></div><p>65% faster data availability for BI teams</p></div>
+							<div class="impact-item"><div class="icon"><i class="fas fa-check"></i></div><p>Automated 90% of ETL maintenance tasks</p></div>
+							<div class="impact-item"><div class="icon"><i class="fas fa-chart-pie"></i></div><p>Enterprise-wide single source of truth</p></div>
+
+							<div style="margin-top: 40px; padding-top: 30px; border-top: 1px solid #eee;">
+								<img src="../images/Success_Stories/Success_Stories_inner_pages/Sunware_Success-Stories_Unifying_Data.png" alt="Data Unification" style="width: 100%; border-radius: 15px;">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Standardized CTA -->
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-12">
+					<div class="footer__cta-area mb-60">
+						<div class="row al-center">
+							<div class="col-xl-6 col-lg-7 lg-mb-40">
+								<div class="footer__cta-area-left lg-t-center">
+									<h2>Build Your Ideal World — We’re Ready!</h2>
+								</div>
+							</div>
+							<div class="col-xl-6 col-lg-5">
+								<div class="footer__cta-area-right d-flex al-center flex-wrap jc-end lg-jc-center gap-25">
+									<a class="default_button" href="#" onclick="openEnquireModal(event)">Start Today<i class="flaticon-right-up"></i></a>
+									<div class="footer__cta-area-right-tel">
+										<div class="footer__cta-area-right-tel-icon"><i class="flaticon-phone-call"></i></div>
+										<div class="footer__cta-area-right-tel-info"><span>Call Us Now</span><h6><a href="tel:(415)755-7890">(415) 755-7890</a></h6></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> <!-- main-content-wrapper -->
+
+	<footer class="site-footer">
+		<div class="footer__one" style="padding: 15px 0; background-color: #0a0f1e;">
+			<div class="container">
+				<div class="row al-center">
+					<div class="col-lg-3 col-sm-6"><a class="logo" href="../index.html"><img src="../white Logo.png" alt="Sunware" style="height:40px;"></a></div>
+					<div class="col-lg-6 col-sm-6 text-center text-white-50"><p style="margin:0;">© 2026 Sunware Technologies. All Rights Reserved.</p></div>
+					<div class="col-lg-3 col-sm-6 text-end text-white-50"><p style="margin:0;">Data. Intelligence. Engineered.</p></div>
+				</div>
+			</div>
 		</div>
 	</footer>
 
     <script src="../assets/js/jquery-3.7.1.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
     <script src="../assets/js/wow.min.js"></script>
+	<script src="../assets/js/anime.min.js"></script>
+	<script src="../assets/js/nav-overlay.js"></script>
     <script>
         new WOW().init();
+		
+		// Header Sticky + Logo Toggle
+		window.addEventListener('scroll', function() {
+			const header = document.querySelector('.header__area');
+			const logoWhite = document.querySelector('.logo-white');
+			const logoDark = document.querySelector('.logo-dark');
+			if (window.scrollY > 150) {
+				header.classList.add('sticky');
+				logoWhite.style.display = 'none';
+				logoDark.style.display = 'block';
+			} else {
+				header.classList.remove('sticky');
+				logoWhite.style.display = 'block';
+				logoDark.style.display = 'none';
+			}
+		});
+
+		// Footer Reveal
+		document.addEventListener("DOMContentLoaded", function () {
+			const footer = document.querySelector('.site-footer');
+			const mainWrapper = document.querySelector('.main-content-wrapper');
+			function adjust() {
+				if (!footer || !mainWrapper) return;
+				if (window.innerWidth < 992) { footer.style.position = 'relative'; footer.style.visibility = 'visible'; mainWrapper.style.marginBottom = '0'; }
+				else { footer.style.position = 'fixed'; footer.style.visibility = 'visible'; mainWrapper.style.marginBottom = footer.offsetHeight + 'px'; }
+			}
+			adjust(); window.addEventListener('resize', adjust);
+		});
+
+		// Custom Cursor Sync
+		document.addEventListener('mousemove', (e) => {
+			const cursor = document.querySelector('.cursor-follower');
+			if(cursor) { cursor.style.left = e.clientX + 'px'; cursor.style.top = e.clientY + 'px'; }
+		});
     </script>
+
+	<!-- Standard Modal -->
+	<div id="enquire-modal" class="modal-overlay">
+		<div class="modal-content-wrapper">
+			<div class="modal-header">
+				<h3>Start Your Journey</h3>
+				<p>Tell us about your project or business needs.</p>
+				<button class="modal-close" onclick="closeEnquireModal()"><i class="fal fa-times"></i></button>
+			</div>
+			<form class="enquire-form" action="#">
+				<div class="form-group">
+					<input type="text" placeholder="Full Name" required>
+				</div>
+				<div class="form-group">
+					<input type="email" placeholder="Corporate Email" required>
+				</div>
+				<div class="form-group">
+					<textarea placeholder="How can we help?" rows="4" required></textarea>
+				</div>
+				<button type="submit" class="default_button" style="width: 100%; justify-content: center;">Send Inquiry <i class="flaticon-right-up"></i></button>
+			</form>
+		</div>
+	</div>
+	<style>
+		.modal-header h3 { font-size: 28px; font-weight: 800; color: #0a0f1e; margin-bottom: 8px; }
+		.modal-header p { color: #666; margin-bottom: 30px; }
+	</style>
+	<script>
+		function openEnquireModal(e) { if(e) e.preventDefault(); document.getElementById('enquire-modal').classList.add('active'); }
+		function closeEnquireModal() { document.getElementById('enquire-modal').classList.remove('active'); }
+	</script>
 </body>
 </html>

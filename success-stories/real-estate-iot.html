@@ -12,280 +12,62 @@
 	<link rel="stylesheet" href="../assets/css/animate.css">
 	<link rel="stylesheet" href="../assets/css/style.css">
 	<style>
-		:root {
-			--primary-color: #EF7F1A;
-			--dark-blue: #0a0f1e;
-		}
-		
-		.story-header { 
-			padding: 180px 0 100px; 
-			background: linear-gradient(rgba(10, 15, 30, 0.85), rgba(10, 15, 30, 0.85)), url('../images/Success_Stories/Success_Stories_inner_pages/Sunware_Success-Stories-06_Beyond_Brick_and_Mortar.png'); 
-			background-size: cover;
-			background-position: center;
-			color: #fff; 
-			position: relative; 
-			overflow: hidden; 
-		}
-
-		.story-meta { 
-			display: flex; 
-			gap: 50px; 
-			margin-top: 50px; 
-			flex-wrap: wrap; 
-			position: relative;
-			z-index: 1;
-		}
-		
-		.meta-item span { 
-			display: block; 
-			font-size: 12px; 
-			text-transform: uppercase; 
-			letter-spacing: 2px; 
-			color: rgba(255,255,255,0.5);
-			margin-bottom: 8px; 
-		}
-		
-		.meta-item strong { 
-			font-size: 20px; 
-			color: var(--primary-color); 
-			font-weight: 700;
-		}
-		
-		.content-section { 
-			padding: 100px 0; 
-			background: #fff; 
-		}
-		
-		.content-grid { 
-			display: grid; 
-			grid-template-columns: 1.8fr 1.2fr; 
-			gap: 80px; 
-		}
-		
-		@media (max-width: 991px) { 
-			.content-grid { grid-template-columns: 1fr; gap: 60px; } 
-		}
-		
-		.story-body h2 {
-			font-size: 36px;
-			font-weight: 800;
-			margin-bottom: 30px;
-			color: var(--dark-blue);
-		}
-
-		.story-body h3 {
-			font-size: 24px;
-			font-weight: 700;
-			margin: 40px 0 20px;
-			color: var(--dark-blue);
-		}
-
-		.story-body p {
-			font-size: 18px;
-			line-height: 1.8;
-			color: #555;
-			margin-bottom: 20px;
-		}
-
-		.tag-list {
-			margin-top: 25px;
-			display: flex;
-			flex-wrap: wrap;
-			gap: 10px;
-		}
-
-		.tag-item { 
-			display: inline-block; 
-			padding: 8px 18px; 
-			background: #f8f9fa; 
-			color: #444; 
-			border-radius: 50px; 
-			font-size: 14px; 
-			font-weight: 600; 
-			border: 1px solid #eee;
-		}
-		
-		.impact-card { 
-			background: #fcfcfc; 
-			padding: 50px; 
-			border-radius: 30px; 
-			border: 1px solid #eee;
-			position: sticky; 
-			top: 140px; 
-		}
-		
-		.impact-card h4 {
-			font-size: 26px;
-			font-weight: 800;
-			margin-bottom: 35px;
-			color: var(--dark-blue);
-		}
-
-		.impact-item { 
-			margin-bottom: 30px; 
-			display: flex; 
-			align-items: flex-start; 
-			gap: 20px; 
-		}
-		
-		.impact-item .icon { 
-			width: 32px;
-			height: 32px;
-			background: rgba(40, 167, 69, 0.1);
-			color: #28a745; 
-			border-radius: 50%;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			font-size: 14px;
-			flex-shrink: 0;
-		}
-
-		.impact-item p {
-			margin: 0;
-			font-size: 17px;
-			font-weight: 500;
-			color: #333;
-		}
-		
-		.back-btn { 
-			display: inline-flex; 
-			align-items: center; 
-			gap: 12px; 
-			color: #fff; 
-			text-decoration: none; 
-			margin-bottom: 40px; 
-			font-weight: 600; 
-			font-size: 15px;
-			letter-spacing: 1px;
-			text-transform: uppercase;
-			opacity: 0.7; 
-			transition: 0.3s; 
-		}
-		
-		.back-btn:hover { 
-			opacity: 1; 
-			color: var(--primary-color); 
-			transform: translateX(-8px); 
-		}
-
-        .header__area { 
-			position: fixed; 
-			top: 0; 
-			width: 100%; 
-			z-index: 1000;
-			background: #fff !important; 
-			box-shadow: 0 4px 30px rgba(0,0,0,0.03); 
-		}
-
-		footer {
-			background: #0a0f1e;
-			padding: 40px 0;
-			color: #fff;
-		}
+		.story-header { background-image: url('../images/Success_Stories/Success_Stories_inner_pages/Sunware_Success-Stories-06_Beyond_Brick_and_Mortar.png'); }
 	</style>
 </head>
 <body>
 
-	<div class="js-nav" role="dialog" aria-modal="true" aria-label="Site Navigation">
-		<div class="nav-brand"><a href="../index.html"><img src="../white Logo.png" alt="Sunware"></a></div>
-		<ul>
-			<li class="nav-item"><a href="../index.html">Home</a></li>
-			<li class="nav-item"><a href="../about.html">About Us</a></li>
-			<li class="nav-item"><a href="#">Services</a></li>
-			<li class="nav-item"><a href="../healthcare-lifesciences.html">Industries</a></li>
-			<li class="nav-item"><a href="../careers.html">Careers</a></li>
-			<li class="nav-item"><a href="../blog.html">Blog</a></li>
-		</ul>
-		<div class="nav-footer">
-			<div class="nav-footer-social">
-				<a href="https://www.linkedin.com/company/sunware-technologies" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-				<a href="https://www.youtube.com/@sunwaretechnologies" target="_blank"><i class="fab fa-youtube"></i></a>
-				<a href="https://www.instagram.com/sunwaretechnologies" target="_blank"><i class="fab fa-instagram"></i></a>
-			</div>
-			<a class="default_button" href="mailto:sales@sunware.in" style="background:#EF7F1A;color:#fff;">Enquire Now <i class="flaticon-right-up"></i></a>
-		</div>
-	</div>
-
-    <header class="header__area">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="header__area-menubar">
-                        <div class="header__area-menubar-left one"><a href="../index.html"><img src="../main logo.png" alt="Sunware" style="height:45px;"></a></div>
-                        <div class="header__area-menubar-center">
-                            <div class="header__area-menubar-center-menu">
-                                <ul>
-                                    <li><a href="../index.html">Home</a></li>
-                                    <li><a href="../about.html">About Us</a></li>
-                                    <li class="has-megamenu"><a href="#">Services <i class="fal fa-chevron-down" style="font-size:12px;margin-left:4px;"></i></a>
-                                        <div class="megamenu">
-                                            <div class="megamenu-content">
-                                                <div class="megamenu-left">
-                                                    <a href="../cloud-solutions.html" class="megamenu-item"><h5>Cloud Solutions</h5><p>Hybrid cloud systems and scalable infrastructure</p></a>
-                                                    <a href="../automation-efficiency.html" class="megamenu-item"><h5>Automation</h5><p>Streamlining operations and process efficiency</p></a>
-                                                    <a href="../data-science-ai.html" class="megamenu-item"><h5>Data Science & AI</h5><p>Generative AI and predictive analytics solutions</p></a>
-                                                    <a href="../salesforce-expertise.html" class="megamenu-item"><h5>Salesforce</h5><p>Implementation, customization and CRM experts</p></a>
-                                                </div>
-                                                <div class="megamenu-right" style="width: 400px; border-radius: 20px; display: flex; flex-direction: column; gap: 20px; align-items: flex-start; padding: 20px;">
-                                                    <a href="../microsoft-solutions.html" class="megamenu-item" style="width: 100%;"><h5>Microsoft Solutions</h5><p>Enterprise technology stack and Azure services</p></a>
-                                                    <a href="../iot-innovations.html" class="megamenu-item" style="width: 100%;"><h5>IoT Innovations</h5><p>Connected smart device ecosystems and data</p></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="has-megamenu"><a href="#">Industries <i class="fal fa-chevron-down" style="font-size:12px;margin-left:4px;"></i></a>
-                                        <div class="megamenu">
-                                            <div class="megamenu-content" style="justify-content: center; align-items: center;">
-                                                <div class="megamenu-left" style="flex: 0 0 1000px; display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
-                                                    <a href="../healthcare-lifesciences.html" class="megamenu-item"><h5>Healthcare & Life Sciences</h5><p>Next-gen patient care and R&D data</p></a>
-                                                    <a href="../banking-finance.html" class="megamenu-item"><h5>Banking & Financial Services</h5><p>Digital transformation and fintech</p></a>
-                                                    <a href="../retail-ecommerce.html" class="megamenu-item"><h5>Retail & E-commerce</h5><p>Scalable online customer journeys</p></a>
-                                                    <a href="../media-entertainment.html" class="megamenu-item"><h5>Media & Entertainment</h5><p>Interactive digital content solutions</p></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li><a href="../careers.html">Careers</a></li>
-                                    <li><a href="../blog.html">Blog</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="header__area-menubar-right">
-                            <div class="header__area-menubar-right-tel lg-display-n"><a class="default_button" href="mailto:sales@sunware.in">Enquire Now<i class="flaticon-right-up"></i></a></div>
-                            <button class="menu js-menu"><span></span><span></span><span></span></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-	<section class="story-header">
-		<div class="container">
-			<a href="../index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
-			<h1 class="wow fadeInUp" style="font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; line-height: 1.1;">Building a Digital <span style="color:var(--primary-color)">Future for Real Estate</span></h1>
-			
-			<div class="story-meta wow fadeInUp" data-wow-delay=".2s">
-				<div class="meta-item">
-					<span>Client</span>
-					<strong>Real Estate Giant</strong>
+	<header class="header__area">
+		<div class="container custom-container">
+			<div class="header__area-menubar">
+				<div class="header__area-menubar-left">
+					<div class="header__area-menubar-left-logo">
+						<a href="../index.html"><img src="../assets/img/logo.png" alt="Logo"></a>
+					</div>
 				</div>
-				<div class="meta-item">
-					<span>Industry</span>
-					<strong>Real Estate SaaS</strong>
+				<div class="header__area-menubar-center">
+					<div class="header__area-menubar-center-menu">
+						<ul id="mobilemenu">
+							<li><a href="../index.html">Home</a></li>
+							<li><a href="../about.html">About Us</a></li>
+							<li class="menu-item-has-children"><a href="#">Services</a>
+								<ul class="sub-menu">
+									<li><a href="../services-details.html">Cloud Computing</a></li>
+									<li><a href="../services-details.html">Cyber Security</a></li>
+									<li><a href="../services-details.html">Data Science</a></li>
+								</ul>
+							</li>
+							<li><a href="../careers.html">Careers</a></li>
+							<li><a href="../blog.html">Blog</a></li>
+						</ul>
+					</div>
 				</div>
-				<div class="meta-item">
-					<span>Deployment</span>
-					<strong>Multi-tenant Framework</strong>
-				</div>
-				<div class="meta-item">
-					<span>Outcome</span>
-					<strong>Automated Leasing IoT</strong>
+				<div class="header__area-menubar-right">
+					<div class="header__area-menubar-right-box">
+						<div class="header__area-menubar-right-box-btn">
+							<a class="default_button" href="#" onclick="openEnquireModal(event)">Enquire Now<i class="flaticon-right-up"></i></a>
+						</div>
+						<button class="menu js-menu"><span></span><span></span><span></span></button>
+					</div>
 				</div>
 			</div>
 		</div>
-	</section>
+	</header>
+
+	<div class="main-content-wrapper">
+		<section class="story-header">
+			<div class="container">
+				<a href="../index.html#portfolio" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Stories</a>
+				<h1 class="wow fadeInUp" style="font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; line-height: 1.1;">Building a Digital <span class="accent-color">Future for Real Estate</span></h1>
+				
+				<div class="story-meta wow fadeInUp" data-wow-delay=".2s">
+					<div class="meta-item"><span>Client</span><strong>Real Estate Giant</strong></div>
+					<div class="meta-item"><span>Industry</span><strong>Real Estate SaaS</strong></div>
+					<div class="meta-item"><span>Deployment</span><strong>Multi-tenant</strong></div>
+					<div class="meta-item"><span>Outcome</span><strong>Automated Leasing</strong></div>
+				</div>
+			</div>
+		</section>
 
 	<section class="content-section">
 		<div class="container">

@@ -1,238 +1,126 @@
-<!-- Layout Top -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<!-- Start Meta -->
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-	<meta name="description" content="Sunware Technologies - Blog Details"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- Title of Site -->
 	<title>Blog Details - Sunware Technologies</title>
-	<!-- Favicons -->
 	<link rel="icon" type="image/png" href="favicon.png">
-	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-	<!-- Font Awesome -->
 	<link rel="stylesheet" href="assets/css/fontawesome.css">
-	<!-- Flaticon -->
 	<link rel="stylesheet" href="assets/font/flaticon_flexitype.css">	
-	<!-- Animate CSS -->
 	<link rel="stylesheet" href="assets/css/animate.css">
-	<!-- Swiper -->
 	<link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-	<!-- Magnific -->
-	<link rel="stylesheet" href="assets/css/magnific-popup.css">
-	<!-- Custom CSS -->
 	<link rel="stylesheet" href="assets/css/style.css">  
-
-	<!-- Fullscreen Nav CSS -->
-	<style>
-	/* ── Hamburger ─────────────────────────────────── */
-	.menu {
-		background: none;
-		border: none;
-		cursor: pointer;
-		padding: 8px;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		gap: 0;
-		z-index: 999999;
-		position: relative;
-	}
-	.menu span {
-		display: block;
-		width: 26px;
-		height: 2px;
-		background: var(--text-heading-color);
-		margin: 5px 0;
-		transition: 0.3s;
-		transform-origin: center;
-	}
-	.menu.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-	.menu.active span:nth-child(2) { opacity: 0; }
-	.menu.active span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
-
-	.js-nav {
-		position: fixed;
-		top: 0;
-		right: 0;
-		width: 100%;
-		height: 100%;
-		z-index: 99990;
-		background: rgba(10, 15, 30, 0.88);
-		backdrop-filter: blur(20px) saturate(120%);
-		transform: translateX(100%);
-		pointer-events: none;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: flex-start;
-		padding: 80px 8vw;
-		will-change: transform;
-		overflow-y: auto;
-	}
-	.js-nav .nav-brand { position: absolute; top: 28px; left: 8vw; }
-	.js-nav .nav-brand img { height: 44px; width: auto; }
-	.js-nav ul { list-style: none; padding: 0; margin: 0; }
-	.nav-item { opacity: 0; transform: translateY(20px); margin-bottom: 4px; }
-	.nav-item a {
-		display: inline-block;
-		font-family: var(--heading-font);
-		font-size: clamp(2.5rem, 5.5vw, 5.5rem);
-		font-weight: 700;
-		color: rgba(255, 255, 255, 0.85);
-		line-height: 1.1;
-		text-decoration: none;
-		padding: 4px 0;
-		position: relative;
-		transition: color 0.25s ease;
-		letter-spacing: -0.02em;
-	}
-	.nav-item a::after {
-		content: '';
-		position: absolute;
-		bottom: -2px;
-		left: 0;
-		width: 0;
-		height: 3px;
-		background: #EF7F1A;
-		transition: width 0.3s ease;
-	}
-	.nav-item a:hover { color: #ffffff; }
-	.nav-item a:hover::after { width: 100%; }
-
-	/* Content Styling */
-	.blog-details-content { max-width: 900px; margin: 0 auto; line-height: 1.8; color: #444; font-size: 18px; }
-	.blog-details-content img { max-width: 100%; height: auto; border-radius: 16px; margin: 30px 0; }
-	.blog-details-content h2, .blog-details-content h3 { margin: 40px 0 20px 0; color: #0a0f1e; }
-	.blog-details-content p { margin-bottom: 25px; }
-	.back-btn { display: inline-flex; align-items: center; gap: 10px; color: #EF7F1A; font-weight: 700; margin-bottom: 40px; transition: 0.3s; }
-	.back-btn:hover { color: #0a0f1e; transform: translateX(-5px); }
-	
-	.article-meta { display: flex; gap: 20px; align-items: center; color: #666; font-size: 14px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
-    .article-meta i { color: #EF7F1A; }
-
-	.main-content-wrapper { position: relative; z-index: 2; background: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-	.site-footer { position: fixed; bottom: 0; left: 0; width: 100%; z-index: 1; visibility: hidden; }
-	</style>
+    <style>
+        .blog-details-area { padding: 160px 0 100px; }
+        .post-thumbnail { width: 100%; border-radius: 30px; margin-bottom: 50px; overflow: hidden; }
+        .post-thumbnail img { width: 100%; height: auto; display: block; }
+        .post-meta { display: flex; gap: 30px; margin-bottom: 30px; font-size: 14px; font-weight: 700; color: #EF7F1A; text-transform: uppercase; letter-spacing: 1px; }
+        .post-title { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800; color: #0a0f1e; line-height: 1.2; margin-bottom: 40px; }
+        .post-content { font-size: 18px; line-height: 1.8; color: #444; }
+        .post-content p { margin-bottom: 25px; }
+        .post-content h2, .post-content h3 { color: #0a0f1e; font-weight: 800; margin: 50px 0 25px; }
+        .post-content img { max-width: 100%; height: auto !important; border-radius: 20px; margin: 30px 0; }
+        .back-to-blog { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; color: #0a0f1e; text-decoration: none; margin-bottom: 40px; transition: 0.3s; }
+        .back-to-blog:hover { color: #EF7F1A; transform: translateX(-5px); }
+    </style>
 </head>
-    
-<body class="data_cursor">
-	<div class="theme-loader"><div class="spinner"><div class="spinner-bounce one"></div><div class="spinner-bounce two"></div><div class="spinner-bounce three"></div></div></div>
-	<div class="cursor"><div class="hide"><div id="cursor-ball"></div></div><div id="cursor-text"></div></div>
-	
-	<div class="js-nav" role="dialog" aria-modal="true" aria-label="Site Navigation">
+
+<body>
+	<!-- Cursor Follower -->
+	<div class="cursor-follower"></div>
+
+	<div class="js-nav">
 		<div class="nav-brand"><a href="index.html"><img src="white Logo.png" alt="Sunware"></a></div>
 		<ul>
 			<li class="nav-item"><a href="index.html">Home</a></li>
 			<li class="nav-item"><a href="about.html">About Us</a></li>
-			<li class="nav-item"><a href="#">Services</a></li>
-			<li class="nav-item"><a href="healthcare-lifesciences.html">Industries</a></li>
-            <li class="nav-item"><a href="careers.html">Careers</a></li>
-			<li class="nav-item"><a href="blog.html" style="color:#EF7F1A">Blog</a></li>
+			<li class="nav-item"><a href="blog.html">Blog</a></li>
+			<li class="nav-item"><a href="careers.html">Careers</a></li>
+			<li class="nav-item"><a href="mailto:sales@sunware.in">Contact</a></li>
 		</ul>
+		<div class="nav-footer">
+			<div class="nav-footer-social">
+				<a href="https://www.linkedin.com/company/sunware-technologies" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+				<a href="https://www.youtube.com/@sunwaretechnologies" target="_blank"><i class="fab fa-youtube"></i></a>
+				<a href="https://www.instagram.com/sunwaretechnologies" target="_blank"><i class="fab fa-instagram"></i></a>
+			</div>
+			<a class="default_button" href="#" onclick="openEnquireModal(event)">Enquire Now <i class="flaticon-right-up"></i></a>
+		</div>
 	</div>
 
-<div class="main-content-wrapper">
-	<header class="header__area">
-		<div class="container">
-			<div class="row">
-				<div class="col-xl-12">
-					<div class="header__area-menubar">
-						<div class="header__area-menubar-left one">
-							<div class="header__area-menubar-left-logo">
-								<a href="index.html"><img src="main logo.png" alt="Sunware Technologies"></a>
-							</div>
-						</div>
-						<div class="header__area-menubar-center">
-							<div class="header__area-menubar-center-menu">
-								<ul id="mobilemenu">
-									<li><a href="index.html">Home</a></li>
-									<li><a href="about.html">About Us</a></li>
-									<li class="has-megamenu"><a href="#">Services <i class="fal fa-chevron-down" style="font-size:12px;margin-left:4px;"></i></a>
-										<div class="megamenu">
-											<div class="megamenu-content">
-												<div class="megamenu-left">
-													<a href="cloud-solutions.html" class="megamenu-item"><h5>Cloud Solutions</h5><p>Hybrid cloud systems and scalable infrastructure</p></a>
-													<a href="automation-efficiency.html" class="megamenu-item"><h5>Automation</h5><p>Streamlining operations and process efficiency</p></a>
-													<a href="data-science-ai.html" class="megamenu-item"><h5>Data Science & AI</h5><p>Generative AI and predictive analytics solutions</p></a>
-													<a href="salesforce-expertise.html" class="megamenu-item"><h5>Salesforce</h5><p>Implementation, customization and CRM experts</p></a>
-												</div>
-												<div class="megamenu-right" style="width: 400px; border-radius: 20px; display: flex; flex-direction: column; gap: 20px; align-items: flex-start; padding: 20px;">
-													<a href="microsoft-solutions.html" class="megamenu-item" style="width: 100%;"><h5>Microsoft Solutions</h5><p>Enterprise technology stack and Azure services</p></a>
-													<a href="iot-innovations.html" class="megamenu-item" style="width: 100%;"><h5>IoT Innovations</h5><p>Connected smart device ecosystems and data</p></a>
+	<div class="main-content-wrapper">
+		<header class="header__area">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-12">
+						<div class="header__area-menubar">
+							<div class="header__area-menubar-left one"><a href="index.html"><img src="main logo.png" alt="Sunware" style="height:45px;"></a></div>
+							<div class="header__area-menubar-center">
+								<div class="header__area-menubar-center-menu">
+									<ul>
+										<li><a href="index.html">Home</a></li>
+										<li><a href="about.html">About Us</a></li>
+										<li class="has-dropdown"><a href="#">Services <i class="fal fa-chevron-down" style="font-size:12px;margin-left:4px;"></i></a>
+											<div class="dropdown-small dropdown-align-left" style="width: 680px;">
+												<div class="services-grid">
+													<a href="cloud-solutions.html" class="megamenu-item"><h5>Cloud Solutions</h5><p>Hybrid cloud systems and scalability</p></a>
+													<a href="automation-efficiency.html" class="megamenu-item"><h5>Automation</h5><p>Streamlining operations and efficiency</p></a>
+													<a href="data-science-ai.html" class="megamenu-item"><h5>Data Science & AI</h5><p>Generative AI and analytics</p></a>
+													<a href="salesforce-expertise.html" class="megamenu-item"><h5>Salesforce</h5><p>Implementation and CRM experts</p></a>
+													<a href="microsoft-solutions.html" class="megamenu-item"><h5>Microsoft Solutions</h5><p>Enterprise stack and Azure</p></a>
+													<a href="iot-innovations.html" class="megamenu-item"><h5>IoT Innovations</h5><p>Connected smart device ecosystems</p></a>
 												</div>
 											</div>
-										</div>
-									</li>
-									<li class="has-megamenu"><a href="#">Industries <i class="fal fa-chevron-down" style="font-size:12px;margin-left:4px;"></i></a>
-										<div class="megamenu">
-											<div class="megamenu-content" style="justify-content: center; align-items: center;">
-												<div class="megamenu-left" style="flex: 0 0 1000px; display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
-													<a href="healthcare-lifesciences.html" class="megamenu-item"><h5>Healthcare & Life Sciences</h5><p>Next-gen patient care and R&D data</p></a>
-													<a href="banking-finance.html" class="megamenu-item"><h5>Banking & Financial Services</h5><p>Digital transformation and fintech</p></a>
-													<a href="retail-ecommerce.html" class="megamenu-item"><h5>Retail & E-commerce</h5><p>Scalable online customer journeys</p></a>
-													<a href="media-entertainment.html" class="megamenu-item"><h5>Media & Entertainment</h5><p>Interactive digital content solutions</p></a>
-												</div>
-											</div>
-										</div>
-									</li>
-									<li><a href="careers.html">Careers</a></li>
-									<li><a href="blog.html">Blog</a></li>
-								</ul>
+										</li>
+										<li><a href="careers.html">Careers</a></li>
+										<li><a href="blog.html">Blog</a></li>
+									</ul>
+								</div>
 							</div>
-						</div>
-						<div class="header__area-menubar-right">
-							<div class="header__area-menubar-right-tel lg-display-n">
-								<a class="default_button" href="#" onclick="openEnquireModal(event)">Enquire Now<i class="flaticon-right-up"></i></a>
+							<div class="header__area-menubar-right">
+								<div class="header__area-menubar-right-tel lg-display-n">
+									<a class="default_button" href="#" onclick="openEnquireModal(event)">Enquire Now<i class="flaticon-right-up"></i></a>
+								</div>
+								<button class="menu js-menu"><span></span><span></span><span></span></button>
 							</div>
-							<button class="menu js-menu" aria-label="Toggle Navigation"><span></span><span></span><span></span></button>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</header>
+		</header>
 
-  
-
-	<section class="section-padding" style="background:#fff; padding-top:140px;">
-		<div class="container">
-			<div class="row">
-				<div class="col-xl-12">
-					<a href="blog.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Blogs</a>
-					
-					<div id="blog-viewer-container" class="blog-details-content">
-						<div class="text-center" style="padding: 100px 0;">
-							<div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div>
-							<p class="mt-3">Fetching content from Sunware Lab...</p>
-						</div>
+		<article class="blog-details-area">
+			<div class="container">
+				<div class="row jc-center">
+					<div class="col-xl-9">
+                        <a href="blog.html" class="back-to-blog"><i class="fas fa-arrow-left"></i> Back to Insights</a>
+                        
+                        <div id="post-viewer">
+                            <div class="text-center" style="padding: 100px 0;">
+                                <div class="spinner-border text-primary"></div>
+                            </div>
+                        </div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</article>
 
-	<div class="container pb-60">
-		<div class="row">
-			<div class="col-xl-12">
-				<div class="footer__cta-area mb-60">
-					<div class="row al-center">
-						<div class="col-xl-6 col-lg-7 lg-mb-40">
-							<div class="footer__cta-area-left lg-t-center">
-								<h2>Build Your Ideal World — We’re Ready!</h2>
+		<!-- Footer CTA -->
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-12">
+					<div class="footer__cta-area mb-60">
+						<div class="row al-center">
+							<div class="col-xl-6 col-lg-7 lg-mb-40">
+								<div class="footer__cta-area-left lg-t-center">
+									<h2>Build Your Ideal World — We’re Ready!</h2>
+								</div>
 							</div>
-						</div>
-						<div class="col-xl-6 col-lg-5">
-							<div class="footer__cta-area-right d-flex al-center flex-wrap jc-end lg-jc-center gap-25">
-								<a class="default_button" href="#" onclick="openEnquireModal(event)">Start Today<i class="flaticon-right-up"></i></a>
-								<div class="footer__cta-area-right-tel">
-									<div class="footer__cta-area-right-tel-icon"><i class="flaticon-phone-call"></i></div>
-									<div class="footer__cta-area-right-tel-info"><span>Call Us Now</span><h6><a href="tel:(415)755-7890">(415) 755-7890</a></h6></div>
+							<div class="col-xl-6 col-lg-5">
+								<div class="footer__cta-area-right d-flex al-center flex-wrap jc-end lg-jc-center gap-25">
+									<a class="default_button" href="#" onclick="openEnquireModal(event)">Start Today<i class="flaticon-right-up"></i></a>
 								</div>
 							</div>
 						</div>
@@ -241,161 +129,101 @@
 			</div>
 		</div>
 	</div>
-</div> <!-- Main Content Wrapper closure -->
 
-
-<footer class="site-footer">
-	<div class="footer__one" style="padding: 15px 0; background-color: #0a0f1e;">
-		<div class="bg_shape" style="background-image: url('assets/img/shape/footer.png');"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-3 col-sm-6">
-					<div class="footer__one-widget">
-						<a class="logo" href="index.html"><img src="white Logo.png" alt="Sunware"></a>
-						<p style="font-style: italic; color: #EF7F1A; margin: 15px 0 4px 0; font-size: 14px; font-weight: 500;">Advanced Data & AI Solutions Tailored to Your Needs.</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6 sm-mt-30">
-					<div class="footer__one-widget ml-40 xl-ml-0">
-						<h5>Quick links</h5>
-						<div class="footer-widget-menu">
-							<ul>
-								<li><a href="index.html">Home</a></li>
-								<li><a href="about.html">About Us</a></li>
-								<li><a href="#">Services</a></li>
-								<li><a href="careers.html">Careers</a></li>
-								<li><a href="blog.html">Blog</a></li>
-								<li><a href="mailto:sales@sunware.in">Contact Us</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6 lg-mt-30">
-					<div class="footer__one-widget contact ml-40 xl-ml-0">
-						<h5>Contact</h5>
-						<div class="contact-item mb-15">
-							<div class="contact-item-icon"><i class="flaticon-email"></i></div>
-							<div class="contact-item-info"><span>Email</span><h6><a href="mailto:sales@sunware.in">sales@sunware.in</a></h6></div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6 lg-mt-30">
-					<div class="footer__one-widget social">
-						<h5>Social Media</h5>
-						<p>Stay connected with us</p>
-						<ul>
-							<li><a href="https://www.linkedin.com/company/sunware-technologies" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-							<li><a href="https://www.youtube.com/@sunwaretechnologies" target="_blank"><i class="fab fa-youtube"></i></a></li>
-							<li><a href="https://www.instagram.com/sunwaretechnologies" target="_blank"><i class="fab fa-instagram"></i></a></li>
-						</ul>
-					</div>
+	<footer class="site-footer">
+		<div class="footer__one" style="padding: 15px 0; background-color: #0a0f1e;">
+			<div class="container">
+				<div class="row al-center jc-between">
+					<div class="col-lg-3"><a href="index.html"><img src="white Logo.png" alt="Sunware" style="height:40px;"></a></div>
+					<div class="col-lg-6 text-center text-white-50"><p style="margin:0;">© 2026 Sunware Technologies. All Rights Reserved.</p></div>
+					<div class="col-lg-3 text-end text-white-50"><p style="margin:0;">Data. Intelligence. Engineered.</p></div>
 				</div>
 			</div>
 		</div>
-	</div>
-</footer>
-<!-- Standardized Modal & Scripts Block -->
-<div id="enquire-modal" class="modal-overlay">
-	<div class="modal-content-wrapper">
-		<div class="modal-header">
-			<h3>Let's Talk</h3>
-			<p>Submit your inquiry and our team will get back to you shortly.</p>
-			<button class="modal-close" onclick="closeEnquireModal()"><i class="fal fa-times"></i></button>
-		</div>
-		<form class="enquire-form">
-			<div class="form-group mb-20"><input type="text" placeholder="Full Name" required></div>
-			<div class="form-group mb-20"><input type="email" placeholder="Email Address" required></div>
-			<div class="form-group mb-20"><input type="text" placeholder="Subject" required></div>
-			<div class="form-group mb-20"><textarea placeholder="Message" rows="4" required></textarea></div>
-			<button type="submit" class="default_button" style="width: 100%; justify-content: center;">Send Inquiry <i class="flaticon-right-up"></i></button>
-		</form>
-	</div>
-</div>
+	</footer>
 
-
-
-<script src="assets/js/jquery-3.7.1.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/wow.min.js"></script>
-<script src="assets/js/gsap.js"></script>
-<script src="assets/js/scroll-trigger.js"></script>
-<script src="assets/js/custom.js"></script>
-<script src="assets/js/nav-overlay.js"></script>
-<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
-
-
-<script>
-	new WOW().init();
-	const lenis = new Lenis({ duration: 1.5 }); function raf(time) { lenis.raf(time); requestAnimationFrame(raf); } requestAnimationFrame(raf);
-	function openEnquireModal(e) { if(e) e.preventDefault(); document.getElementById('enquire-modal').classList.add('active'); if(document.body) document.body.style.overflow = 'hidden'; }
-	function closeEnquireModal() { document.getElementById('enquire-modal').classList.remove('active'); if(document.body) document.body.style.overflow = ''; }
-    
-    // Always hide preloader after load
-    window.addEventListener('load', function() {
-        const loader = document.querySelector('.theme-loader');
-        if(loader) { loader.style.transition = 'opacity 0.5s ease'; loader.style.opacity = '0'; setTimeout(() => { loader.style.display = 'none'; }, 500); }
-    });
-
-	document.addEventListener('DOMContentLoaded', function() {
-		var modal = document.getElementById('enquire-modal');
-		if(modal) { modal.addEventListener('click', function(e) { if (e.target === this) closeEnquireModal(); }); }
-		const f=document.querySelector('.site-footer'),w=document.querySelector('.main-content-wrapper');
-		function a(){ if(!f||!w)return; const h=f.offsetHeight; if(window.innerWidth<992){f.style.position='relative';f.style.visibility='visible';w.style.marginBottom='0';} else{f.style.position='fixed';f.style.visibility='visible';w.style.marginBottom=h+'px';} }
-		a();window.addEventListener('resize',a);
+	<script src="assets/js/jquery-3.7.1.min.js"></script>
+	<script src="assets/js/wow.min.js"></script>
+	<script src="assets/js/nav-overlay.js"></script>
+	<script>
+		new WOW().init();
 
 		// Blogger Single Post Fetcher
-		const urlParams = new URLSearchParams(window.location.search);
-		const targetUrl = urlParams.get('post');
+		$(document).ready(function() {
+			const urlParams = new URLSearchParams(window.location.search);
+			const postId = urlParams.get('post');
+			
+			if(postId) {
+				$.getJSON(`https://sunwaretechnologies.blogspot.com/feeds/posts/default/${postId}?alt=json-in-script&callback=?`, function(data) {
+					const post = data.entry;
+					if(post) {
+						const title = post.title.$t;
+						const date = new Date(post.published.$t).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+						const content = post.content.$t;
+						
+						// Get original image
+						let imgHtml = "";
+						const imgMatch = content.match(/<img[^>]+src="([^">]+)"/);
+						if(imgMatch) {
+							imgHtml = `<div class="post-thumbnail wow fadeInUp"><img src="${imgMatch[1]}" alt="${title}"></div>`;
+						}
 
-		if (!targetUrl) {
-			$('#blog-viewer-container').html('<div class="text-center"><p>No post specified. <a href="blog.html">Back to Blogs</a></p></div>');
-			return;
-		}
+						// Clean content (remove initial image if already shown in thumbnail)
+						const cleanContent = content.replace(/<img[^>]*>/, '');
 
-		$.getJSON('https://sunwaretechnologies.blogspot.com/feeds/posts/default?alt=json-in-script&callback=?', function(data) {
-			const entries = data.feed.entry || [];
-			const post = entries.find(e => e.link.find(l => l.rel === 'alternate').href === targetUrl);
-
-			if (!post) {
-				$('#blog-viewer-container').html('<div class="text-center"><p>Post not found or unavailable in recent feed. <a href="blog.html">Back to Blogs</a></p></div>');
-				return;
+						const html = `
+							<div class="post-meta wow fadeInUp">${date} &nbsp; • &nbsp; Insights</div>
+							<h1 class="post-title wow fadeInUp" data-wow-delay=".1s">${title}</h1>
+							${imgHtml}
+							<div class="post-content wow fadeInUp" data-wow-delay=".2s">
+								${cleanContent}
+							</div>
+						`;
+						$("#post-viewer").html(html);
+                        document.title = title + " - Sunware Technologies Blog";
+					}
+				});
+			} else {
+				window.location.href = 'blog.html';
 			}
-
-			const title = post.title.$t;
-			let content = post.content.$t;
-			const date = new Date(post.published.$t).toLocaleDateString('en-US', { day:'numeric', month:'long', year:'numeric' });
-			const author = post.author[0].name.$t;
-
-			// Content Cleanup & High Res Images
-			content = content.replace(/style="[^"]*"/g, ''); // Clear inline styles
-			content = content.replace(/\/s[0-9]+.*?\/|\/w[0-9]+.*?\//g, '/s1600/'); // Upgrade images
-
-			const detailHtml = `
-				<div class="article-meta">
-					<span><i class="fal fa-user"></i> ${author}</span>
-					<span><i class="fal fa-calendar-alt"></i> ${date}</span>
-				</div>
-				<h1 style="font-size: clamp(32px, 5vw, 56px); font-weight: 800; color: #0a0f1e; line-height: 1.2; margin-bottom: 30px;">${title}</h1>
-				<div class="blog-content-body">
-					${content}
-				</div>
-				<div class="share-post mt-50" style="border-top: 1px solid #eee; padding-top: 30px;">
-					<h5 style="margin-bottom: 20px;">Share this post:</h5>
-					<div style="display: flex; gap: 15px;">
-						<a href="https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}" target="_blank" style="width: 44px; height: 44px; border-radius: 50%; background: #f8f9fa; display: flex; align-items: center; justify-content: center; color: #0077b5;"><i class="fab fa-linkedin-in"></i></a>
-						<a href="https://twitter.com/intent/tweet?url=${encodeURIComponent(window.location.href)}&text=${encodeURIComponent(title)}" target="_blank" style="width: 44px; height: 44px; border-radius: 50%; background: #f8f9fa; display: flex; align-items: center; justify-content: center; color: #1da1f2;"><i class="fab fa-twitter"></i></a>
-					</div>
-				</div>
-			`;
-
-			$('#blog-viewer-container').fadeOut(200, function() {
-				$(this).html(detailHtml).fadeIn(400);
-			});
-		}).fail(function() {
-			$('#blog-viewer-container').html('<div class="text-center"><p>Connection error. Could not reach Sunware Lab.</p></div>');
 		});
-	});
-</script>
 
+		// Footer Reveal
+		document.addEventListener("DOMContentLoaded", function () {
+			const footer = document.querySelector('.site-footer');
+			const mainWrapper = document.querySelector('.main-content-wrapper');
+			function adjust() {
+				if (!footer || !mainWrapper) return;
+				if (window.innerWidth < 992) { footer.style.position = 'relative'; footer.style.visibility = 'visible'; mainWrapper.style.marginBottom = '0'; }
+				else { footer.style.position = 'fixed'; footer.style.visibility = 'visible'; mainWrapper.style.marginBottom = footer.offsetHeight + 'px'; }
+			}
+			adjust(); window.addEventListener('resize', adjust);
+		});
+
+		// Custom Cursor Sync
+		document.addEventListener('mousemove', (e) => {
+			const cursor = document.querySelector('.cursor-follower');
+			if(cursor) { cursor.style.left = e.clientX + 'px'; cursor.style.top = e.clientY + 'px'; }
+		});
+	</script>
+
+	<!-- Enquire Modal -->
+	<div id="enquire-modal" class="modal-overlay">
+		<div class="modal-content-wrapper" style="background:#fff; padding:40px; border-radius:24px; position:relative;">
+			<button class="modal-close" onclick="closeEnquireModal()" style="position:absolute; top:20px; right:20px; background:none; border:none; font-size:24px; cursor:pointer;">&times;</button>
+			<h3 style="font-weight:800; margin-bottom:10px;">Start Your Journey</h3>
+			<p style="color:#666; margin-bottom:30px;">Tell us about your project or business needs.</p>
+			<form class="enquire-form">
+				<div class="form-group mb-20"><input type="text" class="form-control" placeholder="Full Name" style="padding:15px; border-radius:12px;" required></div>
+				<div class="form-group mb-20"><input type="email" class="form-control" placeholder="Corporate Email" style="padding:15px; border-radius:12px;" required></div>
+				<div class="form-group mb-30"><textarea class="form-control" placeholder="How can we help?" rows="4" style="padding:15px; border-radius:12px;" required></textarea></div>
+				<button type="submit" class="default_button" style="width:100%; justify-content:center;">Send Inquiry <i class="flaticon-right-up"></i></button>
+			</form>
+		</div>
+	</div>
+	<script>
+		function openEnquireModal(e) { if(e) e.preventDefault(); document.getElementById('enquire-modal').classList.add('active'); }
+		function closeEnquireModal() { document.getElementById('enquire-modal').classList.remove('active'); }
+	</script>
 </body>
 </html>

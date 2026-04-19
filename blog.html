@@ -1,75 +1,44 @@
-<!-- Layout Top -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Blog - Sunware Technologies</title>
+	<title>Blog & Insights - Sunware Technologies</title>
 	<link rel="icon" type="image/png" href="favicon.png">
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/fontawesome.css">
 	<link rel="stylesheet" href="assets/font/flaticon_flexitype.css">	
 	<link rel="stylesheet" href="assets/css/animate.css">
 	<link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-	<link rel="stylesheet" href="assets/css/magnific-popup.css">
 	<link rel="stylesheet" href="assets/css/style.css">  
-
-	<style>
-	.menu { background: none; border: none; cursor: pointer; padding: 8px; display: none; flex-direction: column; justify-content: center; align-items: center; gap: 0; z-index: 999999; position: relative; }
-	.menu span { display: block; width: 26px; height: 1.5px; background: var(--text-heading-color); margin: 5px 0; transition: 0.3s; transform-origin: center; }
-	.menu.active span { background: #ffffff; }
-	.menu.active span:nth-child(1) { transform: translateY(12px) rotate(45deg); }
-	.menu.active span:nth-child(2) { opacity: 0; }
-	.menu.active span:nth-child(3) { transform: translateY(-12px) rotate(-45deg); }
-
-    @media (max-width: 1199px) {
-        .menu { display: flex; }
-        .header__area-menubar-center { display: none !important; }
-    }
-
-	.js-nav { position: fixed; top: 0; right: 0; width: 100%; height: 100%; z-index: 99990; background: rgba(10, 15, 30, 0.88); backdrop-filter: blur(20px) saturate(120%); transform: translateX(100%); pointer-events: none; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 110px 8vw 80px 8vw; will-change: transform; overflow-y: auto; }
-	.js-nav .nav-brand { position: absolute; top: 28px; left: 8vw; }
-	.js-nav .nav-brand img { height: 50px; width: auto; }
-	.nav-item { opacity: 0; transform: translateY(20px); margin-bottom: 4px; list-style: none; }
-	.nav-item a { display: inline-block; font-family: var(--heading-font); font-size: clamp(2.3rem, 5vw, 5rem); font-weight: 700; color: rgba(255, 255, 255, 0.85); line-height: 1.1; text-decoration: none; position: relative; transition: color 0.25s ease; }
-	.nav-item a:hover { color: #ffffff; }
-    .js-nav .nav-footer { position: absolute; bottom: 48px; left: 8vw; display: flex; align-items: center; gap: 24px; }
-	
-	.main-content-wrapper { position: relative; z-index: 2; background: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-	.site-footer { position: fixed; bottom: 0; left: 0; width: 100%; z-index: 1; visibility: hidden; }
-	.header__area { position: sticky !important; top: 0; left: 0; width: 100%; z-index: 99999 !important; background: #ffffff !important; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border-bottom: 1px solid rgba(0,0,0,0.03); }
-
-	/* ── Megamenu Styles ────────────────────────── */
-	.has-megamenu { position: static !important; }
-	.megamenu { position: absolute; top: 100%; left: 0; width: 100%; background: #fff; box-shadow: 0 20px 40px rgba(0,0,0,0.05); padding: 50px 0; opacity: 0; visibility: hidden; transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1); z-index: 1000; border-bottom: 1px solid #f0f0f0; border-top: 1px solid #f0f0f0; }
-	.has-megamenu:hover .megamenu { opacity: 1; visibility: visible; }
-	.megamenu-content { display: flex; max-width: 1200px; margin: 0 auto; padding: 0 20px; gap: 60px; }
-	.megamenu-left, .megamenu-right { flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-	.megamenu-item { display: block; padding: 20px; border-radius: 16px; transition: 0.3s; text-decoration: none !important; color: inherit; background: #fcfdfe; border: 1px solid transparent; }
-	.megamenu-item:hover { background: #f5f8ff; border-color: #e0e7ff; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.03); }
-	.megamenu-item h5 { font-size: 18px; font-weight: 700; color: #EF7F1A; margin-bottom: 8px; }
-	.megamenu-item p { font-size: 14px; color: #666; margin: 0; line-height: 1.5; }
-	@media (max-width: 991px) {
-		.megamenu-content { flex-direction: column; gap: 20px; }
-		.megamenu-left, .megamenu-right { grid-template-columns: 1fr; }
-	}
-	</style>
+    <style>
+        .blog-hero { padding: 160px 0 100px; background: #fcfdfe; border-bottom: 1px solid #f0f0f0; }
+        #blogger-posts .blog-card { background: #fff; border-radius: 24px; padding: 0; overflow: hidden; border: 1px solid #eee; transition: 0.4s; height: 100%; display: flex; flex-direction: column; }
+        #blogger-posts .blog-card:hover { transform: translateY(-10px); box-shadow: 0 30px 60px rgba(0,0,0,0.05); }
+        .blog-card-img { width: 100%; height: 240px; background-size: cover; background-position: center; }
+        .blog-card-content { padding: 30px; flex-grow: 1; display: flex; flex-direction: column; }
+        .blog-card-date { font-size: 13px; color: #EF7F1A; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; margin-bottom: 15px; }
+        .blog-card-title { font-size: 22px; font-weight: 800; color: #0a0f1e; line-height: 1.4; margin-bottom: 15px; }
+        .blog-card-excerpt { font-size: 15px; color: #666; line-height: 1.6; margin-bottom: 25px; display: -webkit-box; -webkit-line-clamp: 3; line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+        .blog-card-link { font-weight: 700; color: #0a0f1e; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; font-size: 14px; margin-top: auto; }
+        .blog-card-link i { font-size: 12px; transition: 0.3s; }
+        .blog-card-link:hover i { transform: translate(4px, -4px); color: #EF7F1A; }
+    </style>
 </head>
 
-<body class="data_cursor">
-	<div class="theme-loader"><div class="spinner"><div class="spinner-bounce one"></div><div class="spinner-bounce two"></div><div class="spinner-bounce three"></div></div></div>
-	<div class="cursor"><div class="hide"><div id="cursor-ball"></div></div><div id="cursor-text"></div></div>
+<body>
+	<!-- Cursor Follower -->
+	<div class="cursor-follower"></div>
 
-	<div class="js-nav" role="dialog" aria-modal="true" aria-label="Site Navigation">
+	<div class="js-nav">
 		<div class="nav-brand"><a href="index.html"><img src="white Logo.png" alt="Sunware"></a></div>
 		<ul>
 			<li class="nav-item"><a href="index.html">Home</a></li>
 			<li class="nav-item"><a href="about.html">About Us</a></li>
-			<li class="nav-item"><a href="#">Services</a></li>
-			<li class="nav-item"><a href="healthcare-lifesciences.html">Industries</a></li>
-			<li class="nav-item"><a href="careers.html">Careers</a></li>
 			<li class="nav-item"><a href="blog.html">Blog</a></li>
+			<li class="nav-item"><a href="careers.html">Careers</a></li>
+			<li class="nav-item"><a href="mailto:sales@sunware.in">Contact</a></li>
 		</ul>
 		<div class="nav-footer">
 			<div class="nav-footer-social">
@@ -77,22 +46,22 @@
 				<a href="https://www.youtube.com/@sunwaretechnologies" target="_blank"><i class="fab fa-youtube"></i></a>
 				<a href="https://www.instagram.com/sunwaretechnologies" target="_blank"><i class="fab fa-instagram"></i></a>
 			</div>
-			<a class="default_button" href="#" onclick="openEnquireModal(event)" style="background:#EF7F1A;color:#fff;">Enquire Now <i class="flaticon-right-up"></i></a>
+			<a class="default_button" href="#" onclick="openEnquireModal(event)">Enquire Now <i class="flaticon-right-up"></i></a>
 		</div>
 	</div>
 
-<div class="main-content-wrapper">
-	<header class="header__area">
-		<div class="container">
-			<div class="row">
-				<div class="col-xl-12">
-					<div class="header__area-menubar">
-						<div class="header__area-menubar-left one"><a href="index.html"><img src="main logo.png" alt="Sunware" style="height:45px;"></a></div>
-						<div class="header__area-menubar-center">
-							<div class="header__area-menubar-center-menu">
-								<ul id="mobilemenu">
-									<li><a href="index.html">Home</a></li>
-									<li><a href="about.html">About Us</a></li>
+	<div class="main-content-wrapper">
+		<header class="header__area">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-12">
+						<div class="header__area-menubar">
+							<div class="header__area-menubar-left one"><a href="index.html"><img src="main logo.png" alt="Sunware" style="height:45px;"></a></div>
+							<div class="header__area-menubar-center">
+								<div class="header__area-menubar-center-menu">
+									<ul>
+										<li><a href="index.html">Home</a></li>
+										<li><a href="about.html">About Us</a></li>
 										<li class="has-dropdown"><a href="#">Services <i class="fal fa-chevron-down" style="font-size:12px;margin-left:4px;"></i></a>
 											<div class="dropdown-small dropdown-align-left" style="width: 680px;">
 												<div class="services-grid">
@@ -105,93 +74,59 @@
 												</div>
 											</div>
 										</li>
-										<li class="has-dropdown"><a href="#">Industries <i class="fal fa-chevron-down" style="font-size:12px;margin-left:4px;"></i></a>
-											<div class="dropdown-small dropdown-align-right" style="width: 550px;">
-												<div class="megamenu-left industries-grid" style="grid-template-columns: 1fr 1fr; width: 550px;">
-													<a href="healthcare-lifesciences.html" class="megamenu-item"><h5>Healthcare & Life Sciences</h5><p>Next-gen patient care and R&D data</p></a>
-													<a href="banking-finance.html" class="megamenu-item"><h5>Banking & Financial Services</h5><p>Digital transformation and fintech</p></a>
-													<a href="retail-ecommerce.html" class="megamenu-item"><h5>Retail & E-commerce</h5><p>Scalable online customer journeys</p></a>
-													<a href="media-entertainment.html" class="megamenu-item"><h5>Media & Entertainment</h5><p>Interactive digital content solutions</p></a>
-												</div>
-											</div>
-										</li>
-									<li><a href="careers.html">Careers</a></li>
-									<li><a href="blog.html" style="color:#EF7F1A">Blog</a></li>
-								</ul>
-
+										<li><a href="careers.html">Careers</a></li>
+										<li><a href="blog.html">Blog</a></li>
+									</ul>
+								</div>
 							</div>
-						</div>
-						<div class="header__area-menubar-right">
-							<div class="header__area-menubar-right-tel lg-display-n"><a class="default_button" href="#" onclick="openEnquireModal(event)">Enquire Now<i class="flaticon-right-up"></i></a></div>
-							<button class="menu js-menu"><span></span><span></span><span></span></button>
+							<div class="header__area-menubar-right">
+								<div class="header__area-menubar- Tel lg-display-n">
+									<a class="default_button" href="#" onclick="openEnquireModal(event)">Enquire Now<i class="flaticon-right-up"></i></a>
+								</div>
+								<button class="menu js-menu"><span></span><span></span><span></span></button>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</header>
+		</header>
 
-	<div class="blog__grid section-padding-three" style="padding-top:140px; background:#fff;">
+		<section class="blog-hero">
+			<div class="container">
+				<div class="row jc-center text-center">
+					<div class="col-xl-8">
+						<h1 class="wow fadeInUp" style="font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; line-height: 1.1; margin-bottom: 20px;">Insights & <span style="color:#EF7F1A;">Innovation</span></h1>
+						<p class="wow fadeInUp" data-wow-delay=".2s" style="font-size: 18px; color: #666; max-width: 600px; margin: 0 auto;">Exploring the intersection of data engineering, cloud architecture, and artificial intelligence.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="blog-grid-area" style="padding: 100px 0;">
+			<div class="container">
+                <div class="row" id="blogger-posts">
+                    <!-- Dynamic Content -->
+                    <div class="col-12 text-center" id="blog-loader">
+                        <div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div>
+                    </div>
+                </div>
+			</div>
+		</section>
+
+		<!-- Footer CTA -->
 		<div class="container">
-			<div class="row" id="blogger-posts">
-				<!-- Skeleton Loader Grid -->
-				<style>
-					.skeleton-card { background: #fff; border-radius: 12px; padding: 20px; border: 1px solid #f0f0f0; box-shadow: 0 4px 10px rgba(0,0,0,0.02); height: 100%; margin-bottom: 30px; }
-					.skeleton-img { background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%); background-size: 200% 100%; border-radius: 8px; height: 220px; margin-bottom: 20px; animation: 1.5s shine linear infinite; }
-					.skeleton-text { background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%); background-size: 200% 100%; border-radius: 4px; height: 16px; margin-bottom: 12px; animation: 1.5s shine linear infinite; }
-					.skeleton-text.title { height: 28px; width: 85%; margin-bottom: 24px; }
-					.skeleton-text.short { width: 55%; }
-					.skeleton-text.badge { height: 30px; width: 100px; border-radius: 30px; margin-bottom: 20px; }
-					@keyframes shine { to { background-position-x: -200%; } }
-				</style>
-				
-				<div class="col-xl-4 col-lg-6 col-md-6">
-					<div class="skeleton-card">
-						<div class="skeleton-img"></div>
-						<div class="skeleton-text badge"></div>
-						<div class="skeleton-text title"></div>
-						<div class="skeleton-text line"></div>
-						<div class="skeleton-text line short"></div>
-					</div>
-				</div>
-				<div class="col-xl-4 col-lg-6 col-md-6">
-					<div class="skeleton-card">
-						<div class="skeleton-img"></div>
-						<div class="skeleton-text badge"></div>
-						<div class="skeleton-text title"></div>
-						<div class="skeleton-text line"></div>
-						<div class="skeleton-text line short"></div>
-					</div>
-				</div>
-				<div class="col-xl-4 col-lg-6 col-md-6">
-					<div class="skeleton-card">
-						<div class="skeleton-img"></div>
-						<div class="skeleton-text badge"></div>
-						<div class="skeleton-text title"></div>
-						<div class="skeleton-text line"></div>
-						<div class="skeleton-text line short"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="container">
-		<div class="row">
-			<div class="col-xl-12">
-				<div class="footer__cta-area mb-60">
-					<div class="row al-center">
-						<div class="col-xl-6 col-lg-7 lg-mb-40">
-							<div class="footer__cta-area-left lg-t-center">
-								<h2>Build Your Ideal World — We’re Ready!</h2>
+			<div class="row">
+				<div class="col-xl-12">
+					<div class="footer__cta-area mb-60">
+						<div class="row al-center">
+							<div class="col-xl-6 col-lg-7 lg-mb-40">
+								<div class="footer__cta-area-left lg-t-center">
+									<h2>Build Your Ideal World — We’re Ready!</h2>
+								</div>
 							</div>
-						</div>
-						<div class="col-xl-6 col-lg-5">
-							<div class="footer__cta-area-right d-flex al-center flex-wrap jc-end lg-jc-center gap-25">
-								<a class="default_button" href="#" onclick="openEnquireModal(event)">Start Today<i class="flaticon-right-up"></i></a>
-								<div class="footer__cta-area-right-tel">
-									<div class="footer__cta-area-right-tel-icon"><i class="flaticon-phone-call"></i></div>
-									<div class="footer__cta-area-right-tel-info"><span>Call Us Now</span><h6><a href="tel:(415)755-7890">(415) 755-7890</a></h6></div>
+							<div class="col-xl-6 col-lg-5">
+								<div class="footer__cta-area-right d-flex al-center flex-wrap jc-end lg-jc-center gap-25">
+									<a class="default_button" href="#" onclick="openEnquireModal(event)">Start Today<i class="flaticon-right-up"></i></a>
 								</div>
 							</div>
 						</div>
@@ -200,160 +135,104 @@
 			</div>
 		</div>
 	</div>
-</div> <!-- Main Content Wrapper closure -->
 
-
-<footer class="site-footer">
-	<div class="footer__one" style="padding: 15px 0; background-color: #0a0f1e;">
-		<div class="bg_shape" style="background-image: url('assets/img/shape/footer.png');"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-3 col-sm-6">
-					<div class="footer__one-widget">
-						<a class="logo" href="index.html"><img src="white Logo.png" alt="Sunware"></a>
-						<p style="font-style: italic; color: #EF7F1A; margin: 15px 0 4px 0; font-size: 14px; font-weight: 500;">Advanced Data & AI Solutions Tailored to Your Needs.</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6 sm-mt-30">
-					<div class="footer__one-widget ml-40 xl-ml-0">
-						<h5>Quick links</h5>
-						<div class="footer-widget-menu">
-							<ul>
-								<li><a href="index.html">Home</a></li>
-								<li><a href="about.html">About Us</a></li>
-								<li><a href="#">Services</a></li>
-								<li><a href="careers.html">Careers</a></li>
-								<li><a href="blog.html">Blog</a></li>
-								<li><a href="mailto:sales@sunware.in">Contact Us</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6 lg-mt-30">
-					<div class="footer__one-widget contact ml-40 xl-ml-0">
-						<h5>Contact</h5>
-						<div class="contact-item mb-15">
-							<div class="contact-item-icon"><i class="flaticon-email"></i></div>
-							<div class="contact-item-info"><span>Email</span><h6><a href="mailto:sales@sunware.in">sales@sunware.in</a></h6></div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6 lg-mt-30">
-					<div class="footer__one-widget social">
-						<h5>Social Media</h5>
-						<p>Stay connected with us</p>
-						<ul>
-							<li><a href="https://www.linkedin.com/company/sunware-technologies" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-							<li><a href="https://www.youtube.com/@sunwaretechnologies" target="_blank"><i class="fab fa-youtube"></i></a></li>
-							<li><a href="https://www.instagram.com/sunwaretechnologies" target="_blank"><i class="fab fa-instagram"></i></a></li>
-						</ul>
-					</div>
+	<footer class="site-footer">
+		<div class="footer__one" style="padding: 15px 0; background-color: #0a0f1e;">
+			<div class="container">
+				<div class="row al-center jc-between">
+					<div class="col-lg-3"><a href="index.html"><img src="white Logo.png" alt="Sunware" style="height:40px;"></a></div>
+					<div class="col-lg-6 text-center text-white-50"><p style="margin:0;">© 2026 Sunware Technologies. All Rights Reserved.</p></div>
+					<div class="col-lg-3 text-end text-white-50"><p style="margin:0;">Data. Intelligence. Engineered.</p></div>
 				</div>
 			</div>
 		</div>
-	</div>
-</footer>
-<!-- Standardized Modal & Scripts Block -->
-<div id="enquire-modal" class="modal-overlay">
-	<div class="modal-content-wrapper">
-		<div class="modal-header">
-			<h3>Let's Talk</h3>
-			<p>Submit your inquiry and our team will get back to you shortly.</p>
-			<button class="modal-close" onclick="closeEnquireModal()"><i class="fal fa-times"></i></button>
-		</div>
-		<form class="enquire-form">
-			<div class="form-group mb-20"><input type="text" placeholder="Full Name" required></div>
-			<div class="form-group mb-20"><input type="email" placeholder="Email Address" required></div>
-			<div class="form-group mb-20"><input type="text" placeholder="Subject" required></div>
-			<div class="form-group mb-20"><textarea placeholder="Message" rows="4" required></textarea></div>
-			<button type="submit" class="default_button" style="width: 100%; justify-content: center;">Send Inquiry <i class="flaticon-right-up"></i></button>
-		</form>
-	</div>
-</div>
+	</footer>
 
+	<script src="assets/js/jquery-3.7.1.min.js"></script>
+	<script src="assets/js/wow.min.js"></script>
+	<script src="assets/js/nav-overlay.js"></script>
+	<script>
+		new WOW().init();
 
+		// Blogger API Fetcher
+		$(document).ready(function() {
+			$.getJSON("https://sunwaretechnologies.blogspot.com/feeds/posts/default?alt=json-in-script&callback=?", function(data) {
+				const posts = data.feed.entry;
+				let html = "";
+				if(posts) {
+					posts.forEach(post => {
+						const title = post.title.$t;
+						const date = new Date(post.published.$t).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+						const link = post.link.find(l => l.rel === 'alternate').href;
+						const postId = post.id.$t.split('post-')[1];
+						const content = post.content ? post.content.$t : post.summary.$t;
+						
+						// Get image
+						let imgUrl = "assets/img/blog/placeholder.jpg";
+						if(post.media$thumbnail) imgUrl = post.media$thumbnail.url.replace('s72-c', 's1600');
+						else {
+							const imgMatch = content.match(/<img[^>]+src="([^">]+)"/);
+							if(imgMatch) imgUrl = imgMatch[1];
+						}
 
-<script src="assets/js/jquery-3.7.1.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/wow.min.js"></script>
-<script src="assets/js/gsap.js"></script>
-<script src="assets/js/scroll-trigger.js"></script>
-<script src="assets/js/custom.js"></script>
-<script src="assets/js/nav-overlay.js"></script>
-<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+						const cleanExcerpt = content.replace(/<[^>]*>/g, '').substring(0, 120) + '...';
 
-
-<script>
-	new WOW().init();
-	const lenis = new Lenis({ duration: 1.5 }); function raf(time) { lenis.raf(time); requestAnimationFrame(raf); } requestAnimationFrame(raf);
-	function openEnquireModal(e) { if(e) e.preventDefault(); document.getElementById('enquire-modal').classList.add('active'); if(document.body) document.body.style.overflow = 'hidden'; }
-	function closeEnquireModal() { document.getElementById('enquire-modal').classList.remove('active'); if(document.body) document.body.style.overflow = ''; }
-    
-    // Always hide preloader after load
-    window.addEventListener('load', function() {
-        const loader = document.querySelector('.theme-loader');
-        if(loader) { loader.style.transition = 'opacity 0.5s ease'; loader.style.opacity = '0'; setTimeout(() => { loader.style.display = 'none'; }, 500); }
-    });
-
-	document.addEventListener('DOMContentLoaded', function() {
-		var modal = document.getElementById('enquire-modal');
-		if(modal) { modal.addEventListener('click', function(e) { if (e.target === this) closeEnquireModal(); }); }
-		const f=document.querySelector('.site-footer'),w=document.querySelector('.main-content-wrapper');
-		function a(){ if(!f||!w)return; const h=f.offsetHeight; if(window.innerWidth<992){f.style.position='relative';f.style.visibility='visible';w.style.marginBottom='0';} else{f.style.position='fixed';f.style.visibility='visible';w.style.marginBottom=h+'px';} }
-		a();window.addEventListener('resize',a);
-
-		// Blogger Fetch - Grid View
-		$.getJSON('https://sunwaretechnologies.blogspot.com/feeds/posts/default?alt=json-in-script&callback=?', function(data) {
-			var entries = data.feed.entry || [];
-			var html = '';
-
-			if (entries.length === 0) {
-				$('#blogger-posts').html('<div class="col-12 text-center"><p>No articles found.</p></div>');
-				return;
-			}
-
-			entries.forEach(function(entry) {
-				var title = entry.title.$t;
-				var link = entry.link.find(l => l.rel === 'alternate').href;
-				var categories = entry.category ? entry.category.map(c => c.term).slice(0, 1) : ['Insight'];
-				
-				// Extract Thumbnail
-				var thumb = "assets/img/blog/blog-1.jpg";
-				if (entry.content && entry.content.$t.includes('<img')) {
-					var match = entry.content.$t.match(/<img[^>]+src="([^">]+)"/);
-					if (match) thumb = match[1];
-				} else if (entry.media$thumbnail) {
-					thumb = entry.media$thumbnail.url;
+						html += `
+							<div class="col-xl-4 col-md-6 mb-40 wow fadeInUp">
+								<div class="blog-card">
+									<div class="blog-card-img" style="background-image: url('${imgUrl}')"></div>
+									<div class="blog-card-content">
+										<div class="blog-card-date">${date}</div>
+										<h4 class="blog-card-title">${title}</h4>
+										<p class="blog-card-excerpt">${cleanExcerpt}</p>
+										<a href="blog-details.html?post=${postId}" class="blog-card-link">Read Contribution <i class="fas fa-arrow-right"></i></a>
+									</div>
+								</div>
+							</div>
+						`;
+					});
+					$("#blog-loader").remove();
+					$("#blogger-posts").html(html);
 				}
-				thumb = thumb.replace(/\/s[0-9]+.*?\/|\/w[0-9]+.*?\//, '/s800/'); // Higher res
-
-				html += `
-				<div class="col-xl-4 col-lg-6 col-md-6 mb-30">
-					<div class="blog__one-item" style="background:#fff; border-radius:16px; overflow:hidden; border:1px solid #f0f0f0; transition:0.3s; height:100%;">
-						<div class="blog__one-item-image" style="position:relative; overflow:hidden;">
-							<a href="blog-details.html?post=${encodeURIComponent(link)}">
-								<img src="${thumb}" alt="${title}" style="width:100%; height:240px; object-fit:cover; transition:0.5s;">
-							</a>
-							<span style="position:absolute; top:20px; left:20px; background:#EF7F1A; color:#fff; padding:4px 15px; border-radius:30px; font-size:12px; font-weight:700; text-transform:uppercase;">${categories[0]}</span>
-						</div>
-						<div class="blog__one-item-content" style="padding:25px;">
-							<h4 style="font-size:22px; margin-bottom:15px; line-height:1.4; font-weight:700;">
-								<a href="blog-details.html?post=${encodeURIComponent(link)}" style="color:#0a0f1e;">${title}</a>
-							</h4>
-							<a class="default_button" href="blog-details.html?post=${encodeURIComponent(link)}" style="padding:10px 20px; font-size:14px;">Read More<i class="flaticon-right-up"></i></a>
-						</div>
-					</div>
-				</div>`;
 			});
-
-			$('#blogger-posts').fadeOut(200, function() {
-				$(this).html(html).fadeIn(400);
-			});
-		}).fail(function() {
-			$('#blogger-posts').html('<div class="col-12 text-center"><p>Failed to load articles. Please try again later.</p></div>');
 		});
-	});
-</script>
 
+		// Footer Reveal
+		document.addEventListener("DOMContentLoaded", function () {
+			const footer = document.querySelector('.site-footer');
+			const mainWrapper = document.querySelector('.main-content-wrapper');
+			function adjust() {
+				if (!footer || !mainWrapper) return;
+				if (window.innerWidth < 992) { footer.style.position = 'relative'; footer.style.visibility = 'visible'; mainWrapper.style.marginBottom = '0'; }
+				else { footer.style.position = 'fixed'; footer.style.visibility = 'visible'; mainWrapper.style.marginBottom = footer.offsetHeight + 'px'; }
+			}
+			adjust(); window.addEventListener('resize', adjust);
+		});
+
+		// Custom Cursor Sync
+		document.addEventListener('mousemove', (e) => {
+			const cursor = document.querySelector('.cursor-follower');
+			if(cursor) { cursor.style.left = e.clientX + 'px'; cursor.style.top = e.clientY + 'px'; }
+		});
+	</script>
+
+	<!-- Enquire Modal -->
+	<div id="enquire-modal" class="modal-overlay">
+		<div class="modal-content-wrapper" style="background:#fff; padding:40px; border-radius:24px; position:relative;">
+			<button class="modal-close" onclick="closeEnquireModal()" style="position:absolute; top:20px; right:20px; background:none; border:none; font-size:24px; cursor:pointer;">&times;</button>
+			<h3 style="font-weight:800; margin-bottom:10px;">Start Your Journey</h3>
+			<p style="color:#666; margin-bottom:30px;">Tell us about your project or business needs.</p>
+			<form class="enquire-form">
+				<div class="form-group mb-20"><input type="text" class="form-control" placeholder="Full Name" style="padding:15px; border-radius:12px;" required></div>
+				<div class="form-group mb-20"><input type="email" class="form-control" placeholder="Corporate Email" style="padding:15px; border-radius:12px;" required></div>
+				<div class="form-group mb-30"><textarea class="form-control" placeholder="How can we help?" rows="4" style="padding:15px; border-radius:12px;" required></textarea></div>
+				<button type="submit" class="default_button" style="width:100%; justify-content:center;">Send Inquiry <i class="flaticon-right-up"></i></button>
+			</form>
+		</div>
+	</div>
+	<script>
+		function openEnquireModal(e) { if(e) e.preventDefault(); document.getElementById('enquire-modal').classList.add('active'); }
+		function closeEnquireModal() { document.getElementById('enquire-modal').classList.remove('active'); }
+	</script>
 </body>
 </html>

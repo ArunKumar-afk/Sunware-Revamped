@@ -13,52 +13,18 @@
 	<link rel="stylesheet" href="assets/css/animate.css">
 	<link rel="stylesheet" href="assets/css/style.css">  
 
-	<style>
-	.menu { background: none; border: none; cursor: pointer; padding: 8px; display: none; flex-direction: column; justify-content: center; align-items: center; gap: 0; z-index: 999999; position: relative; }
-	.menu span { display: block; width: 26px; height: 2px; background: var(--text-heading-color); margin: 5px 0; transition: 0.3s; transform-origin: center; }
-	.menu.active span { background: #ffffff; }
-	.menu.active span:nth-child(1) { transform: translateY(12px) rotate(45deg); }
-	.menu.active span:nth-child(2) { opacity: 0; }
-	.menu.active span:nth-child(3) { transform: translateY(-12px) rotate(-45deg); }
-
-    @media (max-width: 1199px) {
-        .menu { display: flex; }
-        .header__area-menubar-center { display: none !important; }
-    }
-
-	.js-nav { position: fixed; top: 0; right: 0; width: 100%; height: 100%; z-index: 99990; background: rgba(10, 15, 30, 0.88); backdrop-filter: blur(20px) saturate(120%); transform: translateX(100%); pointer-events: none; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 110px 8vw 80px 8vw; will-change: transform; overflow-y: auto; }
-	.js-nav .nav-brand { position: absolute; top: 28px; left: 8vw; }
-	.js-nav .nav-brand img { height: 50px; width: auto; }
-	.nav-item { opacity: 0; transform: translateY(20px); margin-bottom: 4px; list-style: none; }
-	.nav-item a { display: inline-block; font-family: var(--heading-font); font-size: clamp(2.5rem, 5.5vw, 5.5rem); font-weight: 700; color: rgba(255, 255, 255, 0.85); line-height: 1.1; text-decoration: none; padding: 4px 0; position: relative; transition: color 0.25s ease; letter-spacing: -0.02em; }
-	.nav-item a:hover { color: #ffffff; }
-	.js-nav .nav-footer { position: absolute; bottom: 48px; left: 8vw; display: flex; align-items: center; gap: 24px; }
-	
-	.main-content-wrapper { position: relative; z-index: 2; background: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-	.site-footer { position: fixed; bottom: 0; left: 0; width: 100%; z-index: 1; visibility: hidden; }
-	.header__area { position: sticky; top: 0; left: 0; width: 100%; z-index: 99999 !important; background: #ffffff !important; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04); border-bottom: 1px solid rgba(0, 0, 0, 0.03); }
-
-	.container { max-width: 1650px !important; }
-    .banner__one { position: relative; overflow: hidden; background: #fff; }
-    .banner__one-content { visibility: visible !important; opacity: 1 !important; transform: none !important; position: relative !important; z-index: 10 !important; }
-
-	/* Megamenu Styles are now in assets/css/style.css */
-	</style>
-</head>
-    
 <body class="data_cursor">
-	<div class="theme-loader"><div class="spinner"><div class="spinner-bounce one"></div><div class="spinner-bounce two"></div><div class="spinner-bounce three"></div></div></div>
-	<div class="cursor"><div class="hide"><div id="cursor-ball"></div></div><div id="cursor-text"></div></div>
+	<!-- Cursor Follower -->
+	<div class="cursor-follower"></div>
 
-	<div class="js-nav" role="dialog" aria-modal="true" aria-label="Site Navigation">
-		<div class="nav-brand"><a href="index.html"><img src="main logo.png" alt="Sunware"></a></div>
+	<div class="js-nav">
+		<div class="nav-brand"><a href="index.html"><img src="white Logo.png" alt="Sunware"></a></div>
 		<ul>
 			<li class="nav-item"><a href="index.html">Home</a></li>
 			<li class="nav-item"><a href="about.html">About Us</a></li>
-			<li class="nav-item"><a href="#">Services</a></li>
-			<li class="nav-item"><a href="healthcare-lifesciences.html">Industries</a></li>
-			<li class="nav-item"><a href="careers.html">Careers</a></li>
 			<li class="nav-item"><a href="blog.html">Blog</a></li>
+			<li class="nav-item"><a href="careers.html">Careers</a></li>
+			<li class="nav-item"><a href="mailto:sales@sunware.in">Contact</a></li>
 		</ul>
 		<div class="nav-footer">
 			<div class="nav-footer-social">
@@ -66,9 +32,10 @@
 				<a href="https://www.youtube.com/@sunwaretechnologies" target="_blank"><i class="fab fa-youtube"></i></a>
 				<a href="https://www.instagram.com/sunwaretechnologies" target="_blank"><i class="fab fa-instagram"></i></a>
 			</div>
-			<a class="default_button" href="#" onclick="openEnquireModal(event)" style="background:#EF7F1A;color:#fff;">Enquire Now <i class="flaticon-right-up"></i></a>
+			<a class="default_button" href="#" onclick="openEnquireModal(event)">Enquire Now <i class="flaticon-right-up"></i></a>
 		</div>
 	</div>
+
 	<div class="main-content-wrapper">
 		<header class="header__area">
 			<div class="container">
@@ -119,34 +86,32 @@
 		</header>
 
 
-	<!-- Banner Area (About Page) -->
-	<div class="banner__one" style="position: relative; overflow: hidden; background: #fff;">
-		<!-- Subtle wave background -->
-		<div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, #f0f4ff 0%, #e8f0fe 50%, #f0f7ff 100%); z-index: 0;"></div>
-
-		<div class="container" style="position: relative; z-index: 5; padding: 120px 0;">
-			<div class="row al-center">
+	<!-- Standardized Page Header Start -->
+	<section class="story-header" style="background-image: url('images/Success_Stories/Success_Stories_inner_pages/Sunware_Success-Stories-02_Banner_Unifying_Data.png');">
+		<div class="container">
+			<div class="row al-center jc-between">
 				<div class="col-xl-7 col-lg-7">
 					<div class="banner__one-content">
-						<h1 data-animation="fadeInUp" data-delay=".2s" style="color: var(--primary-color-1); font-size: 64px; line-height: 1.2; max-width: 100%; margin-bottom: 20px;">About Sunware Technologies</h1>
-						<h3 class="subtitle" data-animation="fadeInUp" data-delay=".4s" style="color: #EF7F1A; background: none; border: none; padding: 0; font-size: 32px; font-weight: 700; margin-bottom: 35px; display: block;">Engineering Innovative Solutions</h3>
-						<p data-animation="fadeInUp" data-delay=".5s" style="font-size: 20px; color: #444; margin-bottom: 30px; line-height: 1.8; max-width: 620px;">We engineer innovative solutions to empower businesses with deep technical mastery and groundbreaking AI innovations. Our team transforms complex data challenges into strategic opportunities.</p>
-						<div class="banner__one-content-button" data-animation="fadeInUp" data-delay=".6s" style="display: flex; gap: 16px; flex-wrap: wrap;">
-							<a class="default_button" href="#" onclick="openEnquireModal(event)" style="background: #EF7F1A; border-radius: 50px; padding: 15px 40px; color: #fff; font-weight: 700;">Get In Touch <i class="flaticon-right-up"></i></a>
-							<a class="default_button" href="cloud-solutions.html" style="background: var(--primary-color-1); border-radius: 50px; padding: 15px 40px; color: #fff; font-weight: 600;">Our Services <i class="flaticon-right-up"></i></a>
+						<h1 class="wow fadeInUp" style="font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; line-height: 1.1; color: #fff; margin-bottom: 20px;">About <span class="accent-color">Sunware Technologies</span></h1>
+						<h3 class="wow fadeInUp" data-wow-delay=".2s" style="color: #EF7F1A; font-size: 28px; font-weight: 700; margin-bottom: 25px;">Engineering Innovative Solutions</h3>
+						<p class="wow fadeInUp" data-wow-delay=".4s" style="font-size: 18px; color: rgba(255,255,255,0.9); margin-bottom: 35px; line-height: 1.7; max-width: 650px;">We empower global businesses with deep technical mastery and groundbreaking AI innovations. Our team transforms complex data challenges into strategic opportunities across multiple continents.</p>
+						<div class="wow fadeInUp" data-wow-delay=".6s" style="display: flex; gap: 20px; flex-wrap: wrap;">
+							<a class="default_button" href="#" onclick="openEnquireModal(event)">Work With Us <i class="flaticon-right-up"></i></a>
+							<a class="default_button" href="blog.html" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">Read Stories <i class="flaticon-right-up"></i></a>
 						</div>
 					</div>
 				</div>
 				<div class="col-xl-5 col-lg-5">
-					<div class="banner__one-image-area wow fadeInRight" data-wow-delay=".6s" style="position: relative; z-index: 10;">
-						<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.15); background-color: #000;">
-							<iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/1t_2QZWWz0M?si=0CdhguRS3kDWWQTD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+					<div class="wow fadeInRight" data-wow-delay=".6s" style="position: relative; z-index: 10;">
+						<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 24px; box-shadow: 0 30px 60px rgba(0,0,0,0.5); background-color: #000; border: 1px solid rgba(255,255,255,0.1);">
+							<iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/k9KRLE_KTFI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+	</section>
+	<!-- Standardized Page Header End -->
 
     <!-- About Detailed Story Start -->
 	<section class="about-detailed section-padding" style="background:#fff;">
