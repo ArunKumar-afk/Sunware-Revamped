@@ -7803,7 +7803,7 @@ h6 {
 }
 .dropdown-align-right {
     left: auto !important;
-    right: -40px !important;
+    right: 0 !important;
 }
 .dropdown-align-left {
     right: auto !important;
