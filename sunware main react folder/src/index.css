@@ -1,0 +1,8 @@
+/* Global React app styles — resets only, all design comes from style.css */
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  min-height: 100vh;
+}

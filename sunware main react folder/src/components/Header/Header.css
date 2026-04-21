@@ -1,0 +1,14 @@
+/* Header — inherits all styles from style.css */
+.header__area {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99999 !important;
+  background: #ffffff !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+@media (max-width: 1199px) {
+  .header__area-menubar-center { display: none !important; }
+}
