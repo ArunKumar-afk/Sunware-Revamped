@@ -8168,16 +8168,16 @@ h6 {
     }
     .banner__one .col-xl-5,
     .banner__one .col-lg-5 {
-        margin-bottom: 30px;
+        margin-bottom: 0;
     }
     .banner__one-image-area img {
-        max-width: 350px;
+        max-width: 300px;
         margin: 0 auto;
         display: block;
     }
     .banner__one .container {
-        padding-top: 40px !important;
-        padding-bottom: 40px !important;
+        padding-top: 30px !important;
+        padding-bottom: 50px !important;
     }
 
     /* Story layout stacks */
@@ -8222,18 +8222,58 @@ h6 {
    ============================================================ */
 @media (max-width: 767px) {
     /* Banner hero */
-    .banner__one .container { padding-top: 30px !important; padding-bottom: 30px !important; }
+    .banner__one .container { padding-top: 20px !important; padding-bottom: 40px !important; }
     .banner__one-content h1 { font-size: 28px !important; line-height: 1.2 !important; }
-    .banner__one-content .subtitle { font-size: 18px !important; }
+    .banner__one-content .subtitle { font-size: 18px !important; margin-bottom: 20px !important; }
     .banner__one-content p  { font-size: 16px !important; }
     .banner__one-content .default_button { padding: 12px 28px; font-size: 15px; }
-    .banner__one-image-area img { max-width: 280px; }
+    .banner__one-image-area img { max-width: 240px; }
+    .banner__one .col-xl-5,
+    .banner__one .col-lg-5 { margin-bottom: 0 !important; }
 
     /* Video bg scale for mobile */
     .banner__one video {
         width: 200% !important;
         height: 200% !important;
     }
+
+    /* Enquire Modal - compact for mobile */
+    .modal-content-wrapper {
+        padding: 24px 20px !important;
+        max-height: 90vh;
+        overflow-y: auto;
+        border-radius: 16px !important;
+    }
+    .modal-close {
+        top: 12px !important;
+        right: 12px !important;
+        font-size: 18px !important;
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f0f3f7 !important;
+        border-radius: 50% !important;
+        opacity: 1 !important;
+    }
+    .modal-header h3 { font-size: 20px !important; }
+    .modal-header p { font-size: 13px !important; }
+    .enquire-form .form-group input,
+    .enquire-form .form-group select,
+    .enquire-form .form-group textarea {
+        font-size: 14px !important;
+        padding: 10px 14px !important;
+    }
+    .enquire-form .form-group textarea { rows: 2; min-height: 60px; }
+    .enquire-form .form-group label { font-size: 13px !important; }
+    .enquire-form .form-row { gap: 0 !important; margin-bottom: 10px !important; }
+    .enquire-form .form-group { margin-bottom: 12px !important; }
+
+    /* Flip card back - 2 column grid on mobile too */
+    .stack-flip-links { grid-template-columns: 1fr 1fr; gap: 8px; }
+    .stack-flip-links a { padding: 10px 12px; font-size: 12px; }
+    .stack-flip-card { height: 380px; }
 
     /* Story hero */
     .story-hero { padding: 40px 0 60px 0; }
@@ -8282,12 +8322,24 @@ h6 {
    ============================================================ */
 @media (max-width: 575px) {
     /* Banner hero */
-    .banner__one .container { padding-top: 20px !important; padding-bottom: 20px !important; }
+    .banner__one .container { padding-top: 15px !important; padding-bottom: 30px !important; }
     .banner__one-content h1 { font-size: 24px !important; }
-    .banner__one-content .subtitle { font-size: 16px !important; margin-bottom: 20px !important; }
+    .banner__one-content .subtitle { font-size: 16px !important; margin-bottom: 15px !important; }
     .banner__one-content-button .default_button { width: 100%; text-align: center; justify-content: center; }
-    .banner__one-image-area img { max-width: 220px; }
-    .hero-pagination { margin-top: 20px !important; }
+    .banner__one-image-area img { max-width: 200px; }
+    .hero-pagination { margin-top: 15px !important; }
+
+    /* Modal even more compact */
+    .modal-content-wrapper { padding: 18px 16px !important; }
+    .modal-header h3 { font-size: 18px !important; margin-bottom: 4px !important; }
+    .modal-header p { font-size: 12px !important; margin-bottom: 10px !important; }
+
+    /* Flip card - single column on very small */
+    .stack-flip-links { grid-template-columns: 1fr; gap: 6px; }
+    .stack-flip-links a { padding: 8px 10px; font-size: 11px; }
+    .stack-flip-card { height: 350px; }
+    .stack-flip-back { padding: 20px 16px !important; }
+    .stack-flip-back h4 { font-size: 14px !important; margin-bottom: 12px !important; }
 
     /* Story hero */
     .story-hero h1 { font-size: 24px !important; }
@@ -8489,11 +8541,10 @@ a.megamenu-item-nested:hover {
     z-index: 1;
 }
 .stack-flip-links {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 10px;
     flex: 1;
-    overflow-y: auto;
 }
 .stack-flip-links a {
     display: flex;

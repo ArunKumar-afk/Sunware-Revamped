@@ -34,17 +34,17 @@ document.addEventListener('DOMContentLoaded', function () {
         .add({
           targets: nav,
           translateX: ['100%', '0%'],
-          duration: 1000,
-          easing: 'easeOutElastic(1, .8)'
+          duration: 400,
+          easing: 'easeOutCubic'
         })
         .add({
           targets: items,
           opacity: [0, 1],
-          translateY: [40, 0],
-          delay: anime.stagger(80),
-          duration: 500,
+          translateY: [20, 0],
+          delay: anime.stagger(40),
+          duration: 250,
           easing: 'easeOutExpo'
-        }, '-=250');
+        }, '-=150');
 
     } else {
       // CLOSE: fade items out fast, then slide panel off to the right
@@ -52,21 +52,21 @@ document.addEventListener('DOMContentLoaded', function () {
         .add({
           targets: items,
           opacity: [1, 0],
-          translateY: [0, 30],
-          delay: anime.stagger(40),
-          duration: 200,
+          translateY: [0, 15],
+          delay: anime.stagger(20),
+          duration: 150,
           easing: 'easeInExpo'
         })
         .add({
           targets: nav,
           translateX: ['0%', '100%'],
-          duration: 450,
-          easing: 'easeInOutExpo',
+          duration: 300,
+          easing: 'easeInOutCubic',
           complete: function () {
             nav.style.display = 'none';
             nav.style.pointerEvents = 'none';
           }
-        }, '-=100');
+        }, '-=50');
     }
     }); // end click listener
   }); // end forEach menuBtns

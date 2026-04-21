@@ -1,4 +1,4 @@
-﻿<!-- Layout Top -->
+<!-- Layout Top -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,7 +35,7 @@
     .js-nav .nav-footer { position: absolute; bottom: 48px; left: 8vw; display: flex; align-items: center; gap: 24px; }
 	
 	.main-content-wrapper { position: relative; z-index: 2; background: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: margin-bottom 0.4s ease; }
-	.site-footer { position: relative; z-index: 2; visibility: visible; }
+	.site-footer { position: fixed; bottom: 0; left: 0; width: 100%; z-index: 1; visibility: hidden; }
 	.header__area { position: sticky !important; top: 0; left: 0; width: 100%; z-index: 99999 !important; background: #ffffff !important; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border-bottom: 1px solid rgba(0,0,0,0.03); }
 
     /* Megamenu Styles */
@@ -353,7 +353,7 @@
 	document.addEventListener('DOMContentLoaded', function() {
 		var modal = document.getElementById('enquire-modal');
 		if(modal) { modal.addEventListener('click', function(e) { if (e.target === this) closeEnquireModal(); }); }
-		/* footer in normal flow - no reveal needed */
+		const f=document.querySelector('.site-footer'),w=document.querySelector('.main-content-wrapper');function a(){if(!f||!w)return;const h=f.offsetHeight;if(window.innerWidth<992){f.style.position='relative';f.style.visibility='visible';w.style.marginBottom='0';}else{f.style.position='fixed';f.style.visibility='visible';w.style.marginBottom=h+'px';}}a();window.addEventListener('resize',a);
 	});
 </script>
 </body>
