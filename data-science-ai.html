@@ -1,4 +1,4 @@
-<!-- Layout Top -->
+﻿<!-- Layout Top -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,7 +35,7 @@
     .js-nav .nav-footer { position: absolute; bottom: 48px; left: 8vw; display: flex; align-items: center; gap: 24px; }
 	
 	.main-content-wrapper { position: relative; z-index: 2; background: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: margin-bottom 0.4s ease; }
-	.site-footer { position: fixed; bottom: 0; left: 0; width: 100%; z-index: 1; visibility: hidden; }
+	.site-footer { position: relative; z-index: 2; visibility: visible; }
 	.header__area { position: sticky !important; top: 0; left: 0; width: 100%; z-index: 99999 !important; background: #ffffff !important; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border-bottom: 1px solid rgba(0,0,0,0.03); }
 
 	/* ── Megamenu Styles ────────────────────────── */
@@ -86,52 +86,56 @@
 
 <div class="main-content-wrapper">
 	<header class="header__area">
-		<div class="container">
-			<div class="row">
-				<div class="col-xl-12">
-					<div class="header__area-menubar">
-						<div class="header__area-menubar-left one"><a href="index.html"><img src="main logo.png" alt="Sunware" style="height:45px;"></a></div>
-						<div class="header__area-menubar-center">
-							<div class="header__area-menubar-center-menu">
-								<ul id="mobilemenu">
-									<li><a href="index.html">Home</a></li>
-									<li><a href="about.html">About Us</a></li>
-										<li class="has-dropdown"><a href="#" style="color:#EF7F1A">Services <i class="fal fa-chevron-down" style="font-size:12px;margin-left:4px;"></i></a>
-											<div class="dropdown-small dropdown-align-left" style="width: 680px;">
-												<div class="services-grid">
-													<a href="cloud-solutions.html" class="megamenu-item"><h5>Cloud Solutions</h5><p>Hybrid cloud systems and scalability</p></a>
-													<a href="automation-efficiency.html" class="megamenu-item"><h5>Automation</h5><p>Streamlining operations and efficiency</p></a>
-													<a href="data-science-ai.html" class="megamenu-item"><h5>Data Science & AI</h5><p>Generative AI and analytics</p></a>
-													<a href="salesforce-expertise.html" class="megamenu-item"><h5>Salesforce</h5><p>Implementation and CRM experts</p></a>
-													<a href="microsoft-solutions.html" class="megamenu-item"><h5>Microsoft Solutions</h5><p>Enterprise stack and Azure</p></a>
-													<a href="iot-innovations.html" class="megamenu-item"><h5>IoT Innovations</h5><p>Connected smart device ecosystems</p></a>
-												</div>
-											</div>
-										</li>
-										<li class="has-dropdown"><a href="#">Industries <i class="fal fa-chevron-down" style="font-size:12px;margin-left:4px;"></i></a>
-											<div class="dropdown-small dropdown-align-right" style="width: 550px;">
-												<div class="megamenu-left industries-grid" style="grid-template-columns: 1fr 1fr; width: 550px;">
-													<a href="healthcare-lifesciences.html" class="megamenu-item"><h5>Healthcare & Life Sciences</h5><p>Next-gen patient care and R&D data</p></a>
-													<a href="banking-finance.html" class="megamenu-item"><h5>Banking & Financial Services</h5><p>Digital transformation and fintech</p></a>
-													<a href="retail-ecommerce.html" class="megamenu-item"><h5>Retail & E-commerce</h5><p>Scalable online customer journeys</p></a>
-													<a href="media-entertainment.html" class="megamenu-item"><h5>Media & Entertainment</h5><p>Interactive digital content solutions</p></a>
-												</div>
-											</div>
-										</li>
-									<li><a href="careers.html">Careers</a></li>
-									<li><a href="blog.html">Blog</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="header__area-menubar-right">
-							<div class="header__area-menubar-right-tel lg-display-n"><a class="default_button" href="#" onclick="openEnquireModal(event)">Enquire Now<i class="flaticon-right-up"></i></a></div>
-							<button class="menu js-menu"><span></span><span></span><span></span></button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</header>
+                        <div class="container">
+                                <div class="row">
+                                        <div class="col-xl-12">
+                                                <div class="header__area-menubar">
+                                                        <div class="header__area-menubar-left one"><a href="index.html"><img src="main logo.png" alt="Sunware Technologies" style="height:45px;"></a></div>
+                                                        <div class="header__area-menubar-center">
+                                                                <div class="header__area-menubar-center-menu">
+                                                                        <ul id="mobilemenu">
+                                                                                <li><a href="index.html">Home</a></li>
+                                                                                <li><a href="about.html">About Us</a></li>
+                                                                                <li class="has-dropdown"><a href="#" style="color:#EF7F1A">Services <i class="fal fa-chevron-down" style="font-size:12px;margin-left:4px;"></i></a>
+                                                                                        <div class="dropdown-small dropdown-align-left" style="width: 680px;">
+                                                                                                <div class="services-grid">
+                                                                                                        <a href="cloud-solutions.html" class="megamenu-item"><h5>Cloud Solutions</h5><p>Hybrid cloud systems and scalability</p></a>
+                                                                                                        <a href="automation-efficiency.html" class="megamenu-item"><h5>Automation</h5><p>Streamlining operations and efficiency</p></a>
+                                                                                                        <a href="data-science-ai.html" class="megamenu-item"><h5>Data Science &amp; AI</h5><p>Generative AI and analytics</p></a>
+                                                                                                        <a href="salesforce-expertise.html" class="megamenu-item"><h5>Salesforce</h5><p>Implementation and CRM experts</p></a>
+                                                                                                        <a href="microsoft-solutions.html" class="megamenu-item"><h5>Microsoft Solutions</h5><p>Enterprise stack and Azure</p></a>
+                                                                                                        <a href="iot-innovations.html" class="megamenu-item"><h5>IoT Innovations</h5><p>Connected smart device ecosystems</p></a>
+                                                                                                        <a href="cybersecurity-services.html" class="megamenu-item"><h5>Cybersecurity</h5><p>Protecting your digital assets</p></a>
+                                                                                                        <a href="odoo-solutions.html" class="megamenu-item"><h5>Odoo Solutions</h5><p>ERP and business automation</p></a>
+                                                                                                        <a href="mobile-app-development.html" class="megamenu-item"><h5>Mobile App Development</h5><p>iOS and Android solutions</p></a>
+                                                                                                        <a href="aiot-integrations.html" class="megamenu-item"><h5>AIoT Integrations</h5><p>AI-powered IoT ecosystems</p></a>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                </li>
+                                                                                <li class="has-dropdown"><a href="#">Industries <i class="fal fa-chevron-down" style="font-size:12px;margin-left:4px;"></i></a>
+                                                                                        <div class="dropdown-small dropdown-align-right" style="width: 550px;">
+                                                                                                <div class="megamenu-left industries-grid" style="grid-template-columns: 1fr 1fr; width: 550px;">
+                                                                                                        <a href="healthcare-lifesciences.html" class="megamenu-item"><h5>Healthcare &amp; Life Sciences</h5><p>Next-gen patient care and R&amp;D data</p></a>
+                                                                                                        <a href="banking-finance.html" class="megamenu-item"><h5>Banking &amp; Financial Services</h5><p>Digital transformation and fintech</p></a>
+                                                                                                        <a href="retail-ecommerce.html" class="megamenu-item"><h5>Retail &amp; E-commerce</h5><p>Scalable online customer journeys</p></a>
+                                                                                                        <a href="media-entertainment.html" class="megamenu-item"><h5>Media &amp; Entertainment</h5><p>Interactive digital content solutions</p></a>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                </li>
+                                                                                <li><a href="careers.html">Careers</a></li>
+                                                                                <li><a href="blog.html">Blog</a></li>
+                                                                        </ul>
+                                                                </div>
+                                                        </div>
+                                                        <div class="header__area-menubar-right">
+                                                                <div class="header__area-menubar-right-tel lg-display-n"><a class="default_button" href="#" onclick="openEnquireModal(event)">Enquire Now<i class="flaticon-right-up"></i></a></div>
+                                                                <button class="menu js-menu"><span></span><span></span><span></span></button>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </header>
 
 	<div class="banner__one" style="position: relative; overflow: hidden; background: #fff;">
 		<video autoplay loop muted playsinline style="position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; object-fit: cover; transform: translate(-50%, -50%); z-index: 0; opacity: 0.6;">
@@ -203,54 +207,54 @@
 </div> <!-- main-content-wrapper closure -->
 
 <footer class="site-footer">
-	<div class="footer__one" style="padding: 15px 0; background-color: #0a0f1e;">
-		<div class="bg_shape" style="background-image: url('assets/img/shape/footer.png');"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-3 col-sm-6">
-					<div class="footer__one-widget">
-						<a class="logo" href="index.html"><img src="white Logo.png" alt="Sunware"></a>
-						<p style="font-style: italic; color: #EF7F1A; margin: 15px 0 4px 0; font-size: 14px; font-weight: 500;">Advanced Data & AI Solutions Tailored to Your Needs.</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6 sm-mt-30">
-					<div class="footer__one-widget ml-40 xl-ml-0">
-						<h5>Quick links</h5>
-						<div class="footer-widget-menu">
-							<ul>
-								<li><a href="index.html">Home</a></li>
-								<li><a href="about.html">About Us</a></li>
-								<li><a href="#">Services</a></li>
-								<li><a href="careers.html">Careers</a></li>
-								<li><a href="blog.html">Blog</a></li>
-								<li><a href="mailto:sales@sunware.in">Contact Us</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6 lg-mt-30">
-					<div class="footer__one-widget contact ml-40 xl-ml-0">
-						<h5>Contact</h5>
-						<div class="contact-item mb-15">
-							<div class="contact-item-icon"><i class="flaticon-email"></i></div>
-							<div class="contact-item-info"><span>Email</span><h6><a href="mailto:sales@sunware.in">sales@sunware.in</a></h6></div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6 lg-mt-30">
-					<div class="footer__one-widget social">
-						<h5>Social Media</h5>
-						<p>Stay connected with us</p>
-						<ul>
-							<li><a href="https://www.linkedin.com/company/sunware-technologies" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-							<li><a href="https://www.youtube.com/@sunwaretechnologies" target="_blank"><i class="fab fa-youtube"></i></a></li>
-							<li><a href="https://www.instagram.com/sunwaretechnologies" target="_blank"><i class="fab fa-instagram"></i></a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+        <div class="footer__one" style="padding: 15px 0; background-color: #0a0f1e;">
+                <div class="bg_shape" style="background-image: url('assets/img/shape/footer.png');"></div>
+                <div class="container">
+                        <div class="row">
+                                <div class="col-lg-3 col-sm-6">
+                                        <div class="footer__one-widget">
+                                                <a class="logo" href="index.html"><img src="white Logo.png" alt="Sunware Technologies"></a>
+                                                <p style="font-style: italic; color: #EF7F1A; margin: 15px 0 4px 0; font-size: 14px; font-weight: 500;">Advanced Data &amp; AI Solutions Tailored to Your Needs.</p>
+                                        </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 sm-mt-30">
+                                        <div class="footer__one-widget ml-40 xl-ml-0">
+                                                <h5>Quick links</h5>
+                                                <div class="footer-widget-menu">
+                                                        <ul>
+                                                                <li><a href="index.html">Home</a></li>
+                                                                <li><a href="about.html">About Us</a></li>
+                                                                <li><a href="#">Services</a></li>
+                                                                <li><a href="careers.html">Careers</a></li>
+                                                                <li><a href="blog.html">Blog</a></li>
+                                                                <li><a href="mailto:sales@sunware.in">Contact Us</a></li>
+                                                        </ul>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 lg-mt-30">
+                                        <div class="footer__one-widget contact ml-40 xl-ml-0">
+                                                <h5>Contact</h5>
+                                                <div class="contact-item mb-15">
+                                                        <div class="contact-item-icon"><i class="flaticon-email"></i></div>
+                                                        <div class="contact-item-info"><span>Email</span><h6><a href="mailto:sales@sunware.in">sales@sunware.in</a></h6></div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 lg-mt-30">
+                                        <div class="footer__one-widget social">
+                                                <h5>Social Media</h5>
+                                                <p>Stay connected with us</p>
+                                                <ul>
+                                                        <li><a href="https://www.linkedin.com/company/sunware-technologies" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                                                        <li><a href="https://www.youtube.com/@sunwaretechnologies" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                                                        <li><a href="https://www.instagram.com/sunwaretechnologies" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                                </ul>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
 </footer>
 <!-- Standardized Modal & Scripts Block -->
 <div id="enquire-modal" class="modal-overlay">
@@ -296,9 +300,7 @@
 	document.addEventListener('DOMContentLoaded', function() {
 		var modal = document.getElementById('enquire-modal');
 		if(modal) { modal.addEventListener('click', function(e) { if (e.target === this) closeEnquireModal(); }); }
-		const f=document.querySelector('.site-footer'),w=document.querySelector('.main-content-wrapper');
-		function a(){ if(!f||!w)return; const h=f.offsetHeight; if(window.innerWidth<992){f.style.position='relative';f.style.visibility='visible';w.style.marginBottom='0';} else{f.style.position='fixed';f.style.visibility='visible';w.style.marginBottom=h+'px';} }
-		a();window.addEventListener('resize',a);
+		/* footer in normal flow - no reveal needed */
 	});
 </script>
 </body>

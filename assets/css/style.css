@@ -8092,5 +8092,223 @@ h6 {
 
 /* --------------------------------------- */
 
+/* ============================================================
+   MOBILE RESPONSIVE — Global fixes for all pages
+   ============================================================ */
+
+/* ── story-hero (industry/service page banners) ── */
+.story-hero {
+    padding: 60px 0 80px 0;
+}
+
+/* ── story-row (intro two-column layout) ── */
+.story-row {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+.story-content { flex: 1; }
+.story-image   { flex: 1; }
+.story-image img { width: 100%; border-radius: 24px; }
+
+/* ── culture-card (used on careers, industry pages) ── */
+.culture-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+    height: 100%;
+    transition: 0.3s;
+    border: 1px solid #f0f3f7;
+}
+.culture-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+    border-color: #EF7F1A;
+}
+
+/* ── Banner hero padding ── */
+.banner__one .container {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+/* ── Dropdown: prevent overflow on small screens ── */
+.dropdown-small {
+    max-width: calc(100vw - 40px);
+}
+
+/* ── section-padding default ── */
+.section-padding { padding: 80px 0; }
+
+/* ============================================================
+   BREAKPOINT: 1199px (large tablets / small laptops)
+   ============================================================ */
+@media (max-width: 1199px) {
+    .story-row { gap: 40px; }
+    .footer__cta-area-left h2 { font-size: 36px; line-height: 46px; }
+    .banner__one .container { padding-top: 90px; padding-bottom: 90px; }
+}
+
+/* ============================================================
+   BREAKPOINT: 991px (tablets)
+   ============================================================ */
+@media (max-width: 991px) {
+    /* Story layout stacks */
+    .story-row {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .story-content,
+    .story-image { width: 100%; flex: unset; }
+
+    /* Banner hero */
+    .banner__one .container { padding-top: 70px; padding-bottom: 70px; }
+    .banner__one-content h1 { font-size: 42px !important; }
+
+    /* Story hero */
+    .story-hero { padding: 50px 0 70px 0; }
+    .story-hero h1 { font-size: clamp(2rem, 5vw, 3rem) !important; }
+    .story-hero p  { font-size: 18px !important; }
+
+    /* CTA */
+    .footer__cta-area { padding: 30px 25px; }
+    .footer__cta-area-left h2 { font-size: 30px; line-height: 40px; }
+    .footer__cta-area-right { justify-content: center !important; }
+
+    /* Culture cards */
+    .culture-card { padding: 30px; }
+
+    /* Section padding */
+    .section-padding { padding: 60px 0; }
+
+    /* Services/Industries grid in megamenu */
+    .services-grid,
+    .industries-grid { grid-template-columns: 1fr 1fr !important; }
+
+    /* About hero two-col */
+    .banner__one .col-xl-7,
+    .banner__one .col-xl-5 { width: 100%; }
+}
+
+/* ============================================================
+   BREAKPOINT: 767px (large phones)
+   ============================================================ */
+@media (max-width: 767px) {
+    /* Banner hero */
+    .banner__one .container { padding-top: 60px; padding-bottom: 60px; }
+    .banner__one-content h1 { font-size: 32px !important; line-height: 1.2 !important; }
+    .banner__one-content h3 { font-size: 20px !important; }
+    .banner__one-content p  { font-size: 16px !important; }
+    .banner__one-content .default_button { padding: 12px 28px; font-size: 15px; }
+
+    /* Story hero */
+    .story-hero { padding: 40px 0 60px 0; }
+    .story-hero h1 { font-size: 28px !important; }
+    .story-hero p  { font-size: 16px !important; }
+
+    /* CTA */
+    .footer__cta-area { padding: 25px 20px; text-align: center; }
+    .footer__cta-area-left h2 { font-size: 26px; line-height: 36px; }
+    .footer__cta-area-right {
+        flex-direction: column;
+        align-items: center !important;
+        gap: 20px !important;
+    }
+    .footer__cta-area-right-tel { justify-content: center; }
+
+    /* Culture cards */
+    .culture-card { padding: 25px; }
+
+    /* Section padding */
+    .section-padding { padding: 50px 0; }
+
+    /* Section titles */
+    .section-title h2 { font-size: 28px !important; }
+
+    /* Industry/service intro h2 */
+    .col-lg-6 h2 { font-size: 28px !important; }
+
+    /* YouTube embed on about/careers */
+    .banner__one .col-xl-5 .wow,
+    .banner__one .col-lg-6 .wow { margin-top: 30px; }
+
+    /* Careers iframe */
+    .careers-iframe { height: 1400px; }
+
+    /* Footer columns */
+    .footer__one-widget { margin-bottom: 30px; }
+    .footer__one-widget.ml-40 { margin-left: 0 !important; }
+
+    /* Header logo */
+    .header__area-menubar-left img { height: 38px !important; }
+}
+
+/* ============================================================
+   BREAKPOINT: 575px (small phones)
+   ============================================================ */
+@media (max-width: 575px) {
+    /* Banner hero */
+    .banner__one .container { padding-top: 50px; padding-bottom: 50px; }
+    .banner__one-content h1 { font-size: 26px !important; }
+    .banner__one-content h3 { font-size: 18px !important; }
+    .banner__one-content div[style*="display: flex"] {
+        flex-direction: column !important;
+        gap: 12px !important;
+    }
+    .banner__one-content .default_button { width: 100%; justify-content: center; text-align: center; }
+
+    /* Story hero */
+    .story-hero h1 { font-size: 24px !important; }
+    .story-hero p  { font-size: 15px !important; }
+
+    /* CTA */
+    .footer__cta-area-left h2 { font-size: 22px; line-height: 30px; }
+    .footer__cta-area .default_button { width: 100%; justify-content: center; }
+
+    /* Culture cards */
+    .culture-card { padding: 20px; }
+    .culture-card h4 { font-size: 18px; }
+
+    /* Section titles */
+    .section-title h2 { font-size: 24px !important; }
+    .section-title .subtitle { font-size: 13px; }
+
+    /* Section padding */
+    .section-padding { padding: 40px 0; }
+
+    /* Careers iframe */
+    .careers-iframe { height: 1200px; }
+
+    /* Footer */
+    .footer__one-widget h5 { font-size: 16px; }
+    .footer__one-widget p  { font-size: 13px; }
+
+    /* Nav overlay font size */
+    .nav-item a { font-size: clamp(1.8rem, 8vw, 3rem) !important; }
+}
+
+/* ============================================================
+   BREAKPOINT: 400px (very small phones)
+   ============================================================ */
+@media (max-width: 400px) {
+    .banner__one-content h1 { font-size: 22px !important; }
+    .story-hero h1 { font-size: 20px !important; }
+    .footer__cta-area-left h2 { font-size: 20px; line-height: 28px; }
+    .culture-card { padding: 16px; }
+    .section-padding { padding: 30px 0; }
+    .careers-iframe { height: 1000px; }
+}
+
+/* ── Utility: ensure images never overflow ── */
+img { max-width: 100%; height: auto; }
+
+/* ── Ensure video bg covers properly on mobile ── */
+@media (max-width: 767px) {
+    .banner__one video {
+        width: 200% !important;
+        height: 200% !important;
+    }
+}
 
 /*# sourceMappingURL=style.css.map */
