@@ -8154,6 +8154,32 @@ h6 {
    BREAKPOINT: 991px (tablets)
    ============================================================ */
 @media (max-width: 991px) {
+    /* Banner hero: image on top, text below */
+    .banner__one .row.al-center {
+        flex-direction: column-reverse;
+    }
+    .banner__one .col-xl-7,
+    .banner__one .col-lg-7,
+    .banner__one .col-xl-5,
+    .banner__one .col-lg-5 {
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+    .banner__one .col-xl-5,
+    .banner__one .col-lg-5 {
+        margin-bottom: 30px;
+    }
+    .banner__one-image-area img {
+        max-width: 350px;
+        margin: 0 auto;
+        display: block;
+    }
+    .banner__one .container {
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+    }
+
     /* Story layout stacks */
     .story-row {
         flex-direction: column;
@@ -8162,9 +8188,9 @@ h6 {
     .story-content,
     .story-image { width: 100%; flex: unset; }
 
-    /* Banner hero */
-    .banner__one .container { padding-top: 70px; padding-bottom: 70px; }
-    .banner__one-content h1 { font-size: 42px !important; }
+    /* Banner hero text */
+    .banner__one-content h1 { font-size: 36px !important; }
+    .banner__one-content .subtitle { font-size: 22px !important; }
 
     /* Story hero */
     .story-hero { padding: 50px 0 70px 0; }
@@ -8196,11 +8222,18 @@ h6 {
    ============================================================ */
 @media (max-width: 767px) {
     /* Banner hero */
-    .banner__one .container { padding-top: 60px; padding-bottom: 60px; }
-    .banner__one-content h1 { font-size: 32px !important; line-height: 1.2 !important; }
-    .banner__one-content h3 { font-size: 20px !important; }
+    .banner__one .container { padding-top: 30px !important; padding-bottom: 30px !important; }
+    .banner__one-content h1 { font-size: 28px !important; line-height: 1.2 !important; }
+    .banner__one-content .subtitle { font-size: 18px !important; }
     .banner__one-content p  { font-size: 16px !important; }
     .banner__one-content .default_button { padding: 12px 28px; font-size: 15px; }
+    .banner__one-image-area img { max-width: 280px; }
+
+    /* Video bg scale for mobile */
+    .banner__one video {
+        width: 200% !important;
+        height: 200% !important;
+    }
 
     /* Story hero */
     .story-hero { padding: 40px 0 60px 0; }
@@ -8249,14 +8282,12 @@ h6 {
    ============================================================ */
 @media (max-width: 575px) {
     /* Banner hero */
-    .banner__one .container { padding-top: 50px; padding-bottom: 50px; }
-    .banner__one-content h1 { font-size: 26px !important; }
-    .banner__one-content h3 { font-size: 18px !important; }
-    .banner__one-content div[style*="display: flex"] {
-        flex-direction: column !important;
-        gap: 12px !important;
-    }
-    .banner__one-content .default_button { width: 100%; justify-content: center; text-align: center; }
+    .banner__one .container { padding-top: 20px !important; padding-bottom: 20px !important; }
+    .banner__one-content h1 { font-size: 24px !important; }
+    .banner__one-content .subtitle { font-size: 16px !important; margin-bottom: 20px !important; }
+    .banner__one-content-button .default_button { width: 100%; text-align: center; justify-content: center; }
+    .banner__one-image-area img { max-width: 220px; }
+    .hero-pagination { margin-top: 20px !important; }
 
     /* Story hero */
     .story-hero h1 { font-size: 24px !important; }
