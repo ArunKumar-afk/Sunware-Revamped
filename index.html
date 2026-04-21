@@ -653,6 +653,7 @@
                     <div class="portfolio__one-left overflow-hidden mr-40 xl-mr-0">
                                                 <span class="subtitle wow fadeInLeft" data-wow-delay=".4s">Success Stories</span>
                                                 <h2 class="title_split_anim">Proven Impact Across Industries</h2>
+                                                <p style="color:#555; font-size:16px; margin-top:20px; line-height:1.7;">Click a card to explore the services within each category.</p>
                                                 <div class="item_bounce">
                                                         <a class="default_button mt-40" href="about.html">Explore More<i class="flaticon-right-up"></i></a>
                                                 </div>
@@ -660,31 +661,68 @@
                 </div>
                 <div class="col-lg-7">
                     <div class="portfolio__one-right" id="stack-cards-container">
-                                        <div class="portfolio__one-item stack-card" style="--card-index: 0;">
-                                                <img src="assets/img/services/services-1.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="Solution Engineering">
-                                                <div class="portfolio__one-item-content">
-                                                        <a href="cloud-solutions.html"><i class="flaticon-right-up"></i></a>
-                                                        <span>Services</span>
-                                                        <h4><a href="cloud-solutions.html">Solution Engineering &amp; Development</a></h4>
-                                                        <p style="color:rgba(255,255,255,0.7); font-size:14px; margin-top:10px;">Data Analytics · Enterprise App Development · Infrastructure · Cloud Services · IOT Solutions</p>
+                                        <div class="portfolio__one-item stack-card stack-flip-card" style="--card-index: 0;" onclick="this.classList.toggle('stack-flipped')">
+                                                <div class="stack-flip-inner">
+                                                        <div class="stack-flip-front">
+                                                                <img src="assets/img/services/services-1.jpg" style="width:100%;height:100%;object-fit:cover;" alt="Solution Engineering">
+                                                                <div class="portfolio__one-item-content">
+                                                                        <span>Services</span>
+                                                                        <h4>Solution Engineering &amp; Development</h4>
+                                                                        <p style="color:rgba(255,255,255,0.6); font-size:13px; margin-top:8px;">Click to see services</p>
+                                                                </div>
+                                                        </div>
+                                                        <div class="stack-flip-back">
+                                                                <h4 style="color:#0a0f1e; font-weight:800; margin-bottom:20px; padding-bottom:15px; border-bottom:2px solid #EF7F1A;">Solution Engineering &amp; Development</h4>
+                                                                <div class="stack-flip-links">
+                                                                        <a href="data-science-ai.html" onclick="event.stopPropagation()"><i class="fas fa-chart-bar"></i> Data Analytics</a>
+                                                                        <a href="automation-efficiency.html" onclick="event.stopPropagation()"><i class="fas fa-laptop-code"></i> Enterprise Application Development</a>
+                                                                        <a href="cloud-solutions.html" onclick="event.stopPropagation()"><i class="fas fa-server"></i> Infrastructure</a>
+                                                                        <a href="cloud-solutions.html" onclick="event.stopPropagation()"><i class="fas fa-cloud"></i> Cloud Services</a>
+                                                                        <a href="iot-innovations.html" onclick="event.stopPropagation()"><i class="fas fa-microchip"></i> IOT Solutions</a>
+                                                                </div>
+                                                        </div>
                                                 </div>
                                         </div>
-                                        <div class="portfolio__one-item stack-card" style="--card-index: 1;">
-                                                <img src="assets/img/services/services-2.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="Strategy Transformation">
-                                                <div class="portfolio__one-item-content">
-                                                        <a href="salesforce-expertise.html"><i class="flaticon-right-up"></i></a>
-                                                        <span>Services</span>
-                                                        <h4><a href="salesforce-expertise.html">Strategy &amp; Transformation</a></h4>
-                                                        <p style="color:rgba(255,255,255,0.7); font-size:14px; margin-top:10px;">Technology Consulting · Digital Transformation · AI Enablement · Data Engineering · XR Solutions</p>
+                                        <div class="portfolio__one-item stack-card stack-flip-card" style="--card-index: 1;" onclick="this.classList.toggle('stack-flipped')">
+                                                <div class="stack-flip-inner">
+                                                        <div class="stack-flip-front">
+                                                                <img src="assets/img/services/services-2.jpg" style="width:100%;height:100%;object-fit:cover;" alt="Strategy">
+                                                                <div class="portfolio__one-item-content">
+                                                                        <span>Services</span>
+                                                                        <h4>Strategy &amp; Transformation</h4>
+                                                                        <p style="color:rgba(255,255,255,0.6); font-size:13px; margin-top:8px;">Click to see services</p>
+                                                                </div>
+                                                        </div>
+                                                        <div class="stack-flip-back">
+                                                                <h4 style="color:#0a0f1e; font-weight:800; margin-bottom:20px; padding-bottom:15px; border-bottom:2px solid #EF7F1A;">Strategy &amp; Transformation</h4>
+                                                                <div class="stack-flip-links">
+                                                                        <a href="salesforce-expertise.html" onclick="event.stopPropagation()"><i class="fas fa-cogs"></i> Technology Consulting</a>
+                                                                        <a href="microsoft-solutions.html" onclick="event.stopPropagation()"><i class="fas fa-sync-alt"></i> Digital Transformation</a>
+                                                                        <a href="aiot-integrations.html" onclick="event.stopPropagation()"><i class="fas fa-robot"></i> AI Enablement</a>
+                                                                        <a href="data-science-ai.html" onclick="event.stopPropagation()"><i class="fas fa-database"></i> Data Engineering</a>
+                                                                        <a href="cybersecurity-services.html" onclick="event.stopPropagation()"><i class="fas fa-vr-cardboard"></i> XR Solutions</a>
+                                                                </div>
+                                                        </div>
                                                 </div>
                                         </div>
-                                        <div class="portfolio__one-item stack-card" style="--card-index: 2;">
-                                                <img src="assets/img/services/services-3.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="Operational Support">
-                                                <div class="portfolio__one-item-content">
-                                                        <a href="odoo-solutions.html"><i class="flaticon-right-up"></i></a>
-                                                        <span>Services</span>
-                                                        <h4><a href="odoo-solutions.html">Operational Support &amp; Expansion</a></h4>
-                                                        <p style="color:rgba(255,255,255,0.7); font-size:14px; margin-top:10px;">Staff Augmentation Solution · Maintenance and Support · Learning Platform</p>
+                                        <div class="portfolio__one-item stack-card stack-flip-card" style="--card-index: 2;" onclick="this.classList.toggle('stack-flipped')">
+                                                <div class="stack-flip-inner">
+                                                        <div class="stack-flip-front">
+                                                                <img src="assets/img/services/services-3.jpg" style="width:100%;height:100%;object-fit:cover;" alt="Operational Support">
+                                                                <div class="portfolio__one-item-content">
+                                                                        <span>Services</span>
+                                                                        <h4>Operational Support &amp; Expansion</h4>
+                                                                        <p style="color:rgba(255,255,255,0.6); font-size:13px; margin-top:8px;">Click to see services</p>
+                                                                </div>
+                                                        </div>
+                                                        <div class="stack-flip-back">
+                                                                <h4 style="color:#0a0f1e; font-weight:800; margin-bottom:20px; padding-bottom:15px; border-bottom:2px solid #EF7F1A;">Operational Support &amp; Expansion</h4>
+                                                                <div class="stack-flip-links">
+                                                                        <a href="odoo-solutions.html" onclick="event.stopPropagation()"><i class="fas fa-users"></i> Staff Augmentation Solution</a>
+                                                                        <a href="cybersecurity-services.html" onclick="event.stopPropagation()"><i class="fas fa-tools"></i> Maintenance and Support</a>
+                                                                        <a href="mobile-app-development.html" onclick="event.stopPropagation()"><i class="fas fa-graduation-cap"></i> Learning Platform</a>
+                                                                </div>
+                                                        </div>
                                                 </div>
                                         </div>
                     </div>
