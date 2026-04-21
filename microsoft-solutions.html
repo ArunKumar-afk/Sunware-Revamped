@@ -69,6 +69,7 @@
 	<div class="cursor"><div class="hide"><div id="cursor-ball"></div></div><div id="cursor-text"></div></div>
 
 	<div class="js-nav" role="dialog" aria-modal="true" aria-label="Site Navigation">
+        <button class="nav-close-btn" onclick="document.querySelector('.js-menu').click()" style="position:absolute; top:30px; right:30px; background:none; border:none; color:#fff; font-size:28px; cursor:pointer; z-index:99999; width:44px; height:44px; display:flex; align-items:center; justify-content:center;"><i class="fal fa-times"></i></button>
 		<div class="nav-brand"><a href="index.html"><img src="white Logo.png" alt="Sunware"></a></div>
 		<ul>
 			<li class="nav-item"><a href="index.html">Home</a></li>
@@ -339,11 +340,14 @@
 <script src="assets/js/jquery-3.7.1.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/wow.min.js"></script>
+<script src="assets/js/swiper-bundle.min.js"></script>
 <script src="assets/js/gsap.js"></script>
 <script src="assets/js/scroll-trigger.js"></script>
 <script src="assets/js/custom.js"></script>
 <script src="assets/js/nav-overlay.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
 
 <script>
         new WOW().init();
