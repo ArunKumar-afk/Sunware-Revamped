@@ -1,0 +1,398 @@
+<!-- Layout Top -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Data Analytics - Sunware Technologies</title>
+	<link rel="icon" type="image/png" href="favicon.png">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/fontawesome.css">
+	<link rel="stylesheet" href="assets/font/flaticon_flexitype.css">	
+	<link rel="stylesheet" href="assets/css/animate.css">
+	<link rel="stylesheet" href="assets/css/style.css">  
+
+	<style>
+	.menu { background: none; border: none; cursor: pointer; padding: 8px; display: none; flex-direction: column; justify-content: center; align-items: center; gap: 0; z-index: 999999; position: relative; }
+	.menu span { display: block; width: 26px; height: 1.5px; background: var(--text-heading-color); margin: 5px 0; transition: 0.3s; transform-origin: center; }
+	.menu.active span { background: #ffffff; }
+	.menu.active span:nth-child(1) { transform: translateY(12px) rotate(45deg); }
+	.menu.active span:nth-child(2) { opacity: 0; }
+	.menu.active span:nth-child(3) { transform: translateY(-12px) rotate(-45deg); }
+
+    @media (max-width: 1199px) {
+        .menu { display: flex; }
+        .header__area-menubar-center { display: none !important; }
+    }
+
+	.js-nav { position: fixed; top: 0; right: 0; width: 100%; height: 100%; z-index: 99990; background: rgba(10, 15, 30, 0.88); backdrop-filter: blur(20px) saturate(120%); transform: translateX(100%); pointer-events: none; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 110px 8vw 80px 8vw; will-change: transform; overflow-y: auto; }
+	.js-nav .nav-brand { position: absolute; top: 28px; left: 8vw; }
+	.js-nav .nav-brand img { height: 50px; width: auto; }
+	.nav-item { opacity: 0; transform: translateY(20px); margin-bottom: 4px; list-style: none; }
+	.nav-item a { display: inline-block; font-family: var(--heading-font); font-size: clamp(2.3rem, 5vw, 5rem); font-weight: 700; color: rgba(255, 255, 255, 0.85); line-height: 1.1; text-decoration: none; position: relative; transition: color 0.25s ease; }
+	.nav-item a:hover { color: #ffffff; }
+    .js-nav .nav-footer { position: absolute; bottom: 48px; left: 8vw; display: flex; align-items: center; gap: 24px; }
+	
+	.main-content-wrapper { position: relative; z-index: 2; background: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: margin-bottom 0.4s ease; }
+	.site-footer { position: fixed; bottom: 0; left: 0; width: 100%; z-index: 1; visibility: hidden; }
+	.header__area { position: sticky !important; top: 0; left: 0; width: 100%; z-index: 99999 !important; background: #ffffff !important; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border-bottom: 1px solid rgba(0,0,0,0.03); }
+
+    /* Megamenu Styles */
+    .has-megamenu { position: static !important; }
+    .megamenu { position: absolute; top: 100%; left: 0; width: 100%; background: #fff; box-shadow: 0 20px 40px rgba(0,0,0,0.05); padding: 40px 0; opacity: 0; visibility: hidden; transition: 0.4s; z-index: 1000; border-bottom: 1px solid #f0f0f0; }
+    .has-megamenu:hover .megamenu { opacity: 1; visibility: visible; }
+    .megamenu-content { display: flex; max-width: 1200px; margin: 0 auto; padding: 0 15px; gap: 60px; }
+    .megamenu-left { flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .megamenu-item { display: block; padding: 20px; border-radius: 12px; transition: 0.3s; text-decoration: none !important; color: inherit; }
+    .megamenu-item:hover { background: #f8faff; }
+    .megamenu-item h5 { font-size: 17px; font-weight: 700; color: #EF7F1A; margin-bottom: 6px; }
+    .megamenu-item p { font-size: 14px; color: #777; margin: 0; }
+    .megamenu-right { width: 400px; border-radius: 20px; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #f9fbff; }
+    .megamenu-preview-img { width: 100%; height: 100%; object-fit: cover; transition: 0.4s ease; }
+
+	.story-hero { padding: 100px 0; background: #fff; position: relative; overflow: hidden; }
+	.story-row { display: flex; align-items: center; gap: 60px; margin-bottom: 100px; }
+	.story-row:nth-child(even) { flex-direction: row-reverse; }
+	.story-image img { width: 100%; border-radius: 20px; box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
+    .tailored-grid{padding:100px 0;background:#f9faff;}
+    .solution-card{background:#fff;padding:40px;border-radius:24px;height:100%;transition:0.3s;border:1px solid #eee;box-shadow:0 10px 30px rgba(0,0,0,0.02);}
+	.solution-card:hover{transform:translateY(-10px);border-color:#EF7F1A;box-shadow:0 20px 40px rgba(0,0,0,0.08);}
+	</style>
+</head>
+    
+<body class="data_cursor">
+	<!-- Cursor Follower -->
+	<div class="cursor-follower"></div>
+
+	<div class="theme-loader"><div class="spinner"><div class="spinner-bounce one"></div><div class="spinner-bounce two"></div><div class="spinner-bounce three"></div></div></div>
+	<div class="cursor"><div class="hide"><div id="cursor-ball"></div></div><div id="cursor-text"></div></div>
+
+	<div class="js-nav" role="dialog" aria-modal="true" aria-label="Site Navigation">
+        <button class="nav-close-btn" onclick="document.querySelector('.js-menu').click()" style="position:absolute; top:30px; right:30px; background:none; border:none; color:#fff; font-size:28px; cursor:pointer; z-index:99999; width:44px; height:44px; display:flex; align-items:center; justify-content:center;"><i class="fal fa-times"></i></button>
+		<div class="nav-brand"><a href="index.html"><img src="white Logo.png" alt="Sunware"></a></div>
+		<ul>
+			<li class="nav-item"><a href="index.html">Home</a></li>
+			<li class="nav-item"><a href="about.html">About Us</a></li>
+			<li class="nav-item"><a href="#">Services</a></li>
+			<li class="nav-item"><a href="healthcare-lifesciences.html">Industries</a></li>
+			<li class="nav-item"><a href="careers.html">Careers</a></li>
+			<li class="nav-item"><a href="blog.html">Blog</a></li>
+		</ul>
+		<div class="nav-footer">
+			<div class="nav-footer-social">
+				<a href="https://www.linkedin.com/company/sunware-technologies" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+				<a href="https://www.youtube.com/@sunwaretechnologies" target="_blank"><i class="fab fa-youtube"></i></a>
+				<a href="https://www.instagram.com/sunwaretechnologies" target="_blank"><i class="fab fa-instagram"></i></a>
+			</div>
+			<a class="default_button" href="#" onclick="openEnquireModal(event)" style="background:#EF7F1A;color:#fff;">Enquire Now <i class="flaticon-right-up"></i></a>
+		</div>
+	</div>
+
+<div class="main-content-wrapper">
+	<header class="header__area">
+                        <div class="container">
+                                <div class="row">
+                                        <div class="col-xl-12">
+                                                <div class="header__area-menubar">
+                                                        <div class="header__area-menubar-left one"><a href="index.html"><img src="main logo.png" alt="Sunware Technologies" style="height:45px;"></a></div>
+                                                        <div class="header__area-menubar-center">
+                                                                <div class="header__area-menubar-center-menu">
+                                                                        <ul id="mobilemenu">
+                                                                                <li class="has-dropdown"><a href="#">Services <i class="fal fa-chevron-down" style="font-size:12px;margin-left:4px;"></i></a>
+                                                                                        <div class="dropdown-small dropdown-align-left" style="width: 580px; padding: 24px;">
+                                                                                                <div class="services-categories">
+                                                                                                        <div class="services-category">
+                                                                                                                <div class="services-category-title"><i class="fas fa-code" style="color:#EF7F1A; margin-right:10px;"></i> Solution Engineering &amp; Development</div>
+                                                                                                                <div class="services-category-items">
+                                                                                                                        <a href="data-science-ai.html" class="megamenu-item-nested"><i class="fas fa-chart-bar" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> Data Analytics</a>
+                                                                                                                        <a href="automation-efficiency.html" class="megamenu-item-nested"><i class="fas fa-laptop-code" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> Enterprise Application Development</a>
+                                                                                                                        <a href="cloud-solutions.html" class="megamenu-item-nested"><i class="fas fa-server" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> Infrastructure</a>
+                                                                                                                        <a href="cloud-solutions.html" class="megamenu-item-nested"><i class="fas fa-cloud" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> Cloud Services</a>
+                                                                                                                        <a href="iot-innovations.html" class="megamenu-item-nested"><i class="fas fa-microchip" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> IOT Solutions</a>
+                                                                                                                </div>
+                                                                                                        </div>
+                                                                                                        <div class="services-category">
+                                                                                                                <div class="services-category-title"><i class="fas fa-lightbulb" style="color:#EF7F1A; margin-right:10px;"></i> Strategy &amp; Transformation</div>
+                                                                                                                <div class="services-category-items">
+                                                                                                                        <a href="salesforce-expertise.html" class="megamenu-item-nested"><i class="fas fa-cogs" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> Technology Consulting</a>
+                                                                                                                        <a href="microsoft-solutions.html" class="megamenu-item-nested"><i class="fas fa-sync-alt" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> Digital Transformation</a>
+                                                                                                                        <a href="aiot-integrations.html" class="megamenu-item-nested"><i class="fas fa-robot" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> AI Enablement</a>
+                                                                                                                        <a href="data-science-ai.html" class="megamenu-item-nested"><i class="fas fa-database" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> Data Engineering</a>
+                                                                                                                        <a href="cybersecurity-services.html" class="megamenu-item-nested"><i class="fas fa-vr-cardboard" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> XR Solutions</a>
+                                                                                                                </div>
+                                                                                                        </div>
+                                                                                                        <div class="services-category">
+                                                                                                                <div class="services-category-title"><i class="fas fa-hands-helping" style="color:#EF7F1A; margin-right:10px;"></i> Operational Support &amp; Expansion</div>
+                                                                                                                <div class="services-category-items">
+                                                                                                                        <a href="odoo-solutions.html" class="megamenu-item-nested"><i class="fas fa-users" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> Staff Augmentation</a>
+                                                                                                                        <a href="cybersecurity-services.html" class="megamenu-item-nested"><i class="fas fa-tools" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> Maintenance &amp; Support</a>
+                                                                                                                        <a href="mobile-app-development.html" class="megamenu-item-nested"><i class="fas fa-graduation-cap" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> Learning Platform</a>
+                                                                                                                </div>
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                </li>
+                                                                                <li class="has-dropdown"><a href="#">Industries <i class="fal fa-chevron-down" style="font-size:12px;margin-left:4px;"></i></a>
+                                                                                        <div class="dropdown-small dropdown-align-left" style="width: 480px; padding: 20px;">
+                                                                                                <div style="display: flex; flex-direction: column; gap: 6px;">
+                                                                                                        <a href="healthcare-lifesciences.html" class="megamenu-item-nested" style="font-size:15px; font-weight:600; padding:14px 18px;"><i class="fas fa-heartbeat" style="color:#EF7F1A; margin-right:10px; width:20px;"></i> Healthcare &amp; Life Sciences</a>
+                                                                                                        <a href="banking-finance.html" class="megamenu-item-nested" style="font-size:15px; font-weight:600; padding:14px 18px;"><i class="fas fa-university" style="color:#EF7F1A; margin-right:10px; width:20px;"></i> Banking &amp; Financial Services</a>
+                                                                                                        <a href="retail-ecommerce.html" class="megamenu-item-nested" style="font-size:15px; font-weight:600; padding:14px 18px;"><i class="fas fa-shopping-cart" style="color:#EF7F1A; margin-right:10px; width:20px;"></i> Retail &amp; E-commerce</a>
+                                                                                                        <a href="media-entertainment.html" class="megamenu-item-nested" style="font-size:15px; font-weight:600; padding:14px 18px;"><i class="fas fa-film" style="color:#EF7F1A; margin-right:10px; width:20px;"></i> Media &amp; Entertainment</a>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                </li>
+                                                                                <li class="has-dropdown"><a href="#">Technologies <i class="fal fa-chevron-down" style="font-size:12px;margin-left:4px;"></i></a>
+                                                                                        <div class="dropdown-small dropdown-align-left" style="width: 580px; padding: 24px;">
+                                                                                                <div class="services-categories">
+                                                                                                        <div class="services-category">
+                                                                                                                <div class="services-category-title"><i class="fas fa-briefcase" style="color:#EF7F1A; margin-right:10px;"></i> Core Business Solutions</div>
+                                                                                                                <div class="services-category-items">
+                                                                                                                        <a href="cloud-solutions.html" class="megamenu-item-nested"><i class="fas fa-cloud" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> Cloud Solutions Expertise</a>
+                                                                                                                        <a href="automation-efficiency.html" class="megamenu-item-nested"><i class="fas fa-cogs" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> Automation and Efficiency</a>
+                                                                                                                        <a href="data-science-ai.html" class="megamenu-item-nested"><i class="fas fa-brain" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> Data Science &amp; AI</a>
+                                                                                                                        <a href="mobile-app-development.html" class="megamenu-item-nested"><i class="fas fa-mobile-alt" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> Mobile Application Development</a>
+                                                                                                                </div>
+                                                                                                        </div>
+                                                                                                        <div class="services-category">
+                                                                                                                <div class="services-category-title"><i class="fas fa-puzzle-piece" style="color:#EF7F1A; margin-right:10px;"></i> Specialized Technology Solutions</div>
+                                                                                                                <div class="services-category-items">
+                                                                                                                        <a href="data-science-ai.html" class="megamenu-item-nested"><i class="fas fa-project-diagram" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> Graph Technologies: Neo4J</a>
+                                                                                                                        <a href="salesforce-expertise.html" class="megamenu-item-nested"><i class="fab fa-salesforce" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> CRM: Salesforce</a>
+                                                                                                                        <a href="odoo-solutions.html" class="megamenu-item-nested"><i class="fas fa-cubes" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> ERP: Odoo Solutions</a>
+                                                                                                                </div>
+                                                                                                        </div>
+                                                                                                        <div class="services-category">
+                                                                                                                <div class="services-category-title"><i class="fas fa-rocket" style="color:#EF7F1A; margin-right:10px;"></i> Frontier/Emerging Technologies</div>
+                                                                                                                <div class="services-category-items">
+                                                                                                                        <a href="aiot-integrations.html" class="megamenu-item-nested"><i class="fas fa-robot" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> AIoT Integrations</a>
+                                                                                                                        <a href="iot-innovations.html" class="megamenu-item-nested"><i class="fas fa-microchip" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> IoT Innovations</a>
+                                                                                                                        <a href="cybersecurity-services.html" class="megamenu-item-nested"><i class="fas fa-lock" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> Cybersecurity</a>
+                                                                                                                        <a href="microsoft-solutions.html" class="megamenu-item-nested"><i class="fab fa-microsoft" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> Microsoft &amp; Azure</a>
+                                                                                                                </div>
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                </li>
+                                                                                <li><a href="careers.html">Careers</a></li>
+                                                                                <li><a href="blog.html">Blog</a></li>
+                                                                                <li><a href="about.html">About Us</a></li>
+                                                                        </ul>
+                                                                </div>
+                                                        </div>
+                                                        <div class="header__area-menubar-right">
+                                                                <div class="header__area-menubar-right-tel lg-display-n"><a class="default_button" href="#" onclick="openEnquireModal(event)">Enquire Now<i class="flaticon-right-up"></i></a></div>
+                                                                <button class="menu js-menu"><span></span><span></span><span></span></button>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </header>
+
+	<div class="banner__one" style="position: relative; overflow: hidden; background: #fff;">
+		<video autoplay loop muted playsinline style="position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; object-fit: cover; transform: translate(-50%, -50%); z-index: 0; opacity: 0.6;">
+			<source src="waves_1.mp4" type="video/mp4">
+		</video>
+		
+		<div class="banner__one-image" style="padding: 100px 0; position: relative; z-index: 1; background: transparent;">
+			<div class="container jc-center text-center">
+				<h1 style="color: var(--primary-color-1); font-size: clamp(2.5rem, 6vw, 4rem); line-height: 1.1; margin-bottom: 20px;">Data Analytics</h1>
+				<p style="font-size: 20px; color: #444; margin: 0 auto; max-width: 800px;">Empowering Businesses with Advanced Data Analytics</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="container section-padding">
+		<div class="story-row al-center">
+			<div class="story-content wow fadeInLeft">
+				<h2 style="font-size: 42px; font-weight: 700; margin-bottom: 25px;">Beyond the Raw Data</h2>
+				<p style="font-size: 18px; line-height: 1.8; color: #555;">Sunware Technologies empowers businesses to unlock the power of their data. We transform raw information into actionable insights through data mining, predictive analytics, and data visualization, allowing companies to make better decisions and drive innovation.</p>
+			</div>
+			<div class="story-image wow fadeInRight">
+				<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Data Analytics">
+			</div>
+		</div>
+	</div>
+
+    <section class="tailored-grid"><div class="container"><div class="row g-4">
+        <div class="col-lg-3"><div class="solution-card"><h4>Predictive Analytics</h4><p>Use statistical models and machine learning to predict future trends.</p></div></div>
+        <div class="col-lg-3"><div class="solution-card"><h4>Data Visualization</h4><p>Create intuitive visual representations of data for better understanding.</p></div></div>
+        <div class="col-lg-3"><div class="solution-card"><h4>Real-Time Analytics</h4><p>Analyze data in real-time to make timely decisions.</p></div></div>
+        <div class="col-lg-3"><div class="solution-card"><h4>Business Intelligence</h4><p>Transform raw data into strategic insights that drive growth.</p></div></div>
+    </div></div></section>
+
+	<section style="padding:100px 0;background:#fff;">
+		<div class="container">
+			<div class="text-center mb-60">
+				<p style="font-size:16px;color:#EF7F1A;font-weight:600;margin-bottom:10px;">Who is this service for?</p>
+				<h2 style="font-size:42px;font-weight:700;">Designed For</h2>
+			</div>
+			<div class="row g-4">
+				<div class="col-lg-4">
+					<div class="solution-card text-center">
+						<i class="fas fa-chart-line" style="font-size:40px;color:#EF7F1A;margin-bottom:20px;"></i>
+						<h4>Data-Driven Decision Makers</h4>
+						<p>Organizations seeking to make strategic decisions based on data-backed insights.</p>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="solution-card text-center">
+						<i class="fas fa-search" style="font-size:40px;color:#EF7F1A;margin-bottom:20px;"></i>
+						<h4>Hidden Potential Seekers</h4>
+						<p>Businesses looking to uncover hidden patterns and trends within their data.</p>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="solution-card text-center">
+						<i class="fas fa-lightbulb" style="font-size:40px;color:#EF7F1A;margin-bottom:20px;"></i>
+						<h4>Insights Explorers</h4>
+						<p>Companies aiming to transform raw data into actionable knowledge.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-xl-12">
+				<div class="footer__cta-area mb-60">
+					<div class="row al-center">
+						<div class="col-xl-6 col-lg-7 lg-mb-40">
+							<div class="footer__cta-area-left lg-t-center">
+								<h2>Build Your Ideal World — We're Ready!</h2>
+							</div>
+						</div>
+						<div class="col-xl-6 col-lg-5">
+							<div class="footer__cta-area-right d-flex al-center flex-wrap jc-end lg-jc-center gap-25">
+								<a class="default_button" href="#" onclick="openEnquireModal(event)">Start Today<i class="flaticon-right-up"></i></a>
+								<div class="footer__cta-area-right-tel">
+									<div class="footer__cta-area-right-tel-icon"><i class="flaticon-phone-call"></i></div>
+									<div class="footer__cta-area-right-tel-info"><span>Call Us Now</span><h6><a href="tel:(415)755-7890">(415) 755-7890</a></h6></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+					</div>
+				
+			
+		
+	
+
+
+					
+				
+			
+		
+	
+ <!-- Main content wrapper end -->
+ <!-- main-content-wrapper closure -->
+
+<footer class="site-footer">
+        <div class="footer__one" style="padding: 15px 0; background-color: #0a0f1e;">
+                <div class="bg_shape" style="background-image: url('assets/img/shape/footer.png');"></div>
+                <div class="container">
+                        <div class="row">
+                                <div class="col-lg-3 col-sm-6">
+                                        <div class="footer__one-widget">
+                                                <a class="logo" href="index.html"><img src="white Logo.png" alt="Sunware Technologies"></a>
+                                                <p style="font-style: italic; color: #EF7F1A; margin: 15px 0 4px 0; font-size: 14px; font-weight: 500;">Advanced Data &amp; AI Solutions Tailored to Your Needs.</p>
+                                        </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 sm-mt-30">
+                                        <div class="footer__one-widget ml-40 xl-ml-0">
+                                                <h5>Quick links</h5>
+                                                <div class="footer-widget-menu">
+                                                        <ul>
+                                                                <li><a href="index.html">Home</a></li>
+                                                                <li><a href="about.html">About Us</a></li>
+                                                                <li><a href="#">Services</a></li>
+                                                                <li><a href="careers.html">Careers</a></li>
+                                                                <li><a href="blog.html">Blog</a></li>
+                                                                <li><a href="mailto:sales@sunware.in">Contact Us</a></li>
+                                                        </ul>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 lg-mt-30">
+                                        <div class="footer__one-widget contact ml-40 xl-ml-0">
+                                                <h5>Contact</h5>
+                                                <div class="contact-item mb-15">
+                                                        <div class="contact-item-icon"><i class="flaticon-email"></i></div>
+                                                        <div class="contact-item-info"><span>Email</span><h6><a href="mailto:sales@sunware.in">sales@sunware.in</a></h6></div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 lg-mt-30">
+                                        <div class="footer__one-widget social">
+                                                <h5>Social Media</h5>
+                                                <p>Stay connected with us</p>
+                                                <ul>
+                                                        <li><a href="https://www.linkedin.com/company/sunware-technologies" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                                                        <li><a href="https://www.youtube.com/@sunwaretechnologies" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                                                        <li><a href="https://www.instagram.com/sunwaretechnologies" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                                </ul>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+</footer>
+<!-- Standardized Modal & Scripts Block -->
+<div id="enquire-modal" class="modal-overlay">
+	<div class="modal-content-wrapper">
+		<button class="modal-close" onclick="closeEnquireModal()"><i class="fal fa-times"></i></button>
+                <div class="modal-header" style="text-align:center; margin-bottom:25px;">
+                        <h3 style="font-size:28px; font-weight:800; color:#0a0f1e; margin-bottom:8px;">Let's Talk</h3>
+                        <p style="font-size:15px; color:#666; margin:0;">Submit your inquiry and our team will get back to you shortly.</p>
+                </div>
+		<form class="enquire-form">
+			<div class="form-group mb-20"><input type="text" placeholder="Full Name" required></div>
+			<div class="form-group mb-20"><input type="email" placeholder="Email Address" required></div>
+			<div class="form-group mb-20"><input type="text" placeholder="Subject" required></div>
+			<div class="form-group mb-20"><textarea placeholder="Message" rows="4" required></textarea></div>
+			<button type="submit" class="default_button" style="width: 100%; justify-content: center;">Send Inquiry <i class="flaticon-right-up"></i></button>
+		</form>
+	</div>
+</div>
+
+
+
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/swiper-bundle.min.js"></script>
+<script src="assets/js/gsap.js"></script>
+<script src="assets/js/scroll-trigger.js"></script>
+<script src="assets/js/custom.js"></script>
+<script src="assets/js/nav-overlay.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+
+<script>
+        new WOW().init();
+        const lenis = new Lenis({ duration: 1.5 }); function raf(time) { lenis.raf(time); requestAnimationFrame(raf); } requestAnimationFrame(raf);
+        function openEnquireModal(e) { if(e) e.preventDefault(); document.getElementById('enquire-modal').classList.add('active'); if(document.body) document.body.style.overflow = 'hidden'; }
+        function closeEnquireModal() { document.getElementById('enquire-modal').classList.remove('active'); if(document.body) document.body.style.overflow = ''; }
+        window.addEventListener('load', function() {
+                const loader = document.querySelector('.theme-loader');
+                if(loader) { loader.style.transition = 'opacity 0.5s ease'; loader.style.opacity = '0'; setTimeout(() => { loader.style.display = 'none'; }, 500); }
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+                var modal = document.getElementById('enquire-modal');
+                if(modal) { modal.addEventListener('click', function(e) { if (e.target === this) closeEnquireModal(); }); }
+                const f=document.querySelector('.site-footer'),w=document.querySelector('.main-content-wrapper');
+                function a(){ if(!f||!w)return; const h=f.offsetHeight; if(window.innerWidth<992){f.style.position='relative';f.style.visibility='visible';w.style.marginBottom='0';} else{f.style.position='fixed';f.style.visibility='visible';w.style.marginBottom=h+'px';} }
+                a();window.addEventListener('resize',a);
+                document.addEventListener('mousemove', function(e) { const cursor = document.querySelector('.cursor-follower'); if(cursor) { cursor.style.left = e.clientX + 'px'; cursor.style.top = e.clientY + 'px'; } });
+        });
+</script>
+</body>
+</html>
