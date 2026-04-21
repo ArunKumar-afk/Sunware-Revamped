@@ -714,3 +714,32 @@
     }
 
 })(jQuery);
+
+// ── Nested Category Accordion for Services/Technologies dropdowns ──
+jQuery(document).ready(function($) {
+    // Click on category title toggles its items
+    $(document).on('click', '.services-category-title', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var $cat = $(this).closest('.services-category');
+        var wasActive = $cat.hasClass('active');
+        // Close all siblings
+        $cat.siblings('.services-category').removeClass('active');
+        // Toggle current
+        if (wasActive) {
+            $cat.removeClass('active');
+        } else {
+            $cat.addClass('active');
+        }
+    });
+
+    // Prevent dropdown from closing when clicking inside it
+    $(document).on('click', '.dropdown-small', function(e) {
+        e.stopPropagation();
+    });
+
+    // Prevent nested link clicks from closing dropdown
+    $(document).on('click', '.megamenu-item-nested', function(e) {
+        // Allow navigation - don't stop propagation
+    });
+});
