@@ -8683,4 +8683,68 @@ img { max-width: 100%; height: auto; }
 /* Blog slider equal height */
 .blog_slider .swiper-wrapper { align-items: stretch; }
 .blog_slider .swiper-slide { height: auto; }
+
+/* ============================================================
+   Service Pages — Responsive Fixes
+   ============================================================ */
+@media (max-width: 991px) {
+    .story-row { flex-direction: column !important; gap: 30px !important; margin-bottom: 60px !important; }
+    .story-content, .story-image { width: 100% !important; }
+    .tailored-grid { padding: 60px 0 !important; }
+    .solution-card { padding: 30px !important; }
+    .banner__one-image { padding: 60px 0 !important; }
+}
+@media (max-width: 767px) {
+    .tailored-grid .row .col-lg-3 { flex: 0 0 50%; max-width: 50%; }
+    .solution-card { padding: 24px !important; }
+    .solution-card h4 { font-size: 18px; }
+    .solution-card p { font-size: 14px; }
+    .banner__one-image { padding: 50px 0 !important; }
+    .banner__one-image h1 { font-size: 28px !important; }
+    .banner__one-image p { font-size: 16px !important; }
+}
+@media (max-width: 575px) {
+    .tailored-grid .row .col-lg-3 { flex: 0 0 100%; max-width: 100%; }
+    .solution-card { padding: 20px !important; }
+    .banner__one-image { padding: 40px 0 !important; }
+    .banner__one-image h1 { font-size: 24px !important; }
+}
+
+/* ============================================================
+   Global Optimization
+   ============================================================ */
+/* Smooth scrolling */
+html { scroll-behavior: smooth; }
+
+/* Better font rendering */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* Prevent horizontal overflow */
+html, body { overflow-x: hidden; max-width: 100vw; }
+
+/* Image optimization */
+img { 
+    max-width: 100%; 
+    height: auto; 
+    display: block;
+}
+
+/* Touch targets minimum size */
+@media (max-width: 767px) {
+    a, button { min-height: 44px; }
+    .megamenu-item-nested { min-height: 44px; display: flex; align-items: center; }
+}
+
+/* Print styles */
+@media print {
+    .js-nav, .cursor-follower, .cursor, .theme-loader, 
+    .scroll-up, .header__area-menubar-right { display: none !important; }
+    .main-content-wrapper { box-shadow: none !important; }
+    .site-footer { position: relative !important; visibility: visible !important; }
+}
+
 /*# sourceMappingURL=style.css.map */
