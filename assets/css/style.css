@@ -8323,6 +8323,22 @@ h6 {
 
     /* Header logo */
     .header__area-menubar-left img { height: 38px !important; }
+
+    /* CTA button compact on mobile */
+    .default_button {
+        font-size: 14px !important;
+        padding: 8px 6px 8px 20px !important;
+        gap: 15px !important;
+    }
+    .default_button i {
+        width: 35px !important;
+        height: 35px !important;
+        font-size: 16px !important;
+    }
+    .header__area-menubar-right-tel .default_button {
+        font-size: 13px !important;
+        padding: 6px 4px 6px 16px !important;
+    }
 }
 
 /* ============================================================
