@@ -3463,7 +3463,7 @@ h6 {
   display: inline-block;
   position: relative;
   list-style: none;
-  margin: 0 25px;
+  margin: 0 15px;
 }
 .header__area-menubar-center-menu ul li:hover > a {
   color: var(--primary-color-1);
