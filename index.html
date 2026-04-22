@@ -333,63 +333,35 @@
 
 
 	<!-- Banner Area Start -->
-	<div class="banner__one" style="position: relative; overflow: hidden; background: #fff;">
-		<!-- Background Video -->
-		<video autoplay loop muted playsinline style="position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; object-fit: cover; transform: translate(-50%, -50%); z-index: 0; opacity: 0.6;">
-			<source src="waves_2.mp4" type="video/mp4">
-		</video>
-		
-		<div class="container" style="position: relative; z-index: 5; padding: 120px 0;">
-			<div class="row al-center">
-				<div class="col-xl-7 col-lg-7">
-					<div class="swiper banner-slider" style="overflow: visible;">
-						<div class="swiper-wrapper">
-							<!-- Slide 1: Sunware -->
-							<div class="swiper-slide">
-								<div class="banner__one-content">
-									<h1 data-animation="fadeIn" data-delay=".1s" style="color: var(--primary-color-1); font-size: 64px; line-height: 1.2; max-width: 100%; margin-bottom: 20px;">Advanced Data & AI Solutions Tailored to Your Needs</h1>
-									<h3 class="subtitle" data-animation="fadeIn" data-delay=".2s" style="color: #EF7F1A; background: none; border: none; padding: 0; font-size: 32px; font-weight: 700; margin-bottom: 35px; display: block; line-height: 1.4;">Data. Intelligence. Engineered.</h3>
-									<div class="banner__one-content-button" data-animation="fadeIn" data-delay=".3s">
-										<a class="default_button" href="about.html" style="background: #EF7F1A; border-radius: 50px; padding: 15px 40px; color: #fff; font-weight: 700; font-size: 18px;">Get Started</a>
-									</div>
-								</div>
-							</div>
-
-							<!-- Slide 2: EdgeData -->
-							<div class="swiper-slide">
-								<div class="banner__one-content">
-									<h1 data-animation="fadeIn" data-delay=".1s" style="color: var(--primary-color-1); font-size: 64px; line-height: 1.2; max-width: 100%; margin-bottom: 20px;">Real-Time Edge Intelligence for a Smarter World</h1>
-									<h3 class="subtitle" data-animation="fadeIn" data-delay=".2s" style="color: #EF7F1A; background: none; border: none; padding: 0; font-size: 32px; font-weight: 700; margin-bottom: 35px; display: block; line-height: 1.4;">Process. Analyze. Act — at the Edge.</h3>
-									<div class="banner__one-content-button" data-animation="fadeIn" data-delay=".3s">
-										<a class="default_button" href="https://edgedata360.com" target="_blank" style="background: #EF7F1A; border-radius: 50px; padding: 15px 40px; color: #fff; font-weight: 700; font-size: 18px;">Explore EdgeData</a>
-									</div>
-								</div>
-							</div>
-
-							<!-- Slide 3: Valutek -->
-							<div class="swiper-slide">
-								<div class="banner__one-content">
-									<h1 data-animation="fadeIn" data-delay=".1s" style="color: var(--primary-color-1); font-size: 64px; line-height: 1.2; max-width: 100%; margin-bottom: 20px;">Autonomous Ecosystem. Intelligent Infrastructure at Scale.</h1>
-									<h3 class="subtitle" data-animation="fadeIn" data-delay=".2s" style="color: #EF7F1A; background: none; border: none; padding: 0; font-size: 32px; font-weight: 700; margin-bottom: 35px; display: block; line-height: 1.4;">Reimagining Property Intelligence for Regulated Industries.</h3>
-									<div class="banner__one-content-button" data-animation="fadeIn" data-delay=".3s">
-										<a class="default_button" href="https://valutek.ai" target="_blank" style="background: #EF7F1A; border-radius: 50px; padding: 15px 40px; color: #fff; font-weight: 700; font-size: 18px;">Discover Valucore</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- Pagination dots positioned below text area -->
-						<div class="hero-pagination swiper-pagination"></div>
-					</div>
-				</div>
-				<div class="col-xl-5 col-lg-5">
-					<div class="banner__one-image-area wow fadeInRight" data-wow-delay=".8s" style="position: relative; z-index: 10;">
-						<img id="hero-slide-logo" src="about hero.png" alt="Sunware Technologies" style="width: 100%; display: block; mix-blend-mode: multiply; transition: opacity 0.4s ease;">
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Banner Area End -->
+        <div class="banner__one" style="position: relative; overflow: hidden; background: #fff;">
+                <video autoplay loop muted playsinline style="position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; object-fit: cover; transform: translate(-50%, -50%); z-index: 0; opacity: 0.6;">
+                        <source src="waves_2.mp4" type="video/mp4">
+                </video>
+                <div class="container" style="position: relative; z-index: 5; padding: 120px 0;">
+                        <div class="row al-center">
+                                <div class="col-xl-7 col-lg-7">
+                                        <div id="hero-text-area">
+                                                <h1 id="hero-h1" style="color: var(--primary-color-1); font-size: 64px; line-height: 1.2; margin-bottom: 20px; transition: opacity 0.5s ease;">Advanced Data &amp; AI Solutions Tailored to Your Needs</h1>
+                                                <h3 id="hero-h3" style="color: #EF7F1A; font-size: 32px; font-weight: 700; margin-bottom: 35px; line-height: 1.4; transition: opacity 0.5s ease;">Data. Intelligence. Engineered.</h3>
+                                                <div id="hero-cta" style="transition: opacity 0.5s ease;">
+                                                        <a id="hero-btn" class="default_button" href="about.html" style="background: #EF7F1A; border-radius: 50px; padding: 15px 40px; color: #fff; font-weight: 700; font-size: 18px;">Get Started</a>
+                                                </div>
+                                                <div id="hero-dots" style="display: flex; gap: 12px; margin-top: 40px;">
+                                                        <span class="hero-dot active" data-slide="0" style="width: 12px; height: 12px; border-radius: 50%; background: #EF7F1A; cursor: pointer; transition: all 0.3s;"></span>
+                                                        <span class="hero-dot" data-slide="1" style="width: 12px; height: 12px; border-radius: 50%; background: #ccc; cursor: pointer; transition: all 0.3s;"></span>
+                                                        <span class="hero-dot" data-slide="2" style="width: 12px; height: 12px; border-radius: 50%; background: #ccc; cursor: pointer; transition: all 0.3s;"></span>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="col-xl-5 col-lg-5">
+                                        <div style="position: relative; z-index: 10;">
+                                                <img id="hero-img" src="about hero.png" alt="Sunware Technologies" style="width: 100%; display: block; mix-blend-mode: multiply; transition: opacity 0.5s ease;">
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+        <!-- Banner Area End -->
 	<!-- Brand Logo Slider Start -->
 	<div class="brand_logo_slider_area section-padding" style="background: #ffffff; padding: 50px 0; border-bottom: 1px solid #eee;">
 		<div class="container">
@@ -1239,34 +1211,64 @@
 
 			// Hero Slider Init
 			if (typeof Swiper !== 'undefined') {
-				// ── Hero Slider ──
-                                        const slideLogos = ['about hero.png', 'ed logo.png', 'vt logo.png'];
+				// ── Hero Slideshow (simple, no Swiper) ──
+                                        var heroSlides = [
+                                            { h1: 'Advanced Data & AI Solutions Tailored to Your Needs', h3: 'Data. Intelligence. Engineered.', btn: 'Get Started', href: 'about.html', target: '', img: 'about hero.png' },
+                                            { h1: 'Real-Time Edge Intelligence for a Smarter World', h3: 'Process. Analyze. Act — at the Edge.', btn: 'Explore EdgeData', href: 'https://edgedata360.com', target: '_blank', img: 'ed logo.png' },
+                                            { h1: 'Autonomous Ecosystem. Intelligent Infrastructure at Scale.', h3: 'Reimagining Property Intelligence for Regulated Industries.', btn: 'Discover Valucore', href: 'https://valutek.ai', target: '_blank', img: 'vt logo.png' }
+                                        ];
+                                        var heroIndex = 0;
+                                        var heroTimer;
 
-                                        function swapHeroLogo(realIndex) {
-                                            const logo = document.getElementById('hero-slide-logo');
-                                            if (!logo) return;
-                                            logo.style.opacity = '0';
+                                        function showHeroSlide(idx) {
+                                            heroIndex = idx % heroSlides.length;
+                                            var s = heroSlides[heroIndex];
+                                            var h1 = document.getElementById('hero-h1');
+                                            var h3 = document.getElementById('hero-h3');
+                                            var cta = document.getElementById('hero-cta');
+                                            var img = document.getElementById('hero-img');
+                                            var btn = document.getElementById('hero-btn');
+
+                                            // Fade out
+                                            h1.style.opacity = '0'; h3.style.opacity = '0'; cta.style.opacity = '0'; img.style.opacity = '0';
+
                                             setTimeout(function() {
-                                                logo.src = slideLogos[realIndex % 3];
-                                                logo.style.opacity = '1';
-                                            }, 300);
+                                                h1.textContent = s.h1;
+                                                h3.textContent = s.h3;
+                                                btn.textContent = s.btn;
+                                                btn.href = s.href;
+                                                btn.target = s.target;
+                                                img.src = s.img;
+
+                                                // Fade in with stagger
+                                                setTimeout(function() { img.style.opacity = '1'; }, 50);
+                                                setTimeout(function() { h1.style.opacity = '1'; }, 100);
+                                                setTimeout(function() { h3.style.opacity = '1'; }, 200);
+                                                setTimeout(function() { cta.style.opacity = '1'; }, 300);
+                                            }, 500);
+
+                                            // Update dots
+                                            document.querySelectorAll('.hero-dot').forEach(function(d, i) {
+                                                d.style.background = i === heroIndex ? '#EF7F1A' : '#ccc';
+                                                d.style.width = i === heroIndex ? '32px' : '12px';
+                                                d.style.borderRadius = i === heroIndex ? '6px' : '50%';
+                                            });
                                         }
 
-                                        const heroSlider = new Swiper('.banner-slider', {
-                                            loop: true,
-                                            slidesPerView: 1,
-                                            speed: 1000,
-                                            effect: 'fade',
-                                            simulateTouch: false,
-                                            fadeEffect: { crossFade: true },
-                                            autoplay: { delay: 4500, disableOnInteraction: false },
-                                            pagination: { el: '.hero-pagination', clickable: true },
-                                            on: {
-                                                slideChange: function() {
-                                                    swapHeroLogo(this.realIndex);
-                                                }
-                                            }
+                                        function startHeroTimer() {
+                                            heroTimer = setInterval(function() { showHeroSlide(heroIndex + 1); }, 5000);
+                                        }
+
+                                        // Dot clicks
+                                        document.querySelectorAll('.hero-dot').forEach(function(dot) {
+                                            dot.addEventListener('click', function() {
+                                                clearInterval(heroTimer);
+                                                showHeroSlide(parseInt(this.getAttribute('data-slide')));
+                                                startHeroTimer();
+                                            });
                                         });
+
+                                        startHeroTimer();
 						});
 					}, 300);
 				});
