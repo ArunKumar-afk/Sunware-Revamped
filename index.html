@@ -1,4 +1,4 @@
-<!-- Layout Top -->
+﻿<!-- Layout Top -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -1238,8 +1238,12 @@
                                             var img = document.getElementById('hero-img');
                                             var btn = document.getElementById('hero-btn');
 
-                                            // Fade out
-                                            h1.style.opacity = '0'; h3.style.opacity = '0'; cta.style.opacity = '0'; img.style.opacity = '0';
+                                            // Fade out ALL at same time
+                                            h1.style.opacity = '0';
+                                            h3.style.opacity = '0';
+                                            cta.style.opacity = '0';
+                                            img.style.opacity = '0';
+                                            img.style.transform = 'scale(0.95)';
 
                                             setTimeout(function() {
                                                 h1.textContent = s.h1;
@@ -1249,11 +1253,12 @@
                                                 btn.target = s.target;
                                                 img.src = s.img;
 
-                                                // Fade in with stagger
-                                                setTimeout(function() { img.style.opacity = '1'; }, 50);
-                                                setTimeout(function() { h1.style.opacity = '1'; }, 100);
-                                                setTimeout(function() { h3.style.opacity = '1'; }, 200);
-                                                setTimeout(function() { cta.style.opacity = '1'; }, 300);
+                                                // Fade in ALL at same time
+                                                img.style.opacity = '1';
+                                                img.style.transform = 'scale(1)';
+                                                h1.style.opacity = '1';
+                                                h3.style.opacity = '1';
+                                                cta.style.opacity = '1';
                                             }, 500);
 
                                             // Update dots
