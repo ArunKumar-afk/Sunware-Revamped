@@ -4166,7 +4166,7 @@ h6 {
   height: 100%;
 }
 .banner__one-content {
-  visibility: hidden;
+  visibility: visible;
   padding: 140px 0px 160px 0px;
 }
 .banner__one-content .subtitle {
@@ -8939,28 +8939,8 @@ img { max-width: 100%; height: auto; }
 }
 
 
-/* ── Hero slider transitions ── */
+/* ── Hero logo swap transition ── */
 #hero-slide-logo {
     transition: opacity 0.3s ease;
-}
-.banner-slider .swiper-slide .banner__one-content h1,
-.banner-slider .swiper-slide .banner__one-content h3,
-.banner-slider .swiper-slide .banner__one-content .banner__one-content-button {
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-.banner-slider .swiper-slide:not(.swiper-slide-active) .banner__one-content h1,
-.banner-slider .swiper-slide:not(.swiper-slide-active) .banner__one-content h3,
-.banner-slider .swiper-slide:not(.swiper-slide-active) .banner__one-content .banner__one-content-button {
-    opacity: 0;
-    transform: translateY(10px);
-}
-.banner-slider .swiper-slide-active .banner__one-content h1 {
-    transition-delay: 0s;
-}
-.banner-slider .swiper-slide-active .banner__one-content h3 {
-    transition-delay: 0.1s;
-}
-.banner-slider .swiper-slide-active .banner__one-content .banner__one-content-button {
-    transition-delay: 0.2s;
 }
 /*# sourceMappingURL=style.css.map */
