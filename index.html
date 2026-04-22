@@ -1264,16 +1264,10 @@
                                                 clearInterval(heroTimer);
                                                 showHeroSlide(parseInt(this.getAttribute('data-slide')));
                                                 startHeroTimer();
-);
+                                            });
                                         });
 
-                                        startHeroTimer();
-						});
-					}, 300);
-				});
-			}
-
-			// Custom Cursor Track
+                        // Custom Cursor Track
 			document.addEventListener('mousemove', (e) => {
 				const cursor = document.querySelector('.cursor-follower');
 				if(cursor) { cursor.style.left = e.clientX + 'px'; cursor.style.top = e.clientY + 'px'; }
