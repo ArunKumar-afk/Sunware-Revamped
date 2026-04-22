@@ -8747,4 +8747,42 @@ img {
     .site-footer { position: relative !important; visibility: visible !important; }
 }
 
+
+/* ============================================================
+   Auto-hide Header on Scroll (all pages)
+   ============================================================ */
+.header__area {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99999 !important;
+    background: #ffffff !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s ease;
+    will-change: transform;
+}
+.header__area.header-hidden {
+    transform: translateY(-100%);
+    box-shadow: none;
+}
+.header__area.header-scrolled {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Offset content so it doesn't hide under fixed header */
+.main-content-wrapper {
+    padding-top: 80px;
+}
+@media (max-width: 767px) {
+    .main-content-wrapper { padding-top: 70px; }
+}
+
+/* About page hero - Work With Us button hover = blue */
+.banner__one .default_button:hover {
+    background: #0070D2 !important;
+    color: #fff !important;
+    border-color: #0070D2 !important;
+}
 /*# sourceMappingURL=style.css.map */

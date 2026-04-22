@@ -1,4 +1,4 @@
-(function ($) {
+﻿(function ($) {
     "use strict";
 
     ///=============  * Theme Loader  =============\\\
@@ -677,35 +677,35 @@
     function stickyHeaderBehavior() {
         const header = document.querySelector('.header__area');
         if (!header) return;
-        
-        // Add CSS transition for smooth hiding/showing
-        header.style.transition = 'transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1)';
-        header.style.top = '0'; // Keep top constant, use transform for better performance
-        
+
         let lastScrollTop = 0;
         let isScrolling = false;
-        // Pre-calculate to avoid layout thrashing
-        const headerHeight = header.offsetHeight || 100;
-        
+        const threshold = 80;
+
         window.addEventListener('scroll', function() {
             if (!isScrolling) {
                 window.requestAnimationFrame(function() {
-                    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                    
-                    if (scrollTop > headerHeight * 1.5) {
-                        if (scrollTop > lastScrollTop) {
-                            // Scrolling down - hide header using GPU-accelerated transform
-                            header.style.transform = `translateY(-100%)`;
-                        } else {
-                            // Scrolling up - show header
-                            header.style.transform = 'translateY(0)';
+                    let scrollTop = Math.max(0, window.pageYOffset || document.documentElement.scrollTop);
+
+                    // Shadow on scroll
+                    if (scrollTop > 10) {
+                        header.classList.add('header-scrolled');
+                    } else {
+                        header.classList.remove('header-scrolled');
+                    }
+
+                    // Hide on scroll down, show on scroll up
+                    if (scrollTop > threshold) {
+                        if (scrollTop > lastScrollTop + 5) {
+                            header.classList.add('header-hidden');
+                        } else if (scrollTop < lastScrollTop - 5) {
+                            header.classList.remove('header-hidden');
                         }
                     } else {
-                        // At the very top
-                        header.style.transform = 'translateY(0)';
+                        header.classList.remove('header-hidden');
                     }
-                    
-                    lastScrollTop = Math.max(0, scrollTop);
+
+                    lastScrollTop = scrollTop;
                     isScrolling = false;
                 });
                 isScrolling = true;
