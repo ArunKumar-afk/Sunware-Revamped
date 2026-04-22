@@ -8952,7 +8952,7 @@ img { max-width: 100%; height: auto; }
 }
 .stack-card {
     position: sticky;
-    top: 100px;
+    top: 80px;
     z-index: calc(1 + var(--card-index, 0));
     margin-bottom: 25px;
     box-shadow: 0 8px 40px rgba(0,0,0,0.35);
@@ -8961,12 +8961,12 @@ img { max-width: 100%; height: auto; }
     border-radius: 15px;
     overflow: hidden;
 }
-.stack-card:nth-child(1) { top: 100px; }
-.stack-card:nth-child(2) { top: 110px; }
-.stack-card:nth-child(3) { top: 120px; }
+.stack-card:nth-child(1) { top: 80px; }
+.stack-card:nth-child(2) { top: 85px; }
+.stack-card:nth-child(3) { top: 90px; }
 .columns_sticky {
     position: sticky;
-    top: 100px;
+    top: 80px;
     align-self: flex-start;
 }
 @media (max-width: 991px) {
