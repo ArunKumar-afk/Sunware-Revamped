@@ -8938,4 +8938,14 @@ img { max-width: 100%; height: auto; }
     .site-footer { position: relative !important; visibility: visible !important; }
 }
 
+
+/* ── Hero slider: initial state for fade-in elements ── */
+.banner__one-content > * {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+#hero-slide-logo {
+    transition: opacity 0.4s ease;
+}
 /*# sourceMappingURL=style.css.map */

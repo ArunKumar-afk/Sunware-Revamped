@@ -1252,29 +1252,62 @@
 
 			// Hero Slider Init
 			if (typeof Swiper !== 'undefined') {
-				// Logo per slide: Sunware, EdgeData, Valucore
+				// ── Hero Slider: unified fade transition for all elements ──
                                         const slideLogos = ['about hero.png', 'ed logo.png', 'vt logo.png'];
-                                        function updateHeroLogo(idx) {
+                                        const FADE_DURATION = 400; // ms — same for all elements
+
+                                        function fadeOutHeroElements() {
+                                            // Fade out slide content
+                                            $('.banner-slider .swiper-slide-active .banner__one-content > *').css({
+                                                'opacity': '0',
+                                                'transform': 'translateY(12px)',
+                                                'transition': 'opacity ' + FADE_DURATION + 'ms ease, transform ' + FADE_DURATION + 'ms ease'
+                                            });
+                                            // Fade out logo
                                             const logo = document.getElementById('hero-slide-logo');
-                                            if (!logo) return;
-                                            logo.style.opacity = '0';
-                                            setTimeout(function() { logo.src = slideLogos[idx % 3]; logo.style.opacity = '1'; }, 200);
+                                            if (logo) {
+                                                logo.style.transition = 'opacity ' + FADE_DURATION + 'ms ease';
+                                                logo.style.opacity = '0';
+                                            }
                                         }
+
+                                        function fadeInHeroElements(realIndex) {
+                                            setTimeout(function() {
+                                                // Update logo
+                                                const logo = document.getElementById('hero-slide-logo');
+                                                if (logo) {
+                                                    logo.src = slideLogos[realIndex % 3];
+                                                    logo.style.opacity = '1';
+                                                }
+                                                // Fade in slide content with stagger
+                                                const activeSlide = heroSlider.slides[heroSlider.activeIndex];
+                                                $(activeSlide).find('.banner__one-content > *').each(function(i) {
+                                                    const el = this;
+                                                    setTimeout(function() {
+                                                        $(el).css({
+                                                            'opacity': '1',
+                                                            'transform': 'translateY(0)',
+                                                            'transition': 'opacity ' + FADE_DURATION + 'ms ease, transform ' + FADE_DURATION + 'ms ease'
+                                                        });
+                                                    }, i * 80);
+                                                });
+                                            }, FADE_DURATION);
+                                        }
+
                                         const heroSlider = new Swiper('.banner-slider', {
-                                            loop: true, slidesPerView: 1, speed: 1000, effect: 'fade',
+                                            loop: true, slidesPerView: 1, speed: 800, effect: 'fade',
                                             simulateTouch: false, fadeEffect: { crossFade: true },
                                             autoplay: { delay: 4500, disableOnInteraction: false },
                                             pagination: { el: '.hero-pagination', clickable: true },
-                                            on: { slideChange: function() { updateHeroLogo(this.realIndex); } }
+                                            on: {
+                                                slideChangeTransitionStart: function() {
+                                                    fadeOutHeroElements();
+                                                },
+                                                slideChangeTransitionEnd: function() {
+                                                    fadeInHeroElements(this.realIndex);
+                                                }
+                                            }
                                         });
-				heroSlider.on('slideChangeTransitionStart', function() {
-					$('.banner-slider .swiper-slide [data-animation]').removeClass('animated fadeIn').addClass('animated fadeOut');
-					setTimeout(() => {
-						const activeSlide = heroSlider.slides[heroSlider.activeIndex];
-						$(activeSlide).find('[data-animation]').each(function() {
-							const anim = $(this).data('animation');
-							const delay = $(this).data('delay') || '0s';
-							$(this).removeClass('animated fadeOut').addClass('animated ' + anim).css({ 'animation-delay': delay, 'visibility': 'visible' });
 						});
 					}, 300);
 				});
