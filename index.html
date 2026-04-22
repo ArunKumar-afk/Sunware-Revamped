@@ -1252,59 +1252,31 @@
 
 			// Hero Slider Init
 			if (typeof Swiper !== 'undefined') {
-				// ── Hero Slider: unified fade transition for all elements ──
+				// ── Hero Slider ──
                                         const slideLogos = ['about hero.png', 'ed logo.png', 'vt logo.png'];
-                                        const FADE_DURATION = 400; // ms — same for all elements
 
-                                        function fadeOutHeroElements() {
-                                            // Fade out slide content
-                                            $('.banner-slider .swiper-slide-active .banner__one-content > *').css({
-                                                'opacity': '0',
-                                                'transform': 'translateY(12px)',
-                                                'transition': 'opacity ' + FADE_DURATION + 'ms ease, transform ' + FADE_DURATION + 'ms ease'
-                                            });
-                                            // Fade out logo
+                                        function swapHeroLogo(realIndex) {
                                             const logo = document.getElementById('hero-slide-logo');
-                                            if (logo) {
-                                                logo.style.transition = 'opacity ' + FADE_DURATION + 'ms ease';
-                                                logo.style.opacity = '0';
-                                            }
-                                        }
-
-                                        function fadeInHeroElements(realIndex) {
+                                            if (!logo) return;
+                                            logo.style.opacity = '0';
                                             setTimeout(function() {
-                                                // Update logo
-                                                const logo = document.getElementById('hero-slide-logo');
-                                                if (logo) {
-                                                    logo.src = slideLogos[realIndex % 3];
-                                                    logo.style.opacity = '1';
-                                                }
-                                                // Fade in slide content with stagger
-                                                const activeSlide = heroSlider.slides[heroSlider.activeIndex];
-                                                $(activeSlide).find('.banner__one-content > *').each(function(i) {
-                                                    const el = this;
-                                                    setTimeout(function() {
-                                                        $(el).css({
-                                                            'opacity': '1',
-                                                            'transform': 'translateY(0)',
-                                                            'transition': 'opacity ' + FADE_DURATION + 'ms ease, transform ' + FADE_DURATION + 'ms ease'
-                                                        });
-                                                    }, i * 80);
-                                                });
-                                            }, FADE_DURATION);
+                                                logo.src = slideLogos[realIndex % 3];
+                                                logo.style.opacity = '1';
+                                            }, 300);
                                         }
 
                                         const heroSlider = new Swiper('.banner-slider', {
-                                            loop: true, slidesPerView: 1, speed: 800, effect: 'fade',
-                                            simulateTouch: false, fadeEffect: { crossFade: true },
+                                            loop: true,
+                                            slidesPerView: 1,
+                                            speed: 1000,
+                                            effect: 'fade',
+                                            simulateTouch: false,
+                                            fadeEffect: { crossFade: true },
                                             autoplay: { delay: 4500, disableOnInteraction: false },
                                             pagination: { el: '.hero-pagination', clickable: true },
                                             on: {
-                                                slideChangeTransitionStart: function() {
-                                                    fadeOutHeroElements();
-                                                },
-                                                slideChangeTransitionEnd: function() {
-                                                    fadeInHeroElements(this.realIndex);
+                                                slideChange: function() {
+                                                    swapHeroLogo(this.realIndex);
                                                 }
                                             }
                                         });
