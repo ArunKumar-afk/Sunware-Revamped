@@ -1,4 +1,4 @@
-<!-- Layout Top -->
+﻿<!-- Layout Top -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -396,7 +396,7 @@
 				</div>
 				<div class="col-xl-5 col-lg-5">
 					<div class="banner__one-image-area wow fadeInRight" data-wow-delay=".8s" style="position: relative; z-index: 10;">
-						<img src="about hero.png" alt="Sunware Technologies" style="width: 100%; display: block; mix-blend-mode: multiply;">
+						<img id="hero-slide-logo" src="about hero.png" alt="Sunware Technologies" style="width: 100%; display: block; mix-blend-mode: multiply; transition: opacity 0.4s ease;">
 					</div>
 				</div>
 			</div>
@@ -1252,16 +1252,21 @@
 
 			// Hero Slider Init
 			if (typeof Swiper !== 'undefined') {
-				const heroSlider = new Swiper('.banner-slider', {
-					loop: true,
-					slidesPerView: 1,
-					speed: 1000,
-					effect: 'fade',
-					simulateTouch: false,
-					fadeEffect: { crossFade: true },
-					autoplay: { delay: 4500, disableOnInteraction: false },
-					pagination: { el: '.hero-pagination', clickable: true },
-				});
+				// Logo per slide: Sunware, EdgeData, Valucore
+                                        const slideLogos = ['about hero.png', 'ed logo.png', 'vt logo.png'];
+                                        function updateHeroLogo(idx) {
+                                            const logo = document.getElementById('hero-slide-logo');
+                                            if (!logo) return;
+                                            logo.style.opacity = '0';
+                                            setTimeout(function() { logo.src = slideLogos[idx % 3]; logo.style.opacity = '1'; }, 200);
+                                        }
+                                        const heroSlider = new Swiper('.banner-slider', {
+                                            loop: true, slidesPerView: 1, speed: 1000, effect: 'fade',
+                                            simulateTouch: false, fadeEffect: { crossFade: true },
+                                            autoplay: { delay: 4500, disableOnInteraction: false },
+                                            pagination: { el: '.hero-pagination', clickable: true },
+                                            on: { slideChange: function() { updateHeroLogo(this.realIndex); } }
+                                        });
 				heroSlider.on('slideChangeTransitionStart', function() {
 					$('.banner-slider .swiper-slide [data-animation]').removeClass('animated fadeIn').addClass('animated fadeOut');
 					setTimeout(() => {
