@@ -1210,8 +1210,7 @@
 			window.addEventListener('resize', adjustFooterReveal);
 
 			// Hero Slider Init
-			if (typeof Swiper !== 'undefined') {
-				// ── Hero Slideshow (simple, no Swiper) ──
+			// ── Hero Slideshow (simple, no Swiper) ──
                                         var heroSlides = [
                                             { h1: 'Advanced Data & AI Solutions Tailored to Your Needs', h3: 'Data. Intelligence. Engineered.', btn: 'Get Started', href: 'about.html', target: '', img: 'about hero.png' },
                                             { h1: 'Real-Time Edge Intelligence for a Smarter World', h3: 'Process. Analyze. Act — at the Edge.', btn: 'Explore EdgeData', href: 'https://edgedata360.com', target: '_blank', img: 'ed logo.png' },
@@ -1265,7 +1264,7 @@
                                                 clearInterval(heroTimer);
                                                 showHeroSlide(parseInt(this.getAttribute('data-slide')));
                                                 startHeroTimer();
-                                            });
+);
                                         });
 
                                         startHeroTimer();
