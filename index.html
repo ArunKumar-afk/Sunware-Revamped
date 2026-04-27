@@ -578,23 +578,24 @@
 	</div>
 	<!-- About Area End -->
 	<!-- Portfolio Area Start -->
-        <div class="portfolio__one section-padding">
+        <div class="portfolio__one section-padding" style="padding-bottom: 0;">
                 <div class="bg_shape" style="background-image: radial-gradient(#d1d1d1 1px, transparent 0); background-size: 40px 40px; opacity: 0.15;"></div>
                 <div class="container">
                         <div class="row">
-                <div class="col-lg-5 columns_sticky lg-mb-25">
-                    <div class="portfolio__one-left overflow-hidden mr-40 xl-mr-0">
+                                <div class="col-lg-5 lg-mb-25">
+                                        <div class="scroll-stack-left" style="position: sticky; top: 100px;">
                                                 <span class="subtitle wow fadeInLeft" data-wow-delay=".4s" style="background:#EF7F1A; color:#fff; border-color:#EF7F1A;">Success Stories</span>
                                                 <h2 class="title_split_anim">Proven Impact Across Industries</h2>
                                                 <p style="color:#fff; font-size:16px; margin-top:20px; line-height:1.7; opacity:0.8;">Click a card to explore the services within each category.</p>
                                                 <div class="item_bounce">
                                                         <a class="default_button mt-40" href="about.html">Explore More<i class="flaticon-right-up"></i></a>
                                                 </div>
-                    </div>
-                </div>
-                <div class="col-lg-7">
-                    <div class="portfolio__one-right" id="stack-cards-container">
-                                        <div class="portfolio__one-item stack-card stack-flip-card" style="--card-index: 0;" onclick="this.classList.toggle('stack-flipped')">
+                                        </div>
+                                </div>
+                                <div class="col-lg-7">
+                                        <div class="scroll-stack-cards">
+                                                <div class="scroll-stack-card" data-card="0">
+                                                        <div class="portfolio__one-item stack-card stack-flip-card" style="--card-index: 0;" onclick="this.classList.toggle('stack-flipped')">
                                                 <div class="stack-flip-inner">
                                                         <div class="stack-flip-front">
                                                                 <img src="images/Technologies/Sunware_Technologies_Cloud.png" style="width:100%;height:100%;object-fit:cover;" alt="Solution Engineering">
@@ -616,7 +617,9 @@
                                                         </div>
                                                 </div>
                                         </div>
-                                        <div class="portfolio__one-item stack-card stack-flip-card" style="--card-index: 1;" onclick="this.classList.toggle('stack-flipped')">
+                                                </div>
+                                                <div class="scroll-stack-card" data-card="1">
+                                                        <div class="portfolio__one-item stack-card stack-flip-card" style="--card-index: 1;" onclick="this.classList.toggle('stack-flipped')">
                                                 <div class="stack-flip-inner">
                                                         <div class="stack-flip-front">
                                                                 <img src="images/Technologies/Sunware_Technologies_Data_Science.png" style="width:100%;height:100%;object-fit:cover;" alt="Strategy & Transformation">
@@ -637,7 +640,9 @@
                                                         </div>
                                                 </div>
                                         </div>
-                                        <div class="portfolio__one-item stack-card stack-flip-card" style="--card-index: 2;" onclick="this.classList.toggle('stack-flipped')">
+                                                </div>
+                                                <div class="scroll-stack-card" data-card="2">
+                                                        <div class="portfolio__one-item stack-card stack-flip-card" style="--card-index: 2;" onclick="this.classList.toggle('stack-flipped')">
                                                 <div class="stack-flip-inner">
                                                         <div class="stack-flip-front">
                                                                 <img src="images/Technologies/Sunware_Technologies_Automation.png" style="width:100%;height:100%;object-fit:cover;" alt="Operational Support">
@@ -657,9 +662,10 @@
                                                         </div>
                                                 </div>
                                         </div>
-                    </div>
-                </div>
-            </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
                 </div>
         </div>
         <!-- Portfolio Area End -->
@@ -1390,6 +1396,30 @@
         d.addEventListener('click', function() { clearInterval(timer); show(parseInt(this.getAttribute('data-slide'))); start(); });
     });
     start();
+})();
+</script>
+<script>
+// Scroll Stack Cards Animation
+(function() {
+    var cards = document.querySelectorAll('.scroll-stack-card');
+    if (cards.length === 0) return;
+    
+    window.addEventListener('scroll', function() {
+        cards.forEach(function(card, i) {
+            var rect = card.getBoundingClientRect();
+            var nextCard = cards[i + 1];
+            
+            if (nextCard) {
+                var nextRect = nextCard.getBoundingClientRect();
+                // When next card is close to sticking, scale down current card
+                if (nextRect.top < window.innerHeight * 0.5) {
+                    card.classList.add('scaled-down');
+                } else {
+                    card.classList.remove('scaled-down');
+                }
+            }
+        });
+    }, { passive: true });
 })();
 </script>
 </body>

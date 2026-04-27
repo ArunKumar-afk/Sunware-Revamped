@@ -17987,4 +17987,41 @@ img { max-width: 100%; height: auto; }
     display: block;
     width: 100%;
 }
+
+/* ── Scroll Stack Cards ── */
+.scroll-stack-cards {
+    position: relative;
+    height: 300vh; /* 3 cards x 100vh each */
+}
+.scroll-stack-card {
+    position: sticky;
+    top: 90px;
+    height: 420px;
+    margin-bottom: 50vh;
+    transition: transform 0.1s ease-out, opacity 0.3s ease;
+}
+.scroll-stack-card:last-child {
+    margin-bottom: 0;
+}
+.scroll-stack-card[data-card="0"] { z-index: 1; }
+.scroll-stack-card[data-card="1"] { z-index: 2; }
+.scroll-stack-card[data-card="2"] { z-index: 3; }
+
+/* Scale down previous cards slightly as next one arrives */
+.scroll-stack-card.scaled-down {
+    transform: scale(0.95);
+    opacity: 0.7;
+}
+
+.scroll-stack-left {
+    position: sticky;
+    top: 100px;
+}
+
+@media (max-width: 991px) {
+    .scroll-stack-cards { height: auto; }
+    .scroll-stack-card { position: relative !important; top: 0 !important; margin-bottom: 20px !important; height: auto; }
+    .scroll-stack-card.scaled-down { transform: none; opacity: 1; }
+    .scroll-stack-left { position: relative; top: 0; }
+}
 /*# sourceMappingURL=style.css.map */
