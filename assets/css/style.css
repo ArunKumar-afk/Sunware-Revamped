@@ -18024,4 +18024,22 @@ img { max-width: 100%; height: auto; }
     .scroll-stack-card.scaled-down { transform: none; opacity: 1; }
     .scroll-stack-left { position: relative; top: 0; }
 }
+
+/* ── Scroll Stack Cards (simple sticky) ── */
+.scard {
+    position: relative;
+}
+@media (max-width: 991px) {
+    .scard {
+        position: relative !important;
+        top: 0 !important;
+        margin-bottom: 20px !important;
+        height: 300px !important;
+    }
+}
+@media (max-width: 575px) {
+    .scard {
+        height: 250px !important;
+    }
+}
 /*# sourceMappingURL=style.css.map */
