@@ -586,37 +586,82 @@
                                         <div style="position: sticky; top: 100px;">
                                                 <span class="subtitle wow fadeInLeft" data-wow-delay=".4s" style="background:#EF7F1A; color:#fff; border-color:#EF7F1A;">Success Stories</span>
                                                 <h2 class="title_split_anim">Proven Impact Across Industries</h2>
-                                                <p style="color:#fff; font-size:16px; margin-top:20px; line-height:1.7; opacity:0.8;">Scroll to explore our service categories. Click a card to see details.</p>
+                                                <p style="color:#fff; font-size:16px; margin-top:20px; line-height:1.7; opacity:0.8;">Click a card to explore the services within each category.</p>
                                                 <div class="item_bounce">
                                                         <a class="default_button mt-40" href="about.html">Explore More<i class="flaticon-right-up"></i></a>
                                                 </div>
                                         </div>
                                 </div>
                                 <div class="col-lg-7">
-                                        <div id="stack-scroll-area">
-                                                <!-- Card 1 -->
-                                                <div class="scard" style="position: sticky; top: 90px; z-index: 1; margin-bottom: 60vh; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.3); height: 400px; cursor: pointer; transition: transform 0.4s ease, opacity 0.4s ease;" onclick="window.location.href='data-analytics.html'">
-                                                        <img src="images/Technologies/Sunware_Technologies_Cloud.png" style="width:100%; height:100%; object-fit:cover; display:block;" alt="Solution Engineering">
-                                                        <div style="position:absolute; bottom:0; left:0; right:0; padding:30px; background:linear-gradient(transparent, rgba(0,0,0,0.8));">
-                                                                <span style="color:#EF7F1A; font-size:13px; font-weight:600; text-transform:uppercase; letter-spacing:1px;">Services</span>
-                                                                <h4 style="color:#fff; font-size:22px; font-weight:800; margin:6px 0 0;">Solution Engineering &amp; Development</h4>
+                                        <div id="stack-cards-container">
+                                                <div style="position:sticky; top:90px; z-index:1; margin-bottom:60vh;">
+                                                        <div class="portfolio__one-item stack-card stack-flip-card" style="--card-index: 0;" onclick="this.classList.toggle('stack-flipped')">
+                                                <div class="stack-flip-inner">
+                                                        <div class="stack-flip-front">
+                                                                <img src="images/Technologies/Sunware_Technologies_Cloud.png" style="width:100%;height:100%;object-fit:cover;" alt="Solution Engineering">
+                                                                <div class="portfolio__one-item-content">
+                                                                        <span>Services</span>
+                                                                        <h4>Solution Engineering &amp; Development</h4>
+                                                                        <p style="color:rgba(255,255,255,0.6); font-size:13px; margin-top:8px;">Click to see services</p>
+                                                                </div>
+                                                        </div>
+                                                        <div class="stack-flip-back">
+                                                                <h4 style="color:#0a0f1e; font-weight:800; margin-bottom:20px; padding-bottom:15px; border-bottom:2px solid #EF7F1A;">Solution Engineering &amp; Development</h4>
+                                                                <div class="stack-flip-links">
+                                                                        <a href="data-analytics.html" onclick="event.stopPropagation()"><i class="fas fa-chart-bar"></i> Data Analytics</a>
+                                                                        <a href="enterprise-app-development.html" onclick="event.stopPropagation()"><i class="fas fa-laptop-code"></i> Enterprise Application Development</a>
+                                                                        <a href="infrastructure.html" onclick="event.stopPropagation()"><i class="fas fa-server"></i> Infrastructure</a>
+                                                                        <a href="cloud-services-page.html" onclick="event.stopPropagation()"><i class="fas fa-cloud"></i> Cloud Services</a>
+                                                                        <a href="iot-solutions.html" onclick="event.stopPropagation()"><i class="fas fa-microchip"></i> IOT Solutions</a>
+                                                                </div>
                                                         </div>
                                                 </div>
-                                                <!-- Card 2 -->
-                                                <div class="scard" style="position: sticky; top: 95px; z-index: 2; margin-bottom: 60vh; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.3); height: 400px; cursor: pointer; transition: transform 0.4s ease, opacity 0.4s ease;" onclick="window.location.href='technology-consulting.html'">
-                                                        <img src="images/Technologies/Sunware_Technologies_Data_Science.png" style="width:100%; height:100%; object-fit:cover; display:block;" alt="Strategy">
-                                                        <div style="position:absolute; bottom:0; left:0; right:0; padding:30px; background:linear-gradient(transparent, rgba(0,0,0,0.8));">
-                                                                <span style="color:#EF7F1A; font-size:13px; font-weight:600; text-transform:uppercase; letter-spacing:1px;">Services</span>
-                                                                <h4 style="color:#fff; font-size:22px; font-weight:800; margin:6px 0 0;">Strategy &amp; Transformation</h4>
+                                        </div>
+                                                </div>
+                                                <div style="position:sticky; top:95px; z-index:2; margin-bottom:60vh;">
+                                                        <div class="portfolio__one-item stack-card stack-flip-card" style="--card-index: 1;" onclick="this.classList.toggle('stack-flipped')">
+                                                <div class="stack-flip-inner">
+                                                        <div class="stack-flip-front">
+                                                                <img src="images/Technologies/Sunware_Technologies_Data_Science.png" style="width:100%;height:100%;object-fit:cover;" alt="Strategy & Transformation">
+                                                                <div class="portfolio__one-item-content">
+                                                                        <span>Services</span>
+                                                                        <h4>Strategy &amp; Transformation</h4>
+                                                                        <p style="color:rgba(255,255,255,0.6); font-size:13px; margin-top:8px;">Click to see services</p>
+                                                                </div>
+                                                        </div>
+                                                        <div class="stack-flip-back">
+                                                                <h4 style="color:#0a0f1e; font-weight:800; margin-bottom:20px; padding-bottom:15px; border-bottom:2px solid #EF7F1A;">Strategy &amp; Transformation</h4>
+                                                                <div class="stack-flip-links">
+                                                                        <a href="technology-consulting.html" onclick="event.stopPropagation()"><i class="fas fa-cogs"></i> Technology Consulting</a>
+                                                                        <a href="digital-transformation.html" onclick="event.stopPropagation()"><i class="fas fa-sync-alt"></i> Digital Transformation</a>
+                                                                        <a href="ai-enablement.html" onclick="event.stopPropagation()"><i class="fas fa-robot"></i> AI Enablement</a>
+                                                                        <a href="data-engineering.html" onclick="event.stopPropagation()"><i class="fas fa-database"></i> Data Engineering</a>
+                                                                </div>
                                                         </div>
                                                 </div>
-                                                <!-- Card 3 -->
-                                                <div class="scard" style="position: sticky; top: 100px; z-index: 3; margin-bottom: 0; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.3); height: 400px; cursor: pointer; transition: transform 0.4s ease, opacity 0.4s ease;" onclick="window.location.href='staff-augmentation.html'">
-                                                        <img src="images/Technologies/Sunware_Technologies_Automation.png" style="width:100%; height:100%; object-fit:cover; display:block;" alt="Operational Support">
-                                                        <div style="position:absolute; bottom:0; left:0; right:0; padding:30px; background:linear-gradient(transparent, rgba(0,0,0,0.8));">
-                                                                <span style="color:#EF7F1A; font-size:13px; font-weight:600; text-transform:uppercase; letter-spacing:1px;">Services</span>
-                                                                <h4 style="color:#fff; font-size:22px; font-weight:800; margin:6px 0 0;">Operational Support &amp; Expansion</h4>
+                                        </div>
+                                                </div>
+                                                <div style="position:sticky; top:100px; z-index:3; margin-bottom:0;">
+                                                        <div class="portfolio__one-item stack-card stack-flip-card" style="--card-index: 2;" onclick="this.classList.toggle('stack-flipped')">
+                                                <div class="stack-flip-inner">
+                                                        <div class="stack-flip-front">
+                                                                <img src="images/Technologies/Sunware_Technologies_Automation.png" style="width:100%;height:100%;object-fit:cover;" alt="Operational Support">
+                                                                <div class="portfolio__one-item-content">
+                                                                        <span>Services</span>
+                                                                        <h4>Operational Support &amp; Expansion</h4>
+                                                                        <p style="color:rgba(255,255,255,0.6); font-size:13px; margin-top:8px;">Click to see services</p>
+                                                                </div>
                                                         </div>
+                                                        <div class="stack-flip-back">
+                                                                <h4 style="color:#0a0f1e; font-weight:800; margin-bottom:20px; padding-bottom:15px; border-bottom:2px solid #EF7F1A;">Operational Support &amp; Expansion</h4>
+                                                                <div class="stack-flip-links">
+                                                                        <a href="staff-augmentation.html" onclick="event.stopPropagation()"><i class="fas fa-users"></i> Staff Augmentation Solution</a>
+                                                                        <a href="maintenance-support.html" onclick="event.stopPropagation()"><i class="fas fa-tools"></i> Maintenance and Support</a>
+                                                                        <a href="learning-platform.html" onclick="event.stopPropagation()"><i class="fas fa-graduation-cap"></i> Learning Platform</a>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
                                                 </div>
                                         </div>
                                 </div>
