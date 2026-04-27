@@ -32,7 +32,1139 @@
 	<!-- Fullscreen Nav CSS -->
 	<!-- Navigation and Layout styles migrated to assets/css/style.css -->
 	<style>
-	/* stack-card styles in style.css */
+	/* ΓöÇΓöÇ Banner Slider Custom Styles ΓöÇΓöÇ */
+	.banner-slider { width: 100%; height: 100%; position: relative; }
+        /* Swiper fade handles slide visibility */
+	.banner-pagination { position: absolute !important; bottom: 40px !important; left: 0; width: 100%; display: flex; justify-content: center; align-items: center; gap: 12px; z-index: 20 !important; }
+	</style>
+
+
+	<!-- Footer Reveal CSS -->
+	<style>
+	.main-content-wrapper {
+		position: relative;
+		z-index: 2;
+		background: #fff; /* Ensures reveal behaves on scroll overlap */
+		box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Adds premium visual lift */
+	}
+	.site-footer {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		z-index: 1; /* Sits behind content stack */
+		visibility: hidden; /* Prevent early flashes */
+	}
+	/* ΓöÇΓöÇ Sticky Header ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+	/* header styles in style.css */
+	/* ΓöÇΓöÇ Banner Slider Custom Styles ΓöÇΓöÇ */
+	.banner-slider { width: 100%; height: 100%; position: relative; }
+        /* Swiper fade handles slide visibility */
+	.banner-pagination {
+		position: absolute !important;
+		bottom: 40px !important;
+		left: 0;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 12px;
+		z-index: 20 !important;
+	}
+	.banner-pagination .swiper-pagination-bullet {
+		width: 12px;
+		height: 12px;
+		background: rgba(255, 255, 255, 0.4);
+		opacity: 1;
+		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+		border-radius: 50%;
+		cursor: pointer;
+		margin: 0 !important;
+		border: 2px solid transparent;
+	}
+	.banner-pagination .swiper-pagination-bullet-active {
+		background: #EF7F1A !important;
+		width: 35px;
+		border-radius: 6px;
+		border-color: #EF7F1A;
+	}
+	/* Fix for title readability on video */
+	.banner__one-content h1 {
+		text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+	}
+	@media (max-width: 991px) {
+		.banner__one-image {
+			padding: 80px 0 !important;
+		}
+		.banner__one-content h1 {
+			font-size: 36px !important;
+			line-height: 1.2 !important;
+		}
+		.banner-pagination {
+			bottom: 30px !important;
+		}
+	}
+	</style>
+</head>
+    
+<body class="data_cursor">
+	<!-- Preloader Start -->
+	<div class="theme-loader">
+		<div class="spinner">
+			<div class="spinner-bounce one"></div>
+			<div class="spinner-bounce two"></div>
+			<div class="spinner-bounce three"></div>
+		</div>
+	</div>
+	<!-- Preloader End -->
+	<!-- Cursor Start -->
+	<div class="cursor">
+		<div class="hide"><div id="cursor-ball"></div></div>
+        <div id="cursor-text"></div>
+    </div>
+	<!-- Cursor End -->
+
+	<!-- Fullscreen Nav Overlay -->
+	<div class="js-nav" role="dialog" aria-modal="true" aria-label="Site Navigation">
+        <button class="nav-close-btn" onclick="document.querySelector('.js-menu').click()" style="position:absolute; top:30px; right:30px; background:none; border:none; color:#fff; font-size:28px; cursor:pointer; z-index:99999; width:44px; height:44px; display:flex; align-items:center; justify-content:center;"><i class="fal fa-times"></i></button>
+		<div class="nav-brand">
+			<a href="index.html"><img src="white Logo.png" alt="Sunware Technologies"></a>
+		</div>
+		<ul>
+			<li class="nav-item"><a href="index.html">Home</a></li>
+			<li class="nav-item"><a href="about.html">About Us</a></li>
+			<li class="nav-item"><a href="#">Services</a></li>
+			<li class="nav-item"><a href="healthcare-lifesciences.html">Industries</a></li>
+			<li class="nav-item"><a href="careers.html">Careers</a></li>
+			<li class="nav-item"><a href="blog.html">Blog</a></li>
+		</ul>
+		<div class="nav-footer">
+			<div class="nav-footer-social">
+				<a href="https://www.linkedin.com/company/sunware-technologies" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+				<a href="https://www.youtube.com/@sunwaretechnologies" target="_blank"><i class="fab fa-youtube"></i></a>
+				<a href="https://www.instagram.com/sunwaretechnologies" target="_blank"><i class="fab fa-instagram"></i></a>
+			</div>
+			<a class="default_button" href="#" onclick="openEnquireModal(event)" style="background:#EF7F1A;color:#fff;">Enquire Now <i class="flaticon-right-up"></i></a>
+		</div>
+	</div>
+	<!-- /Fullscreen Nav Overlay -->
+
+<div class="main-content-wrapper">
+<!-- Header -->
+	<!-- Search -->
+		<!-- Search Box Start -->
+	<div class="header__area-menubar-right-search-box">
+		<form>
+			<input type="search" placeholder="Search Here.....">
+			<button type="submit"><i class="fal fa-search"></i></button>
+		</form> 
+		<span class="header__area-menubar-right-search-box-icon"><i class="fal fa-times"></i></span>
+	</div>
+	<!-- Search Box End -->
+	<!-- Off Canvas -->
+	
+    <!-- Hamburger Start -->
+	<div class="header__area-menubar-right-sidebar-popup">
+		<div class="sidebar-close-btn"><i class="fal fa-times"></i></div>
+		<div class="header__area-menubar-right-sidebar-popup-logo">
+			<a href="index.html"> <img src="main logo.png" alt="Sunware Technologies"></a>
+		</div>
+		<p>We ship secure, scalable payment infrastructure faster than traditional vendors—while understanding your US-regulated market deeply.</p>
+						<p>Advanced Data & AI Solutions Tailored to Your Needs.</p>
+		<div class="header__area-menubar-right-sidebar-popup-contact">
+			<h4 class="mb-30">Address</h4>
+			<div class="header__area-menubar-right-sidebar-popup-contact-item">
+				<div class="header__area-menubar-right-sidebar-popup-contact-item-icon">
+					<i class="flaticon-phone"></i>
+				</div>
+				<div class="header__area-menubar-right-sidebar-popup-contact-item-content">
+					<span>Phone:</span>
+					<h6><a href="tel:+125(895)658568">+125 (895) 658 568</a></h6>
+				</div>
+			</div>
+			<div class="header__area-menubar-right-sidebar-popup-contact-item">
+				<div class="header__area-menubar-right-sidebar-popup-contact-item-icon">
+					<i class="flaticon-email-3"></i>
+				</div>
+				<div class="header__area-menubar-right-sidebar-popup-contact-item-content">
+					<span>Email:</span>
+					<h6><a href="mailto:support@name.com">support@name.com</a></h6>
+				</div>
+			</div>
+			<div class="header__area-menubar-right-sidebar-popup-contact-item">
+				<div class="header__area-menubar-right-sidebar-popup-contact-item-icon">
+					<i class="flaticon-location-1"></i>
+				</div>
+				<div class="header__area-menubar-right-sidebar-popup-contact-item-content">
+					<span>Location:</span>
+					<h6><a href="https://google.com/maps" target="_blank">321 Data Drive, Cloud City, WA 67890</a></h6>
+				</div>
+			</div>
+		</div>
+		<div class="header__area-menubar-right-sidebar-popup-social">
+			<ul>
+				<li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+				<li><a href="https://x.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
+				<li><a href="https://behance.net" target="_blank"><i class="fab fa-behance"></i></a></li>
+				<li><a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+			</ul>							
+		</div>
+	</div>
+	<div class="sidebar-overlay"></div>
+	<!-- Hamburger End -->
+	<!-- Mobile Menu Start -->
+	<div class="menu__bar-popup">
+		<div class="menu__bar-popup-top">
+			<div class="logo"><a href="index.html"><img src="main logo.png" alt="Sunware Technologies"></a></div>			
+			<div class="close"><i class="fal fa-times"></i></div>
+
+		</div>
+		<div class="vertical-menu">
+			<div class="vertical_menu">
+				<!-- Here Menu Will Come Automatically Via Javascript / Same Menu as in Header -->
+			</div>
+		</div>
+	</div>
+	<div class="menu__bar-popup-overlay"></div>
+	<!-- Mobile Menu End -->
+
+	<!-- Header Area Start -->
+	<header class="header__area">
+                        <div class="container">
+                                <div class="row">
+                                        <div class="col-xl-12">
+                                                <div class="header__area-menubar">
+                                                        <div class="header__area-menubar-left one"><a href="index.html"><img src="main logo.png" alt="Sunware Technologies" style="height:45px;"></a></div>
+                                                        <div class="header__area-menubar-center">
+                                                                <div class="header__area-menubar-center-menu">
+                                                                        <ul id="mobilemenu">
+                                                                                <li class="has-dropdown"><a href="#">Services <i class="fal fa-chevron-down" style="font-size:12px;margin-left:4px;"></i></a>
+                                                                                        <div class="dropdown-small dropdown-align-left" style="width: 580px; padding: 24px;">
+                                                                                                <div class="services-categories">
+                                                                                                        <div class="services-category">
+                                                                                                                <div class="services-category-title"><i class="fas fa-brain" style="color:#EF7F1A; margin-right:10px;"></i> Data Science, AI &amp; Analytics</div>
+                                                                                                                <div class="services-category-items">
+                                                                                                                        <a href="ai-enablement.html" class="megamenu-item-nested"><i class="fas fa-robot" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> AI Enablement</a>
+                                                                                                                        <a href="data-science-ai.html" class="megamenu-item-nested"><i class="fas fa-flask" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> Data Science &amp; AI</a>
+                                                                                                                        <a href="data-analytics.html" class="megamenu-item-nested"><i class="fas fa-chart-bar" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> Data Analytics</a>
+                                                                                                                        <a href="data-engineering.html" class="megamenu-item-nested"><i class="fas fa-database" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> Data Engineering</a>
+                                                                                                                        <a href="iot-solutions.html" class="megamenu-item-nested"><i class="fas fa-microchip" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> IoT Solutions</a>
+                                                                                                                </div>
+                                                                                                        </div>
+                                                                                                        <div class="services-category">
+                                                                                                                <div class="services-category-title"><i class="fas fa-code" style="color:#EF7F1A; margin-right:10px;"></i> Engineering &amp; Development</div>
+                                                                                                                <div class="services-category-items">
+                                                                                                                        <a href="enterprise-app-development.html" class="megamenu-item-nested"><i class="fas fa-laptop-code" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> Enterprise Application Development</a>
+                                                                                                                        <a href="cloud-services-page.html" class="megamenu-item-nested"><i class="fas fa-cloud" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> Cloud Services</a>
+                                                                                                                        <a href="infrastructure.html" class="megamenu-item-nested"><i class="fas fa-server" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> Infrastructure</a>
+                                                                                                                        <a href="mobile-app-development.html" class="megamenu-item-nested"><i class="fas fa-mobile-alt" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> Mobile App Development</a>
+                                                                                                                        <a href="cybersecurity-services.html" class="megamenu-item-nested"><i class="fas fa-shield-alt" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> Cybersecurity</a>
+                                                                                                                </div>
+                                                                                                        </div>
+                                                                                                        <div class="services-category">
+                                                                                                                <div class="services-category-title"><i class="fas fa-lightbulb" style="color:#EF7F1A; margin-right:10px;"></i> Strategy &amp; Consulting</div>
+                                                                                                                <div class="services-category-items">
+                                                                                                                        <a href="technology-consulting.html" class="megamenu-item-nested"><i class="fas fa-cogs" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> Technology Consulting</a>
+                                                                                                                        <a href="digital-transformation.html" class="megamenu-item-nested"><i class="fas fa-sync-alt" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> Digital Transformation</a>
+                                                                                                                        <a href="xr-solutions.html" class="megamenu-item-nested"><i class="fas fa-vr-cardboard" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> XR Solutions</a>
+                                                                                                                        <a href="salesforce-expertise.html" class="megamenu-item-nested"><i class="fab fa-salesforce" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> Salesforce Expertise</a>
+                                                                                                                        <a href="odoo-solutions.html" class="megamenu-item-nested"><i class="fas fa-cubes" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> Odoo Solutions</a>
+                                                                                                                </div>
+                                                                                                        </div>
+                                                                                                        <div class="services-category">
+                                                                                                                <div class="services-category-title"><i class="fas fa-hands-helping" style="color:#EF7F1A; margin-right:10px;"></i> Operational Support</div>
+                                                                                                                <div class="services-category-items">
+                                                                                                                        <a href="staff-augmentation.html" class="megamenu-item-nested"><i class="fas fa-users" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> Staff Augmentation</a>
+                                                                                                                        <a href="maintenance-support.html" class="megamenu-item-nested"><i class="fas fa-tools" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> Maintenance &amp; Support</a>
+                                                                                                                        <a href="microsoft-solutions.html" class="megamenu-item-nested"><i class="fab fa-microsoft" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> Microsoft Solutions</a>
+                                                                                                                </div>
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                </li>
+                                                                                <li class="has-dropdown"><a href="#">Industries <i class="fal fa-chevron-down" style="font-size:12px;margin-left:4px;"></i></a>
+                                                                                        <div class="dropdown-small dropdown-align-left" style="width: 480px; padding: 20px;">
+                                                                                                <div style="display: flex; flex-direction: column; gap: 6px;">
+                                                                                                        <a href="healthcare-lifesciences.html" class="megamenu-item-nested" style="font-size:15px; font-weight:600; padding:14px 18px;"><i class="fas fa-heartbeat" style="color:#EF7F1A; margin-right:10px; width:20px;"></i> Healthcare &amp; Life Sciences</a>
+                                                                                                        <a href="banking-finance.html" class="megamenu-item-nested" style="font-size:15px; font-weight:600; padding:14px 18px;"><i class="fas fa-university" style="color:#EF7F1A; margin-right:10px; width:20px;"></i> Banking &amp; Financial Services</a>
+                                                                                                        <a href="retail-ecommerce.html" class="megamenu-item-nested" style="font-size:15px; font-weight:600; padding:14px 18px;"><i class="fas fa-shopping-cart" style="color:#EF7F1A; margin-right:10px; width:20px;"></i> Retail &amp; E-commerce</a>
+                                                                                                        <a href="media-entertainment.html" class="megamenu-item-nested" style="font-size:15px; font-weight:600; padding:14px 18px;"><i class="fas fa-film" style="color:#EF7F1A; margin-right:10px; width:20px;"></i> Media &amp; Entertainment</a>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                </li>
+                                                                                <li class="has-dropdown"><a href="#">Technologies <i class="fal fa-chevron-down" style="font-size:12px;margin-left:4px;"></i></a>
+                                                                                        <div class="dropdown-small dropdown-align-left" style="width: 580px; padding: 24px;">
+                                                                                                <div class="services-categories">
+                                                                                                        <div class="services-category">
+                                                                                                                <div class="services-category-title"><i class="fas fa-briefcase" style="color:#EF7F1A; margin-right:10px;"></i> Core Business Solutions</div>
+                                                                                                                <div class="services-category-items">
+                                                                                                                        <a href="cloud-solutions.html" class="megamenu-item-nested"><i class="fas fa-cloud" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> Cloud Solutions Expertise</a>
+                                                                                                                        <a href="automation-efficiency.html" class="megamenu-item-nested"><i class="fas fa-cogs" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> Automation and Efficiency</a>
+                                                                                                                        <a href="data-science-ai.html" class="megamenu-item-nested"><i class="fas fa-brain" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> Data Science &amp; AI</a>
+                                                                                                                        <a href="mobile-app-development.html" class="megamenu-item-nested"><i class="fas fa-mobile-alt" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> Mobile Application Development</a>
+                                                                                                                </div>
+                                                                                                        </div>
+                                                                                                        <div class="services-category">
+                                                                                                                <div class="services-category-title"><i class="fas fa-puzzle-piece" style="color:#EF7F1A; margin-right:10px;"></i> Specialized Technology Solutions</div>
+                                                                                                                <div class="services-category-items">
+                                                                                                                        <a href="data-science-ai.html" class="megamenu-item-nested"><i class="fas fa-project-diagram" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> Graph Technologies: Neo4J</a>
+                                                                                                                        <a href="salesforce-expertise.html" class="megamenu-item-nested"><i class="fab fa-salesforce" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> CRM: Salesforce</a>
+                                                                                                                        <a href="odoo-solutions.html" class="megamenu-item-nested"><i class="fas fa-cubes" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> ERP: Odoo Solutions</a>
+                                                                                                                </div>
+                                                                                                        </div>
+                                                                                                        <div class="services-category">
+                                                                                                                <div class="services-category-title"><i class="fas fa-rocket" style="color:#EF7F1A; margin-right:10px;"></i> Frontier/Emerging Technologies</div>
+                                                                                                                <div class="services-category-items">
+                                                                                                                        <a href="aiot-integrations.html" class="megamenu-item-nested"><i class="fas fa-robot" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> AIoT Integrations</a>
+                                                                                                                        <a href="iot-innovations.html" class="megamenu-item-nested"><i class="fas fa-microchip" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> IoT Innovations</a>
+                                                                                                                        <a href="cybersecurity-services.html" class="megamenu-item-nested"><i class="fas fa-lock" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> Cybersecurity</a>
+                                                                                                                        <a href="microsoft-solutions.html" class="megamenu-item-nested"><i class="fab fa-microsoft" style="color:#EF7F1A; margin-right:8px; width:16px;"></i> Microsoft &amp; Azure</a>
+                                                                                                                </div>
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                </li>
+                                                                                <li><a href="careers.html">Careers</a></li>
+                                                                                <li><a href="blog.html">Blog</a></li>
+                                                                                <li><a href="about.html">About Us</a></li>
+                                                                        </ul>
+                                                                </div>
+                                                        </div>
+                                                        <div class="header__area-menubar-right">
+                                                                <div class="header__area-menubar-right-tel lg-display-n"><a class="default_button" href="#" onclick="openEnquireModal(event)">Enquire Now<i class="flaticon-right-up"></i></a></div>
+                                                                <button class="menu js-menu"><span></span><span></span><span></span></button>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </header>
+	<!-- Header Area End -->
+
+
+	<!-- Banner Area Start -->
+        <div class="banner__one" style="position: relative; overflow: hidden; background: #fff;">
+                <video autoplay loop muted playsinline style="position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; object-fit: cover; transform: translate(-50%, -50%); z-index: 0; opacity: 0.6;">
+                        <source src="waves_2.mp4" type="video/mp4">
+                </video>
+                <div class="container" style="position: relative; z-index: 5; padding: 120px 0;">
+                        <div class="row al-center">
+                                <div class="col-xl-7 col-lg-7">
+                                        <div id="hero-text-area">
+                                                <h1 id="hero-h1" style="color: var(--primary-color-1); font-size: 64px; line-height: 1.2; margin-bottom: 20px; transition: opacity 0.5s ease;">Advanced Data &amp; AI Solutions Tailored to Your Needs</h1>
+                                                <h3 id="hero-h3" style="color: #EF7F1A; font-size: 32px; font-weight: 700; margin-bottom: 35px; line-height: 1.4; transition: opacity 0.5s ease;">Data. Intelligence. Engineered.</h3>
+                                                <div id="hero-cta" style="transition: opacity 0.5s ease;">
+                                                        <a id="hero-btn" class="default_button" href="about.html" style="background: #EF7F1A; border-radius: 50px; padding: 15px 40px; color: #fff; font-weight: 700; font-size: 18px;">Get Started</a>
+                                                </div>
+                                                <div style="display: flex; gap: 12px; margin-top: 40px;">
+                                                        <span class="hero-dot active" data-slide="0" style="width: 32px; height: 12px; border-radius: 6px; background: #EF7F1A; cursor: pointer; transition: all 0.3s;"></span>
+                                                        <span class="hero-dot" data-slide="1" style="width: 12px; height: 12px; border-radius: 50%; background: #ccc; cursor: pointer; transition: all 0.3s;"></span>
+                                                        <span class="hero-dot" data-slide="2" style="width: 12px; height: 12px; border-radius: 50%; background: #ccc; cursor: pointer; transition: all 0.3s;"></span>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="col-xl-5 col-lg-5">
+                                        <div style="position: relative; z-index: 10;">
+                                                <img id="hero-img" src="about hero.png" alt="Sunware Technologies" style="width: 100%; display: block; mix-blend-mode: multiply; transition: opacity 0.5s ease, transform 0.5s ease;">
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+        <!-- Banner Area End -->
+	<!-- Brand Logo Slider Start -->
+	<div class="brand_logo_slider_area section-padding" style="background: #ffffff; padding: 50px 0; border-bottom: 1px solid #eee;">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="swiper brand_slider">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="images/Client Logo/Sunware_Technologies_Client_Acumen.jpg" alt="Acumen"></div>
+							<div class="swiper-slide"><img src="images/Client Logo/Sunware_Technologies_Client_Bank-of-the-west.jpg" alt="Bank of the West"></div>
+							<div class="swiper-slide"><img src="images/Client Logo/Sunware_Technologies_Client_Fleetgurd.jpg" alt="Fleetgurd"></div>
+							<div class="swiper-slide"><img src="images/Client Logo/Sunware_Technologies_Client_Global-payment.jpg" alt="Global Payment"></div>
+							<div class="swiper-slide"><img src="images/Client Logo/Sunware_Technologies_Client_HP.jpg" alt="HP"></div>
+							<div class="swiper-slide"><img src="images/Client Logo/Sunware_Technologies_Client_HouseAdvantage.jpg" alt="HouseAdvantage"></div>
+							<div class="swiper-slide"><img src="images/Client Logo/Sunware_Technologies_Client_Mastercard.jpg" alt="Mastercard"></div>
+							<div class="swiper-slide"><img src="images/Client Logo/Sunware_Technologies_Client_PsiQuantum.jpg" alt="PsiQuantum"></div>
+							<div class="swiper-slide"><img src="images/Client Logo/Sunware_Technologies_Client_Regeneron.jpg" alt="Regeneron"></div>
+							<div class="swiper-slide"><img src="images/Client Logo/Sunware_Technologies_Client_SafeWay.jpg" alt="SafeWay"></div>
+							<div class="swiper-slide"><img src="images/Client Logo/Sunware_Technologies_Client_SoCalGas.jpg" alt="SoCalGas"></div>
+							<div class="swiper-slide"><img src="images/Client Logo/Sunware_Technologies_Client_USAA.jpg" alt="USAA"></div>
+							<div class="swiper-slide"><img src="images/Client Logo/Sunware_Technologies_Client_convence.jpg" alt="Convence"></div>
+							<div class="swiper-slide"><img src="images/Client Logo/Sunware_Technologies_Client_pFizer.jpg" alt="pFizer"></div>
+							<div class="swiper-slide"><img src="images/Client Logo/Sunware_Technologies_Client_premium_media.jpg" alt="Premium Media"></div>
+							<div class="swiper-slide"><img src="images/Client Logo/Sunware_Technologies_Client_roche.jpg" alt="Roche"></div>
+							<div class="swiper-slide"><img src="images/Client Logo/Sunware_Technologies_Client_sciformix.jpg" alt="Sciformix"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Brand Logo Slider End -->
+	<!-- Industries Area Start -->
+	<div class="industries__one overflow-hidden section-padding">
+		<div class="bg_shape" style="background-image: url('assets/img/shape/bg.png');"></div>
+		<div class="container">
+			<div class="row mb-40">
+				<div class="col-lg-12">
+					<div class="services__one-title t-center">
+						<span class="subtitle wow fadeInLeft" data-wow-delay=".4s">Our Expertise</span>
+						<h2 class="title_split_anim">Industries We Serve</h2>
+					</div>
+					<div class="t-center mt-30 mb-50" style="max-width: 900px; margin-left: auto; margin-right: auto;">
+						<h4 style="font-weight: 700; color: var(--primary-color-1); margin-bottom: 20px;">Driving Business Innovation: Through Intelligent Data</h4>
+						<p style="font-size: 18px; line-height: 1.8; color: #555;">At Sunware Technologies, we transform business challenges into technological opportunities. We're experts in cloud data engineering, analytics, machine learning, and AI solutions tailored specifically for the Banking, Financial Services, Insurance, Utilities, Retail, Manufacturing, and Healthcare sectors. Our specialized approach and frameworks help organizations manage and leverage their data to drive innovation, efficiency, and competitive advantage. We don't just implement technology—we engineer strategic solutions that deliver measurable business outcomes.</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row al-center mt-30">
+				<!-- Industry Selection List -->
+				<div class="col-lg-4 col-md-5">
+					<div class="industry-nav">
+						<div class="industry-nav-item active" data-target="healthcare">
+							<h5>Healthcare & Life Sciences <i class="fas fa-chevron-right"></i></h5>
+						</div>
+						<div class="industry-nav-item" data-target="banking">
+							<h5>Banking & Financial Services <i class="fas fa-chevron-right"></i></h5>
+						</div>
+						<div class="industry-nav-item" data-target="retail">
+							<h5>Retail & E-commerce <i class="fas fa-chevron-right"></i></h5>
+						</div>
+						<div class="industry-nav-item" data-target="media">
+							<h5>Media & Entertainment <i class="fas fa-chevron-right"></i></h5>
+						</div>
+					</div>
+				</div>
+
+				<!-- Industry Details Content Area -->
+				<div class="col-lg-8 col-md-7">
+					<div class="industry-content-wrapper">
+						<!-- Healthcare Content -->
+						<div id="healthcare" class="industry-detail-content active">
+							<p>In the fast-paced world of pharmaceutical and life sciences, where a single breakthrough can transform millions of lives, staying ahead of the curve is paramount. We understand the unique challenges you face, from accelerating drug development timelines to ensuring strict regulatory compliance. Our tailored IT solutions are designed to empower your organization to achieve its goals and make a real impact.</p>
+							
+							<div class="industry-stats-container">
+								<div class="stat-item">
+									<h2 class="stat-value">$67.82 bln</h2>
+									<p class="stat-year">by 2025</p>
+									<span class="stat-desc">The healthcare analytics market is expected to reach.</span>
+								</div>
+								<div class="stat-divider"></div>
+								<div class="stat-item">
+									<h2 class="stat-value">46.2%</h2>
+									<p class="stat-year">by 2028</p>
+									<span class="stat-desc">The global AI in healthcare market is expected to grow</span>
+								</div>
+							</div>
+							
+							<div class="mt-40">
+								<a class="default_button" href="healthcare-lifesciences.html">Read More <i class="flaticon-right-up"></i></a>
+							</div>
+						</div>
+
+						<!-- Banking Content -->
+						<div id="banking" class="industry-detail-content d-none">
+							<p>In today's fast-paced digital world, where 80% of financial transactions are now conducted online, the banking and financial services industry is experiencing a profound transformation. We empower banks and financial institutions to embrace this digital revolution and thrive in the new financial landscape.</p>
+							<div class="industry-stats-container">
+								<div class="stat-item">
+									<h2 class="stat-value">$332.5 bln</h2>
+									<p class="stat-year">by 2028</p>
+									<span class="stat-desc">The global fintech market is expected to reach.</span>
+								</div>
+								<div class="stat-divider"></div>
+								<div class="stat-item">
+									<h2 class="stat-value">60%</h2>
+									<p class="stat-year">by 2025</p>
+									<span class="stat-desc">Banks will offer open banking services.</span>
+								</div>
+							</div>
+							<div class="mt-40">
+								<a class="default_button" href="banking-finance.html">Read More <i class="flaticon-right-up"></i></a>
+							</div>
+						</div>
+
+						<!-- Retail Content -->
+						<div id="retail" class="industry-detail-content d-none">
+							<p>The retail landscape is undergoing a seismic shift, with online sales projected to account for 24% of total retail sales by 2026. In this dynamic environment, we empower retailers to not only survive but thrive. We specialize in delivering IT solutions that transform online shopping experiences, optimize supply chains, and drive customer engagement.</p>
+							<div class="industry-stats-container">
+								<div class="stat-item">
+									<h2 class="stat-value">$17.86 bln</h2>
+									<p class="stat-year">by 2028</p>
+									<span class="stat-desc">The global augmented reality (AR) and virtual reality (VR) in the retail market is expected to reach.</span>
+								</div>
+								<div class="stat-divider"></div>
+								<div class="stat-item">
+									<h2 class="stat-value">80%</h2>
+									<p class="stat-year">Customer Success</p>
+									<span class="stat-desc">Of consumers are more likely to purchase from a brand that provides personalized experiences.</span>
+								</div>
+							</div>
+							<div class="mt-40">
+								<a class="default_button" href="retail-ecommerce.html">Read More <i class="flaticon-right-up"></i></a>
+							</div>
+						</div>
+
+						<!-- Media Content -->
+						<div id="media" class="industry-detail-content d-none">
+							<p>In the fast-paced and ever-evolving world of media and entertainment, staying ahead of the curve is essential for success. With over 70% of consumers now preferring streaming services to traditional television, and social media engagement driving 50% of content discovery, the industry is undergoing a digital revolution. We empower media and entertainment companies to harness these trends and thrive in the digital age.</p>
+							<div class="industry-stats-container">
+								<div class="stat-item">
+									<h2 class="stat-value">80%</h2>
+									<p class="stat-year">Strategic Impact</p>
+									<span class="stat-desc">Of media executives believe that AI will significantly impact their industry in the next five years.</span>
+								</div>
+								<div class="stat-divider"></div>
+								<div class="stat-item">
+									<h2 class="stat-value">63%</h2>
+									<p class="stat-year">Efficiency Gains</p>
+									<span class="stat-desc">Of media companies are using AI to automate at least one part of their content production process.</span>
+								</div>
+							</div>
+							<div class="mt-40">
+								<a class="default_button" href="media-entertainment.html">Read More <i class="flaticon-right-up"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Industries Area End -->
+	<!-- About Area Start -->
+	<div class="about__one overflow-hidden section-padding" style="padding: 100px 0;">
+		<div class="container">
+			<div class="row al-center">
+				<div class="col-lg-12">
+					<div class="about__one-right ml-40 xl-ml-0 t-center">
+						<div class="about__one-right-title">
+							<span class="subtitle wow fadeInLeft" data-wow-delay=".4s">Our Core Values</span>
+							<h2 class="title_split_anim mb-20" style="color: #EF7F1A;">Value & Ethos</h2>
+							<div style="width: 100px; height: 1px; background: #EF7F1A; margin: 15px auto 30px auto;"></div>
+							<h4 style="font-weight: 700; color: #EF7F1A; margin-bottom: 20px; max-width: 850px; margin-left: auto; margin-right: auto;">We engineer innovative solutions to empower business.</h4>
+							<p class="wow fadeInUp" data-wow-delay=".4s" style="font-size: 18px; line-height: 1.8; color: #555; max-width: 850px; margin: 0 auto;">Our specialized 'SWORD' framework is built on the principles of synergy, wisdom, and excellence, ensuring we deliver data-driven integrity in every strategic solution we engineer for our global clients.</p>							
+						</div>
+						<div class="sword-values-container mt-40" style="margin-top: 60px !important;">
+							<div class="sword-item">
+								<div class="sword-circle">S</div>
+								<p>Empowerment Through <span>S</span>ynergy</p>
+							</div>
+							<div class="sword-item">
+								<div class="sword-circle">W</div>
+								<p>Sustainable <span>W</span>isdom</p>
+							</div>
+							<div class="sword-item">
+								<div class="sword-circle">O</div>
+								<p>Outcome-<span>O</span>riented Excellence</p>
+							</div>
+					<div class="sword-item">
+								<div class="sword-circle">R</div>
+								<p><span>R</span>elentless Innovation</p>
+							</div>
+							<div class="sword-item">
+								<div class="sword-circle">D</div>
+								<p><span>D</span>ata-driven Integrity</p>
+							</div>
+						</div>
+						<div class="item_bounce mt-55">
+							<a class="default_button" href="about.html">Discover More<i class="flaticon-right-up"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- About Area End -->
+	<!-- Portfolio Area Start -->
+        <div class="portfolio__one section-padding">
+                <div class="bg_shape" style="background-image: radial-gradient(#d1d1d1 1px, transparent 0); background-size: 40px 40px; opacity: 0.15;"></div>
+                <div class="container">
+                        <div class="row">
+                <div class="col-lg-5 columns_sticky lg-mb-25">
+                    <div class="portfolio__one-left overflow-hidden mr-40 xl-mr-0">
+                                                <span class="subtitle wow fadeInLeft" data-wow-delay=".4s" style="background:#EF7F1A; color:#fff; border-color:#EF7F1A;">Success Stories</span>
+                                                <h2 class="title_split_anim">Proven Impact Across Industries</h2>
+                                                <p style="color:#fff; font-size:16px; margin-top:20px; line-height:1.7; opacity:0.8;">Click a card to explore the services within each category.</p>
+                                                <div class="item_bounce">
+                                                        <a class="default_button mt-40" href="about.html">Explore More<i class="flaticon-right-up"></i></a>
+                                                </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="portfolio__one-right" id="stack-cards-container">
+                                        <div class="portfolio__one-item stack-card stack-flip-card" style="--card-index: 0;" onclick="this.classList.toggle('stack-flipped')">
+                                                <div class="stack-flip-inner">
+                                                        <div class="stack-flip-front">
+                                                                <img src="images/Technologies/Sunware_Technologies_Cloud.png" style="width:100%;height:100%;object-fit:cover;" alt="Solution Engineering">
+                                                                <div class="portfolio__one-item-content">
+                                                                        <span>Services</span>
+                                                                        <h4>Solution Engineering &amp; Development</h4>
+                                                                        <p style="color:rgba(255,255,255,0.6); font-size:13px; margin-top:8px;">Click to see services</p>
+                                                                </div>
+                                                        </div>
+                                                        <div class="stack-flip-back">
+                                                                <h4 style="color:#0a0f1e; font-weight:800; margin-bottom:20px; padding-bottom:15px; border-bottom:2px solid #EF7F1A;">Solution Engineering &amp; Development</h4>
+                                                                <div class="stack-flip-links">
+                                                                        <a href="data-science-ai.html" onclick="event.stopPropagation()"><i class="fas fa-chart-bar"></i> Data Analytics</a>
+                                                                        <a href="automation-efficiency.html" onclick="event.stopPropagation()"><i class="fas fa-laptop-code"></i> Enterprise Application Development</a>
+                                                                        <a href="cloud-solutions.html" onclick="event.stopPropagation()"><i class="fas fa-server"></i> Infrastructure</a>
+                                                                        <a href="cloud-solutions.html" onclick="event.stopPropagation()"><i class="fas fa-cloud"></i> Cloud Services</a>
+                                                                        <a href="iot-innovations.html" onclick="event.stopPropagation()"><i class="fas fa-microchip"></i> IOT Solutions</a>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="portfolio__one-item stack-card stack-flip-card" style="--card-index: 1;" onclick="this.classList.toggle('stack-flipped')">
+                                                <div class="stack-flip-inner">
+                                                        <div class="stack-flip-front">
+                                                                <img src="images/Technologies/Sunware_Technologies_Data_Science.png" style="width:100%;height:100%;object-fit:cover;" alt="Strategy & Transformation">
+                                                                <div class="portfolio__one-item-content">
+                                                                        <span>Services</span>
+                                                                        <h4>Strategy &amp; Transformation</h4>
+                                                                        <p style="color:rgba(255,255,255,0.6); font-size:13px; margin-top:8px;">Click to see services</p>
+                                                                </div>
+                                                        </div>
+                                                        <div class="stack-flip-back">
+                                                                <h4 style="color:#0a0f1e; font-weight:800; margin-bottom:20px; padding-bottom:15px; border-bottom:2px solid #EF7F1A;">Strategy &amp; Transformation</h4>
+                                                                <div class="stack-flip-links">
+                                                                        <a href="salesforce-expertise.html" onclick="event.stopPropagation()"><i class="fas fa-cogs"></i> Technology Consulting</a>
+                                                                        <a href="microsoft-solutions.html" onclick="event.stopPropagation()"><i class="fas fa-sync-alt"></i> Digital Transformation</a>
+                                                                        <a href="aiot-integrations.html" onclick="event.stopPropagation()"><i class="fas fa-robot"></i> AI Enablement</a>
+                                                                        <a href="data-science-ai.html" onclick="event.stopPropagation()"><i class="fas fa-database"></i> Data Engineering</a>
+                                                                        <a href="cybersecurity-services.html" onclick="event.stopPropagation()"><i class="fas fa-vr-cardboard"></i> XR Solutions</a>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="portfolio__one-item stack-card stack-flip-card" style="--card-index: 2;" onclick="this.classList.toggle('stack-flipped')">
+                                                <div class="stack-flip-inner">
+                                                        <div class="stack-flip-front">
+                                                                <img src="images/Technologies/Sunware_Technologies_Automation.png" style="width:100%;height:100%;object-fit:cover;" alt="Operational Support">
+                                                                <div class="portfolio__one-item-content">
+                                                                        <span>Services</span>
+                                                                        <h4>Operational Support &amp; Expansion</h4>
+                                                                        <p style="color:rgba(255,255,255,0.6); font-size:13px; margin-top:8px;">Click to see services</p>
+                                                                </div>
+                                                        </div>
+                                                        <div class="stack-flip-back">
+                                                                <h4 style="color:#0a0f1e; font-weight:800; margin-bottom:20px; padding-bottom:15px; border-bottom:2px solid #EF7F1A;">Operational Support &amp; Expansion</h4>
+                                                                <div class="stack-flip-links">
+                                                                        <a href="odoo-solutions.html" onclick="event.stopPropagation()"><i class="fas fa-users"></i> Staff Augmentation Solution</a>
+                                                                        <a href="cybersecurity-services.html" onclick="event.stopPropagation()"><i class="fas fa-tools"></i> Maintenance and Support</a>
+                                                                        <a href="mobile-app-development.html" onclick="event.stopPropagation()"><i class="fas fa-graduation-cap"></i> Learning Platform</a>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                    </div>
+                </div>
+            </div>
+                </div>
+        </div>
+        <!-- Portfolio Area End -->
+        
+	<!-- Team Area Start -->
+    <div class="team__one overflow-hidden section-padding">
+        <div class="container">
+            <div class="row mb-60">
+                <div class="col-xl-12">
+                    <div class="team__one-title t-center">
+                        <span class="subtitle wow fadeInLeft" data-wow-delay=".4s">Our Stack</span>
+                        <h2 class="title_split_anim">Core Technologies & Services</h2>                        
+                    </div>
+                </div>
+            </div>
+            <div class="row wow fadeInUp" data-wow-delay=".6s">
+                <div class="col-lg-12">
+                    <div class="swiper team_slider">
+                        <div class="swiper-wrapper data_cursor" data-cursor-text="Drag">
+                           <div class="swiper-slide">
+                              <a href="cloud-solutions.html" class="team__one-item" style="display: block; cursor: pointer;">
+                                    <img src="images/Technologies/Sunware_Technologies_Cloud.png" alt="Cloud">
+                                    <div class="team__one-item-content">
+                                        <h4>Cloud Solutions</h4>
+                                        <span>Expertise in hybrid cloud systems</span>
+                                    </div>
+                                </a>
+                           </div>
+                           <div class="swiper-slide">
+                              <a href="automation-efficiency.html" class="team__one-item" style="display: block; cursor: pointer;">
+                                    <img src="images/Technologies/Sunware_Technologies_Automation.png" alt="Automation">
+                                    <div class="team__one-item-content">
+                                        <h4>Automation</h4>
+                                        <span>Streamlining operations & efficiency</span>
+                                    </div>
+                                </a>
+                           </div>
+                           <div class="swiper-slide">
+                              <a href="data-science-ai.html" class="team__one-item" style="display: block; cursor: pointer;">
+                                    <img src="images/Technologies/Sunware_Technologies_Data_Science.png" alt="AI">
+                                    <div class="team__one-item-content">
+                                        <h4>Data Science & AI</h4>
+                                        <span>Generative AI & predictive analytics</span>
+                                    </div>
+                                </a>
+                           </div>
+                           <div class="swiper-slide">
+                              <a href="salesforce-expertise.html" class="team__one-item" style="display: block; cursor: pointer;">
+                                    <img src="images/Technologies/Sunware_Technologies_Sales_force.png" alt="Salesforce">
+                                    <div class="team__one-item-content">
+                                        <h4>Salesforce</h4>
+                                        <span>Implementation & customization</span>
+                                    </div>
+                                </a>
+                           </div>
+                           <div class="swiper-slide">
+                              <a href="microsoft-solutions.html" class="team__one-item" style="display: block; cursor: pointer;">
+                                    <img src="images/Technologies/Sunware_Technologies_Microsoft_Technologies.png" alt="Microsoft">
+                                    <div class="team__one-item-content">
+                                        <h4>Microsoft Solutions</h4>
+                                        <span>Enterprise technology stack experts</span>
+                                    </div>
+                                </a>
+                           </div>
+                           <div class="swiper-slide">
+                              <a href="odoo-solutions.html" class="team__one-item" style="display: block; cursor: pointer;">
+                                    <img src="images/Technologies/Sunware_Technologies_Odoo.png" alt="Odoo">
+                                    <div class="team__one-item-content">
+                                        <h4>Odoo Solutions</h4>
+                                        <span>Custom ERP & business applications</span>
+                                    </div>
+                                </a>
+                           </div>
+                           <div class="swiper-slide">
+                              <a href="iot-innovations.html" class="team__one-item" style="display: block; cursor: pointer;">
+                                    <img src="images/Technologies/Sunware_Technologies_IoT.png" alt="IoT">
+                                    <div class="team__one-item-content">
+                                        <h4>IoT Innovations</h4>
+                                        <span>Connected smart device ecosystems</span>
+                                    </div>
+                                </a>
+                           </div>
+                           <div class="swiper-slide">
+                              <a href="cybersecurity-services.html" class="team__one-item" style="display: block; cursor: pointer;">
+                                    <img src="images/Technologies/Sunware_Technologies_Cybersecurity.png" alt="Security">
+                                    <div class="team__one-item-content">
+                                        <h4>Cybersecurity</h4>
+                                        <span>Advanced threat protection & audit</span>
+                                    </div>
+                                </a>
+                           </div>
+                           <div class="swiper-slide">
+                              <a href="aiot-integrations.html" class="team__one-item" style="display: block; cursor: pointer;">
+                                    <img src="images/Technologies/Sunware_Technologies_AIoT.png" alt="AIoT">
+                                    <div class="team__one-item-content">
+                                        <h4>AIoT Integrations</h4>
+                                        <span>Merging intelligence with physical IoT</span>
+                                    </div>
+                                </a>
+                           </div>
+                           <div class="swiper-slide">
+                              <a href="mobile-app-development.html" class="team__one-item" style="display: block; cursor: pointer;">
+                                    <img src="images/Technologies/Sunware_Technologies_Mobile_Development.png" alt="Mobile App">
+                                    <div class="team__one-item-content">
+                                        <h4>Mobile Development</h4>
+                                        <span>iOS, Android & cross-platform apps</span>
+                                    </div>
+                                </a>
+                           </div>
+                           <div class="swiper-slide">
+                              <a href="data-science-ai.html" class="team__one-item" style="display: block; cursor: pointer;">
+                                        <img src="images/Technologies/Sunware_Technologies_Data_Science.png" alt="Neo4J">
+                                        <div class="team__one-item-content">
+                                        <h4>Neo4J</h4>
+                                        <span>Graph database & knowledge graphs</span>
+                                        </div>
+                                </a>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<!-- Team Area End -->
+	<!-- Benefits Area Start -->
+	<!-- Advantages Area Start -->
+	<div class="process__area overflow-hidden section-padding">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-12">
+					<div class="process__area-title t-center">
+						<span class="subtitle wow fadeInLeft" data-wow-delay=".4s">Advantages</span>
+						<h2 class="title_split_anim">Sunware Technologies Advantages</h2>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-12">
+					<div class="process__area-list" style="grid-template-columns: repeat(5, 1fr); gap: 24px;">
+						<div class="process__area-item wow fadeInUp" data-wow-delay=".2s">
+							<span>01</span>
+							<div class="process__area-item-area">
+								<i class="flaticon-strategy"></i>
+								<h5>Core Focus Unleashed</h5>
+								<p>Focus on your core business while we handle project execution seamlessly.</p>
+							</div>
+						</div>
+						<div class="process__area-item wow fadeInUp" data-wow-delay=".3s">
+							<span>02</span>
+							<div class="process__area-item-area">
+								<i class="flaticon-repair"></i>
+								<h5>Always-On Maintenance</h5>
+								<p>We prioritize user experience with ongoing maintenance, ensuring market relevance.</p>
+							</div>
+						</div>
+						<div class="process__area-item wow fadeInUp" data-wow-delay=".4s">
+							<span>03</span>
+							<div class="process__area-item-area">
+								<i class="flaticon-cyber-security"></i>
+								<h5>Security Built-In</h5>
+								<p>Robust security at every step of development, protecting your sensitive data.</p>
+							</div>
+						</div>
+						<div class="process__area-item wow fadeInUp" data-wow-delay=".5s">
+							<span>04</span>
+							<div class="process__area-item-area">
+								<i class="flaticon-paper-plane"></i>
+								<h5>Faster Launch, Bigger Impact</h5>
+								<p>Experienced team and vast talent pool get your project to market quickly.</p>
+							</div>
+						</div>
+						<div class="process__area-item wow fadeInUp" data-wow-delay=".6s">
+							<span>05</span>
+							<div class="process__area-item-area">
+								<i class="flaticon-artificial-intelligence"></i>
+								<h5>AI-Powered Efficiency</h5>
+								<p>Leverage AI and analytics to optimize resources and automating tasks.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Advantages Area End -->
+
+
+	<!-- Blog Area Start -->
+	<div class="blog__one overflow-hidden section-padding">
+		<div class="container">
+			<div class="row mb-60">
+				<div class="col-xl-12">
+					<div class="blog__one-title t-center">
+						<span class="subtitle wow fadeInLeft" data-wow-delay=".4s">Expert Insights</span>
+						<h2 class="title_split_anim">Update News & Blogs</h2>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-12">
+					<div class="swiper blog_slider">
+						<div class="swiper-wrapper data_cursor" id="blogger-landing-posts" data-cursor-text="Drag">
+							<!-- Dynamic feed items loaded dynamically via JS loaded below -->
+							<div class="swiper-slide text-center">
+								<p>Loading Latest Insights...</p>
+							</div>
+						</div>
+					</div>
+					<div class="blog__one-dots mt-35">
+						<div class="blog-pagination"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Blog Area End -->
+
+
+
+	<!-- Footer CTA Area Start -->
+	<div class="container">
+		<div class="row">
+			<div class="col-xl-12">
+				<div class="footer__cta-area mb-60">
+					<div class="row al-center">
+						<div class="col-xl-6 col-lg-7 lg-mb-40">
+							<div class="footer__cta-area-left lg-t-center">
+								<h2>Build Your Ideal World — We're Ready!</h2>
+							</div>
+						</div>
+						<div class="col-xl-6 col-lg-5">
+							<div class="footer__cta-area-right d-flex al-center flex-wrap jc-end lg-jc-center gap-25">
+								<a class="default_button" href="request-quote.html">Start Today<i class="flaticon-right-up"></i></a>
+								<div class="footer__cta-area-right-tel">
+									<div class="footer__cta-area-right-tel-icon">
+										<i class="flaticon-phone-call"></i>
+									</div>
+									<div class="footer__cta-area-right-tel-info">
+										<span>Call Us Now</span>
+										<h6><a href="tel:+14089811878">+1 408 981 1878</a></h6>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div> <!-- Main Content Wrapper Closing -->
+
+<!-- Fixed Footer Area Start -->
+<footer class="site-footer">
+        <div class="footer__one" style="padding: 15px 0; background-color: #0a0f1e;">
+                <div class="bg_shape" style="background-image: url('assets/img/shape/footer.png');"></div>
+                <div class="container">
+                        <div class="row">
+                                <div class="col-lg-3 col-sm-6">
+                                        <div class="footer__one-widget">
+                                                <a class="logo" href="index.html"><img src="white Logo.png" alt="Sunware Technologies"></a>
+                                                <p style="font-style: italic; color: #EF7F1A; margin: 15px 0 4px 0; font-size: 14px; font-weight: 500;">Advanced Data &amp; AI Solutions Tailored to Your Needs.</p>
+                                        </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 sm-mt-30">
+                                        <div class="footer__one-widget ml-40 xl-ml-0">
+                                                <h5>Quick links</h5>
+                                                <div class="footer-widget-menu">
+                                                        <ul>
+                                                                <li><a href="index.html">Home</a></li>
+                                                                <li><a href="about.html">About Us</a></li>
+                                                                <li><a href="#">Services</a></li>
+                                                                <li><a href="careers.html">Careers</a></li>
+                                                                <li><a href="blog.html">Blog</a></li>
+                                                                <li><a href="mailto:sales@sunware.in">Contact Us</a></li>
+                                                        </ul>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 lg-mt-30">
+                                        <div class="footer__one-widget contact ml-40 xl-ml-0">
+                                                <h5>Contact</h5>
+                                                <div class="contact-item mb-15">
+                                                        <div class="contact-item-icon"><i class="flaticon-email"></i></div>
+                                                        <div class="contact-item-info"><span>Email</span><h6><a href="mailto:sales@sunware.in">sales@sunware.in</a></h6></div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 lg-mt-30">
+                                        <div class="footer__one-widget social">
+                                                <h5>Social Media</h5>
+                                                <p>Stay connected with us</p>
+                                                <ul>
+                                                        <li><a href="https://www.linkedin.com/company/sunware-technologies" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                                                        <li><a href="https://www.youtube.com/@sunwaretechnologies" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                                                        <li><a href="https://www.instagram.com/sunwaretechnologies" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                                </ul>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+</footer>
+
+	<!-- Dynamic Footer Reveal Height Calculation -->
+	<script>
+	document.addEventListener("DOMContentLoaded", function () {
+		const footer = document.querySelector('.site-footer');
+		const mainWrapper = document.querySelector('.main-content-wrapper');
+
+		function adjustFooterReveal() {
+			if (!footer || !mainWrapper) return;
+			
+			// 1. Measure Footer Height
+			const footerHeight = footer.offsetHeight;
+			
+			// On small screens, fixed reveal can feel crowded, we disable or keep it based on preference
+			if (window.innerWidth < 992) {
+				footer.style.position = 'relative';
+				footer.style.zIndex = 'auto';
+				footer.style.visibility = 'visible';
+				mainWrapper.style.marginBottom = '0px';
+			} else {
+				footer.style.position = 'fixed';
+				footer.style.zIndex = '1';
+				footer.style.visibility = 'visible';
+				// 2. Set margin on main block to reveal it correctly
+				mainWrapper.style.marginBottom = footerHeight + 'px';
+			}
+		}
+
+		// Run on Load + Resize
+		adjustFooterReveal();
+		window.addEventListener('resize', adjustFooterReveal);
+	});
+	</script>
+<!-- Layout Bottom -->
+    	<!-- Scroll Btn Start -->
+	<div class="scroll-up scroll-one">
+		<svg class="scroll-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102"><path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" /> </svg>
+	</div>
+	<!-- Scroll Btn End -->
+	        
+
+	<div id="enquire-modal" class="modal-overlay">
+		<div class="modal-content-wrapper">
+			<button class="modal-close" onclick="closeEnquireModal()"><i class="fal fa-times"></i></button>
+                        <div class="modal-header" style="text-align:center; margin-bottom:25px;">
+                                <h3 style="font-size:28px; font-weight:800; color:#0a0f1e; margin-bottom:8px;">Let's Talk</h3>
+                                <p style="font-size:15px; color:#666; margin:0;">Submit your inquiry and our team will get back to you shortly.</p>
+                        </div>
+			<form class="enquire-form">
+				<div class="form-row">
+					<div class="form-group">
+						<label>Full Name</label>
+						<input type="text" placeholder="John Doe" required>
+					</div>
+					<div class="form-group">
+						<label>Corporate Email</label>
+						<input type="email" placeholder="john@company.com" required>
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="form-group">
+						<label>Phone Number</label>
+						<input type="tel" placeholder="+1 234 567 890" required>
+					</div>
+					<div class="form-group">
+						<label>Subject</label>
+						<select required>
+							<option value="">Select Service</option>
+							<option>Cloud Solutions</option>
+							<option>Data & AI Analytics</option>
+							<option>Cybersecurity</option>
+							<option>IoT Innovations</option>
+							<option>Other Services</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label>How can we help?</label>
+					<textarea placeholder="Describe your requirements..." rows="4" required></textarea>
+				</div>
+				<button type="submit" class="default_button" style="width: 100%; justify-content: center; margin-top: 10px;">Send Inquiry <i class="flaticon-right-up"></i></button>
+			</form>
+		</div>
+	</div>
+
+	<!-- Modal Styles -->
+	<style>
+		.modal-content-wrapper { padding: 40px; }
+		.form-row { display: flex; gap: 20px; margin-bottom: 20px; }
+
+		@media (max-width: 575px) {
+			.modal-content-wrapper { padding: 30px 20px; }
+			.form-row { flex-direction: column; gap: 0; }
+		}
+
+		/* Global Footer Reveal Fix */
+		body {
+			margin: 0 !important;
+			padding: 0 !important;
+			background: #ffffff !important;
+		}
+
+		.main-content-wrapper {
+			position: relative;
+			z-index: 10;
+			background: #ffffff !important;
+			width: 100%;
+			/* overflow: hidden removed — breaks position:sticky on card stack */
+		}
+		
+		/* Direct section backgrounds */
+		.banner__one, .industries__one, .about__one,
+		.team__one, .advantages_area, .news__one, .footer__cta, .brand__area {
+			background-color: #ffffff !important;
+			position: relative;
+			z-index: 11;
+			width: 100%;
+		}
+
+		.site-footer {
+			z-index: 1 !important;
+			width: 100%;
+		}
+		
+		/* Hero Pagination Fix */
+		.hero-pagination.swiper-pagination {
+			position: relative !important;
+			bottom: 0 !important;
+			left: 0 !important;
+			margin-top: 40px !important;
+			display: flex !important;
+			justify-content: flex-start !important;
+			gap: 12px !important;
+			width: auto !important;
+			z-index: 20 !important;
+		}
+		.hero-pagination .swiper-pagination-bullet {
+			width: 12px !important;
+			height: 12px !important;
+			background: #cccccc !important;
+			opacity: 1 !important;
+			margin: 0 !important;
+			border-radius: 50% !important;
+			transition: all 0.3s ease !important;
+			border: none !important;
+		}
+		.hero-pagination .swiper-pagination-bullet-active {
+			background: #EF7F1A !important;
+			width: 32px !important;
+			border-radius: 10px !important;
+		}
+		
+		/* Remove stray dots */
+		.swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+			background: #ccc;
+		}
+
+		/* Sticky Header Styles */
+		.header__area.sticky {
+			position: fixed !important;
+			top: 0;
+			left: 0;
+			width: 100%;
+			background: #ffffff;
+			box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+			z-index: 99999;
+			animation: slideInDown 0.4s ease;
+		}
+		@keyframes slideInDown {
+			from { transform: translateY(-100%); }
+			to { transform: translateY(0); }
+		}
+
+		/* ΓöÇΓöÇ Hard Stacking Cards ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+		.portfolio__one .portfolio__one-right {
+			display: flex;
+			flex-direction: column;
+			gap: 0;
+			/* Enough height for 4 cards to each get their scroll moment */
+			padding-bottom: 0;
+		}
+		.portfolio__one-item {
+			position: relative;
+			overflow: hidden;
+			border-radius: 15px;
+		}
+		/* Each .stack-card sticks at the SAME top = hard overlap */
+		.stack-card {
+			position: sticky;
+			top: 120px;
+			z-index: calc(1 + var(--card-index, 0));
+			margin-bottom: 25px;
+			box-shadow: 0 8px 40px rgba(0,0,0,0.35);
+			transform-origin: top center;
+			will-change: transform;
+		}
+		/* Offset each card slightly so you can see them peek beneath the active one */
+		.stack-card:nth-child(1) { top: 120px; }
+		.stack-card:nth-child(2) { top: 124px; }
+		.stack-card:nth-child(3) { top: 128px; }
+		.stack-card:nth-child(4) { top: 132px; }
 
 		@media (max-width: 991px) {
 			.main-content-wrapper { margin-bottom: 0 !important; }
@@ -88,7 +1220,7 @@
 			window.addEventListener('resize', adjustFooterReveal);
 
 			// Hero Slider Init
-			// ── Hero Slideshow (simple, no Swiper) ──
+			// ΓöÇΓöÇ Hero Slideshow (simple, no Swiper) ΓöÇΓöÇ
                                         var heroSlides = [
                                             { h1: 'Advanced Data & AI Solutions Tailored to Your Needs', h3: 'Data. Intelligence. Engineered.', btn: 'Get Started', href: 'about.html', target: '', img: 'about hero.png' },
                                             { h1: 'Real-Time Edge Intelligence for a Smarter World', h3: 'Process. Analyze. Act — at the Edge.', btn: 'Explore EdgeData', href: 'https://edgedata360.com', target: '_blank', img: 'ed logo.png' },
@@ -106,12 +1238,8 @@
                                             var img = document.getElementById('hero-img');
                                             var btn = document.getElementById('hero-btn');
 
-                                            // Fade out ALL at same time
-                                            h1.style.opacity = '0';
-                                            h3.style.opacity = '0';
-                                            cta.style.opacity = '0';
-                                            img.style.opacity = '0';
-                                            img.style.transform = 'scale(0.95)';
+                                            // Fade out
+                                            h1.style.opacity = '0'; h3.style.opacity = '0'; cta.style.opacity = '0'; img.style.opacity = '0';
 
                                             setTimeout(function() {
                                                 h1.textContent = s.h1;
@@ -121,12 +1249,11 @@
                                                 btn.target = s.target;
                                                 img.src = s.img;
 
-                                                // Fade in ALL at same time
-                                                img.style.opacity = '1';
-                                                img.style.transform = 'scale(1)';
-                                                h1.style.opacity = '1';
-                                                h3.style.opacity = '1';
-                                                cta.style.opacity = '1';
+                                                // Fade in with stagger
+                                                setTimeout(function() { img.style.opacity = '1'; }, 50);
+                                                setTimeout(function() { h1.style.opacity = '1'; }, 100);
+                                                setTimeout(function() { h3.style.opacity = '1'; }, 200);
+                                                setTimeout(function() { cta.style.opacity = '1'; }, 300);
                                             }, 500);
 
                                             // Update dots
@@ -230,6 +1357,42 @@
 		});
 	});
 	</script>
+<script>
+// Hero Slideshow
+(function() {
+    var slides = [
+        { h1: 'Advanced Data & AI Solutions Tailored to Your Needs', h3: 'Data. Intelligence. Engineered.', btn: 'Get Started', href: 'about.html', target: '', img: 'about hero.png' },
+        { h1: 'Real-Time Edge Intelligence for a Smarter World', h3: 'Process. Analyze. Act \u2014 at the Edge.', btn: 'Explore EdgeData', href: 'https://edgedata360.com', target: '_blank', img: 'ed logo.png' },
+        { h1: 'Autonomous Ecosystem. Intelligent Infrastructure at Scale.', h3: 'Reimagining Property Intelligence for Regulated Industries.', btn: 'Discover Valucore', href: 'https://valutek.ai', target: '_blank', img: 'vt logo.png' }
+    ];
+    var idx = 0, timer;
+    function show(i) {
+        idx = i % 3;
+        var s = slides[idx];
+        var h1 = document.getElementById('hero-h1');
+        var h3 = document.getElementById('hero-h3');
+        var cta = document.getElementById('hero-cta');
+        var img = document.getElementById('hero-img');
+        var btn = document.getElementById('hero-btn');
+        if (!h1 || !img) return;
+        h1.style.opacity='0'; h3.style.opacity='0'; cta.style.opacity='0'; img.style.opacity='0'; img.style.transform='scale(0.95)';
+        setTimeout(function() {
+            h1.textContent = s.h1; h3.textContent = s.h3; btn.textContent = s.btn; btn.href = s.href; btn.target = s.target; img.src = s.img;
+            img.style.opacity='1'; img.style.transform='scale(1)'; h1.style.opacity='1'; h3.style.opacity='1'; cta.style.opacity='1';
+        }, 500);
+        document.querySelectorAll('.hero-dot').forEach(function(d, j) {
+            d.style.background = j===idx ? '#EF7F1A' : '#ccc';
+            d.style.width = j===idx ? '32px' : '12px';
+            d.style.borderRadius = j===idx ? '6px' : '50%';
+        });
+    }
+    function start() { timer = setInterval(function() { show(idx+1); }, 5000); }
+    document.querySelectorAll('.hero-dot').forEach(function(d) {
+        d.addEventListener('click', function() { clearInterval(timer); show(parseInt(this.getAttribute('data-slide'))); start(); });
+    });
+    start();
+})();
+</script>
 </body>
 </html>
 
