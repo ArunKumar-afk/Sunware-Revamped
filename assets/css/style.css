@@ -304,7 +304,7 @@ body {
   font-size: 16px;
   line-height: 28px;
   font-weight: 400;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 img {
@@ -8724,7 +8724,7 @@ body {
 }
 
 /* Prevent horizontal overflow */
-html, body { overflow-x: hidden; max-width: 100vw; }
+html, body { max-width: 100vw; }
 
 /* Image optimization */
 img { 
@@ -8807,7 +8807,7 @@ img {
 /* ============================================================
    COMPREHENSIVE MOBILE RESPONSIVE
    ============================================================ */
-html, body { overflow-x: hidden; max-width: 100%; }
+html, body { max-width: 100%; }
 html { scroll-behavior: smooth; }
 body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 *, *::before, *::after { box-sizing: border-box; }
@@ -9287,7 +9287,7 @@ body {
   font-size: 16px;
   line-height: 28px;
   font-weight: 400;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 img {
@@ -17707,7 +17707,7 @@ body {
 }
 
 /* Prevent horizontal overflow */
-html, body { overflow-x: hidden; max-width: 100vw; }
+html, body { max-width: 100vw; }
 
 /* Image optimization */
 img { 
@@ -17790,7 +17790,7 @@ img {
 /* ============================================================
    COMPREHENSIVE MOBILE RESPONSIVE
    ============================================================ */
-html, body { overflow-x: hidden; max-width: 100%; }
+html, body { max-width: 100%; }
 html { scroll-behavior: smooth; }
 body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 *, *::before, *::after { box-sizing: border-box; }
