@@ -10,8 +10,10 @@
     document.addEventListener("DOMContentLoaded", function() {
         var mobileMenu = document.getElementById("mobilemenu");
         var mainMenu = document.querySelector(".vertical_menu");
-        var clonedMenu = mobileMenu.cloneNode(true);
-        mainMenu.appendChild(clonedMenu);
+        if (mobileMenu && mainMenu) {
+            var clonedMenu = mobileMenu.cloneNode(true);
+            mainMenu.appendChild(clonedMenu);
+        }
     });
     jQuery(document).ready(function($) {
         $('.vertical_menu ul li.menu-item-has-children').append('<span class="mobile-arrows far fa-plus"></span>');
@@ -341,6 +343,7 @@
     function customCursor() {
         var ball = document.getElementById("cursor-ball");
         var cursorText = document.getElementById("cursor-text");
+        if (!ball || !cursorText) return;
         if (!ball || !cursorText) return;
         var hoverAreas = document.querySelectorAll('.data_cursor:not(body)');
         var lastHoveredElement = null;
