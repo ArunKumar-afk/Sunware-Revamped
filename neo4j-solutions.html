@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Salesforce Implementation - Sunware Technologies</title>
+	<title>Neo4J Graph Technologies - Sunware Technologies</title>
 	<link rel="icon" type="image/png" href="favicon.png">
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/fontawesome.css">
@@ -38,8 +38,18 @@
 	.site-footer { position: fixed; bottom: 0; left: 0; width: 100%; z-index: 1; visibility: hidden; }
 	/* header styles in style.css */
 
-    /* Megamenu Styles are now in assets/css/style.css */
-
+    /* Megamenu Styles */
+    .has-megamenu { position: static !important; }
+    .megamenu { position: absolute; top: 100%; left: 0; width: 100%; background: #fff; box-shadow: 0 20px 40px rgba(0,0,0,0.05); padding: 40px 0; opacity: 0; visibility: hidden; transition: 0.4s; z-index: 1000; border-bottom: 1px solid #f0f0f0; }
+    .has-megamenu:hover .megamenu { opacity: 1; visibility: visible; }
+    .megamenu-content { display: flex; max-width: 1200px; margin: 0 auto; padding: 0 15px; gap: 60px; }
+    .megamenu-left { flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .megamenu-item { display: block; padding: 20px; border-radius: 12px; transition: 0.3s; text-decoration: none !important; color: inherit; }
+    .megamenu-item:hover { background: #f8faff; }
+    .megamenu-item h5 { font-size: 17px; font-weight: 700; color: #EF7F1A; margin-bottom: 6px; }
+    .megamenu-item p { font-size: 14px; color: #777; margin: 0; }
+    .megamenu-right { width: 400px; border-radius: 20px; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #f9fbff; }
+    .megamenu-preview-img { width: 100%; height: 100%; object-fit: cover; transition: 0.4s ease; }
 
 	.story-hero { padding: 100px 0; background: #fff; position: relative; overflow: hidden; }
 	.story-row { display: flex; align-items: center; gap: 60px; margin-bottom: 100px; }
@@ -66,6 +76,7 @@
 			<li class="nav-item"><a href="about.html">About Us</a></li>
 			<li class="nav-item"><a href="#">Services</a></li>
 			<li class="nav-item"><a href="healthcare-lifesciences.html">Industries</a></li>
+			<li class="nav-item"><a href="careers.html">Careers</a></li>
 			<li class="nav-item"><a href="blog.html">Blog</a></li>
 		</ul>
 		<div class="nav-footer">
@@ -198,13 +209,8 @@
 		
 		<div class="banner__one-image" style="padding: 100px 0; position: relative; z-index: 1; background: transparent;">
 			<div class="container jc-center text-center">
-				<div class="wow fadeInUp" data-wow-delay=".2s" style="margin-bottom: 30px;">
-					<a href="index.html" class="default_button" style="padding: 10px 25px; font-size: 14px; background: transparent; border: 1px solid var(--primary-color-1); color: var(--primary-color-1);">
-						<i class="fal fa-long-arrow-left" style="margin-right: 8px;"></i> Back to Home
-					</a>
-				</div>
-				<h1 style="color: var(--primary-color-1); font-size: clamp(2.5rem, 6vw, 4rem); line-height: 1.1; margin-bottom: 20px;">Salesforce Implementation</h1>
-				<p style="font-size: 20px; color: #444; margin: 0 auto; max-width: 800px;">Maximize your CRM potential with customized Salesforce solutions.</p>
+				<h1 style="color: var(--primary-color-1); font-size: clamp(2.5rem, 6vw, 4rem); line-height: 1.1; margin-bottom: 20px;">Neo4J Graph Technologies</h1>
+				<p style="font-size: 20px; color: #444; margin: 0 auto; max-width: 800px;">Unlock the Power of Connected Data</p>
 			</div>
 		</div>
 	</div>
@@ -212,21 +218,53 @@
 	<div class="container section-padding">
 		<div class="story-row al-center">
 			<div class="story-content wow fadeInLeft">
-				<h2 style="font-size: 42px; font-weight: 700; margin-bottom: 25px;">CRM Like Never Before</h2>
-				<p style="font-size: 18px; line-height: 1.8; color: #555;">Sunware’s certified Salesforce experts specialize in bespoke implementations and configurations that enhance your customer relationship management. We offer end-to-end services including system implementation, data migration, and third-party integration.</p>
+				<h2 style="font-size: 42px; font-weight: 700; margin-bottom: 25px;">Transform Your Data with Graph Intelligence</h2>
+				<p style="font-size: 18px; line-height: 1.8; color: #555;">Sunware Technologies leverages Neo4J's powerful graph database technology to help businesses uncover hidden relationships in their data, enabling smarter decisions, fraud detection, recommendation engines, and knowledge graphs that drive real business value.</p>
 			</div>
 			<div class="story-image wow fadeInRight">
-				<img src="https://images.unsplash.com/photo-1552581234-26120784c042?auto=format&fit=crop&w=800&q=80" alt="Salesforce Implementation">
+				<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Neo4J Graph Technologies">
 			</div>
 		</div>
 	</div>
 
     <section class="tailored-grid"><div class="container"><div class="row g-4">
-        <div class="col-lg-3"><div class="solution-card"><h4>Configuration</h4><p>Bespoke Salesforce setup tailored to your sales cycle.</p></div></div>
-        <div class="col-lg-3"><div class="solution-card"><h4>Migration</h4><p>Seamless data transition with zero downtime.</p></div></div>
-        <div class="col-lg-3"><div class="solution-card"><h4>Automation</h4><p>Streamlined workflows for peak sales efficiency.</p></div></div>
-        <div class="col-lg-3"><div class="solution-card"><h4>Insights</h4><p>Custom dashboards for real-time business intelligence.</p></div></div>
+        <div class="col-lg-3"><div class="solution-card"><h4>Knowledge Graphs</h4><p>Build intelligent knowledge graphs that connect your data and reveal hidden insights.</p></div></div>
+        <div class="col-lg-3"><div class="solution-card"><h4>Fraud Detection</h4><p>Identify fraudulent patterns and anomalies through real-time graph analysis.</p></div></div>
+        <div class="col-lg-3"><div class="solution-card"><h4>Recommendation Engines</h4><p>Deliver personalized recommendations powered by graph-based algorithms.</p></div></div>
+        <div class="col-lg-3"><div class="solution-card"><h4>Network Analysis</h4><p>Analyze complex networks and relationships to optimize operations.</p></div></div>
     </div></div></section>
+
+	<section style="padding: 100px 0; background: #fff;">
+		<div class="container">
+			<div class="text-center mb-60">
+				<p style="font-size: 16px; color: #EF7F1A; font-weight: 600; margin-bottom: 10px;">Who is this service for?</p>
+				<h2 style="font-size: 42px; font-weight: 700;">Ideal For</h2>
+			</div>
+			<div class="row g-4">
+				<div class="col-lg-4">
+					<div class="solution-card text-center">
+						<i class="fas fa-database" style="font-size: 40px; color: #EF7F1A; margin-bottom: 20px;"></i>
+						<h4>Data-Rich Organizations</h4>
+						<p>Businesses with complex, interconnected data seeking deeper insights.</p>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="solution-card text-center">
+						<i class="fas fa-shield-alt" style="font-size: 40px; color: #EF7F1A; margin-bottom: 20px;"></i>
+						<h4>Security Focused</h4>
+						<p>Organizations needing advanced fraud detection and risk analysis.</p>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="solution-card text-center">
+						<i class="fas fa-users" style="font-size: 40px; color: #EF7F1A; margin-bottom: 20px;"></i>
+						<h4>Customer-Centric</h4>
+						<p>Companies wanting to deliver personalized experiences at scale.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
 	<div class="container">
 		<div class="row">
@@ -235,7 +273,7 @@
 					<div class="row al-center">
 						<div class="col-xl-6 col-lg-7 lg-mb-40">
 							<div class="footer__cta-area-left lg-t-center">
-								<h2>Build Your Ideal World — We’re Ready!</h2>
+								<h2>Build Your Ideal World — We're Ready!</h2>
 							</div>
 						</div>
 						<div class="col-xl-6 col-lg-5">
