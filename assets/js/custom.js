@@ -426,6 +426,7 @@
     ///=============  * Scroll To Top  =============\\\
     function scrollToTop() {
         var scrollPath = document.querySelector('.scroll-up path');
+        if (!scrollPath) return;
         var pathLength = scrollPath.getTotalLength();
         scrollPath.style.transition = scrollPath.style.WebkitTransition = 'none';
         scrollPath.style.strokeDasharray = pathLength + ' ' + pathLength;
