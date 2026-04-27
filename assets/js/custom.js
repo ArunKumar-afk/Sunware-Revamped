@@ -341,6 +341,7 @@
     function customCursor() {
         var ball = document.getElementById("cursor-ball");
         var cursorText = document.getElementById("cursor-text");
+        if (!ball || !cursorText) return;
         var hoverAreas = document.querySelectorAll('.data_cursor:not(body)');
         var lastHoveredElement = null;
         var mouseX = 0, mouseY = 0;
