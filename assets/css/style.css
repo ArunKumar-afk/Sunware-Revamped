@@ -304,7 +304,7 @@ body {
   font-size: 16px;
   line-height: 28px;
   font-weight: 400;
-  overflow-x: clip;
+  /* overflow removed for sticky */
 }
 
 img {
@@ -9287,7 +9287,7 @@ body {
   font-size: 16px;
   line-height: 28px;
   font-weight: 400;
-  overflow-x: clip;
+  /* overflow removed for sticky */
 }
 
 img {
