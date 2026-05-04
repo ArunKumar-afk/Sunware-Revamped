@@ -18123,4 +18123,39 @@ img { max-width: 100%; height: auto; }
     .footer__one-widget .logo { display: block; text-align: center; }
     .footer__one-widget .logo img { margin: 0 auto; }
 }
+
+/* ============================================================
+   MOBILE FIXES — Service/Industry/Tech pages
+   ============================================================ */
+
+/* CTA block hidden under fixed header - add top margin */
+@media (max-width: 991px) {
+    .footer__cta-area {
+        margin-top: 20px;
+    }
+    .footer__cta-area.mb-60 {
+        margin-bottom: 30px !important;
+    }
+}
+
+/* Service/Industry/Tech page hero: center Back to Home and content */
+@media (max-width: 991px) {
+    .banner__one-image .container { text-align: center !important; }
+    .story-hero .container { text-align: center !important; }
+    .story-hero .default_button { margin: 0 auto; }
+}
+
+/* Footer logo: left aligned, not centered */
+@media (max-width: 767px) {
+    .footer__one-widget .logo { text-align: left !important; }
+    .footer__one-widget .logo img { margin: 0 !important; }
+}
+
+/* Ensure CTA is not under the fixed header */
+@media (max-width: 767px) {
+    .footer__cta-area {
+        position: relative;
+        z-index: 10;
+    }
+}
 /*# sourceMappingURL=style.css.map */
