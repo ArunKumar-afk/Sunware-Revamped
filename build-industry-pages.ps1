@@ -15,10 +15,7 @@ $ctaBlock = @'
                                                 <div class="col-xl-6 col-lg-5">
                                                         <div class="footer__cta-area-right d-flex al-center flex-wrap jc-end lg-jc-center gap-25">
                                                                 <a class="default_button" href="#" onclick="openEnquireModal(event)">Start Today<i class="flaticon-right-up"></i></a>
-                                                                <div class="footer__cta-area-right-tel">
-                                                                        <div class="footer__cta-area-right-tel-icon"><i class="flaticon-phone-call"></i></div>
-                                                                        <div class="footer__cta-area-right-tel-info"><span>Call Us Now</span><h6><a href="tel:(415)755-7890">(415) 755-7890</a></h6></div>
-                                                                </div>
+
                                                         </div>
                                                 </div>
                                         </div>
