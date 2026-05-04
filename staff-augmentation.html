@@ -359,10 +359,10 @@
                         <h3 style="font-size:28px; font-weight:800; color:#0a0f1e; margin-bottom:8px;">Let's Talk</h3>
                 </div>
 		<form class="enquire-form">
-			<div class="form-group mb-20"><input type="text" placeholder="Enter your name" required></div>
-			<div class="form-group mb-20"><input type="email" placeholder="Enter your email address" required></div>
-			<div class="form-group mb-20"><input type="text" placeholder="Subject" required></div>
-			<div class="form-group mb-20"><textarea placeholder="Message" rows="4" required></textarea></div>
+			<div class="form-group mb-20"><input type="text" placeholder="Enter your name" name="name" required></div>
+			<div class="form-group mb-20"><input type="email" placeholder="Enter your email address" name="email" required></div>
+			<div class="form-group mb-20"><input type="text" placeholder="Subject" name="subject" required></div>
+			<div class="form-group mb-20"><textarea placeholder="Message" name="message" rows="4" required></textarea></div>
 			<button type="submit" class="default_button" style="width: 100%; justify-content: center;">Send Inquiry <i class="flaticon-right-up"></i></button>
 		</form>
 	</div>
@@ -399,6 +399,49 @@
                 a();window.addEventListener('resize',a);
                 document.addEventListener('mousemove', function(e) { const cursor = document.querySelector('.cursor-follower'); if(cursor) { cursor.style.left = e.clientX + 'px'; cursor.style.top = e.clientY + 'px'; } });
         });
+</script>
+<script>
+// Enquiry Form -> Google Sheets
+document.addEventListener('DOMContentLoaded', function() {
+    var form = document.querySelector('.enquire-form');
+    if (!form) return;
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var btn = form.querySelector('button[type="submit"]');
+        var origText = btn.innerHTML;
+        btn.innerHTML = 'Sending... <i class="flaticon-right-up"></i>';
+        btn.disabled = true;
+
+        var data = {
+            name: (form.querySelector('[name="name"]') || {}).value || '',
+            email: (form.querySelector('[name="email"]') || {}).value || '',
+            phone: (form.querySelector('[name="phone"]') || {}).value || '',
+            subject: (form.querySelector('[name="subject"]') || {}).value || '',
+            message: (form.querySelector('[name="message"]') || {}).value || ''
+        };
+
+        fetch('https://script.google.com/macros/s/AKfycby5L1bBvwmm-AHCZ5Id43BYDDAmEjPU46-akntHHB3RroqjYWi1tAp9rU9PzJCuA_O5/exec', {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        }).then(function() {
+            btn.innerHTML = 'Sent Successfully! <i class="fas fa-check"></i>';
+            btn.style.background = '#28a745';
+            form.reset();
+            setTimeout(function() {
+                btn.innerHTML = origText;
+                btn.style.background = '';
+                btn.disabled = false;
+                closeEnquireModal();
+            }, 2000);
+        }).catch(function() {
+            btn.innerHTML = 'Send Inquiry <i class="flaticon-right-up"></i>';
+            btn.disabled = false;
+            alert('Something went wrong. Please try again.');
+        });
+    });
+});
 </script>
 </body>
 </html>
