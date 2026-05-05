@@ -18158,4 +18158,20 @@ img { max-width: 100%; height: auto; }
         z-index: 10;
     }
 }
+
+/* ── Global Offices: always horizontal ── */
+#offices-row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0;
+}
+#offices-row > [data-country] {
+    flex: 1 1 220px;
+    min-width: 200px;
+}
+@media (max-width: 575px) {
+    #offices-row > [data-country] {
+        flex: 1 1 100%;
+    }
+}
 /*# sourceMappingURL=style.css.map */
