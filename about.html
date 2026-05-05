@@ -318,7 +318,7 @@
                         </div>
                         <div class="row">
                                 <!-- USA -->
-                                <div class="col-lg-3 col-md-6 mb-40 wow fadeInUp" data-wow-delay=".1s">
+                                <div class="col-lg-3 col-md-6 mb-40 wow fadeInUp" data-wow-delay=".1s" data-country="usa">
                                         <div class="culture-card" style="height:100%;">
                                                 <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
                                                         <div style="width:44px; height:44px; background:rgba(239,127,26,0.1); border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0;"><i class="fas fa-flag-usa" style="color:#EF7F1A; font-size:20px;"></i></div>
@@ -329,7 +329,7 @@
                                         </div>
                                 </div>
                                 <!-- UAE -->
-                                <div class="col-lg-3 col-md-6 mb-40 wow fadeInUp" data-wow-delay=".2s">
+                                <div class="col-lg-3 col-md-6 mb-40 wow fadeInUp" data-wow-delay=".2s" data-country="uae">
                                         <div class="culture-card" style="height:100%;">
                                                 <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
                                                         <div style="width:44px; height:44px; background:rgba(239,127,26,0.1); border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0;"><i class="fas fa-globe" style="color:#EF7F1A; font-size:20px;"></i></div>
@@ -340,7 +340,7 @@
                                         </div>
                                 </div>
                                 <!-- UK -->
-                                <div class="col-lg-3 col-md-6 mb-40 wow fadeInUp" data-wow-delay=".3s">
+                                <div class="col-lg-3 col-md-6 mb-40 wow fadeInUp" data-wow-delay=".3s" data-country="uk">
                                         <div class="culture-card" style="height:100%;">
                                                 <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
                                                         <div style="width:44px; height:44px; background:rgba(239,127,26,0.1); border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0;"><i class="fas fa-globe-europe" style="color:#EF7F1A; font-size:20px;"></i></div>
@@ -350,7 +350,7 @@
                                         </div>
                                 </div>
                                 <!-- India -->
-                                <div class="col-lg-3 col-md-6 mb-40 wow fadeInUp" data-wow-delay=".4s">
+                                <div class="col-lg-3 col-md-6 mb-40 wow fadeInUp" data-wow-delay=".4s" data-country="india">
                                         <div class="culture-card" style="height:100%;">
                                                 <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
                                                         <div style="width:44px; height:44px; background:rgba(239,127,26,0.1); border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0;"><i class="fas fa-map-marker-alt" style="color:#EF7F1A; font-size:20px;"></i></div>
@@ -381,6 +381,7 @@
                                         <div class="culture-card" style="height:100%;">
                                                 <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
                                                         <div style="width:44px; height:44px; background:rgba(239,127,26,0.1); border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0;"><i class="fas fa-flag-usa" style="color:#EF7F1A; font-size:20px;"></i></div>
+                                                        <h4 style="font-weight:800; margin:0; color:#0a0f1e;">USA</h4>" style="color:#EF7F1A; font-size:20px;"></i></div>
                                                         <h4 style="font-weight:800; margin:0; color:#0a0f1e;">USA</h4>
                                                 </div>
                                                 <p style="color:#555; font-size:14px; line-height:1.7; margin-bottom:10px;">20065 Stevens Creek Blvd, Suite B-2B, Cupertino, CA 95014</p>
@@ -581,6 +582,46 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+</script>
+<script>
+// Reorder office cards based on domain
+(function() {
+    document.addEventListener('DOMContentLoaded', function() {
+        var row = document.getElementById('offices-row');
+        if (!row) return;
+        
+        var isIndiaDomain = window.location.hostname.endsWith('.in');
+        var cards = Array.from(row.querySelectorAll('[data-country]'));
+        
+        if (isIndiaDomain) {
+            // India first, then USA, UAE, UK
+            var order = ['india', 'usa', 'uae', 'uk'];
+        } else {
+            // USA first, then UAE, UK, India last
+            var order = ['usa', 'uae', 'uk', 'india'];
+        }
+        
+        order.forEach(function(country) {
+            var card = cards.find(function(c) { return c.getAttribute('data-country') === country; });
+            if (card) row.appendChild(card);
+        });
+    });
+})();
+</script>
+<script>
+(function() {
+    document.addEventListener("DOMContentLoaded", function() {
+        var row = document.getElementById("offices-row");
+        if (!row) return;
+        var isIndia = window.location.hostname.endsWith(".in");
+        var order = isIndia ? ["india","usa","uae","uk"] : ["usa","uae","uk","india"];
+        var cards = Array.from(row.querySelectorAll("[data-country]"));
+        order.forEach(function(c) {
+            var card = cards.find(function(el) { return el.getAttribute("data-country") === c; });
+            if (card) row.appendChild(card);
+        });
+    });
+})();
 </script>
 </body>
 </html>
