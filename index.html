@@ -6,14 +6,118 @@
 	<!-- Start Meta -->
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-	<meta name="description" content="Sunware Technologies"/>
-	<meta name="keywords" content="Creative, Digital, multipage, landing, freelancer template"/>
-	<meta name="author" content="wpCodify">
+	<meta name="author" content="Sunware Technologies">
+	<meta name="robots" content="index, follow">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- Title of Site -->
-	<title>Sunware Technologies</title>
+
+	<!-- Dynamic SEO: swaps meta/schema based on domain (.in = India-local, .com = global) -->
+	<script>
+	(function() {
+		var host = window.location.hostname.toLowerCase();
+		var isIndia = host.endsWith('.in'); // sunware.in or sunwaretechnologies.in
+
+		/* ── SEO CONFIG ─────────────────────────────────────── */
+		var seo = isIndia ? {
+			title      : 'Sunware Technologies — AI & Data Engineering Company in Chennai, India',
+			desc       : 'Sunware Technologies is a Chennai-based AI, Data Engineering and Cloud solutions company. Serving enterprises across India with offices in Chennai, Pune and Bengaluru.',
+			keywords   : 'Sunware Technologies Chennai, AI company India, data engineering Chennai, cloud solutions India, software company Chennai, IT services India, digital transformation India',
+			canonical  : 'https://sunwaretechnologies.in/',
+			ogUrl      : 'https://sunwaretechnologies.in/',
+			ogTitle    : 'Sunware Technologies — AI & Engineering Company in Chennai',
+			ogDesc     : 'Chennai-based technology company delivering AI, Data Engineering, Cloud and Digital Transformation for Indian enterprises.',
+			schemaUrl  : 'https://sunwaretechnologies.in',
+			areaServed : ['IN'],
+			addresses  : [
+				{ locality:'Chennai', region:'Tamil Nadu', postal:'600053', street:'117, KSR Nagar, Ambattur', country:'IN' },
+				{ locality:'Pune',    region:'Maharashtra', postal:'411006', street:'Sky Loft, Creaticity Mall, Off Airport Road, Yerawada', country:'IN' },
+				{ locality:'Bengaluru', region:'Karnataka', postal:'560102', street:'29/A, 27th Main Road, Sector 5, HSR Layout', country:'IN' }
+			],
+			schemDesc  : 'Sunware Technologies is a Chennai, India-based technology company specialising in AI, Data Engineering, Cloud Solutions and Digital Transformation for Indian enterprises.',
+			foundLoc   : 'Chennai, Tamil Nadu, India'
+		} : {
+			title      : 'Sunware Technologies — AI, Data Engineering & Product Engineering Services',
+			desc       : 'Sunware Technologies delivers AI, Data Engineering, Cloud Solutions and Digital Transformation services to global enterprises. Offices in USA, UAE, UK and India.',
+			keywords   : 'Sunware Technologies, AI services, data engineering, cloud solutions, product engineering, digital transformation, enterprise software, USA, Dubai, UK, India',
+			canonical  : 'https://sunwaretechnologies.com/',
+			ogUrl      : 'https://sunwaretechnologies.com/',
+			ogTitle    : 'Sunware Technologies — AI, Data & Product Engineering',
+			ogDesc     : 'End-to-end technology services: Data Science & AI, Cloud, Digital Transformation and Operational Support for global enterprises.',
+			schemaUrl  : 'https://sunwaretechnologies.com',
+			areaServed : ['US','AE','GB','IN'],
+			addresses  : [
+				{ locality:'Cupertino', region:'CA', postal:'95014', street:'20065 Stevens Creek Blvd, Suite B-2B', country:'US' },
+				{ locality:'Dubai',     region:'',   postal:'',      street:'Unit No: 144, DMCC Business Centre, Level 5, Jewellery & Gemplex 2', country:'AE' },
+				{ locality:'Ilford',    region:'',   postal:'IG1 1BA', street:'6th Floor, Forest House, 16-20 Clements Road', country:'GB' },
+				{ locality:'Chennai',   region:'Tamil Nadu', postal:'600053', street:'117, KSR Nagar, Ambattur', country:'IN' }
+			],
+			schemDesc  : 'Sunware Technologies delivers AI, Data Engineering, Cloud Solutions, Digital Transformation and Product Engineering services to global enterprises across USA, UAE, UK and India.',
+			foundLoc   : 'Cupertino, CA, USA'
+		};
+
+		/* ── INJECT META TAGS ───────────────────────────────── */
+		document.write('<meta name="description" content="' + seo.desc + '"/>');
+		document.write('<meta name="keywords" content="' + seo.keywords + '"/>');
+		document.write('<meta property="og:title" content="' + seo.ogTitle + '"/>');
+		document.write('<meta property="og:description" content="' + seo.ogDesc + '"/>');
+		document.write('<meta property="og:type" content="website"/>');
+		document.write('<meta property="og:url" content="' + seo.ogUrl + '"/>');
+		document.write('<meta property="og:image" content="' + seo.schemaUrl + '/main logo.png"/>');
+		document.write('<link rel="canonical" href="' + seo.canonical + '"/>');
+		document.write('<title>' + seo.title + '</title>');
+
+		/* ── INJECT JSON-LD ORGANIZATION SCHEMA ─────────────── */
+		var addresses = seo.addresses.map(function(a) {
+			return '{"@type":"PostalAddress","streetAddress":"' + a.street + '","addressLocality":"' + a.locality + '","addressRegion":"' + a.region + '","postalCode":"' + a.postal + '","addressCountry":"' + a.country + '"}';
+		}).join(',');
+
+		var baseUrl = seo.schemaUrl;
+		var orgSchema = {
+			"@context": "https://schema.org",
+			"@type": "Organization",
+			"name": "Sunware Technologies",
+			"url": baseUrl,
+			"logo": baseUrl + "/main logo.png",
+			"email": "connect@sunwaretechnologies.com",
+			"sameAs": [
+				"https://www.linkedin.com/company/sunware-technologies",
+				"https://www.youtube.com/@sunwaretechnologies"
+			],
+			"description": seo.schemDesc,
+			"foundingLocation": seo.foundLoc,
+			"areaServed": seo.areaServed,
+			"address": seo.addresses.map(function(a) {
+				return { "@type":"PostalAddress", "streetAddress":a.street, "addressLocality":a.locality, "addressRegion":a.region, "postalCode":a.postal, "addressCountry":a.country };
+			})
+		};
+
+		var serviceSchema = {
+			"@context": "https://schema.org",
+			"@type": "ItemList",
+			"name": "Sunware Technologies Services",
+			"itemListElement": [
+				{"@type":"ListItem","position":1,"name":"Data Science & AI","url": baseUrl + "/data-science-ai.html"},
+				{"@type":"ListItem","position":2,"name":"Data Analytics","url": baseUrl + "/data-analytics.html"},
+				{"@type":"ListItem","position":3,"name":"Data Engineering","url": baseUrl + "/data-engineering.html"},
+				{"@type":"ListItem","position":4,"name":"Enterprise Application Development","url": baseUrl + "/enterprise-app-development.html"},
+				{"@type":"ListItem","position":5,"name":"Cloud Services","url": baseUrl + "/cloud-services-page.html"},
+				{"@type":"ListItem","position":6,"name":"Technology Consulting","url": baseUrl + "/technology-consulting.html"},
+				{"@type":"ListItem","position":7,"name":"Digital Transformation","url": baseUrl + "/digital-transformation.html"},
+				{"@type":"ListItem","position":8,"name":"AI Enablement","url": baseUrl + "/ai-enablement.html"},
+				{"@type":"ListItem","position":9,"name":"Staff Augmentation","url": baseUrl + "/staff-augmentation.html"},
+				{"@type":"ListItem","position":10,"name":"Maintenance & Support","url": baseUrl + "/maintenance-support.html"}
+			]
+		};
+
+		document.write('<script type="application/ld+json">' + JSON.stringify(orgSchema) + '<\/script>');
+		document.write('<script type="application/ld+json">' + JSON.stringify(serviceSchema) + '<\/script>');
+
+		/* ── hreflang: tell Google .com = global, .in = India ── */
+		document.write('<link rel="alternate" hreflang="en" href="https://sunwaretechnologies.com/"/>');
+		document.write('<link rel="alternate" hreflang="en-IN" href="https://sunwaretechnologies.in/"/>');
+		document.write('<link rel="alternate" hreflang="x-default" href="https://sunwaretechnologies.com/"/>');
+	})();
+	</script>
 	<!-- Favicons -->
-	<link rel="icon" type="image/png" href="favicon.png">
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<!-- Font Awesome -->
