@@ -48,8 +48,7 @@ Sunware Technologies provides end-to-end technology services across three practi
 
 ## Products
 
-- **EdgeData 360** (edgedata360.com): Real-time edge intelligence platform
-- **Valucore** (valutek.ai): Autonomous ecosystem intelligence platform
+- **EdgeData360** (edgedata360.com): Real-time edge intelligence platform
 
 ## Industries Served
 

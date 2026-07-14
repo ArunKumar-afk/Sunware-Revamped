@@ -162,7 +162,7 @@
 	      "name": "What products does Sunware Technologies offer?",
 	      "acceptedAnswer": {
 	        "@type": "Answer",
-	        "text": "Sunware Technologies has two proprietary products: EdgeData 360 (edgedata360.com), a real-time edge intelligence platform, and Valucore (valutek.ai), an autonomous ecosystem intelligence platform."
+	        "text": "Sunware Technologies has one proprietary product: EdgeData360 (edgedata360.com), a real-time edge intelligence platform."
 	      }
 	    },
 	    {
@@ -527,7 +527,6 @@
                                                 <div style="display: flex; gap: 12px; margin-top: 40px;">
                                                         <span class="hero-dot active" data-slide="0" style="width: 32px; height: 12px; border-radius: 6px; background: #EF7F1A; cursor: pointer; transition: all 0.3s;"></span>
                                                         <span class="hero-dot" data-slide="1" style="width: 12px; height: 12px; border-radius: 50%; background: #ccc; cursor: pointer; transition: all 0.3s;"></span>
-                                                        <span class="hero-dot" data-slide="2" style="width: 12px; height: 12px; border-radius: 50%; background: #ccc; cursor: pointer; transition: all 0.3s;"></span>
                                                 </div>
                                         </div>
                                 </div>
@@ -1466,12 +1465,11 @@
 (function() {
     var slides = [
         { h1: 'Advanced Data & AI Solutions Tailored to Your Needs', h3: 'Data. Intelligence. Engineered.', btn: 'Get Started', href: 'about.html', target: '', img: 'about hero.png' },
-        { h1: 'Real-Time Edge Intelligence for a Smarter World', h3: 'Process. Analyze. Act — at the Edge.', btn: 'Explore EdgeData', href: 'https://edgedata360.com', target: '_blank', img: 'ed logo.png' },
-        { h1: 'Autonomous Ecosystem. Intelligent Infrastructure at Scale.', h3: 'Reimagining Property Intelligence for Regulated Industries.', btn: 'Discover Valucore', href: 'https://valutek.ai', target: '_blank', img: 'vt logo.png' }
+        { h1: 'Real-Time Edge Intelligence for a Smarter World', h3: 'Process. Analyze. Act — at the Edge.', btn: 'Explore EdgeData360', href: 'https://edgedata360.com', target: '_blank', img: 'ed logo.png' }
     ];
     var idx = 0, timer;
     function show(i) {
-        idx = i % 3;
+        idx = i % 2;
         var s = slides[idx];
         var h1 = document.getElementById('hero-h1');
         var h3 = document.getElementById('hero-h3');
