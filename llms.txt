@@ -1,0 +1,73 @@
+# Sunware Technologies
+
+> Sunware Technologies is a global technology services company specialising in Artificial Intelligence, Data Engineering, Cloud Solutions, Digital Transformation and Product Engineering. We serve enterprise clients across the USA, UAE, UK and India.
+
+## About
+
+Sunware Technologies was founded in Cupertino, California, USA. The company operates globally with offices in:
+- USA: 20065 Stevens Creek Blvd, Suite B-2B, Cupertino, CA 95014
+- UAE: Unit No. 144, DMCC Business Centre, Level 5, Jewellery & Gemplex 2, Dubai
+- UK: 6th Floor, Forest House, 16-20 Clements Road, Ilford, IG1 1BA
+- India (Chennai): 117, KSR Nagar, Ambattur, Chennai, Tamil Nadu 600053
+- India (Pune): Sky Loft, Creaticity Mall, Off Airport Road, Yerawada, Pune 411006
+- India (Bengaluru): 29/A, 27th Main Road, Sector 5, HSR Layout, Bengaluru 560102
+
+Email: connect@sunwaretechnologies.com
+Website: https://sunwaretechnologies.com
+
+## What We Do
+
+Sunware Technologies provides end-to-end technology services across three practice areas:
+
+### Solution Engineering & Development
+- Data Analytics: Business intelligence, dashboards, advanced analytics
+- Data Science & AI: Machine learning models, NLP, predictive analytics, AI strategy
+- Data Engineering: Data pipelines, data lakes, data warehouses, ETL/ELT
+- Enterprise Application Development: Custom web apps, microservices, API integration
+- Cloud Services: AWS, Azure, GCP migration, architecture, managed services
+- IoT Solutions: Device connectivity, edge computing, smart operations
+- Infrastructure: IT infrastructure design, hybrid cloud, managed services
+
+### Strategy & Transformation
+- Technology Consulting: IT roadmap, architecture decisions, digital strategy
+- Digital Transformation: Process automation, legacy modernisation, cloud-first strategy
+- AI Enablement: AI adoption, implementation, change management
+- Data Engineering: Scalable data infrastructure for enterprise decision-making
+
+### Operational Support & Expansion
+- Staff Augmentation: Vetted tech talent across AI, cloud, data engineering
+- Maintenance & Support: Application maintenance, performance monitoring, 24/7 support
+- Microsoft Solutions: Azure, Dynamics 365, Power Platform, Microsoft 365
+- Neo4J Graph Technologies: Graph database implementation and consulting
+- Salesforce Expertise: CRM implementation, customisation, integration
+- Odoo Solutions: ERP implementation and customisation
+- Mobile App Development: iOS, Android, cross-platform apps
+- Cybersecurity: Threat assessment, security architecture, compliance
+- AIoT Integrations: AI-powered IoT for smart operations
+- Automation & Efficiency: RPA, workflow automation, intelligent automation
+
+## Products
+
+- **EdgeData 360** (edgedata360.com): Real-time edge intelligence platform
+- **Valucore** (valutek.ai): Autonomous ecosystem intelligence platform
+
+## Industries Served
+
+- Healthcare & Life Sciences
+- Banking & Financial Services
+- Retail & E-Commerce
+- Media & Entertainment
+
+## Key Facts
+
+- Headquarters: Cupertino, California, USA
+- Offices: USA, UAE, UK, India (Chennai, Pune, Bengaluru)
+- Services: AI, Data Engineering, Cloud, Digital Transformation, Product Engineering
+- Clients include enterprises in banking, healthcare, pharmaceutical, retail, and media sectors
+- Technology partners: Neo4J, Salesforce, Odoo, Microsoft Azure, AWS
+
+## Social Profiles
+
+- LinkedIn: https://www.linkedin.com/company/sunwaretechnologies/posts/?feedView=all
+- YouTube: https://www.youtube.com/@sunwaretechnologies
+- Instagram: https://www.instagram.com/sunwaretechnologies
