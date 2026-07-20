@@ -1,4 +1,4 @@
-﻿<!-- Layout Top -->
+<!-- Layout Top -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,14 +16,14 @@
 		var host = window.location.hostname.toLowerCase();
 		var isIndia = host.endsWith('.in'); // sunware.in or sunwaretechnologies.in
 
-		/* ── SEO CONFIG ─────────────────────────────────────── */
+		/* -- SEO CONFIG --------------------------------------- */
 		var seo = isIndia ? {
-			title      : 'Sunware Technologies — AI & Data Engineering Company in Chennai, India',
+			title      : 'Sunware Technologies � AI & Data Engineering Company in Chennai, India',
 			desc       : 'Sunware Technologies is a Chennai-based AI, Data Engineering and Cloud solutions company. Serving enterprises across India with offices in Chennai, Pune and Bengaluru.',
 			keywords   : 'Sunware Technologies Chennai, AI company India, data engineering Chennai, cloud solutions India, software company Chennai, IT services India, digital transformation India',
 			canonical  : 'https://sunwaretechnologies.in/',
 			ogUrl      : 'https://sunwaretechnologies.in/',
-			ogTitle    : 'Sunware Technologies — AI & Engineering Company in Chennai',
+			ogTitle    : 'Sunware Technologies � AI & Engineering Company in Chennai',
 			ogDesc     : 'Chennai-based technology company delivering AI, Data Engineering, Cloud and Digital Transformation for Indian enterprises.',
 			schemaUrl  : 'https://sunwaretechnologies.in',
 			areaServed : ['IN'],
@@ -35,12 +35,12 @@
 			schemDesc  : 'Sunware Technologies is a Chennai, India-based technology company specialising in AI, Data Engineering, Cloud Solutions and Digital Transformation for Indian enterprises.',
 			foundLoc   : 'Chennai, Tamil Nadu, India'
 		} : {
-			title      : 'Sunware Technologies — AI, Data Engineering & Product Engineering Services',
+			title      : 'Sunware Technologies � AI, Data Engineering & Product Engineering Services',
 			desc       : 'Sunware Technologies delivers AI, Data Engineering, Cloud Solutions and Digital Transformation services to global enterprises. Offices in USA, UAE, UK and India.',
 			keywords   : 'Sunware Technologies, AI services, data engineering, cloud solutions, product engineering, digital transformation, enterprise software, USA, Dubai, UK, India',
 			canonical  : 'https://sunwaretechnologies.com/',
 			ogUrl      : 'https://sunwaretechnologies.com/',
-			ogTitle    : 'Sunware Technologies — AI, Data & Product Engineering',
+			ogTitle    : 'Sunware Technologies � AI, Data & Product Engineering',
 			ogDesc     : 'End-to-end technology services: Data Science & AI, Cloud, Digital Transformation and Operational Support for global enterprises.',
 			schemaUrl  : 'https://sunwaretechnologies.com',
 			areaServed : ['US','AE','GB','IN'],
@@ -54,7 +54,7 @@
 			foundLoc   : 'Cupertino, CA, USA'
 		};
 
-		/* ── INJECT META TAGS ───────────────────────────────── */
+		/* -- INJECT META TAGS --------------------------------- */
 		document.write('<meta name="description" content="' + seo.desc + '"/>');
 		document.write('<meta name="keywords" content="' + seo.keywords + '"/>');
 		document.write('<meta property="og:title" content="' + seo.ogTitle + '"/>');
@@ -65,7 +65,7 @@
 		document.write('<link rel="canonical" href="' + seo.canonical + '"/>');
 		document.write('<title>' + seo.title + '</title>');
 
-		/* ── INJECT JSON-LD ORGANIZATION SCHEMA ─────────────── */
+		/* -- INJECT JSON-LD ORGANIZATION SCHEMA --------------- */
 		var addresses = seo.addresses.map(function(a) {
 			return '{"@type":"PostalAddress","streetAddress":"' + a.street + '","addressLocality":"' + a.locality + '","addressRegion":"' + a.region + '","postalCode":"' + a.postal + '","addressCountry":"' + a.country + '"}';
 		}).join(',');
@@ -111,7 +111,7 @@
 		document.write('<script type="application/ld+json">' + JSON.stringify(orgSchema) + '<\/script>');
 		document.write('<script type="application/ld+json">' + JSON.stringify(serviceSchema) + '<\/script>');
 
-		/* ── hreflang: tell Google .com = global, .in = India ── */
+		/* -- hreflang: tell Google .com = global, .in = India -- */
 		document.write('<link rel="alternate" hreflang="en" href="https://sunwaretechnologies.com/"/>');
 		document.write('<link rel="alternate" hreflang="en-IN" href="https://sunwaretechnologies.in/"/>');
 		document.write('<link rel="alternate" hreflang="x-default" href="https://sunwaretechnologies.com/"/>');
@@ -138,7 +138,7 @@
 	      "name": "What services does Sunware Technologies offer?",
 	      "acceptedAnswer": {
 	        "@type": "Answer",
-	        "text": "Sunware Technologies offers three core service areas: (1) Solution Engineering & Development — including Data Science & AI, Data Analytics, Data Engineering, Enterprise App Development, Cloud Services, and IoT Solutions; (2) Strategy & Transformation — including Technology Consulting, Digital Transformation, and AI Enablement; (3) Operational Support & Expansion — including Staff Augmentation, Maintenance & Support, Microsoft Solutions, Neo4J Graph Technologies, Salesforce, Odoo ERP, Mobile App Development, and Cybersecurity."
+	        "text": "Sunware Technologies offers three core service areas: (1) Solution Engineering & Development � including Data Science & AI, Data Analytics, Data Engineering, Enterprise App Development, Cloud Services, and IoT Solutions; (2) Strategy & Transformation � including Technology Consulting, Digital Transformation, and AI Enablement; (3) Operational Support & Expansion � including Staff Augmentation, Maintenance & Support, Microsoft Solutions, Neo4J Graph Technologies, Salesforce, Odoo ERP, Mobile App Development, and Cybersecurity."
 	      }
 	    },
 	    {
@@ -195,7 +195,7 @@
 	<!-- Fullscreen Nav CSS -->
 	<!-- Navigation and Layout styles migrated to assets/css/style.css -->
 	<style>
-	/* ── Banner Slider Custom Styles ── */
+	/* -- Banner Slider Custom Styles -- */
 	.banner-slider { width: 100%; height: 100%; position: relative; }
         /* Swiper fade handles slide visibility */
 	.banner-pagination { position: absolute !important; bottom: 40px !important; left: 0; width: 100%; display: flex; justify-content: center; align-items: center; gap: 12px; z-index: 20 !important; }
@@ -218,9 +218,9 @@
 		z-index: 1; /* Sits behind content stack */
 		visibility: hidden; /* Prevent early flashes */
 	}
-	/* ── Sticky Header ────────────────────────── */
+	/* -- Sticky Header -------------------------- */
 	/* header styles in style.css */
-	/* ── Banner Slider Custom Styles ── */
+	/* -- Banner Slider Custom Styles -- */
 	.banner-slider { width: 100%; height: 100%; position: relative; }
         /* Swiper fade handles slide visibility */
 	.banner-pagination {
@@ -333,7 +333,7 @@
 		<div class="header__area-menubar-right-sidebar-popup-logo">
 			<a href="index.html"> <img src="main logo.png" alt="Sunware Technologies"></a>
 		</div>
-		<p>We ship secure, scalable payment infrastructure faster than traditional vendors—while understanding your US-regulated market deeply.</p>
+		<p>We ship secure, scalable payment infrastructure faster than traditional vendors�while understanding your US-regulated market deeply.</p>
 						<p>Advanced Data & AI Solutions Tailored to Your Needs.</p>
 		<div class="header__area-menubar-right-sidebar-popup-contact">
 			<h4 class="mb-30">Address</h4>
@@ -485,7 +485,7 @@
                                                                                                 <div style="display: flex; flex-direction: column; gap: 6px;">
                                                                                                         <a href="edgedata360.html" class="megamenu-item-nested" style="font-size:15px; font-weight:600; padding:14px 18px;">
                                                                                                                 <div style="display:flex; align-items:center; gap:12px;">
-                                                                                                                        <img src="ed logo.png" alt="EdgeData360" style="height:28px; width:auto;">
+                                                                                                                        <img src="images/edlogo.png" alt="EdgeData360" style="height:28px; width:auto;">
                                                                                                                         <div><div style="font-weight:700; color:#0a0f1e;">EdgeData360</div><div style="font-size:12px; color:#666; font-weight:400;">Real-time edge intelligence platform</div></div>
                                                                                                                 </div>
                                                                                                         </a>
@@ -583,7 +583,7 @@
 					</div>
 					<div class="t-center mt-30 mb-50" style="max-width: 900px; margin-left: auto; margin-right: auto;">
 						<h4 style="font-weight: 700; color: var(--primary-color-1); margin-bottom: 20px;">Driving Business Innovation: Through Intelligent Data</h4>
-						<p style="font-size: 18px; line-height: 1.8; color: #555;">At Sunware Technologies, we transform business challenges into technological opportunities. We're experts in cloud data engineering, analytics, machine learning, and AI solutions tailored specifically for the Banking, Financial Services, Insurance, Utilities, Retail, Manufacturing, and Healthcare sectors. Our specialized approach and frameworks help organizations manage and leverage their data to drive innovation, efficiency, and competitive advantage. We don't just implement technology—we engineer strategic solutions that deliver measurable business outcomes.</p>
+						<p style="font-size: 18px; line-height: 1.8; color: #555;">At Sunware Technologies, we transform business challenges into technological opportunities. We're experts in cloud data engineering, analytics, machine learning, and AI solutions tailored specifically for the Banking, Financial Services, Insurance, Utilities, Retail, Manufacturing, and Healthcare sectors. Our specialized approach and frameworks help organizations manage and leverage their data to drive innovation, efficiency, and competitive advantage. We don't just implement technology�we engineer strategic solutions that deliver measurable business outcomes.</p>
 					</div>
 				</div>
 			</div>
@@ -1063,7 +1063,7 @@
 					<div class="row al-center">
 						<div class="col-xl-6 col-lg-7 lg-mb-40">
 							<div class="footer__cta-area-left lg-t-center">
-								<h2>Build Your Ideal World — We're Ready!</h2>
+								<h2>Build Your Ideal World � We're Ready!</h2>
 							</div>
 						</div>
 						<div class="col-xl-6 col-lg-5">
@@ -1230,7 +1230,7 @@
 			z-index: 10;
 			background: #ffffff !important;
 			width: 100%;
-			/* overflow: hidden removed — breaks position:sticky on card stack */
+			/* overflow: hidden removed � breaks position:sticky on card stack */
 		}
 		
 		/* Direct section backgrounds */
@@ -1296,7 +1296,7 @@
 			to { transform: translateY(0); }
 		}
 
-		/* ── Hard Stacking Cards ───────────────────── */
+		/* -- Hard Stacking Cards --------------------- */
 		.portfolio__one .portfolio__one-right {
 			display: flex;
 			flex-direction: column;
@@ -1465,7 +1465,7 @@
 (function() {
     var slides = [
         { h1: 'Advanced Data & AI Solutions Tailored to Your Needs', h3: 'Data. Intelligence. Engineered.', btn: 'Get Started', href: 'about.html', target: '', img: 'about hero.png' },
-        { h1: 'Real-Time Edge Intelligence for a Smarter World', h3: 'Process. Analyze. Act — at the Edge.', btn: 'Explore EdgeData360', href: 'https://edgedata360.com', target: '_blank', img: 'ed logo.png' }
+        { h1: 'Real-Time Edge Intelligence for a Smarter World', h3: 'Process. Analyze. Act � at the Edge.', btn: 'Explore EdgeData360', href: 'https://edgedata360.com', target: '_blank', img: 'ed logo.png' }
     ];
     var idx = 0, timer;
     function show(i) {
