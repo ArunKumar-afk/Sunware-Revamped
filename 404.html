@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="noindex, nofollow">
+	<title>Page Not Found — Sunware Technologies</title>
+	<link rel="icon" type="image/png" href="favicon.png">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/fontawesome.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<style>
+		body { margin: 0; background: #fff; font-family: var(--body-font, sans-serif); }
+		.notfound-wrap {
+			min-height: 100vh;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			padding: 60px 20px;
+			background: #fff;
+			position: relative;
+			overflow: hidden;
+		}
+		.notfound-wrap::before {
+			content: '404';
+			position: absolute;
+			font-size: clamp(160px, 30vw, 320px);
+			font-weight: 900;
+			color: rgba(239, 127, 26, 0.05);
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			line-height: 1;
+			pointer-events: none;
+			user-select: none;
+		}
+		.notfound-logo { margin-bottom: 40px; }
+		.notfound-logo img { height: 48px; width: auto; }
+		.notfound-code {
+			font-size: 96px;
+			font-weight: 900;
+			color: #EF7F1A;
+			line-height: 1;
+			margin-bottom: 16px;
+		}
+		.notfound-title {
+			font-size: clamp(1.6rem, 4vw, 2.4rem);
+			font-weight: 800;
+			color: #0a0f1e;
+			margin-bottom: 16px;
+		}
+		.notfound-desc {
+			font-size: 18px;
+			color: #666;
+			max-width: 520px;
+			margin: 0 auto 40px;
+			line-height: 1.7;
+		}
+		.notfound-actions {
+			display: flex;
+			gap: 16px;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		.notfound-divider {
+			width: 60px;
+			height: 4px;
+			background: #EF7F1A;
+			border-radius: 2px;
+			margin: 0 auto 28px;
+		}
+		@media (max-width: 480px) {
+			.notfound-code { font-size: 72px; }
+		}
+	</style>
+</head>
+<body>
+
+<div class="notfound-wrap">
+	<div class="notfound-logo">
+		<a href="index.html"><img src="main logo.png" alt="Sunware Technologies"></a>
+	</div>
+
+	<div class="notfound-code">404</div>
+	<div class="notfound-divider"></div>
+	<h1 class="notfound-title">Page Not Found</h1>
+	<p class="notfound-desc">The page you're looking for doesn't exist or may have been moved. Let's get you back on track.</p>
+
+	<div class="notfound-actions">
+		<a href="index.html" class="default_button">
+			<i class="fal fa-home" style="margin-right:8px;"></i> Back to Home
+		</a>
+		<a href="about.html" class="default_button" style="background:transparent;color:#0a0f1e;border:2px solid rgba(0,0,0,0.15);">
+			About Us <i class="flaticon-right-up"></i>
+		</a>
+		<a href="mailto:connect@sunwaretechnologies.com" class="default_button" style="background:transparent;color:#0a0f1e;border:2px solid rgba(0,0,0,0.15);">
+			Contact Us <i class="flaticon-right-up"></i>
+		</a>
+	</div>
+</div>
+
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+<script src="assets/js/custom.js"></script>
+</body>
+</html>
