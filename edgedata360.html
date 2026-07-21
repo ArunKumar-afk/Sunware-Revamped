@@ -1,63 +1,106 @@
+<!-- Layout Top -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-	<meta name="description" content="Read the latest insights on AI, data engineering, cloud solutions and digital transformation from the Sunware Technologies team."/>
+	<meta name="description" content="EdgeData360 by Sunware Technologies ï¿½ the enterprise platform with 250+ connectors, AI-ready pipelines in 10 minutes, and real-time agentic AI for industrial operations."/>
 	
-	<title>Blog ? Sunware Technologies | Tech Insights & Articles</title>
+	<title>EdgeData360 ï¿½ Data Unified. AI Unleashed. | Sunware Technologies</title>
 	
-	<link rel="canonical" href="https://sunwaretechnologies.com/blog.html"/>
+	<meta name="keywords" content="EdgeData360, edge intelligence platform, real-time data platform, IoT data platform, AI edge computing, data unification, Sunware Technologies product, industrial IoT, edge analytics"/>
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="EdgeData360 - Data Unified. AI Unleashed. | Sunware Technologies"/>
+<meta property="og:description" content="Enterprise platform with 250+ connectors, AI-ready pipelines in 10 minutes, and real-time agentic AI for industrial operations."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://sunwaretechnologies.com/edgedata360.html"/>
+<meta property="og:image" content="https://sunwaretechnologies.com/images/edlogo.png"/>
+<link rel="canonical" href="https://sunwaretechnologies.com/edgedata360.html"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"EdgeData360","applicationCategory":"BusinessApplication","operatingSystem":"Cloud, On-Premises","description":"Real-time edge intelligence platform with 250+ connectors, AI-ready pipelines, and agentic AI for industrial operations.","url":"https://edgedata360.com","provider":{"@type":"Organization","name":"Sunware Technologies","url":"https://sunwaretechnologies.com"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://sunwaretechnologies.com/"},{"@type":"ListItem","position":2,"name":"Products","item":"https://sunwaretechnologies.com/"},{"@type":"ListItem","position":3,"name":"EdgeData360","item":"https://sunwaretechnologies.com/edgedata360.html"}]}</script>
+
+
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/fontawesome.css">
 	<link rel="stylesheet" href="assets/font/flaticon_flexitype.css">	
 	<link rel="stylesheet" href="assets/css/animate.css">
-	<link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
 	<link rel="stylesheet" href="assets/css/style.css">  
-    <style>
-        .blog-hero { padding: 160px 0 100px; background: #fcfdfe; border-bottom: 1px solid #f0f0f0; }
-        #blogger-posts .blog-card { background: #fff; border-radius: 24px; padding: 0; overflow: hidden; border: 1px solid #eee; transition: 0.4s; height: 100%; display: flex; flex-direction: column; }
-        #blogger-posts .blog-card:hover { transform: translateY(-10px); box-shadow: 0 30px 60px rgba(0,0,0,0.05); }
-        .blog-card-img { width: 100%; height: 240px; background-size: cover; background-position: center; }
-        .blog-card-content { padding: 30px; flex-grow: 1; display: flex; flex-direction: column; }
-        .blog-card-date { font-size: 13px; color: #EF7F1A; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; margin-bottom: 15px; }
-        .blog-card-title { font-size: 22px; font-weight: 800; color: #0a0f1e; line-height: 1.4; margin-bottom: 15px; }
-        .blog-card-excerpt { font-size: 15px; color: #666; line-height: 1.6; margin-bottom: 25px; display: -webkit-box; -webkit-line-clamp: 3; line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-        .blog-card-link { font-weight: 700; color: #0a0f1e; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; font-size: 14px; margin-top: auto; }
-        .blog-card-link i { font-size: 12px; transition: 0.3s; }
-        .blog-card-link:hover i { transform: translate(4px, -4px); color: #EF7F1A; }
-    </style>
-<style>
-        .main-content-wrapper { position: relative; z-index: 2; background: #fff; }
-        .site-footer { position: fixed; bottom: 0; left: 0; width: 100%; z-index: 1; visibility: hidden; }
-</style>
+
+	<style>
+	.menu { background: none; border: none; cursor: pointer; padding: 8px; display: none; flex-direction: column; justify-content: center; align-items: center; gap: 0; z-index: 999999; position: relative; }
+	.menu span { display: block; width: 26px; height: 1.5px; background: var(--text-heading-color); margin: 5px 0; transition: 0.3s; transform-origin: center; }
+	.menu.active span { background: #ffffff; }
+	.menu.active span:nth-child(1) { transform: translateY(12px) rotate(45deg); }
+	.menu.active span:nth-child(2) { opacity: 0; }
+	.menu.active span:nth-child(3) { transform: translateY(-12px) rotate(-45deg); }
+
+    @media (max-width: 1199px) {
+        .menu { display: flex; }
+        .header__area-menubar-center { display: none !important; }
+    }
+
+	.js-nav { position: fixed; top: 0; right: 0; width: 100%; height: 100%; z-index: 99990; background: rgba(10, 15, 30, 0.88); backdrop-filter: blur(20px) saturate(120%); transform: translateX(100%); pointer-events: none; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 110px 8vw 80px 8vw; will-change: transform; overflow-y: auto; }
+	.js-nav .nav-brand { position: absolute; top: 28px; left: 8vw; }
+	.js-nav .nav-brand img { height: 50px; width: auto; }
+	.nav-item { opacity: 0; transform: translateY(20px); margin-bottom: 4px; list-style: none; }
+	.nav-item a { display: inline-block; font-family: var(--heading-font); font-size: clamp(2.3rem, 5vw, 5rem); font-weight: 700; color: rgba(255, 255, 255, 0.85); line-height: 1.1; text-decoration: none; position: relative; transition: color 0.25s ease; }
+	.nav-item a:hover { color: #ffffff; }
+    .js-nav .nav-footer { position: absolute; bottom: 48px; left: 8vw; display: flex; align-items: center; gap: 24px; }
+	
+	.main-content-wrapper { position: relative; z-index: 2; background: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: margin-bottom 0.4s ease; }
+	.site-footer { position: fixed; bottom: 0; left: 0; width: 100%; z-index: 1; visibility: hidden; }
+	/* header styles in style.css */
+
+	/* -- Megamenu Styles -------------------------- */
+	.has-megamenu { position: static !important; }
+	.megamenu { position: absolute; top: 100%; left: 0; width: 100%; background: #fff; box-shadow: 0 20px 40px rgba(0,0,0,0.05); padding: 50px 0; opacity: 0; visibility: hidden; transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1); z-index: 1000; border-bottom: 1px solid #f0f0f0; border-top: 1px solid #f0f0f0; }
+	.has-megamenu:hover .megamenu { opacity: 1; visibility: visible; }
+	.megamenu-content { display: flex; max-width: 1200px; margin: 0 auto; padding: 0 20px; gap: 60px; }
+	.megamenu-left, .megamenu-right { flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+	.megamenu-item { display: block; padding: 20px; border-radius: 16px; transition: 0.3s; text-decoration: none !important; color: inherit; background: #fcfdfe; border: 1px solid transparent; }
+	.megamenu-item:hover { background: #f5f8ff; border-color: #e0e7ff; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.03); }
+	.megamenu-item h5 { font-size: 18px; font-weight: 700; color: #EF7F1A; margin-bottom: 8px; }
+	.megamenu-item p { font-size: 14px; color: #666; margin: 0; line-height: 1.5; }
+	@media (max-width: 991px) {
+		.megamenu-content { flex-direction: column; gap: 20px; }
+		.megamenu-left, .megamenu-right { grid-template-columns: 1fr; }
+	}
+
+	.story-hero { padding: 100px 0; background: #fff; position: relative; overflow: hidden; }
+	.story-row { display: flex; align-items: center; gap: 60px; margin-bottom: 100px; }
+	.story-row:nth-child(even) { flex-direction: row-reverse; }
+	.story-image img { width: 100%; border-radius: 20px; box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
+	</style>
 </head>
-
+    
 <body >
-<div class="js-nav">
-        <button class="nav-close-btn" onclick="document.querySelector('.js-menu').click()" style="position:absolute; top:30px; right:30px; background:none; border:none; color:#fff; font-size:28px; cursor:pointer; z-index:99999; width:44px; height:44px; display:flex; align-items:center; justify-content:center;"><i class="fal fa-times"></i></button>
-        <div class="nav-brand"><a href="index.html"><img src="white Logo.png" alt="Sunware Technologies"></a></div>
-        <ul>
-                <li class="nav-item"><a href="index.html">Home</a></li>
-                <li class="nav-item"><a href="data-analytics.html">Services</a></li>
-                <li class="nav-item"><a href="healthcare-lifesciences.html">Industries</a></li>
-                <li class="nav-item"><a href="cloud-solutions.html">Technologies</a></li>
-                <li class="nav-item"><a href="careers.html">Careers</a></li>
-                <li class="nav-item"><a href="blog.html">Blog</a></li>
-                <li class="nav-item"><a href="about.html">About Us</a></li>
-        </ul>
-        <div class="nav-footer">
-                <div class="nav-footer-social">
-                        <a href="https://in.linkedin.com/company/sunwaretechnologies" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://www.youtube.com/@sunwaretechnologies" target="_blank"><i class="fab fa-youtube"></i></a>
-                        <a href="https://www.instagram.com/sunwaretechnologies" target="_blank"><i class="fab fa-instagram"></i></a>
-                </div>
-                <a class="default_button" href="#" onclick="openEnquireModal(event)" style="background:#EF7F1A;color:#fff;">Enquire Now <i class="flaticon-right-up"></i></a>
-        </div>
-</div>
 
-	<div class="main-content-wrapper">
-		<header class="header__area">
+	<div class="theme-loader"><div class="spinner"><div class="spinner-bounce one"></div><div class="spinner-bounce two"></div><div class="spinner-bounce three"></div></div></div></div><div id="cursor-text"></div></div>
+
+	<div class="js-nav" role="dialog" aria-modal="true" aria-label="Site Navigation">
+        <button class="nav-close-btn" onclick="document.querySelector('.js-menu').click()" style="position:absolute; top:30px; right:30px; background:none; border:none; color:#fff; font-size:28px; cursor:pointer; z-index:99999; width:44px; height:44px; display:flex; align-items:center; justify-content:center;"><i class="fal fa-times"></i></button>
+		<div class="nav-brand"><a href="index.html"><img src="white Logo.png" alt="Sunware"></a></div>
+		<ul>
+			<li class="nav-item"><a href="index.html">Home</a></li>
+			<li class="nav-item"><a href="data-analytics.html">Services</a></li>
+			<li class="nav-item"><a href="healthcare-lifesciences.html">Industries</a></li>
+			<li class="nav-item"><a href="cloud-solutions.html">Technologies</a></li>
+                        <li class="nav-item"><a href="careers.html">Careers</a></li>
+                        <li class="nav-item"><a href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a href="about.html">About Us</a></li>
+		</ul>
+		<div class="nav-footer">
+			<div class="nav-footer-social">
+				<a href="https://in.linkedin.com/company/sunwaretechnologies" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+				<a href="https://www.youtube.com/@sunwaretechnologies" target="_blank"><i class="fab fa-youtube"></i></a>
+				<a href="https://www.instagram.com/sunwaretechnologies" target="_blank"><i class="fab fa-instagram"></i></a>
+			</div>
+			<a class="default_button" href="#" onclick="openEnquireModal(event)" style="background:#EF7F1A;color:#fff;">Enquire Now <i class="flaticon-right-up"></i></a>
+		</div>
+	</div>
+
+<div class="main-content-wrapper">
+	<header class="header__area">
                         <div class="container">
                                 <div class="row">
                                         <div class="col-xl-12">
@@ -180,52 +223,191 @@
                         </div>
                 </header>
 
-		<section class="blog-hero">
-			<div class="container">
-				<div class="row jc-center text-center">
-					<div class="col-xl-8">
-						<h1 class="wow fadeInUp" style="color: var(--primary-color-1); font-size: 64px; font-weight: 900; line-height: 1.2; margin-bottom: 20px;">Insights & <span style="color:#EF7F1A;">Innovation</span></h1>
-						<p class="wow fadeInUp" data-wow-delay=".2s" style="font-size: 18px; color: #666; max-width: 600px; margin: 0 auto;">Exploring the intersection of data engineering, cloud architecture, and artificial intelligence.</p>
+	<!-- EdgeData360 Page Header Start -->
+	<div class="banner__one" style="position: relative; overflow: hidden; background: #fff;">
+		<video autoplay loop muted playsinline style="position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; object-fit: cover; transform: translate(-50%, -50%); z-index: 0; opacity: 0.6;">
+			<source src="waves_2.mp4" type="video/mp4">
+		</video>
+		<div class="container" style="position: relative; z-index: 5; padding: 120px 0;">
+			<div class="row al-center jc-between">
+				<div class="col-xl-7 col-lg-7">
+					<div class="banner__one-content">
+						<div class="wow fadeInUp" style="margin-bottom: 18px;">
+							<img src="images/edlogo.png" alt="EdgeData360" style="height: 48px; width: auto;">
+						</div>
+						<div class="wow fadeInLeft" style="display: inline-flex; align-items: center; gap: 10px; background: rgba(239,127,26,0.08); border: 1px solid rgba(239,127,26,0.25); border-radius: 50px; padding: 8px 20px; margin-bottom: 20px;">
+							<span style="display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #EF7F1A; flex-shrink: 0;"></span>
+							<span style="font-size: 13px; font-weight: 700; color: #EF7F1A; letter-spacing: 0.5px; text-transform: uppercase; font-family: var(--heading-font);">A Product by Sunware Technologies</span>
+						</div>
+						<h1 class="wow fadeInUp" style="color: var(--primary-color-1); font-size: 64px; font-weight: 900; line-height: 1.2; margin-bottom: 20px;">Turn Enterprise Data Into <span style="color:#EF7F1A;">Instant AI Intelligence.</span></h1>
+						<p class="wow fadeInUp" data-wow-delay=".4s" style="font-size: 18px; color: rgba(0,0,0,0.75); margin-bottom: 35px; line-height: 1.7; max-width: 650px;">Seamlessly unify 250+ data sources, create AI-ready pipelines in 10 minutes, and enable real-time decision-making powered by AI.</p>
+						<div class="wow fadeInUp" data-wow-delay=".6s" style="display: flex; gap: 20px; flex-wrap: wrap;">
+							<a class="default_button" href="https://edgedata360.com" target="_blank">Visit EdgeData360.com <i class="flaticon-right-up"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-5 col-lg-5">
+					<div class="wow fadeInRight" data-wow-delay=".6s" style="background: rgba(255,255,255,0.85); padding: 40px; border-radius: 32px; border: 1px solid rgba(0,0,0,0.08); backdrop-filter: blur(10px);">
+						<div style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 32px;">
+							<div style="flex: 1; min-width: 100px; background:#fff; border:1px solid #eee; border-radius:14px; padding:22px 18px; box-shadow:0 4px 20px rgba(0,0,0,0.06); text-align:center;">
+								<div style="font-size:32px; font-weight:800; color:#EF7F1A;">250+</div>
+								<div style="font-size:13px; color:#666; margin-top:6px;">Connectors</div>
+							</div>
+							<div style="flex: 1; min-width: 100px; background:#fff; border:1px solid #eee; border-radius:14px; padding:22px 18px; box-shadow:0 4px 20px rgba(0,0,0,0.06); text-align:center;">
+								<div style="font-size:32px; font-weight:800; color:#EF7F1A;">10 Min</div>
+								<div style="font-size:13px; color:#666; margin-top:6px;">Pipeline Setup</div>
+							</div>
+							<div style="flex: 1; min-width: 100px; background:#fff; border:1px solid #eee; border-radius:14px; padding:22px 18px; box-shadow:0 4px 20px rgba(0,0,0,0.06); text-align:center;">
+								<div style="font-size:32px; font-weight:800; color:#EF7F1A;">Real-Time</div>
+								<div style="font-size:13px; color:#666; margin-top:6px;">AI Inferencing</div>
+							</div>
+						</div>
+						<p style="font-size: 16px; line-height: 1.8; color: #444; margin: 0; font-style: italic;"><i class="fas fa-quote-left" style="color:#EF7F1A; margin-right:8px;"></i>Deploy on-premises or in your cloud. EdgeData360 centralises edge operations with real-time visibility ï¿½ turning raw industrial data into actionable intelligence without writing a single line of integration code.</p>
 					</div>
 				</div>
 			</div>
-		</section>
+		</div>
+	</div>
+	<!-- EdgeData360 Page Header End -->
+<!-- Section 1: About -->
+<div class="container section-padding">
+<div class="story-row al-center">
+<div class="story-content wow fadeInLeft">
+<span class="subtitle">About EdgeData360</span>
+<h2 style="font-size:42px;font-weight:800;margin:16px 0 24px;color:var(--primary-color-1);">Data Unified. AI Unleashed.</h2>
+<p style="font-size:18px;line-height:1.8;color:#555;margin-bottom:20px;">EdgeData360 is Sunware Technologies' enterprise product ï¿½ a unified data platform that connects every source, powers real-time intelligence, and transforms operational data into business outcomes.</p>
+<p style="font-size:18px;line-height:1.8;color:#555;margin-bottom:32px;">Deploy on-premises or in your customer cloud. EdgeData360 delivers centralized edge operations with real-time visibility, turning raw industrial data into actionable intelligence ï¿½ without writing a single line of custom integration code.</p>
+<a class="default_button" href="https://edgedata360.com" target="_blank">Visit EdgeData360.com <i class="flaticon-right-up"></i></a>
+</div>
+<div class="story-image wow fadeInRight">
+<img src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?auto=format&fit=crop&w=800&q=80" alt="EdgeData360 Platform">
+</div>
+</div>
+</div>
 
-		<section class="blog-grid-area" style="padding: 100px 0;">
-			<div class="container">
-                <div class="row" id="blogger-posts">
-                    <!-- Dynamic Content -->
-                    <div class="col-12 text-center" id="blog-loader">
-                        <div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div>
-                    </div>
-                </div>
+<!-- Section 2: Platform Capabilities -->
+<section class="section-padding" style="background:#f8faff;">
+<div class="container">
+<div class="section-title t-center mb-60">
+<span class="subtitle">Platform Capabilities</span>
+<h2 style="font-weight:800;">The EdgeData360 Engine</h2>
+<p style="max-width:680px;margin:0 auto;color:#666;font-size:18px;">Built for Speed. Engineered for Scale.</p>
+</div>
+<div class="row">
+<div class="col-lg-4 col-md-6 mb-40 wow fadeInUp">
+<div class="culture-card"><div style="font-size:32px;color:#EF7F1A;margin-bottom:20px;"><i class="fas fa-plug"></i></div><h4 style="font-weight:800;margin-bottom:12px;">250+ Plug-and-Play Connectors</h4><p style="color:#666;line-height:1.7;">Connect databases, PLCs, Historian systems, APIs, and built-in MQTT/Sparkplug servers ï¿½ without any custom integration code.</p></div>
+</div>
+<div class="col-lg-4 col-md-6 mb-40 wow fadeInUp" data-wow-delay=".1s">
+<div class="culture-card"><div style="font-size:32px;color:#EF7F1A;margin-bottom:20px;"><i class="fas fa-stream"></i></div><h4 style="font-weight:800;margin-bottom:12px;">Ready in 10 Minutes</h4><p style="color:#666;line-height:1.7;">Collect, standardize, and stream live operational data from the edge to the cloud in minutes ï¿½ not months.</p></div>
+</div>
+<div class="col-lg-4 col-md-6 mb-40 wow fadeInUp" data-wow-delay=".2s">
+<div class="culture-card"><div style="font-size:32px;color:#EF7F1A;margin-bottom:20px;"><i class="fas fa-brain"></i></div><h4 style="font-weight:800;margin-bottom:12px;">Agentic AI at the Edge</h4><p style="color:#666;line-height:1.7;">Embed ML inferencing and AI agents directly into live pipelines for split-second, automated decisions.</p></div>
+</div>
+<div class="col-lg-4 col-md-6 mb-40 wow fadeInUp" data-wow-delay=".3s">
+<div class="culture-card"><div style="font-size:32px;color:#EF7F1A;margin-bottom:20px;"><i class="fas fa-shield-alt"></i></div><h4 style="font-weight:800;margin-bottom:12px;">Dynamic APIs &amp; Data Guard</h4><p style="color:#666;line-height:1.7;">Expose data securely via Dynamic REST APIs with granular, fine-tuned access controls.</p></div>
+</div>
+<div class="col-lg-4 col-md-6 mb-40 wow fadeInUp" data-wow-delay=".4s">
+<div class="culture-card"><div style="font-size:32px;color:#EF7F1A;margin-bottom:20px;"><i class="fas fa-network-wired"></i></div><h4 style="font-weight:800;margin-bottom:12px;">Multi-Edge Operations</h4><p style="color:#666;line-height:1.7;">Deploy, monitor, and manage your entire edge fleet from a single unified cloud console.</p></div>
+</div>
+<div class="col-lg-4 col-md-6 mb-40 wow fadeInUp" data-wow-delay=".5s">
+<div class="culture-card"><div style="font-size:32px;color:#EF7F1A;margin-bottom:20px;"><i class="fas fa-chart-bar"></i></div><h4 style="font-weight:800;margin-bottom:12px;">Visual AI Analytics</h4><p style="color:#666;line-height:1.7;">Build and share dynamic real-time dashboards fueled by continuous AI-driven insights.</p></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Section 3: The Challenge -->
+<div class="container section-padding">
+<div class="story-row al-center">
+<div class="story-image wow fadeInLeft">
+<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" alt="Data Challenge">
+</div>
+<div class="story-content wow fadeInRight">
+<span class="subtitle">The Challenge</span>
+<h2 style="font-size:38px;font-weight:800;margin:16px 0 28px;color:var(--primary-color-1);">Still Struggling with Disconnected Data?</h2>
+<div style="display:flex;flex-direction:column;gap:20px;">
+<div style="display:flex;align-items:flex-start;gap:16px;"><i class="fas fa-layer-group" style="color:#EF7F1A;font-size:22px;margin-top:3px;flex-shrink:0;"></i><div><strong style="color:#0a0f1e;font-size:17px;">The Silo Effect</strong><p style="color:#666;margin:6px 0 0;line-height:1.6;">Critical operational data trapped across disparate, legacy systems.</p></div></div>
+<div style="display:flex;align-items:flex-start;gap:16px;"><i class="fas fa-hourglass-half" style="color:#EF7F1A;font-size:22px;margin-top:3px;flex-shrink:0;"></i><div><strong style="color:#0a0f1e;font-size:17px;">Sluggish Timelines</strong><p style="color:#666;margin:6px 0 0;line-height:1.6;">Complex integration cycles dragging for months, not days.</p></div></div>
+<div style="display:flex;align-items:flex-start;gap:16px;"><i class="fas fa-eye-slash" style="color:#EF7F1A;font-size:22px;margin-top:3px;flex-shrink:0;"></i><div><strong style="color:#0a0f1e;font-size:17px;">Operational Blind Spots</strong><p style="color:#666;margin:6px 0 0;line-height:1.6;">Zero real-time visibility into your live OT networks and environments.</p></div></div>
+<div style="display:flex;align-items:flex-start;gap:16px;"><i class="fas fa-times-circle" style="color:#EF7F1A;font-size:22px;margin-top:3px;flex-shrink:0;"></i><div><strong style="color:#0a0f1e;font-size:17px;">Failed AI Initiatives</strong><p style="color:#666;margin:6px 0 0;line-height:1.6;">Powerful algorithms starved by poor, unstandardized data quality.</p></div></div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Powered by Sunware Technologies -->
+<section class="section-padding" style="background: #f8faff;">
+	<div class="container">
+		<div class="section-title t-center mb-60">
+			<span class="subtitle">Powered by Sunware Technologies</span>
+			<h2 style="font-weight:800;">EdgeData360 is backed by deep expertise in</h2>
+			<p style="max-width: 600px; margin: 0 auto; color: #666; font-size: 18px;">Every layer of EdgeData360 is built on Sunware's proven services ï¿½ connecting your edge to the enterprise.</p>
+		</div>
+		<div class="row">
+			<div class="col-lg-3 col-md-6 mb-30 wow fadeInUp">
+				<a href="data-science-ai.html" class="culture-card" style="display: block; text-align: center; text-decoration: none;">
+					<div style="width: 64px; height: 64px; border-radius: 16px; background: rgba(239,127,26,0.1); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+						<i class="fas fa-brain" style="font-size: 26px; color: #EF7F1A;"></i>
+					</div>
+					<h5 style="font-weight: 800; color:#0a0f1e; margin-bottom: 10px;">Data Science &amp; AI</h5>
+					<p style="color: #888; font-size: 14px; margin: 0; line-height: 1.6;">ML models powering real-time edge intelligence</p>
+				</a>
 			</div>
-		</section>
+			<div class="col-lg-3 col-md-6 mb-30 wow fadeInUp" data-wow-delay=".1s">
+				<a href="iot-solutions.html" class="culture-card" style="display: block; text-align: center; text-decoration: none;">
+					<div style="width: 64px; height: 64px; border-radius: 16px; background: rgba(239,127,26,0.1); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+						<i class="fas fa-microchip" style="font-size: 26px; color: #EF7F1A;"></i>
+					</div>
+					<h5 style="font-weight: 800; color:#0a0f1e; margin-bottom: 10px;">IoT Solutions</h5>
+					<p style="color: #888; font-size: 14px; margin: 0; line-height: 1.6;">Device connectivity &amp; edge infrastructure</p>
+				</a>
+			</div>
+			<div class="col-lg-3 col-md-6 mb-30 wow fadeInUp" data-wow-delay=".2s">
+				<a href="cloud-services-page.html" class="culture-card" style="display: block; text-align: center; text-decoration: none;">
+					<div style="width: 64px; height: 64px; border-radius: 16px; background: rgba(239,127,26,0.1); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+						<i class="fas fa-cloud" style="font-size: 26px; color: #EF7F1A;"></i>
+					</div>
+					<h5 style="font-weight: 800; color:#0a0f1e; margin-bottom: 10px;">Cloud Services</h5>
+					<p style="color: #888; font-size: 14px; margin: 0; line-height: 1.6;">Hybrid edge-to-cloud architecture</p>
+				</a>
+			</div>
+			<div class="col-lg-3 col-md-6 mb-30 wow fadeInUp" data-wow-delay=".3s">
+				<a href="data-engineering.html" class="culture-card" style="display: block; text-align: center; text-decoration: none;">
+					<div style="width: 64px; height: 64px; border-radius: 16px; background: rgba(239,127,26,0.1); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+						<i class="fas fa-database" style="font-size: 26px; color: #EF7F1A;"></i>
+					</div>
+					<h5 style="font-weight: 800; color:#0a0f1e; margin-bottom: 10px;">Data Engineering</h5>
+					<p style="color: #888; font-size: 14px; margin: 0; line-height: 1.6;">Robust pipelines from edge to enterprise</p>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
 
-		<!-- Footer CTA -->
-		<div class="container">
-			<div class="row">
-				<div class="col-xl-12">
-					<div class="footer__cta-area mb-60">
-						<div class="row al-center">
-							<div class="col-xl-6 col-lg-7 lg-mb-40">
-								<div class="footer__cta-area-left lg-t-center">
-									<h2>Stay Ahead of the Curve — Let's Connect</h2>
-								</div>
-							</div>
-							<div class="col-xl-6 col-lg-5">
-								<div class="footer__cta-area-right d-flex al-center flex-wrap jc-end lg-jc-center gap-25">
-									<a class="default_button" href="#" onclick="openEnquireModal(event)">Start Today<i class="flaticon-right-up"></i></a>
-                                                                </div>
-							</div>
+<!-- Footer CTA Area -->
+<div class="container">
+	<div class="row">
+		<div class="col-xl-12">
+			<div class="footer__cta-area mb-60">
+				<div class="row al-center">
+					<div class="col-xl-6 col-lg-7 lg-mb-40">
+						<div class="footer__cta-area-left lg-t-center">
+							<h2>Ready to unify your data and unleash AI?</h2>
+						</div>
+					</div>
+					<div class="col-xl-6 col-lg-5">
+						<div class="footer__cta-area-right d-flex al-center flex-wrap jc-end lg-jc-center gap-25">
+							<a class="default_button" href="https://edgedata360.com" target="_blank">Visit EdgeData360.com <i class="flaticon-right-up"></i></a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+</div>
+</div><!-- main-content-wrapper closure -->
 
-	<footer class="site-footer">
+<footer class="site-footer">
         <div class="footer__one" style="padding: 15px 0; background-color:#0a0f1e;">
                 <div class="bg_shape" style="background-image: url('assets/img/shape/footer.png');"></div>
                 <div class="container">
@@ -259,33 +441,37 @@
                                                         <div class="contact-item-info"><span>Email</span><h6><a href="mailto:connect@sunwaretechnologies.com">connect@sunwaretechnologies.com</a></h6></div>
                                                 </div>
                                                 <div style="display:flex; gap:12px; margin-top:20px;">
-                                                        <a href="https://in.linkedin.com/company/sunwaretechnologies" target="_blank" style="width:40px; height:40px; border-radius:50%; background:rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; transition:0.3s;"><i class="fab fa-linkedin-in"></i></a>
-                                                        <a href="https://www.youtube.com/@sunwaretechnologies" target="_blank" style="width:40px; height:40px; border-radius:50%; background:rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; transition:0.3s;"><i class="fab fa-youtube"></i></a>
-                                                        <a href="https://www.instagram.com/sunwaretechnologies" target="_blank" style="width:40px; height:40px; border-radius:50%; background:rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; transition:0.3s;"><i class="fab fa-instagram"></i></a>
+                                                        <a href="https://in.linkedin.com/company/sunwaretechnologies" target="_blank" style="width:40px; height:40px; border-radius:50%; background:rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px;"><i class="fab fa-linkedin-in"></i></a>
+                                                        <a href="https://www.youtube.com/@sunwaretechnologies" target="_blank" style="width:40px; height:40px; border-radius:50%; background:rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px;"><i class="fab fa-youtube"></i></a>
+                                                        <a href="https://www.instagram.com/sunwaretechnologies" target="_blank" style="width:40px; height:40px; border-radius:50%; background:rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px;"><i class="fab fa-instagram"></i></a>
                                                 </div>
                                         </div>
                                 </div>
-                                
+                                <div class="col-lg-3 col-sm-6 lg-mt-30">
+                                        
+                                </div>
                         </div>
                 </div>
         </div>
 </footer>
+<!-- Standardized Modal & Scripts Block -->
+<div id="enquire-modal" class="modal-overlay">
+	<div class="modal-content-wrapper">
+		<button class="modal-close" onclick="closeEnquireModal()"><i class="fal fa-times"></i></button>
+                <div class="modal-header" style="text-align:center; margin-bottom:25px;">
+                        <h3 style="font-size:28px; font-weight:800; color:#0a0f1e; margin-bottom:8px;">Let's Talk</h3>
+                </div>
+		<form class="enquire-form">
+			<div class="form-group mb-20"><input type="text" placeholder="Enter your name" name="name" required></div>
+			<div class="form-group mb-20"><input type="email" placeholder="Enter your email address" name="email" required></div>
+			<div class="form-group mb-20"><input type="text" placeholder="Subject" name="subject" required></div>
+			<div class="form-group mb-20"><textarea placeholder="Message" name="message" rows="4" required></textarea></div>
+			<button type="submit" class="default_button" style="width: 100%; justify-content: center;">Send Inquiry <i class="flaticon-right-up"></i></button>
+		</form>
+	</div>
+</div>
 
-	<div id="enquire-modal" class="modal-overlay">
-<div class="modal-content-wrapper">
-<button class="modal-close" onclick="closeEnquireModal()"><i class="fal fa-times"></i></button>
-<div class="modal-header" style="text-align:center; margin-bottom:25px;">
-<h3 style="font-size:28px; font-weight:800; color:#0a0f1e; margin-bottom:8px;">Let's Talk</h3>
-</div>
-<form class="enquire-form">
-<div class="form-group mb-20"><input type="text" placeholder="Enter your name" name="name" required></div>
-<div class="form-group mb-20"><input type="email" placeholder="Enter your email address" name="email" required></div>
-<div class="form-group mb-20"><input type="text" placeholder="Subject" name="subject" required></div>
-<div class="form-group mb-20"><textarea placeholder="Message" name="message" rows="4" required></textarea></div>
-<button type="submit" class="default_button" style="width: 100%; justify-content: center;">Send Inquiry <i class="flaticon-right-up"></i></button>
-</form>
-</div>
-</div>
+
 
 <script src="assets/js/jquery-3.7.1.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
@@ -298,8 +484,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
 
-	<script>
 
+<script>
         new WOW().init();
         const lenis = new Lenis({ duration: 1.5 }); function raf(time) { lenis.raf(time); requestAnimationFrame(raf); } requestAnimationFrame(raf);
         function openEnquireModal(e) { if(e) e.preventDefault(); document.getElementById('enquire-modal').classList.add('active'); if(document.body) document.body.style.overflow = 'hidden'; }
@@ -316,67 +502,6 @@
                 a();window.addEventListener('resize',a);
                 document.addEventListener('mousemove', function(e) { const cursor = document.querySelector('.cursor-follower'); if(cursor) { cursor.style.left = e.clientX + 'px'; cursor.style.top = e.clientY + 'px'; } });
         });
-        // Blogger API Fetcher
-		$(document).ready(function() {
-			$.getJSON("https://sunwaretechnologies.blogspot.com/feeds/posts/default?alt=json-in-script&callback=?", function(data) {
-				const posts = data.feed.entry;
-				let html = "";
-				if(posts) {
-					posts.forEach(post => {
-						const title = post.title.$t;
-						const date = new Date(post.published.$t).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-						const link = post.link.find(l => l.rel === 'alternate').href;
-						const postId = post.id.$t.split('post-')[1];
-						const content = post.content ? post.content.$t : post.summary.$t;
-						
-						// Get image
-						let imgUrl = "assets/img/blog/placeholder.jpg";
-						if(post.media$thumbnail) imgUrl = post.media$thumbnail.url.replace('s72-c', 's1600');
-						else {
-							const imgMatch = content.match(/<img[^>]+src="([^">]+)"/);
-							if(imgMatch) imgUrl = imgMatch[1];
-						}
-
-						const cleanExcerpt = content.replace(/<[^>]*>/g, '').substring(0, 120) + '...';
-
-						html += `
-							<div class="col-xl-4 col-md-6 mb-40 wow fadeInUp">
-								<div class="blog-card">
-									<div class="blog-card-img" style="background-image: url('${imgUrl}')"></div>
-									<div class="blog-card-content">
-										<div class="blog-card-date">${date}</div>
-										<h4 class="blog-card-title">${title}</h4>
-										<p class="blog-card-excerpt">${cleanExcerpt}</p>
-										<a href="blog-details.html?post=${postId}" class="blog-card-link">Read Contribution <i class="fas fa-arrow-right"></i></a>
-									</div>
-								</div>
-							</div>
-						`;
-					});
-					$("#blog-loader").remove();
-					$("#blogger-posts").html(html);
-				}
-			});
-		});
-
-		// Footer Reveal
-		document.addEventListener("DOMContentLoaded", function () {
-			const footer = document.querySelector('.site-footer');
-			const mainWrapper = document.querySelector('.main-content-wrapper');
-			function adjust() {
-				if (!footer || !mainWrapper) return;
-				if (window.innerWidth < 992) { footer.style.position = 'relative'; footer.style.visibility = 'visible'; mainWrapper.style.marginBottom = '0'; }
-				else { footer.style.position = 'fixed'; footer.style.visibility = 'visible'; mainWrapper.style.marginBottom = footer.offsetHeight + 'px'; }
-			}
-			adjust(); window.addEventListener('resize', adjust);
-		});
-
-		// Custom Cursor Sync
-		document.addEventListener('mousemove', (e) => {
-			const cursor = document.querySelector('.cursor-follower');
-			if(cursor) { cursor.style.left = e.clientX + 'px'; cursor.style.top = e.clientY + 'px'; }
-		});
-	
 </script>
 <script>
 // Enquiry Form -> Google Sheets
