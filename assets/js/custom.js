@@ -3,7 +3,11 @@
 
     ///=============  * Theme Loader  =============\\\
     function themeLoader() {
-        $('.theme-loader').hide();
+        var loader = document.querySelector('.theme-loader');
+        if (loader) {
+            loader.classList.add('loaded');
+            setTimeout(function() { loader.remove(); }, 700);
+        }
     }
 
     ///=============  * Mobile Menu  =============\\\

@@ -770,51 +770,8 @@ h6 {
 /*==========================================================================
 * Preloader CSS
 ==========================================================================*/
-.theme-loader {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: var(--primary-color-1);
-  z-index: 9999999999;
-}
 
-.spinner {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  display: flex;
-}
 
-.spinner-bounce {
-  will-change: transform;
-  height: 45px;
-  width: 45px;
-  border-radius: 50%;
-  background: var(--secondary-color);
-  display: inline-block;
-  animation: bounces 1s ease-in-out infinite alternate;
-  transform-origin: 50% 50%;
-}
-.spinner-bounce.one {
-  margin-right: 15px;
-}
-.spinner-bounce.two {
-  margin-right: 15px;
-  animation-delay: 0.4s;
-}
-.spinner-bounce.three {
-  animation-delay: 0.8s;
-}
-
-@keyframes bounces {
-  0% {
-    transform: scale(0.8);
-  }
-  100% {
-    transform: scale(0.2);
-  }
-}
 /*==========================================================================
 * Video Animation CSS
 ==========================================================================*/
@@ -9753,51 +9710,8 @@ h6 {
 /*==========================================================================
 * Preloader CSS
 ==========================================================================*/
-.theme-loader {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: var(--primary-color-1);
-  z-index: 9999999999;
-}
 
-.spinner {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  display: flex;
-}
 
-.spinner-bounce {
-  will-change: transform;
-  height: 45px;
-  width: 45px;
-  border-radius: 50%;
-  background: var(--secondary-color);
-  display: inline-block;
-  animation: bounces 1s ease-in-out infinite alternate;
-  transform-origin: 50% 50%;
-}
-.spinner-bounce.one {
-  margin-right: 15px;
-}
-.spinner-bounce.two {
-  margin-right: 15px;
-  animation-delay: 0.4s;
-}
-.spinner-bounce.three {
-  animation-delay: 0.8s;
-}
-
-@keyframes bounces {
-  0% {
-    transform: scale(0.8);
-  }
-  100% {
-    transform: scale(0.2);
-  }
-}
 /*==========================================================================
 * Video Animation CSS
 ==========================================================================*/
@@ -18184,4 +18098,65 @@ img { max-width: 100%; height: auto; }
 .section-title h2,
 .section-title h3 {
   color: var(--primary-color-1);
+}
+
+/* ============================================================
+   Preloader - Frosted Glass Blur
+   ============================================================ */
+.theme-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  z-index: 9999999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+.theme-loader.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+.theme-loader .loader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+.theme-loader .loader-logo {
+  width: 60px;
+  height: auto;
+  animation: loaderPulse 1.6s ease-in-out infinite;
+}
+.theme-loader .loader-bar {
+  width: 120px;
+  height: 3px;
+  background: rgba(0, 112, 210, 0.15);
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+}
+.theme-loader .loader-bar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -40%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, var(--primary-color-1), transparent);
+  border-radius: 3px;
+  animation: loaderSlide 1.2s ease-in-out infinite;
+}
+@keyframes loaderPulse {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+@keyframes loaderSlide {
+  0% { left: -40%; }
+  100% { left: 100%; }
 }
