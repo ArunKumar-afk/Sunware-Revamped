@@ -76,9 +76,15 @@ document.addEventListener('DOMContentLoaded', function () {
     if (e.key === 'Escape' && isOpen) menuBtns[0].click();
   });
 
-  // Close when a nav link is clicked
+  // Close when a nav link is clicked (but not sub-menu toggles)
   document.querySelectorAll('.js-nav a').forEach(function (link) {
-    link.addEventListener('click', function () {
+    link.addEventListener('click', function (e) {
+      // Don't close if this is a sub-menu toggle or a sub-menu category title
+      if (this.getAttribute('onclick') || this.closest('.nav-sub-title')) return;
+      // Don't close for links inside .nav-sub (sub-links navigate, that's fine to close)
+      // Only close for actual navigation links
+      var href = this.getAttribute('href');
+      if (!href || href === '#') return;
       if (isOpen) menuBtns[0].click();
     });
   });
