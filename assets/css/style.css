@@ -18188,8 +18188,65 @@ img { max-width: 100%; height: auto; }
   .nav-sub { padding: 8px 0 6px 12px; }
 }
 
-/* EdgeData360 page - right column responsive */
+
+
+/* ============================================================
+   EdgeData360 - Stats Card (Right Column)
+   ============================================================ */
+.ed-stats-card {
+  background: rgba(255,255,255,0.9);
+  padding: 36px;
+  border-radius: 28px;
+  border: 1px solid rgba(0,0,0,0.06);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.04);
+}
+.ed-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 28px;
+}
+.ed-stat-item {
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  border-radius: 16px;
+  padding: 20px 12px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+}
+.ed-stat-value {
+  font-size: 24px;
+  font-weight: 800;
+  color: #EF7F1A;
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+.ed-stat-label {
+  font-size: 12px;
+  color: #888;
+  font-weight: 500;
+}
+.ed-stats-quote {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #555;
+  margin: 0;
+  font-style: italic;
+}
+
+/* EdgeData360 stats - responsive */
 @media (max-width: 991px) {
-  .banner__one .col-xl-5,
-  .banner__one .col-lg-5 { display: none; }
+  .ed-stats-col { margin-top: 40px; }
+  .ed-stats-card { padding: 28px; }
+  .ed-stats-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .ed-stat-value { font-size: 20px; }
+}
+@media (max-width: 575px) {
+  .ed-stats-card { padding: 20px; border-radius: 20px; }
+  .ed-stats-grid { gap: 10px; }
+  .ed-stat-item { padding: 14px 8px; border-radius: 12px; }
+  .ed-stat-value { font-size: 18px; }
+  .ed-stat-label { font-size: 11px; }
+  .ed-stats-quote { font-size: 13px; }
 }
