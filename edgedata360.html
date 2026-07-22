@@ -69,7 +69,13 @@
 	.story-hero { padding: 100px 0; background: #fff; position: relative; overflow: hidden; }
 	.story-row { display: flex; align-items: center; gap: 60px; margin-bottom: 100px; }
 	.story-row:nth-child(even) { flex-direction: row-reverse; }
+	.story-content { flex: 1; min-width: 0; }
+	.story-image { flex: 1; min-width: 0; }
 	.story-image img { width: 100%; border-radius: 0; box-shadow: none; }
+	@media (max-width: 991px) {
+		.story-row { flex-direction: column !important; gap: 30px; }
+		.story-content, .story-image { flex: none; width: 100%; }
+	}
 	</style>
 </head>
     
@@ -275,7 +281,7 @@
 	<!-- EdgeData360 Page Header Start -->
 	<div class="banner__one" style="position: relative; overflow: hidden; background: #fff;">
 		<video autoplay loop muted playsinline style="position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; object-fit: cover; transform: translate(-50%, -50%); z-index: 0; opacity: 0.6;">
-			<source src="waves_2.mp4" type="video/mp4">
+			<source src="edgedata360/iot north america.mp4" type="video/mp4">
 		</video>
 		<div class="container" style="position: relative; z-index: 5; padding: 120px 0;">
 			<div class="row al-center jc-between">
@@ -392,42 +398,42 @@
 			<h2 style="font-weight:800;">EdgeData360 is backed by deep expertise in</h2>
 			<p style="max-width: 600px; margin: 0 auto; color: #666; font-size: 18px;">Every layer of EdgeData360 is built on Sunware's proven services - connecting your edge to the enterprise.</p>
 		</div>
-		<div class="row">
+		<div class="row justify-content-center">
 			<div class="col-lg-3 col-md-6 mb-30 wow fadeInUp">
-				<a href="data-science-ai.html" class="culture-card" style="display: block; text-align: center; text-decoration: none;">
-					<div style="width: 64px; height: 64px; border-radius: 16px; background: rgba(239,127,26,0.1); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-						<i class="fas fa-brain" style="font-size: 26px; color: #EF7F1A;"></i>
+				<div class="culture-card" style="display: block; text-align: center; height: 100%;">
+					<div style="width: 100%; height: 120px; border-radius: 16px; overflow: hidden; margin-bottom: 20px;">
+						<img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=240&fit=crop" alt="Data Science & AIML" style="width: 100%; height: 100%; object-fit: cover;">
 					</div>
-					<h5 style="font-weight: 800; color:#0a0f1e; margin-bottom: 10px;">Data Science &amp; AI</h5>
-					<p style="color: #888; font-size: 14px; margin: 0; line-height: 1.6;">ML models powering real-time edge intelligence</p>
-				</a>
+					<h5 style="font-weight: 800; color:#0a0f1e; margin-bottom: 10px;">Data Science &amp; AIML</h5>
+					<p style="color: #888; font-size: 14px; margin: 0; line-height: 1.6;">AIML models powering real-time edge intelligence</p>
+				</div>
 			</div>
 			<div class="col-lg-3 col-md-6 mb-30 wow fadeInUp" data-wow-delay=".1s">
-				<a href="iot-solutions.html" class="culture-card" style="display: block; text-align: center; text-decoration: none;">
-					<div style="width: 64px; height: 64px; border-radius: 16px; background: rgba(239,127,26,0.1); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-						<i class="fas fa-microchip" style="font-size: 26px; color: #EF7F1A;"></i>
+				<div class="culture-card" style="display: block; text-align: center; height: 100%;">
+					<div style="width: 100%; height: 120px; border-radius: 16px; overflow: hidden; margin-bottom: 20px;">
+						<img src="https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?w=400&h=240&fit=crop" alt="IoT Solutions" style="width: 100%; height: 100%; object-fit: cover;">
 					</div>
 					<h5 style="font-weight: 800; color:#0a0f1e; margin-bottom: 10px;">IoT Solutions</h5>
 					<p style="color: #888; font-size: 14px; margin: 0; line-height: 1.6;">Device connectivity &amp; edge infrastructure</p>
-				</a>
+				</div>
 			</div>
 			<div class="col-lg-3 col-md-6 mb-30 wow fadeInUp" data-wow-delay=".2s">
-				<a href="cloud-services-page.html" class="culture-card" style="display: block; text-align: center; text-decoration: none;">
-					<div style="width: 64px; height: 64px; border-radius: 16px; background: rgba(239,127,26,0.1); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-						<i class="fas fa-cloud" style="font-size: 26px; color: #EF7F1A;"></i>
+				<div class="culture-card" style="display: block; text-align: center; height: 100%;">
+					<div style="width: 100%; height: 120px; border-radius: 16px; overflow: hidden; margin-bottom: 20px;">
+						<img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=400&h=240&fit=crop" alt="Cloud Services" style="width: 100%; height: 100%; object-fit: cover;">
 					</div>
 					<h5 style="font-weight: 800; color:#0a0f1e; margin-bottom: 10px;">Cloud Services</h5>
 					<p style="color: #888; font-size: 14px; margin: 0; line-height: 1.6;">Hybrid edge-to-cloud architecture</p>
-				</a>
+				</div>
 			</div>
 			<div class="col-lg-3 col-md-6 mb-30 wow fadeInUp" data-wow-delay=".3s">
-				<a href="data-engineering.html" class="culture-card" style="display: block; text-align: center; text-decoration: none;">
-					<div style="width: 64px; height: 64px; border-radius: 16px; background: rgba(239,127,26,0.1); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-						<i class="fas fa-database" style="font-size: 26px; color: #EF7F1A;"></i>
+				<div class="culture-card" style="display: block; text-align: center; height: 100%;">
+					<div style="width: 100%; height: 120px; border-radius: 16px; overflow: hidden; margin-bottom: 20px;">
+						<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=240&fit=crop" alt="Data Engineering" style="width: 100%; height: 100%; object-fit: cover;">
 					</div>
 					<h5 style="font-weight: 800; color:#0a0f1e; margin-bottom: 10px;">Data Engineering</h5>
 					<p style="color: #888; font-size: 14px; margin: 0; line-height: 1.6;">Robust pipelines from edge to enterprise</p>
-				</a>
+				</div>
 			</div>
 		</div>
 	</div>
