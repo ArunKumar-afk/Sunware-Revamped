@@ -18160,3 +18160,15 @@ img { max-width: 100%; height: auto; }
   0% { left: -40%; }
   100% { left: 100%; }
 }
+
+/* ============================================================
+   Fullscreen Nav - Expandable Sub-menus
+   ============================================================ */
+.nav-item.has-sub > a { display: inline-flex !important; align-items: center; gap: 10px; }
+.nav-item.has-sub > a .nav-toggle { font-size: 0.5em; transition: transform 0.3s ease; display: inline-block; }
+.nav-item.has-sub.open > a .nav-toggle { transform: rotate(180deg); }
+.nav-sub { display: none; padding: 12px 0 8px 20px; }
+.nav-item.has-sub.open .nav-sub { display: block; }
+.nav-sub a { display: block; font-family: var(--body-font); font-size: clamp(0.9rem, 2vw, 1.1rem) !important; font-weight: 500 !important; color: rgba(255,255,255,0.6) !important; padding: 8px 0; text-decoration: none; transition: color 0.2s ease, padding-left 0.2s ease; }
+.nav-sub a:hover { color: #EF7F1A !important; padding-left: 8px; }
+.nav-sub-title { font-size: 0.7rem; font-weight: 700; color: #EF7F1A; text-transform: uppercase; letter-spacing: 1px; padding: 12px 0 6px 0; margin: 0; }
