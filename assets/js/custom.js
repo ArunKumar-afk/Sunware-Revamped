@@ -1,6 +1,19 @@
 ﻿(function ($) {
     "use strict";
 
+    ///=============  * Nav Sub-menu Toggle (Accordion)  =============\\\
+    window.toggleNavSub = function(e, el) {
+        e.preventDefault();
+        e.stopPropagation();
+        var li = el.parentElement;
+        var isOpen = li.classList.contains('open');
+        // Close all other open sub-menus (accordion)
+        var siblings = li.parentElement.querySelectorAll('.nav-item.has-sub.open');
+        siblings.forEach(function(s) { if (s !== li) s.classList.remove('open'); });
+        // Toggle current
+        if (isOpen) { li.classList.remove('open'); } else { li.classList.add('open'); }
+    };
+
     ///=============  * Theme Loader  =============\\\
     function themeLoader() {
         var loader = document.querySelector('.theme-loader');

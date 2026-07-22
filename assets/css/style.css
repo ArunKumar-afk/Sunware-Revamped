@@ -18172,3 +18172,24 @@ img { max-width: 100%; height: auto; }
 .nav-sub a { display: block; font-family: var(--body-font); font-size: clamp(0.9rem, 2vw, 1.1rem) !important; font-weight: 500 !important; color: rgba(255,255,255,0.6) !important; padding: 8px 0; text-decoration: none; transition: color 0.2s ease, padding-left 0.2s ease; }
 .nav-sub a:hover { color: #EF7F1A !important; padding-left: 8px; }
 .nav-sub-title { font-size: 0.7rem; font-weight: 700; color: #EF7F1A; text-transform: uppercase; letter-spacing: 1px; padding: 12px 0 6px 0; margin: 0; }
+
+/* ============================================================
+   Fullscreen Nav Sub-menu - prevent close on sub-link click
+   ============================================================ */
+.nav-sub a { pointer-events: auto; }
+.js-nav ul { list-style: none; padding: 0; margin: 0; width: 100%; }
+
+/* Responsive: nav overlay scroll fix */
+@media (max-width: 768px) {
+  .js-nav { padding: 80px 6vw 60px 6vw; justify-content: flex-start; }
+  .nav-item a { font-size: clamp(1.6rem, 5vw, 2.2rem) !important; }
+  .nav-sub a { font-size: 0.95rem !important; padding: 6px 0; }
+  .nav-sub-title { font-size: 0.65rem; }
+  .nav-sub { padding: 8px 0 6px 12px; }
+}
+
+/* EdgeData360 page - right column responsive */
+@media (max-width: 991px) {
+  .banner__one .col-xl-5,
+  .banner__one .col-lg-5 { display: none; }
+}
