@@ -10,6 +10,25 @@
 	<meta name="robots" content="index, follow">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+	<!-- Static SEO Fallback (visible to crawlers that don't execute JS) -->
+	<title>Sunware Technologies - AI, Data Engineering &amp; Product Engineering Services</title>
+	<meta name="description" content="Sunware Technologies delivers AI, Data Engineering, Cloud Solutions and Digital Transformation services to global enterprises. Offices in USA, UAE, UK and India.">
+	<meta name="keywords" content="Sunware Technologies, AI services, data engineering, cloud solutions, product engineering, digital transformation, enterprise software, USA, Dubai, UK, India, Chennai">
+	<link rel="canonical" href="https://sunwaretechnologies.com/">
+	<meta property="og:title" content="Sunware Technologies - AI, Data &amp; Product Engineering">
+	<meta property="og:description" content="End-to-end technology services: Data Science &amp; AI, Cloud, Digital Transformation and Operational Support for global enterprises.">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://sunwaretechnologies.com/">
+	<meta property="og:image" content="https://sunwaretechnologies.com/main logo.png">
+	<meta property="og:site_name" content="Sunware Technologies">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Sunware Technologies - AI, Data &amp; Product Engineering">
+	<meta name="twitter:description" content="End-to-end technology services: Data Science &amp; AI, Cloud, Digital Transformation and Operational Support for global enterprises.">
+	<meta name="twitter:image" content="https://sunwaretechnologies.com/main logo.png">
+	<link rel="alternate" hreflang="en" href="https://sunwaretechnologies.com/">
+	<link rel="alternate" hreflang="en-IN" href="https://sunwaretechnologies.in/">
+	<link rel="alternate" hreflang="x-default" href="https://sunwaretechnologies.com/">
+
 	<!-- Dynamic SEO: swaps meta/schema based on domain (.in = India-local, .com = global) -->
 	<script>
 	(function() {
@@ -54,16 +73,15 @@
 			foundLoc   : 'Cupertino, CA, USA'
 		};
 
-		/* - INJECT META TAGS --------------------------------- */
-		document.write('<meta name="description" content="' + seo.desc + '"/>');
-		document.write('<meta name="keywords" content="' + seo.keywords + '"/>');
-		document.write('<meta property="og:title" content="' + seo.ogTitle + '"/>');
-		document.write('<meta property="og:description" content="' + seo.ogDesc + '"/>');
-		document.write('<meta property="og:type" content="website"/>');
-		document.write('<meta property="og:url" content="' + seo.ogUrl + '"/>');
-		document.write('<meta property="og:image" content="' + seo.schemaUrl + '/main logo.png"/>');
-		document.write('<link rel="canonical" href="' + seo.canonical + '"/>');
-		document.write('<title>' + seo.title + '</title>');
+		/* - UPDATE META TAGS (replaces static fallbacks) -------- */
+		document.title = seo.title;
+		document.querySelector('meta[name="description"]').setAttribute('content', seo.desc);
+		document.querySelector('meta[name="keywords"]').setAttribute('content', seo.keywords);
+		document.querySelector('link[rel="canonical"]').setAttribute('href', seo.canonical);
+		document.querySelector('meta[property="og:title"]').setAttribute('content', seo.ogTitle);
+		document.querySelector('meta[property="og:description"]').setAttribute('content', seo.ogDesc);
+		document.querySelector('meta[property="og:url"]').setAttribute('content', seo.ogUrl);
+		document.querySelector('meta[property="og:image"]').setAttribute('content', seo.schemaUrl + '/main logo.png');
 
 		/* - INJECT JSON-LD ORGANIZATION SCHEMA --------------- */
 		var addresses = seo.addresses.map(function(a) {
@@ -108,16 +126,18 @@
 			]
 		};
 
-		document.write('<script type="application/ld+json">' + JSON.stringify(orgSchema) + '<\/script>');
-		document.write('<script type="application/ld+json">' + JSON.stringify(serviceSchema) + '<\/script>');
+		var s1 = document.createElement('script'); s1.type = 'application/ld+json'; s1.text = JSON.stringify(orgSchema); document.head.appendChild(s1);
+		var s2 = document.createElement('script'); s2.type = 'application/ld+json'; s2.text = JSON.stringify(serviceSchema); document.head.appendChild(s2);
 
 		/* - hreflang: tell Google .com = global, .in = India - */
-		document.write('<link rel="alternate" hreflang="en" href="https://sunwaretechnologies.com/"/>');
-		document.write('<link rel="alternate" hreflang="en-IN" href="https://sunwaretechnologies.in/"/>');
-		document.write('<link rel="alternate" hreflang="x-default" href="https://sunwaretechnologies.com/"/>');
+		var h1 = document.createElement('link'); h1.rel='alternate'; h1.hreflang='en'; h1.href='https://sunwaretechnologies.com/'; document.head.appendChild(h1);
+		var h2 = document.createElement('link'); h2.rel='alternate'; h2.hreflang='en-IN'; h2.href='https://sunwaretechnologies.in/'; document.head.appendChild(h2);
+		var h3 = document.createElement('link'); h3.rel='alternate'; h3.hreflang='x-default'; h3.href='https://sunwaretechnologies.com/'; document.head.appendChild(h3);
 	})();
 	</script>
 	<!-- Favicons -->
+	<link rel="icon" type="image/png" href="favicon.png">
+	<link rel="apple-touch-icon" href="favicon.png">
 
 	<!-- FAQ Schema: helps AI engines answer "who is Sunware Technologies" -->
 	<script type="application/ld+json">
