@@ -76,24 +76,31 @@ export default function Scripts() {
       });
     };
 
-    // Custom cursor with "Drag" text
+    // Custom cursor - only shows on data-cursor-text elements
     const initCursor = () => {
-      const cursorText = document.getElementById("cursor-text");
       const cursorBall = document.getElementById("cursor-ball");
-      if (!cursorText && !cursorBall) return;
+      if (!cursorBall) return;
+
+      let isHovering = false;
 
       document.addEventListener("mousemove", (e) => {
-        if (cursorBall) { cursorBall.style.left = e.clientX + "px"; cursorBall.style.top = e.clientY + "px"; }
-        if (cursorText) { cursorText.style.left = e.clientX + "px"; cursorText.style.top = e.clientY + "px"; }
+        if (isHovering) {
+          cursorBall.style.left = e.clientX + "px";
+          cursorBall.style.top = e.clientY + "px";
+        }
       });
 
       document.querySelectorAll("[data-cursor-text]").forEach((el) => {
         el.addEventListener("mouseenter", () => {
-          const text = el.getAttribute("data-cursor-text") || "";
-          if (cursorText) { cursorText.textContent = text; cursorText.classList.add("active"); }
+          isHovering = true;
+          const text = el.getAttribute("data-cursor-text") || "Drag";
+          cursorBall.textContent = text;
+          cursorBall.classList.add("active");
         });
         el.addEventListener("mouseleave", () => {
-          if (cursorText) { cursorText.textContent = ""; cursorText.classList.remove("active"); }
+          isHovering = false;
+          cursorBall.classList.remove("active");
+          cursorBall.textContent = "";
         });
       });
     };

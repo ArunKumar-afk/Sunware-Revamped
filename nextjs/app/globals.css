@@ -56,33 +56,29 @@ body { margin: 0 !important; padding: 0 !important; background: #ffffff !importa
 .cursor { pointer-events: none; z-index: 9999999; }
 #cursor-ball {
   position: fixed;
-  width: 8px;
-  height: 8px;
+  width: 0;
+  height: 0;
   background: var(--primary-color-1);
   border-radius: 50%;
   transform: translate(-50%, -50%);
   pointer-events: none;
   z-index: 9999999;
-  transition: width 0.3s, height 0.3s, opacity 0.3s;
-}
-#cursor-text {
-  position: fixed;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: 9999999;
-  font-size: 12px;
-  font-weight: 700;
-  color: #fff;
-  background: var(--primary-color-1);
-  padding: 8px 16px;
-  border-radius: 50px;
+  transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   opacity: 0;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  white-space: nowrap;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
-#cursor-text.active {
+#cursor-ball.active {
+  width: 70px;
+  height: 70px;
   opacity: 1;
 }
+#cursor-text { display: none; }
 [data-cursor-text] { cursor: grab; }
 [data-cursor-text]:active { cursor: grabbing; }
 
