@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import AboutClient from "@/components/AboutClient";
+import HtmlPage from "@/components/HtmlPage";
+import fs from "fs";
+import path from "path";
 
 export const metadata: Metadata = {
   title: "About Us - Sunware Technologies | AI & Engineering Company",
@@ -15,5 +17,7 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
-  return <AboutClient />;
+  const htmlPath = path.join(process.cwd(), "public", "partials", "about.html");
+  const content = fs.readFileSync(htmlPath, "utf-8");
+  return <HtmlPage content={content} />;
 }

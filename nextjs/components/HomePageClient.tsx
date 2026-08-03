@@ -7,8 +7,14 @@ export default function HomePageClient({ content }: { content: string }) {
   useEffect(() => {
     if (!ref.current) return;
 
+    // Wait for external scripts to load then initialize
+    function waitForSwiper(cb: () => void, retries = 20) {
+      if ((window as any).Swiper) { cb(); return; }
+      if (retries > 0) setTimeout(() => waitForSwiper(cb, retries - 1), 200);
+    }
+
     // Re-init WOW.js
-    if ((window as any).WOW) new (window as any).WOW().init();
+    setTimeout(() => { if ((window as any).WOW) new (window as any).WOW().init(); }, 300);
 
     // Industries tab navigation
     const navItems = ref.current.querySelectorAll<HTMLElement>(".industry-nav-item");
@@ -25,9 +31,10 @@ export default function HomePageClient({ content }: { content: string }) {
       });
     });
 
-    // Brand slider
-    if ((window as any).Swiper) {
-      new (window as any).Swiper(".brand_slider", {
+    // Initialize Swipers when ready
+    waitForSwiper(() => {
+      const Swiper = (window as any).Swiper;
+      new Swiper(".brand_slider", {
         slidesPerView: 6,
         spaceBetween: 30,
         loop: true,
@@ -35,9 +42,7 @@ export default function HomePageClient({ content }: { content: string }) {
         autoplay: { delay: 0, disableOnInteraction: false },
         breakpoints: { 320: { slidesPerView: 2 }, 768: { slidesPerView: 4 }, 1200: { slidesPerView: 6 } },
       });
-
-      // Team/Tech slider
-      new (window as any).Swiper(".team_slider", {
+      new Swiper(".team_slider", {
         slidesPerView: 4,
         spaceBetween: 25,
         loop: true,
@@ -45,9 +50,42 @@ export default function HomePageClient({ content }: { content: string }) {
         autoplay: { delay: 3000 },
         breakpoints: { 320: { slidesPerView: 1 }, 768: { slidesPerView: 2 }, 1200: { slidesPerView: 4 } },
       });
+    });
+
+    // Blog feed from Blogger
+    function loadBlogFeed() {
+      const $ = (window as any).jQuery;
+      if (!$) return;
+      $.getJSON("https://sunwaretechnologies.blogspot.com/feeds/posts/default?alt=json-in-script&callback=?", function (data: any) {
+        const entries = data.feed.entry || [];
+        let html = "";
+        if (entries.length === 0) { $("#blogger-landing-posts").html('<div class="swiper-slide text-center"><p>No articles found.</p></div>'); return; }
+        entries.forEach(function (entry: any) {
+          const title = entry.title.$t;
+          const link = entry.link.find((l: any) => l.rel === "alternate").href;
+          let thumb = "/assets/img/blog/blog-1.jpg";
+          if (entry.content && entry.content.$t.includes("<img")) {
+            const match = entry.content.$t.match(/<img[^>]+src="([^">]+)"/);
+            if (match) thumb = match[1];
+          } else if (entry.media$thumbnail) { thumb = entry.media$thumbnail.url; }
+          thumb = thumb.replace(/\/s[0-9]+.*?\/|\/w[0-9]+.*?\//, "/s1600/");
+          html += '<div class="blog__one-item swiper-slide"><div class="blog__one-item-image" style="margin-bottom:25px;"><a href="/blog?post=' + encodeURIComponent(link) + '"><img src="' + thumb + '" alt="' + title + '" style="height:250px;width:100%;object-fit:cover;border-radius:16px;"></a></div><div class="blog__one-item-content"><h5><a href="/blog?post=' + encodeURIComponent(link) + '">' + title + '</a></h5><a class="more_btn" href="/blog?post=' + encodeURIComponent(link) + '">Read More<i class="flaticon flaticon-right-up"></i></a></div></div>';
+        });
+        $("#blogger-landing-posts").html(html);
+        setTimeout(() => {
+          if ((window as any).Swiper) {
+            new (window as any).Swiper(".blog_slider", { slidesPerView: 3, spaceBetween: 30, loop: true, speed: 1000, pagination: { el: ".blog-pagination", clickable: true }, breakpoints: { 320: { slidesPerView: 1 }, 768: { slidesPerView: 2 }, 1200: { slidesPerView: 3 } } });
+          }
+        }, 500);
+      });
     }
 
-    // Hero slideshow
+    // Wait for jQuery then load blogs
+    function waitForJQuery(cb: () => void, retries = 20) {
+      if ((window as any).jQuery) { cb(); return; }
+      if (retries > 0) setTimeout(() => waitForJQuery(cb, retries - 1), 200);
+    }
+    waitForJQuery(loadBlogFeed);
     const slides = [
       { h1: "Advanced Data & AI Solutions Tailored to Your Needs", h3: "Data. Intelligence. Engineered.", btn: "Get Started", href: "/about", img: "/about hero.png" },
       { h1: "Real-Time Edge Intelligence for a Smarter World", h3: "Process. Analyze. Act - at the Edge.", btn: "Explore EdgeData360", href: "/edgedata360", img: "/ed logo.png" },
