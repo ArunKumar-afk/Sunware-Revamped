@@ -52,6 +52,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
         <Preloader />
+        <div className="cursor">
+          <div className="hide"><div id="cursor-ball"></div></div>
+          <div id="cursor-text"></div>
+        </div>
         <FullscreenNav />
         <div className="main-content-wrapper">
           <Header />
