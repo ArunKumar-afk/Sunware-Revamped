@@ -85,3 +85,87 @@ body { margin: 0 !important; padding: 0 !important; background: #ffffff !importa
 }
 [data-cursor-text] { cursor: grab; }
 [data-cursor-text]:active { cursor: grabbing; }
+
+
+/* ============================================================
+   Responsive Fixes & Smooth Transitions
+   ============================================================ */
+
+/* Careers iframe responsive */
+.careers-iframe {
+  width: 100% !important;
+  min-height: 700px;
+  border: none;
+  border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+  background: #fff;
+  display: block;
+}
+@media (max-width: 768px) {
+  .careers-iframe { min-height: 500px; border-radius: 16px; }
+}
+
+/* Desktop nav dropdowns - ensure hover works */
+.has-dropdown { position: relative; }
+.has-dropdown .dropdown-small {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(10px);
+  z-index: 1000;
+  background: #fff;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  border-radius: 16px;
+  border: 1px solid #f0f0f0;
+}
+.has-dropdown:hover .dropdown-small {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Smooth page transitions */
+.main-content-wrapper {
+  animation: fadeInPage 0.4s ease-out;
+}
+@keyframes fadeInPage {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Link hover transitions */
+a { transition: color 0.2s ease, background 0.2s ease, transform 0.2s ease; }
+.default_button { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important; }
+.default_button:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
+
+/* Card hover animations */
+.culture-card { transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; }
+.culture-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
+
+/* Section animations */
+.section-padding { position: relative; }
+.wow { visibility: visible !important; }
+
+/* Better responsive for industry content */
+@media (max-width: 991px) {
+  .industry-nav { margin-bottom: 30px; }
+  .industry-content-wrapper { margin-top: 20px; }
+  .process__area-list { grid-template-columns: repeat(2, 1fr) !important; }
+}
+@media (max-width: 575px) {
+  .process__area-list { grid-template-columns: 1fr !important; }
+  .banner__one .container { padding: 60px 0 !important; }
+  .banner__one-content h1 { font-size: 32px !important; }
+  .section-title h2 { font-size: 28px !important; }
+  h2.title_split_anim { font-size: 28px !important; }
+}
+
+/* Smooth scroll anchor offset for sticky header */
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+/* Image load transitions */
+img { transition: opacity 0.3s ease; }
+.swiper-slide img { will-change: transform; }
