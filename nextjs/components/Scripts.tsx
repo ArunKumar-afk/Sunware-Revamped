@@ -1,9 +1,15 @@
 "use client";
 import Script from "next/script";
 import { useEffect } from "react";
+import Lenis from "@studio-freight/lenis";
 
 export default function Scripts() {
   useEffect(() => {
+    // Lenis smooth scroll
+    const lenis = new Lenis({ duration: 1.5 });
+    function raf(time: number) { lenis.raf(time); requestAnimationFrame(raf); }
+    requestAnimationFrame(raf);
+
     // Initialize WOW.js after mount
     const initWow = () => {
       if ((window as any).WOW) {
