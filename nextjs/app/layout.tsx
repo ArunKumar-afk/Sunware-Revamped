@@ -49,6 +49,28 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
         <link rel="stylesheet" href="/assets/css/magnific-popup.css" />
         <link rel="stylesheet" href="/assets/css/style.css" />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Sunware Technologies",
+          "url": "https://sunwaretechnologies.com",
+          "logo": "https://sunwaretechnologies.com/main logo.png",
+          "email": "connect@sunwaretechnologies.com",
+          "description": "Sunware Technologies is a global technology services company specialising in Artificial Intelligence, Data Engineering, Cloud Solutions, Digital Transformation and Product Engineering.",
+          "sameAs": [
+            "https://in.linkedin.com/company/sunwaretechnologies",
+            "https://www.youtube.com/@sunwaretechnologies",
+            "https://www.instagram.com/sunwaretechnologies"
+          ],
+          "address": [
+            {"@type":"PostalAddress","streetAddress":"20065 Stevens Creek Blvd, Suite B-2B","addressLocality":"Cupertino","addressRegion":"CA","postalCode":"95014","addressCountry":"US"},
+            {"@type":"PostalAddress","streetAddress":"Unit No. 144, DMCC Business Centre, Level 5, Jewellery & Gemplex 2","addressLocality":"Dubai","addressCountry":"AE"},
+            {"@type":"PostalAddress","streetAddress":"6th Floor, Forest House, 16-20 Clements Road","addressLocality":"Ilford","postalCode":"IG1 1BA","addressCountry":"GB"},
+            {"@type":"PostalAddress","streetAddress":"117, KSR Nagar, Ambattur","addressLocality":"Chennai","addressRegion":"Tamil Nadu","postalCode":"600053","addressCountry":"IN"}
+          ],
+          "areaServed": ["US","AE","GB","IN"],
+          "knowsAbout": ["Artificial Intelligence","Data Engineering","Cloud Computing","Digital Transformation","Product Engineering","IoT Solutions","Cybersecurity"]
+        })}} />
       </head>
       <body>
         <Preloader />
