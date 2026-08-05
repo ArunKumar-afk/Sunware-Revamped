@@ -1,4 +1,4 @@
-/* Page-specific styles */
+come to/* Page-specific styles */
 .story-row { display: flex; align-items: center; gap: 60px; margin-bottom: 100px; }
 .story-row:nth-child(even) { flex-direction: row-reverse; }
 .story-content { flex: 1; min-width: 0; }
@@ -100,9 +100,10 @@ body { margin: 0 !important; padding: 0 !important; background: #ffffff !importa
   white-space: nowrap;
 }
 #cursor-ball.active {
-  width: 120px;
-  height: 120px;
+  width: 180px;
+  height: 180px;
   opacity: 0.9;
+  font-size: 18px;
 }
 #cursor-text { display: none; }
 [data-cursor-text] { cursor: none !important; }
@@ -788,4 +789,29 @@ img { transition: opacity 0.3s ease; }
   visibility: visible !important;
   transform: translateY(0) !important;
   pointer-events: all !important;
+}
+
+
+/* Fix: Show sub-items inside dropdown categories */
+.services-category-items {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  max-height: none !important;
+  overflow: visible !important;
+  padding: 4px 0 !important;
+}
+.services-category-items a {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+.services-categories {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 20px !important;
+}
+.services-category {
+  flex: 1;
+  min-width: 200px;
 }
