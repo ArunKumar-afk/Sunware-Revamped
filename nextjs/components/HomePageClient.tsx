@@ -47,8 +47,11 @@ export default function HomePageClient({ content }: { content: string }) {
         spaceBetween: 25,
         loop: true,
         speed: 800,
-        autoplay: { delay: 3000 },
-        breakpoints: { 320: { slidesPerView: 1 }, 768: { slidesPerView: 2 }, 1200: { slidesPerView: 4 } },
+        grabCursor: true,
+        centeredSlides: false,
+        autoplay: { delay: 3000, disableOnInteraction: false },
+        pagination: { el: ".team-slider-pagination", clickable: true },
+        breakpoints: { 320: { slidesPerView: 1, centeredSlides: true, spaceBetween: 20 }, 768: { slidesPerView: 2, spaceBetween: 20 }, 1200: { slidesPerView: 4, spaceBetween: 25 } },
       });
     });
 
@@ -77,7 +80,7 @@ export default function HomePageClient({ content }: { content: string }) {
         container.innerHTML = html;
         setTimeout(() => {
           waitForSwiper(() => {
-            new (window as any).Swiper(".blog_slider", { slidesPerView: 3, spaceBetween: 30, loop: true, speed: 1000, pagination: { el: ".blog-pagination", clickable: true }, breakpoints: { 320: { slidesPerView: 1 }, 768: { slidesPerView: 2 }, 1200: { slidesPerView: 3 } } });
+            new (window as any).Swiper(".blog_slider", { slidesPerView: 3, spaceBetween: 30, loop: true, speed: 1000, grabCursor: true, pagination: { el: ".blog-pagination", clickable: true }, breakpoints: { 320: { slidesPerView: 1 }, 768: { slidesPerView: 2 }, 1200: { slidesPerView: 3 } } });
           });
         }, 300);
         // Cleanup

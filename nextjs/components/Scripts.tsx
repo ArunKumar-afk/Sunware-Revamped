@@ -52,8 +52,11 @@ export default function Scripts() {
       });
       // Close nav on link click (but not sub-menu toggles)
       document.querySelectorAll<HTMLAnchorElement>(".js-nav a").forEach((link) => {
-        link.addEventListener("click", function () {
+        link.addEventListener("click", function (e) {
+          // Don't close if this has toggleNavSub onclick or is inside a sub-menu toggle
           if (this.getAttribute("onclick") || this.closest(".nav-sub-title")) return;
+          // Don't close for sub-menu parent links (has-sub)
+          if (this.closest(".nav-item.has-sub") && this.parentElement?.classList.contains("has-sub")) return;
           const href = this.getAttribute("href");
           if (!href || href === "#") return;
           if (isOpen) menuBtns[0].click();
@@ -78,7 +81,7 @@ export default function Scripts() {
       window.addEventListener("resize", adjust);
     };
 
-    // Sticky header - hide on scroll down, show on scroll up
+    // Sticky header - hide on scroll down, show on scroll up (desktop only)
     const initStickyHeader = () => {
       const header = document.querySelector<HTMLElement>(".header__area");
       if (!header) return;
@@ -89,14 +92,20 @@ export default function Scripts() {
         if (!ticking) {
           window.requestAnimationFrame(() => {
             const currentScroll = window.scrollY;
+            // On mobile/tablet, don't hide header
+            if (window.innerWidth <= 1199) {
+              if (currentScroll > 10) header.classList.add("sticky");
+              else header.classList.remove("sticky");
+              ticking = false;
+              lastScroll = currentScroll;
+              return;
+            }
+            // Desktop behavior
             if (currentScroll <= 10) {
-              // At top - show normal
               header.classList.remove("sticky", "header-hidden");
             } else if (currentScroll > lastScroll && currentScroll > 80) {
-              // Scrolling down - hide
               header.classList.add("sticky", "header-hidden");
             } else {
-              // Scrolling up - show sticky
               header.classList.add("sticky");
               header.classList.remove("header-hidden");
             }
