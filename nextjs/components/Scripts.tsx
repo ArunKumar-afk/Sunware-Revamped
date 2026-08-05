@@ -78,13 +78,33 @@ export default function Scripts() {
       window.addEventListener("resize", adjust);
     };
 
-    // Sticky header
+    // Sticky header - hide on scroll down, show on scroll up
     const initStickyHeader = () => {
       const header = document.querySelector<HTMLElement>(".header__area");
       if (!header) return;
+      let lastScroll = 0;
+      let ticking = false;
+      
       window.addEventListener("scroll", () => {
-        if (window.scrollY > 100) header.classList.add("sticky");
-        else header.classList.remove("sticky");
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            const currentScroll = window.scrollY;
+            if (currentScroll <= 10) {
+              // At top - show normal
+              header.classList.remove("sticky", "header-hidden");
+            } else if (currentScroll > lastScroll && currentScroll > 80) {
+              // Scrolling down - hide
+              header.classList.add("sticky", "header-hidden");
+            } else {
+              // Scrolling up - show sticky
+              header.classList.add("sticky");
+              header.classList.remove("header-hidden");
+            }
+            lastScroll = currentScroll;
+            ticking = false;
+          });
+          ticking = true;
+        }
       });
     };
 
