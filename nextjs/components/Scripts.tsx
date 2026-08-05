@@ -117,7 +117,9 @@ export default function Scripts() {
       });
     };
 
-    setTimeout(() => { initWow(); initNav(); initFooterReveal(); initStickyHeader(); initCursor(); }, 100);
+    setTimeout(() => { initWow(); initNav(); initFooterReveal(); initStickyHeader(); initCursor(); }, 300);
+    // Re-init nav on any navigation (SPA)
+    setTimeout(() => { initNav(); }, 1000);
   }, []);
 
   return (
