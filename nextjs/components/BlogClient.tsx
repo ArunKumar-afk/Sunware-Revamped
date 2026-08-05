@@ -57,6 +57,11 @@ export default function BlogClient() {
 
   // Single post view
   if (selectedPost) {
+    // Remove ALL images from content to avoid duplicates (we show featured image separately)
+    let cleanContent = selectedPost.content;
+    cleanContent = cleanContent.replace(/<a[^>]*>\s*<img[^>]*>\s*<\/a>/gi, '');
+    cleanContent = cleanContent.replace(/<img[^>]*>/gi, '');
+
     return (
       <>
         <section style={{ padding: "60px 0 40px" }}>
@@ -71,7 +76,7 @@ export default function BlogClient() {
                 <img src={selectedPost.thumb} alt={selectedPost.title} style={{ width: "100%", height: "auto", maxHeight: "500px", objectFit: "cover" }} />
               </div>
             )}
-            <div className="blog-content" style={{ fontSize: "17px", lineHeight: 1.9, color: "#444", maxWidth: "800px" }} dangerouslySetInnerHTML={{ __html: selectedPost.content }} />
+            <div className="blog-content" style={{ fontSize: "17px", lineHeight: 1.9, color: "#444", maxWidth: "800px" }} dangerouslySetInnerHTML={{ __html: cleanContent }} />
           </div>
         </section>
       </>

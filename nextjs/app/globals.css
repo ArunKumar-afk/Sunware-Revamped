@@ -81,30 +81,32 @@ body { margin: 0 !important; padding: 0 !important; background: #ffffff !importa
   position: fixed;
   width: 0;
   height: 0;
-  background: var(--primary-color-1);
+  background: #0a0f1e;
   border-radius: 50%;
   transform: translate(-50%, -50%);
   pointer-events: none;
   z-index: 9999999;
-  transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1), height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
   color: #fff;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  overflow: visible;
+  white-space: nowrap;
 }
 #cursor-ball.active {
-  width: 160px;
-  height: 160px;
-  opacity: 1;
-  font-size: 16px;
+  width: 120px;
+  height: 120px;
+  opacity: 0.9;
 }
 #cursor-text { display: none; }
-[data-cursor-text] { cursor: grab; }
-[data-cursor-text]:active { cursor: grabbing; }
+[data-cursor-text] { cursor: none !important; }
+[data-cursor-text] * { cursor: none !important; }
 
 
 /* ============================================================
