@@ -261,3 +261,28 @@ img { transition: opacity 0.3s ease; }
   .nav-sub-title { font-size: 0.65rem; }
   .nav-sub { padding: 8px 0 6px 12px; }
 }
+
+
+/* ============================================================
+   Mobile Hero Fix - text first, image below, smaller text
+   ============================================================ */
+@media (max-width: 991px) {
+  .banner__one .row { flex-direction: column-reverse !important; }
+  .banner__one .col-xl-7, .banner__one .col-lg-7,
+  .banner__one .col-xl-5, .banner__one .col-lg-5 {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+  .banner__one .container { padding: 60px 0 !important; }
+  #hero-h1, .banner__one-content h1 { font-size: 36px !important; line-height: 1.2 !important; }
+  #hero-h3, .banner__one-content h3 { font-size: 20px !important; }
+  .banner__one-content p { font-size: 16px !important; }
+  #hero-img { max-width: 280px !important; margin: 0 auto 30px !important; display: block !important; }
+}
+@media (max-width: 575px) {
+  #hero-h1, .banner__one-content h1 { font-size: 28px !important; }
+  #hero-h3, .banner__one-content h3 { font-size: 18px !important; }
+  .banner__one .container { padding: 40px 0 !important; }
+  #hero-img { max-width: 200px !important; }
+}
