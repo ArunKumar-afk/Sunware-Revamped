@@ -77,7 +77,7 @@ export default function EdgeDataClient() {
               { icon: "fa-chart-line", title: "Visual AI Analytics Dashboard", desc: "Build and share dynamic real-time dashboards fueled by continuous AI-driven insights and visual intelligence." },
               { icon: "fa-robot", title: "AI Chatbot", desc: "Conversational AI interface for querying operational data, triggering actions, and getting real-time insights naturally." },
               { icon: "fa-user-cog", title: "Skill Agent", desc: "Specialized AI agents trained on domain-specific tasks to automate complex operational workflows autonomously." },
-              { icon: "fa-clock", title: "Time Based AI Scheduler", desc: "Schedule and orchestrate AI tasks with time-based triggers for predictive maintenance, alerts, and batch processing." },
+              { icon: "fa-clock", title: "Time Based AI Scheduler", desc: "Set-and-forget scheduled intelligence. Define daily, weekly, or monthly schedules with event-driven triggers. Runs continuously with built-in retry logic and failure alerts." },
             ].map((item, i) => (
               <div className={`col-lg-4 col-md-6 mb-40 wow fadeInUp`} data-wow-delay={`${i * 0.1}s`} key={item.title}>
                 <div className="culture-card" style={{ height: "100%" }}>

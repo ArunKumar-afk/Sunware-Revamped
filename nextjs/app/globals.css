@@ -127,14 +127,15 @@ body { margin: 0 !important; padding: 0 !important; background: #ffffff !importa
   .careers-iframe { min-height: 500px; border-radius: 16px; }
 }
 
-/* Desktop nav dropdowns - ensure hover works */
+/* Desktop nav dropdowns - click to open, click elsewhere to close */
 .header__area-menubar-center-menu ul > li.has-dropdown { position: relative !important; }
+.header__area-menubar-center-menu ul > li.has-dropdown > a { cursor: pointer; }
 .header__area-menubar-center-menu ul > li.has-dropdown > .dropdown-small {
   position: absolute !important;
   top: 100% !important;
   left: 0 !important;
-  opacity: 0;
-  visibility: hidden;
+  opacity: 0 !important;
+  visibility: hidden !important;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateY(10px);
   z-index: 10000 !important;
@@ -142,23 +143,16 @@ body { margin: 0 !important; padding: 0 !important; background: #ffffff !importa
   box-shadow: 0 20px 40px rgba(0,0,0,0.08) !important;
   border-radius: 16px !important;
   border: 1px solid #f0f0f0;
-  pointer-events: none;
+  pointer-events: none !important;
+  display: block !important;
 }
-/* Bridge the gap between nav item and dropdown */
-.header__area-menubar-center-menu ul > li.has-dropdown::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  height: 20px;
-  background: transparent;
-}
+/* Show dropdown when parent has .dropdown-open class OR on hover */
+.header__area-menubar-center-menu ul > li.has-dropdown.dropdown-open > .dropdown-small,
 .header__area-menubar-center-menu ul > li.has-dropdown:hover > .dropdown-small {
   opacity: 1 !important;
   visibility: visible !important;
   transform: translateY(0) !important;
-  pointer-events: all;
+  pointer-events: all !important;
 }
 
 /* Smooth page transitions */
@@ -779,3 +773,19 @@ img { transition: opacity 0.3s ease; }
 .blog-content a { color: #EF7F1A; text-decoration: underline; }
 .blog-content ul, .blog-content ol { padding-left: 20px; margin-bottom: 16px; }
 .blog-content li { margin-bottom: 8px; line-height: 1.7; }
+
+
+/* Override any conflicting dropdown rules from style.css */
+.header__area-menubar-center-menu ul li .sub-menu,
+.header__area-menubar-center-menu ul li .dropdown-small {
+  display: block !important;
+}
+.header__area-menubar-center-menu ul li:hover > .sub-menu,
+.header__area-menubar-center-menu ul li:hover > .dropdown-small,
+.header__area-menubar-center-menu ul li.dropdown-open > .sub-menu,
+.header__area-menubar-center-menu ul li.dropdown-open > .dropdown-small {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+  pointer-events: all !important;
+}

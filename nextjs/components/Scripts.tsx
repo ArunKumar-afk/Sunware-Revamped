@@ -146,9 +146,33 @@ export default function Scripts() {
       });
     };
 
-    setTimeout(() => { initWow(); initNav(); initFooterReveal(); initStickyHeader(); initCursor(); }, 300);
+    // Desktop dropdown - click to open/close
+    const initDesktopDropdowns = () => {
+      const dropdownItems = document.querySelectorAll<HTMLElement>(".header__area-menubar-center-menu ul > li.has-dropdown > a");
+      dropdownItems.forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          const li = link.parentElement!;
+          const isOpen = li.classList.contains("dropdown-open");
+          // Close all other dropdowns
+          document.querySelectorAll(".has-dropdown.dropdown-open").forEach((el) => el.classList.remove("dropdown-open"));
+          // Toggle this one
+          if (!isOpen) li.classList.add("dropdown-open");
+        });
+      });
+      // Close on click outside
+      document.addEventListener("click", (e) => {
+        const target = e.target as HTMLElement;
+        if (!target.closest(".has-dropdown")) {
+          document.querySelectorAll(".has-dropdown.dropdown-open").forEach((el) => el.classList.remove("dropdown-open"));
+        }
+      });
+    };
+
+    setTimeout(() => { initWow(); initNav(); initFooterReveal(); initStickyHeader(); initCursor(); initDesktopDropdowns(); }, 300);
     // Re-init nav on any navigation (SPA)
-    setTimeout(() => { initNav(); }, 1000);
+    setTimeout(() => { initNav(); initDesktopDropdowns(); }, 1000);
   }, []);
 
   return (
