@@ -768,3 +768,12 @@ img { transition: opacity 0.3s ease; }
   .blog-pagination { display: none !important; }
   .blog__one-dots { display: none !important; }
 }
+
+
+/* Blog content styling */
+.blog-content img { max-width: 100%; height: auto; border-radius: 12px; margin: 20px 0; }
+.blog-content p { margin-bottom: 16px; }
+.blog-content h2, .blog-content h3 { color: var(--primary-color-1); margin: 24px 0 12px; }
+.blog-content a { color: #EF7F1A; text-decoration: underline; }
+.blog-content ul, .blog-content ol { padding-left: 20px; margin-bottom: 16px; }
+.blog-content li { margin-bottom: 8px; line-height: 1.7; }
