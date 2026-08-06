@@ -168,6 +168,18 @@ export default function Scripts() {
           document.querySelectorAll(".has-dropdown.dropdown-open").forEach((el) => el.classList.remove("dropdown-open"));
         }
       });
+
+      // Category accordion inside dropdowns
+      document.querySelectorAll<HTMLElement>(".services-category-title").forEach((title) => {
+        title.addEventListener("click", (e) => {
+          e.stopPropagation();
+          const cat = title.parentElement!;
+          const isOpen = cat.classList.contains("cat-open");
+          // Close siblings
+          cat.parentElement?.querySelectorAll(".services-category.cat-open").forEach((el) => el.classList.remove("cat-open"));
+          if (!isOpen) cat.classList.add("cat-open");
+        });
+      });
     };
 
     setTimeout(() => { initWow(); initNav(); initFooterReveal(); initStickyHeader(); initCursor(); initDesktopDropdowns(); }, 300);
