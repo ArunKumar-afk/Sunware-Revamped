@@ -6,6 +6,7 @@ import FullscreenNav from "@/components/FullscreenNav";
 import Preloader from "@/components/Preloader";
 import EnquireModal from "@/components/EnquireModal";
 import Scripts from "@/components/Scripts";
+import DomainSEO from "@/components/DomainSEO";
 
 export const metadata: Metadata = {
   title: "Sunware Technologies - AI, Data Engineering & Product Engineering Services",
@@ -73,6 +74,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         })}} />
       </head>
       <body>
+        <DomainSEO />
         <Preloader />
         <div className="cursor">
           <div className="hide"><div id="cursor-ball"></div></div>

@@ -169,16 +169,16 @@ export default function Scripts() {
         }
       });
 
-      // Category accordion inside dropdowns
-      document.querySelectorAll<HTMLElement>(".services-category-title").forEach((title) => {
-        title.addEventListener("click", (e) => {
-          e.stopPropagation();
-          const cat = title.parentElement!;
-          const isOpen = cat.classList.contains("cat-open");
-          // Close siblings
-          cat.parentElement?.querySelectorAll(".services-category.cat-open").forEach((el) => el.classList.remove("cat-open"));
-          if (!isOpen) cat.classList.add("cat-open");
-        });
+      // Category accordion inside dropdowns - use event delegation
+      document.addEventListener("click", (e) => {
+        const title = (e.target as HTMLElement).closest(".services-category-title") as HTMLElement;
+        if (!title) return;
+        e.stopPropagation();
+        const cat = title.parentElement!;
+        const isOpen = cat.classList.contains("cat-open");
+        // Close siblings
+        cat.parentElement?.querySelectorAll(".services-category.cat-open").forEach((el) => el.classList.remove("cat-open"));
+        if (!isOpen) cat.classList.add("cat-open");
       });
     };
 

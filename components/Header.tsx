@@ -1,5 +1,15 @@
 "use client";
 
+function handleCategoryClick(e: React.MouseEvent) {
+  const title = (e.target as HTMLElement).closest(".services-category-title");
+  if (!title) return;
+  e.stopPropagation();
+  const cat = title.parentElement!;
+  const isOpen = cat.classList.contains("cat-open");
+  cat.parentElement?.querySelectorAll(".services-category.cat-open").forEach((el) => el.classList.remove("cat-open"));
+  if (!isOpen) cat.classList.add("cat-open");
+}
+
 export default function Header() {
   return (
     <header className="header__area">
@@ -34,7 +44,7 @@ export default function Header() {
                     <li className="has-dropdown">
                       <a href="#">Services <i className="fal fa-chevron-down" style={{ fontSize: "12px", marginLeft: "4px" }}></i></a>
                       <div className="dropdown-small dropdown-align-left" style={{ width: "580px", padding: "24px" }}>
-                        <div className="services-categories">
+                        <div className="services-categories" onClick={handleCategoryClick}>
                           <div className="services-category">
                             <div className="services-category-title"><i className="fas fa-brain" style={{ color: "#EF7F1A", marginRight: "10px" }}></i> Data Science, AI &amp; Analytics</div>
                             <div className="services-category-items">
@@ -92,7 +102,7 @@ export default function Header() {
                     <li className="has-dropdown">
                       <a href="#">Technologies <i className="fal fa-chevron-down" style={{ fontSize: "12px", marginLeft: "4px" }}></i></a>
                       <div className="dropdown-small dropdown-align-left" style={{ width: "580px", padding: "24px" }}>
-                        <div className="services-categories">
+                        <div className="services-categories" onClick={handleCategoryClick}>
                           <div className="services-category">
                             <div className="services-category-title"><i className="fas fa-briefcase" style={{ color: "#EF7F1A", marginRight: "10px" }}></i> Core Business Solutions</div>
                             <div className="services-category-items">
