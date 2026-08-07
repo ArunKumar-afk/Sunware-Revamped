@@ -79,31 +79,33 @@ body { margin: 0 !important; padding: 0 !important; background: #ffffff !importa
 .cursor { pointer-events: none; z-index: 9999999; }
 #cursor-ball {
   position: fixed;
-  width: 0;
-  height: 0;
+  width: 12px;
+  height: 12px;
   background: #0a0f1e;
   border-radius: 50%;
   transform: translate(-50%, -50%);
   pointer-events: none;
   z-index: 9999999;
-  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1), height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1), height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease, font-size 0.4s ease;
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
-  color: #fff;
-  font-size: 14px;
+  color: transparent;
+  font-size: 0px;
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
-  overflow: visible;
+  overflow: hidden;
   white-space: nowrap;
 }
 #cursor-ball.active {
-  width: 80px;
-  height: 80px;
-  opacity: 0.85;
-  font-size: 13px;
+  width: 88px;
+  height: 88px;
+  opacity: 0.88;
+  font-size: 14px;
+  color: #fff;
+  overflow: visible;
 }
 #cursor-text { display: none; }
 [data-cursor-text] { cursor: none !important; }
