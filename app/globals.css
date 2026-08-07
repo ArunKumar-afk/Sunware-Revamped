@@ -1113,3 +1113,110 @@ h1, h2, h3, .section-title {
   .hc-benefits-grid { grid-template-columns: 1fr !important; }
   .hc-benefit-card { padding: 24px 20px !important; }
 }
+
+
+/* ============================================================
+   Healthcare - Tailored Solutions Grid (numbered cards)
+   ============================================================ */
+.hc-solutions { padding: 60px 0; background: #ffffff; }
+.hc-solutions .container { max-width: 1200px; }
+.hc-sol-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 24px !important;
+  margin-top: 40px;
+}
+.hc-sol-item {
+  background: #fff;
+  border: 1.5px solid #eef1f5;
+  border-radius: 20px;
+  padding: 32px 28px;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  overflow: hidden;
+}
+.hc-sol-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.07);
+  border-color: rgba(239,127,26,0.25);
+}
+.hc-sol-num {
+  font-size: 11px;
+  font-weight: 700;
+  color: #EF7F1A;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  background: rgba(239,127,26,0.08);
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+.hc-sol-icon {
+  font-size: 28px;
+  color: var(--primary-color-1);
+  margin-bottom: 16px;
+  display: block;
+}
+.hc-sol-item h4 {
+  font-size: 18px;
+  font-weight: 800;
+  color: #0a0f1e;
+  margin-bottom: 12px;
+}
+.hc-sol-item p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.7;
+  margin: 0;
+}
+@media (max-width: 991px) { .hc-sol-grid { grid-template-columns: repeat(2, 1fr) !important; } }
+@media (max-width: 575px) { .hc-sol-grid { grid-template-columns: 1fr !important; } .hc-sol-item { padding: 22px 18px; } }
+
+/* ============================================================
+   Healthcare - Why Choose Us (3-column cards)
+   ============================================================ */
+.hc-why { padding: 60px 0; background: #f5f7fa; position: relative; }
+.hc-why-stripe { display: none; }
+.hc-why-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 24px !important;
+  margin-top: 40px;
+}
+.hc-why-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 36px 28px;
+  border: 1.5px solid #eef1f5;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.hc-why-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(0,0,0,0.07); }
+.hc-why-icon-wrap {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(239,127,26,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 26px;
+  color: #EF7F1A;
+}
+.hc-why-divider {
+  width: 40px;
+  height: 3px;
+  background: #EF7F1A;
+  border-radius: 2px;
+  margin: 0 auto 16px;
+}
+.hc-why-card h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: #0a0f1e;
+  margin-bottom: 12px;
+}
+.hc-why-card p { font-size: 14px; color: #666; line-height: 1.7; margin: 0; }
+@media (max-width: 991px) { .hc-why-grid { grid-template-columns: 1fr !important; } }
