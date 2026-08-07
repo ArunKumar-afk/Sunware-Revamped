@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import HtmlPage from "@/components/HtmlPage";
 
 export const metadata: Metadata = {
@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 const content = `<!-- --- BANNER HERO (matches site pattern) --- -->
-	<section class="story-hero" style="background: linear-gradient(rgba(10,15,30,0.7), rgba(10,15,30,0.8)), url('images/Industries/Sunware_Industries_Healthcare_and_Life_Sciences_Banner.png'); background-size: cover; background-position: center; padding: 40px 0 100px 0;">
+	<section class="story-hero" style="background: linear-gradient(rgba(10,15,30,0.3), rgba(10,15,30,0.55)), url('images/Industries/Sunware_Industries_Healthcare_and_Life_Sciences_Banner.png'); background-size: cover; background-position: center; padding: 40px 0 100px 0;">
                 <div class="container text-center">
                         <div class="wow fadeInUp" data-wow-delay=".2s" style="margin-bottom: 30px;">
                                 <a href="index.html" class="default_button" style="padding: 10px 25px; font-size: 14px; background: transparent; border: 1px solid #fff; color: #fff;"><i class="fal fa-long-arrow-left" style="margin-right: 8px;"></i> Back to Home</a>
