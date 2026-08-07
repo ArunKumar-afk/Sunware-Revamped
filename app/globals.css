@@ -861,17 +861,17 @@ img { transition: opacity 0.3s ease; }
   flex-shrink: 0;
 }
 .services-category.cat-open .services-category-title {
-  background: var(--primary-color-1);
-  color: #fff !important;
+  background: rgba(0, 112, 210, 0.08);
+  color: var(--primary-color-1) !important;
   border-bottom-color: transparent;
   border-radius: 8px;
 }
 .services-category.cat-open .services-category-title i {
-  color: #fff !important;
+  color: var(--primary-color-1) !important;
 }
 .services-category.cat-open .services-category-title::after {
   transform: rotate(180deg);
-  color: #fff;
+  color: var(--primary-color-1);
 }
 
 
@@ -999,3 +999,24 @@ h1, h2, h3, .section-title {
 @media (min-width: 992px) {
   .stack-nav-btn, .stack-dots { display: none !important; }
 }
+
+
+/* ============================================================
+   Nav dropdown items - consistent light blue hover/active
+   ============================================================ */
+.megamenu-item-nested {
+  border-radius: 10px !important;
+  transition: background 0.2s, color 0.2s !important;
+  padding: 10px 14px !important;
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+  color: #333 !important;
+  text-decoration: none !important;
+  font-size: 14px !important;
+}
+.megamenu-item-nested:hover {
+  background: rgba(0, 112, 210, 0.07) !important;
+  color: var(--primary-color-1) !important;
+}
+.megamenu-item-nested:hover i { color: var(--primary-color-1) !important; }
