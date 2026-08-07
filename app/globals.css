@@ -1,4 +1,4 @@
-come to/* Page-specific styles */
+i wcome to/* Page-specific styles */
 .story-row { display: flex; align-items: center; gap: 60px; margin-bottom: 100px; }
 .story-row:nth-child(even) { flex-direction: row-reverse; }
 .story-content { flex: 1; min-width: 0; }
@@ -86,7 +86,12 @@ body { margin: 0 !important; padding: 0 !important; background: #ffffff !importa
   transform: translate(-50%, -50%);
   pointer-events: none;
   z-index: 9999999;
-  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1), height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease, font-size 0.4s ease;
+  /* Shrink fast, then fade after a short delay */
+  transition: 
+    width 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    height 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.35s ease 0.2s,
+    font-size 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -100,12 +105,18 @@ body { margin: 0 !important; padding: 0 !important; background: #ffffff !importa
   white-space: nowrap;
 }
 #cursor-ball.active {
-  width: 88px;
-  height: 88px;
+  width: 60px;
+  height: 60px;
   opacity: 0.88;
-  font-size: 14px;
+  font-size: 12px;
   color: #fff;
   overflow: visible;
+  /* Expand immediately when entering */
+  transition:
+    width 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    height 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.2s ease,
+    font-size 0.25s ease;
 }
 #cursor-text { display: none; }
 [data-cursor-text] { cursor: none !important; }
@@ -1331,4 +1342,20 @@ h1, h2, h3, .section-title {
   height: 100px !important;
   font-size: 15px !important;
   opacity: 0.88 !important;
+}
+
+
+/* Fix: Process cards - all icons same size and weight */
+.process__area-item-area i {
+  font-size: 40px !important;
+  line-height: 1 !important;
+  display: block !important;
+  text-align: center !important;
+  margin: 0 auto 16px !important;
+  color: var(--primary-color-1) !important;
+}
+.process__area-item-area .fas,
+.process__area-item-area .fal,
+.process__area-item-area .fab {
+  font-size: 36px !important;
 }
