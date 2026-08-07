@@ -1220,3 +1220,72 @@ h1, h2, h3, .section-title {
 }
 .hc-why-card p { font-size: 14px; color: #666; line-height: 1.7; margin: 0; }
 @media (max-width: 991px) { .hc-why-grid { grid-template-columns: 1fr !important; } }
+
+
+/* ============================================================
+   Healthcare - Intro Split Section Fix
+   ============================================================ */
+.hc-intro { padding: 80px 0; background: #fff; }
+.hc-intro-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 60px !important;
+  align-items: center !important;
+}
+.hc-intro-grid > div:first-child .hc-intro-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #EF7F1A;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+  background: rgba(239,127,26,0.08);
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+.hc-intro-grid h2 {
+  font-size: clamp(26px, 3.5vw, 38px) !important;
+  font-weight: 800 !important;
+  color: var(--primary-color-1) !important;
+  line-height: 1.25 !important;
+  margin-bottom: 20px !important;
+}
+.hc-intro-grid p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 14px;
+}
+.hc-intro-visual {
+  position: relative;
+}
+.hc-intro-visual img {
+  width: 100% !important;
+  height: 380px !important;
+  object-fit: cover !important;
+  border-radius: 24px !important;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.1) !important;
+  display: block !important;
+}
+.hc-intro-badge {
+  position: absolute;
+  bottom: -20px;
+  left: 24px;
+  background: #fff;
+  border-radius: 14px;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+  border: 1px solid #eef1f5;
+}
+.hc-badge-icon { font-size: 22px; color: #EF7F1A; }
+.hc-badge-text strong { display: block; font-size: 14px; font-weight: 700; color: #0a0f1e; }
+.hc-badge-text span { font-size: 12px; color: #888; }
+@media (max-width: 991px) {
+  .hc-intro-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+  .hc-intro-visual img { height: 280px !important; }
+  .hc-intro-badge { bottom: -16px; }
+}
