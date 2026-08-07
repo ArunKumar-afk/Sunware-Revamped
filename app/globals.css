@@ -1289,3 +1289,44 @@ h1, h2, h3, .section-title {
   .hc-intro-visual img { height: 280px !important; }
   .hc-intro-badge { bottom: -16px; }
 }
+
+
+/* Fix: Process area cards - consistent center alignment */
+.process__area-item-area {
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+.process__area-item-area i {
+  display: block !important;
+  text-align: center !important;
+  margin: 0 auto 16px !important;
+}
+.process__area-item-area h5 {
+  text-align: center !important;
+}
+.process__area-item-area p {
+  text-align: center !important;
+}
+
+/* Fix: Team slider overflow - cursor stays inside */
+.team__one .swiper,
+.team_slider {
+  overflow: hidden !important;
+}
+
+/* Fix: Drag cursor - much larger */
+#cursor-ball {
+  width: 0;
+  height: 0;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+#cursor-ball.active {
+  width: 100px !important;
+  height: 100px !important;
+  font-size: 15px !important;
+  opacity: 0.88 !important;
+}
