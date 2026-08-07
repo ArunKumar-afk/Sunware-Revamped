@@ -936,3 +936,66 @@ h1, h2, h3, .section-title {
     padding-right: 0;
   }
 }
+
+
+/* ============================================================
+   Mobile: Stack cards carousel nav buttons
+   ============================================================ */
+@media (max-width: 991px) {
+  /* Wrapper for carousel + nav */
+  #stack-cards-container {
+    position: relative;
+  }
+  
+  /* Nav buttons */
+  .stack-nav-btn {
+    display: flex !important;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.9);
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    font-size: 16px;
+    color: var(--primary-color-1);
+    transition: all 0.2s ease;
+  }
+  .stack-nav-btn:hover { background: #fff; box-shadow: 0 6px 20px rgba(0,0,0,0.2); }
+  .stack-nav-prev { left: 4px; }
+  .stack-nav-next { right: 4px; }
+  
+  /* Dot indicators */
+  .stack-dots {
+    display: flex !important;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+    padding-bottom: 10px;
+  }
+  .stack-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.4);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    padding: 0;
+  }
+  .stack-dot.active {
+    background: #EF7F1A;
+    width: 24px;
+    border-radius: 4px;
+  }
+}
+
+@media (min-width: 992px) {
+  .stack-nav-btn, .stack-dots { display: none !important; }
+}

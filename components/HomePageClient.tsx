@@ -55,6 +55,58 @@ export default function HomePageClient({ content }: { content: string }) {
       });
     });
 
+    // Mobile stack cards carousel (only on mobile)
+    function initStackCarousel() {
+      if (window.innerWidth >= 992) return;
+      const container = document.getElementById("stack-cards-container");
+      if (!container) return;
+
+      const cards = container.querySelectorAll<HTMLElement>(".stack-card");
+      if (cards.length === 0) return;
+      let current = 0;
+
+      function goTo(idx: number) {
+        current = idx;
+        cards[idx].scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+        container!.querySelectorAll(".stack-dot").forEach((d, i) => d.classList.toggle("active", i === idx));
+      }
+
+      // Add nav buttons if not already present
+      if (!container.querySelector(".stack-nav-prev")) {
+        const prev = document.createElement("button");
+        prev.className = "stack-nav-btn stack-nav-prev";
+        prev.innerHTML = '<i class="fal fa-chevron-left"></i>';
+        const next = document.createElement("button");
+        next.className = "stack-nav-btn stack-nav-next";
+        next.innerHTML = '<i class="fal fa-chevron-right"></i>';
+        prev.addEventListener("click", () => goTo((current - 1 + cards.length) % cards.length));
+        next.addEventListener("click", () => goTo((current + 1) % cards.length));
+        container.appendChild(prev);
+        container.appendChild(next);
+
+        // Dots
+        const dotsEl = document.createElement("div");
+        dotsEl.className = "stack-dots";
+        cards.forEach((_, i) => {
+          const dot = document.createElement("button");
+          dot.className = "stack-dot" + (i === 0 ? " active" : "");
+          dot.addEventListener("click", () => goTo(i));
+          dotsEl.appendChild(dot);
+        });
+        container.parentElement?.appendChild(dotsEl);
+      }
+
+      // Touch swipe support
+      let startX = 0;
+      container.addEventListener("touchstart", (e) => { startX = e.touches[0].clientX; }, { passive: true });
+      container.addEventListener("touchend", (e) => {
+        const diff = startX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 50) goTo(diff > 0 ? (current + 1) % cards.length : (current - 1 + cards.length) % cards.length);
+      });
+    }
+
+    setTimeout(() => initStackCarousel(), 500);
+
     // Blog feed from Blogger via JSONP
     function loadBlogFeed() {
       const container = document.getElementById("blogger-landing-posts");
