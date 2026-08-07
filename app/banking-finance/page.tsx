@@ -11,7 +11,7 @@ const content = `<!-- Page Hero Start -->
         <section class="story-hero" style="background: linear-gradient(rgba(10,15,30,0.3), rgba(10,15,30,0.55)), url('images/Industries/Sunware_Industries_Banking_and_Financial_Services_Banner.png'); background-size: cover; background-position: center; padding: 40px 0 100px 0;">
                 <div class="container text-center">
                         <div class="wow fadeInUp" data-wow-delay=".2s" style="margin-bottom: 30px;">
-                                <a href="index.html" class="default_button" style="padding: 10px 25px; font-size: 14px; background: transparent; border: 1px solid #fff; color: #fff;"><i class="fal fa-long-arrow-left" style="margin-right: 8px;"></i> Back to Home</a>
+                                <a href="/" class="default_button" style="padding: 10px 25px; font-size: 14px; background: transparent; border: 1px solid #fff; color: #fff;"><i class="fal fa-long-arrow-left" style="margin-right: 8px;"></i> Back to Home</a>
                         </div>
                         <div class="wow fadeInUp" data-wow-delay=".4s">
                                 <h1 style="color: #fff; font-size: clamp(2.5rem, 6vw, 4rem); margin-bottom: 20px;">Banking &amp; Financial Services</h1>

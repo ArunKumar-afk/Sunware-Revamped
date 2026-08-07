@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import HtmlPage from "@/components/HtmlPage";
 
 export const metadata: Metadata = {
@@ -15,7 +15,7 @@ const content = `<div class="banner__one" style="position: relative; overflow: h
 		<div class="banner__one-image" style="padding: 100px 0; position: relative; z-index: 1; background: transparent;">
 			<div class="container jc-center text-center">
                                 <div class="wow fadeInUp" data-wow-delay=".2s" style="margin-bottom: 30px;">
-                                        <a href="index.html" class="default_button" style="padding: 10px 25px; font-size: 14px; background: transparent; border: 1px solid var(--primary-color-1); color: var(--primary-color-1);"><i class="fal fa-long-arrow-left" style="margin-right: 8px;"></i> Back to Home</a>
+                                        <a href="/" class="default_button" style="padding: 10px 25px; font-size: 14px; background: transparent; border: 1px solid var(--primary-color-1); color: var(--primary-color-1);"><i class="fal fa-long-arrow-left" style="margin-right: 8px;"></i> Back to Home</a>
                                 </div>
 				<h1 style="color: var(--primary-color-1); font-size: clamp(2.5rem, 6vw, 4rem); line-height: 1.1; margin-bottom: 20px;">Neo4J Graph Technologies</h1>
 				<p style="font-size: 20px; color: #444; margin: 0 auto; max-width: 800px;">Unlock the Power of Connected Data</p>

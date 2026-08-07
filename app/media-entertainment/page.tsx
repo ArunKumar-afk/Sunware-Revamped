@@ -11,7 +11,7 @@ const content = `<!-- Page Hero Start -->
         <section class="story-hero" style="background: linear-gradient(rgba(10,15,30,0.3), rgba(10,15,30,0.6)), url('https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1400&q=80&fit=crop'); background-size: cover; background-position: center center; min-height: 320px; padding: 60px 0 60px 0;">
                 <div class="container text-center">
                         <div class="wow fadeInUp" data-wow-delay=".2s" style="margin-bottom: 30px;">
-                                <a href="index.html" class="default_button" style="padding: 10px 25px; font-size: 14px; background: transparent; border: 1px solid #fff; color: #fff;"><i class="fal fa-long-arrow-left" style="margin-right: 8px;"></i> Back to Home</a>
+                                <a href="/" class="default_button" style="padding: 10px 25px; font-size: 14px; background: transparent; border: 1px solid #fff; color: #fff;"><i class="fal fa-long-arrow-left" style="margin-right: 8px;"></i> Back to Home</a>
                         </div>
                         <div class="wow fadeInUp" data-wow-delay=".4s">
                                 <h1 style="color: #fff; font-size: clamp(2.5rem, 6vw, 4rem); margin-bottom: 20px;">Media &amp; Entertainment</h1>

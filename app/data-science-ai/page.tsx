@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import HtmlPage from "@/components/HtmlPage";
 
 export const metadata: Metadata = {
@@ -15,7 +15,7 @@ const content = `<div class="banner__one" style="position: relative; overflow: h
 		<div class="banner__one-image" style="padding: 100px 0; position: relative; z-index: 1; background: transparent;">
 			<div class="container jc-center text-center">
 				<div class="wow fadeInUp" data-wow-delay=".2s" style="margin-bottom: 30px;">
-					<a href="index.html" class="default_button" style="padding: 10px 25px; font-size: 14px; background: transparent; border: 1px solid var(--primary-color-1); color: var(--primary-color-1);">
+					<a href="/" class="default_button" style="padding: 10px 25px; font-size: 14px; background: transparent; border: 1px solid var(--primary-color-1); color: var(--primary-color-1);">
 						<i class="fal fa-long-arrow-left" style="margin-right: 8px;"></i> Back to Home
 					</a>
 				</div>
