@@ -1,5 +1,4 @@
 "use client";
-import Script from "next/script";
 import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
 
@@ -187,15 +186,5 @@ export default function Scripts() {
     setTimeout(() => { initNav(); initDesktopDropdowns(); }, 1000);
   }, []);
 
-  return (
-    <>
-      <Script src="/assets/js/jquery-3.7.1.min.js" strategy="beforeInteractive" />
-      <Script src="/assets/js/bootstrap.min.js" strategy="afterInteractive" />
-      <Script src="/assets/js/wow.min.js" strategy="afterInteractive" />
-      <Script src="/assets/js/swiper-bundle.min.js" strategy="afterInteractive" />
-      <Script src="/assets/js/gsap.js" strategy="afterInteractive" />
-      <Script src="/assets/js/scroll-trigger.js" strategy="afterInteractive" />
-      <Script src="/assets/js/split-text.js" strategy="afterInteractive" />
-    </>
-  );
+  return null;
 }
