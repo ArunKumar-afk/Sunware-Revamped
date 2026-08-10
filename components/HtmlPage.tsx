@@ -48,6 +48,18 @@ export default function HtmlPage({ content }: { content: string }) {
       script.parentNode?.replaceChild(newScript, script);
     });
 
+    // Domain-aware office ordering (About page)
+    const officesRow = ref.current.querySelector<HTMLElement>("#offices-row");
+    if (officesRow) {
+      const host = window.location.hostname.toLowerCase();
+      const isIndia = host.endsWith(".in");
+      if (isIndia) {
+        const india = officesRow.querySelector<HTMLElement>('[data-country="india"]');
+        if (india) officesRow.insertBefore(india, officesRow.firstChild);
+      }
+      // .com / other: USA already first by default
+    }
+
   }, [content]);
 
   return <div ref={ref} dangerouslySetInnerHTML={{ __html: content }} />;
