@@ -9,10 +9,49 @@ import EnquireModal from "@/components/EnquireModal";
 import Scripts from "@/components/Scripts";
 import DomainSEO from "@/components/DomainSEO";
 
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Sunware Technologies",
+  "url": "https://sunwaretechnologies.com",
+  "logo": { "@type": "ImageObject", "url": "https://sunwaretechnologies.com/main%20logo.png", "width": 200, "height": 60 },
+  "contactPoint": { "@type": "ContactPoint", "contactType": "customer support", "email": "connect@sunwaretechnologies.com", "availableLanguage": ["English"] },
+  "description": "Sunware Technologies is a global technology services company specialising in AI, Data Engineering, Cloud Solutions, Digital Transformation and Product Engineering.",
+  "foundingLocation": "Cupertino, California, USA",
+  "sameAs": ["https://in.linkedin.com/company/sunwaretechnologies","https://www.youtube.com/@sunwaretechnologies","https://www.instagram.com/sunwaretechnologies","https://sunwaretechnologies.in"],
+  "address": [
+    {"@type":"PostalAddress","streetAddress":"20065 Stevens Creek Blvd, Suite B-2B","addressLocality":"Cupertino","addressRegion":"CA","postalCode":"95014","addressCountry":"US"},
+    {"@type":"PostalAddress","streetAddress":"Unit No. 144, DMCC Business Centre, Level 5, Jewellery & Gemplex 2","addressLocality":"Dubai","addressCountry":"AE"},
+    {"@type":"PostalAddress","streetAddress":"6th Floor, Forest House, 16-20 Clements Road","addressLocality":"Ilford","postalCode":"IG1 1BA","addressCountry":"GB"},
+    {"@type":"PostalAddress","streetAddress":"117, KSR Nagar, Ambattur","addressLocality":"Chennai","addressRegion":"Tamil Nadu","postalCode":"600053","addressCountry":"IN"}
+  ],
+  "areaServed": ["US","AE","GB","IN"],
+  "knowsAbout": ["Artificial Intelligence","Data Engineering","Cloud Computing","Digital Transformation","IoT Solutions","Cybersecurity","Salesforce","Microsoft Azure","Neo4j","Odoo ERP"]
+};
+
+const localBizSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Sunware Technologies Pvt. Ltd.",
+  "url": "https://sunwaretechnologies.in",
+  "image": "https://sunwaretechnologies.com/main%20logo.png",
+  "description": "AI, Data Engineering and Cloud Solutions company in Chennai, India.",
+  "address": { "@type": "PostalAddress", "streetAddress": "117, KSR Nagar, Ambattur", "addressLocality": "Chennai", "addressRegion": "Tamil Nadu", "postalCode": "600053", "addressCountry": "IN" },
+  "geo": { "@type": "GeoCoordinates", "latitude": 13.1143, "longitude": 80.1548 },
+  "openingHoursSpecification": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
+  "sameAs": ["https://in.linkedin.com/company/sunwaretechnologies"]
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Sunware Technologies",
+  "url": "https://sunwaretechnologies.com",
+  "potentialAction": { "@type": "SearchAction", "target": { "@type": "EntryPoint", "urlTemplate": "https://sunwaretechnologies.com/blog?q={search_term_string}" }, "query-input": "required name=search_term_string" }
+};
+
 export const metadata: Metadata = {
-  // 55 chars — within the 50–60 target
   title: "Sunware Technologies | AI, Data & Cloud Solutions",
-  // 150 chars — within the 120–160 target; keywords: AI, Data Engineering, Cloud Solutions, Digital Transformation
   description: "Sunware Technologies delivers AI, Data Engineering, Cloud Solutions & Digital Transformation for global enterprises. Offices in USA, UAE, UK & India.",
   keywords: "AI solutions, data engineering, cloud solutions, digital transformation, Sunware Technologies, enterprise software, machine learning, IoT, Chennai, USA, Dubai, UK, India",
   authors: [{ name: "Sunware Technologies" }],
@@ -35,13 +74,13 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://sunwaretechnologies.com/",
-    languages: {
-      en: "https://sunwaretechnologies.com/",
-      "en-IN": "https://sunwaretechnologies.in/",
-    },
+    languages: { en: "https://sunwaretechnologies.com/", "en-IN": "https://sunwaretechnologies.in/" },
   },
-  verification: {
-    google: "google-site-verification-token-here",
+  // JSON-LD via metadata.other — avoids raw <script> in JSX and hydration warnings
+  other: {
+    "script:ld+json:org": JSON.stringify(orgSchema),
+    "script:ld+json:local": JSON.stringify(localBizSchema),
+    "script:ld+json:web": JSON.stringify(websiteSchema),
   },
 };
 
@@ -58,86 +97,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
         <link rel="stylesheet" href="/assets/css/magnific-popup.css" />
         <link rel="stylesheet" href="/assets/css/style.css" />
-        {/* Organization Schema */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "Sunware Technologies",
-          "url": "https://sunwaretechnologies.com",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://sunwaretechnologies.com/main%20logo.png",
-            "width": 200,
-            "height": 60
-          },
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "contactType": "customer support",
-            "email": "connect@sunwaretechnologies.com",
-            "availableLanguage": ["English"]
-          },
-          "description": "Sunware Technologies is a global technology services company specialising in Artificial Intelligence, Data Engineering, Cloud Solutions, Digital Transformation and Product Engineering.",
-          "foundingLocation": "Cupertino, California, USA",
-          "numberOfEmployees": { "@type": "QuantitativeValue", "minValue": 50, "maxValue": 500 },
-          "sameAs": [
-            "https://in.linkedin.com/company/sunwaretechnologies",
-            "https://www.youtube.com/@sunwaretechnologies",
-            "https://www.instagram.com/sunwaretechnologies",
-            "https://sunwaretechnologies.in"
-          ],
-          "address": [
-            {"@type":"PostalAddress","streetAddress":"20065 Stevens Creek Blvd, Suite B-2B","addressLocality":"Cupertino","addressRegion":"CA","postalCode":"95014","addressCountry":"US"},
-            {"@type":"PostalAddress","streetAddress":"Unit No. 144, DMCC Business Centre, Level 5, Jewellery & Gemplex 2","addressLocality":"Dubai","addressCountry":"AE"},
-            {"@type":"PostalAddress","streetAddress":"6th Floor, Forest House, 16-20 Clements Road","addressLocality":"Ilford","postalCode":"IG1 1BA","addressCountry":"GB"},
-            {"@type":"PostalAddress","streetAddress":"117, KSR Nagar, Ambattur","addressLocality":"Chennai","addressRegion":"Tamil Nadu","postalCode":"600053","addressCountry":"IN"}
-          ],
-          "areaServed": ["US","AE","GB","IN"],
-          "knowsAbout": ["Artificial Intelligence","Data Engineering","Cloud Computing","Digital Transformation","Product Engineering","IoT Solutions","Cybersecurity","Salesforce","Microsoft Azure","Neo4j","Odoo ERP"]
-        })}} />
-        {/* LocalBusiness Schema — Chennai HQ (India) */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "LocalBusiness",
-          "name": "Sunware Technologies Pvt. Ltd.",
-          "url": "https://sunwaretechnologies.in",
-          "image": "https://sunwaretechnologies.com/main%20logo.png",
-          "description": "AI, Data Engineering and Cloud Solutions company in Chennai, India.",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "117, KSR Nagar, Ambattur",
-            "addressLocality": "Chennai",
-            "addressRegion": "Tamil Nadu",
-            "postalCode": "600053",
-            "addressCountry": "IN"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 13.1143,
-            "longitude": 80.1548
-          },
-          "openingHoursSpecification": {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-            "opens": "09:00",
-            "closes": "18:00"
-          },
-          "sameAs": ["https://in.linkedin.com/company/sunwaretechnologies"]
-        })}} />
-        {/* WebSite Schema */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-          "name": "Sunware Technologies",
-          "url": "https://sunwaretechnologies.com",
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": {
-              "@type": "EntryPoint",
-              "urlTemplate": "https://sunwaretechnologies.com/blog?q={search_term_string}"
-            },
-            "query-input": "required name=search_term_string"
-          }
-        })}} />
       </head>
       <body>
         <DomainSEO />
@@ -154,11 +113,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         <EnquireModal />
         <Scripts />
+        {/* All scripts afterInteractive — compatible with App Router */}
+        <Script src="/assets/js/jquery-3.7.1.min.js" strategy="afterInteractive" />
+        <Script src="/assets/js/bootstrap.min.js" strategy="afterInteractive" />
+        <Script src="/assets/js/wow.min.js" strategy="afterInteractive" />
+        <Script src="/assets/js/swiper-bundle.min.js" strategy="afterInteractive" />
+        <Script src="/assets/js/gsap.js" strategy="afterInteractive" />
+        <Script src="/assets/js/scroll-trigger.js" strategy="afterInteractive" />
+        <Script src="/assets/js/split-text.js" strategy="afterInteractive" />
         {/* Google Analytics GA4 */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-698R671PW8"
-          strategy="afterInteractive"
-        />
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-698R671PW8" strategy="afterInteractive" />
         <Script id="gtag-init" strategy="afterInteractive">{`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
@@ -170,13 +134,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             linker: { domains: ['sunwaretechnologies.com', 'sunwaretechnologies.in', 'sunware.in'] }
           });
         `}</Script>
-        <Script src="/assets/js/jquery-3.7.1.min.js" strategy="beforeInteractive" />
-        <Script src="/assets/js/bootstrap.min.js" strategy="afterInteractive" />
-        <Script src="/assets/js/wow.min.js" strategy="afterInteractive" />
-        <Script src="/assets/js/swiper-bundle.min.js" strategy="afterInteractive" />
-        <Script src="/assets/js/gsap.js" strategy="afterInteractive" />
-        <Script src="/assets/js/scroll-trigger.js" strategy="afterInteractive" />
-        <Script src="/assets/js/split-text.js" strategy="afterInteractive" />
       </body>
     </html>
   );
