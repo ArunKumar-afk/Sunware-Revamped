@@ -15,9 +15,6 @@ export default function Footer() {
                 <p style={{ fontStyle: "italic", color: "#EF7F1A", margin: "18px 0 8px 0", fontSize: "14px", fontWeight: 500 }}>
                   Advanced Data &amp; AI Solutions Tailored to Your Needs.
                 </p>
-                <p style={{ color: "#aaa", fontSize: "13px", lineHeight: "1.8", margin: "0" }}>
-                  Offices in USA · UAE · UK · India
-                </p>
                 {/* Social icons */}
                 <div style={{ display: "flex", gap: "12px", marginTop: "20px" }}>
                   <a href="https://in.linkedin.com/company/sunwaretechnologies" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
@@ -83,17 +80,6 @@ export default function Footer() {
                     >
                       connect@sunwaretechnologies.com
                     </a>
-                  </div>
-                </div>
-                <div className="contact-item" style={{ display: "flex", gap: "12px", alignItems: "flex-start" }}>
-                  <div style={{ color: "#EF7F1A", fontSize: "18px", marginTop: "2px", flexShrink: 0 }}>
-                    <i className="flaticon-location"></i>
-                  </div>
-                  <div>
-                    <span style={{ color: "#888", fontSize: "12px", display: "block", marginBottom: "4px", textTransform: "uppercase", letterSpacing: "0.5px" }}>Offices</span>
-                    <span style={{ color: "#aaa", fontSize: "13px", lineHeight: "1.7" }}>
-                      USA · UAE · UK · India
-                    </span>
                   </div>
                 </div>
               </div>

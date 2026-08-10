@@ -51,22 +51,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link rel="apple-touch-icon" href="/favicon.png" />
-        {/* Google Analytics GA4 - tracks all three domains: sunwaretechnologies.com, sunwaretechnologies.in, sunware.in */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-698R671PW8"></script>
-        <script dangerouslySetInnerHTML={{ __html: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-698R671PW8', {
-            send_page_view: true,
-            page_title: document.title,
-            page_path: window.location.pathname,
-            page_location: window.location.href,
-            linker: {
-              domains: ['sunwaretechnologies.com', 'sunwaretechnologies.in', 'sunware.in']
-            }
-          });
-        `}} />
         <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
         <link rel="stylesheet" href="/assets/css/fontawesome.css" />
         <link rel="stylesheet" href="/assets/font/flaticon_flexitype.css" />
@@ -170,6 +154,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         <EnquireModal />
         <Scripts />
+        {/* Google Analytics GA4 */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-698R671PW8"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-698R671PW8', {
+            send_page_view: true,
+            page_path: window.location.pathname,
+            page_location: window.location.href,
+            linker: { domains: ['sunwaretechnologies.com', 'sunwaretechnologies.in', 'sunware.in'] }
+          });
+        `}</Script>
         <Script src="/assets/js/jquery-3.7.1.min.js" strategy="beforeInteractive" />
         <Script src="/assets/js/bootstrap.min.js" strategy="afterInteractive" />
         <Script src="/assets/js/wow.min.js" strategy="afterInteractive" />
