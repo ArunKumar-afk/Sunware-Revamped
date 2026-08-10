@@ -73,9 +73,9 @@ export default function FullscreenNav() {
       </ul>
       <div className="nav-footer">
         <div className="nav-footer-social">
-          <a href="https://in.linkedin.com/company/sunwaretechnologies" target="_blank"><i className="fab fa-linkedin-in"></i></a>
-          <a href="https://www.youtube.com/@sunwaretechnologies" target="_blank"><i className="fab fa-youtube"></i></a>
-          <a href="https://www.instagram.com/sunwaretechnologies" target="_blank"><i className="fab fa-instagram"></i></a>
+          <a href="https://in.linkedin.com/company/sunwaretechnologies" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i className="fab fa-linkedin-in"></i><span style={{ marginLeft: "6px", fontSize: "13px" }}>LinkedIn</span></a>
+          <a href="https://www.youtube.com/@sunwaretechnologies" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i className="fab fa-youtube"></i><span style={{ marginLeft: "6px", fontSize: "13px" }}>YouTube</span></a>
+          <a href="https://www.instagram.com/sunwaretechnologies" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i className="fab fa-instagram"></i><span style={{ marginLeft: "6px", fontSize: "13px" }}>Instagram</span></a>
         </div>
         <a className="default_button" href="#" onClick={(e) => { e.preventDefault(); (window as any).openEnquireModal?.(e); }} style={{ background: "#EF7F1A", color: "#fff" }}>Enquire Now <i className="flaticon-right-up"></i></a>
       </div>
