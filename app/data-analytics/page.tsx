@@ -7,87 +7,180 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://sunwaretechnologies.com/data-analytics" },
 };
 
-const content = `<div class="banner__one" style="position: relative; overflow: hidden; background: #fff;">
-		<video autoplay loop muted playsinline style="position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; object-fit: cover; transform: translate(-50%, -50%); z-index: 0; opacity: 0.6;">
-			<source src="waves_1.mp4" type="video/mp4">
-		</video>
-		
-		<div class="banner__one-image" style="padding: 100px 0; position: relative; z-index: 1; background: transparent;">
-			<div class="container jc-center text-center">
-				<h1 style="color: var(--primary-color-1); font-size: clamp(2.5rem, 6vw, 4rem); line-height: 1.1; margin-bottom: 20px;">Data Analytics</h1>
-				<p style="font-size: 20px; color: #444; margin: 0 auto; max-width: 800px;">Empowering Businesses with Advanced Data Analytics</p>
+const content = `
+	<section class="story-hero" style="background: linear-gradient(rgba(10,15,30,0.45), rgba(10,15,30,0.65)), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1400&q=80&fit=crop'); background-size: cover; background-position: center; padding: 40px 0 100px 0;">
+		<div class="container text-center">
+			<div class="wow fadeInUp" data-wow-delay=".2s" style="margin-bottom: 30px;">
+				<a href="/" class="default_button" style="padding: 10px 25px; font-size: 14px; background: transparent; border: 1px solid #fff; color: #fff;"><i class="fal fa-long-arrow-left" style="margin-right: 8px;"></i> Back to Home</a>
 			</div>
+			<div class="wow fadeInUp" data-wow-delay=".4s">
+				<h1 style="color: #fff; font-size: clamp(2.5rem, 6vw, 4rem); margin-bottom: 20px;">Data Analytics</h1>
+			</div>
+			<p class="wow fadeInUp" data-wow-delay=".6s" style="font-size: 24px; max-width: 900px; margin: 0 auto; color: #ffffff; text-shadow: 0 2px 10px rgba(0,0,0,0.4);">Transforming raw data into strategic intelligence that drives confident decisions.</p>
 		</div>
-	</div>
+	</section>
 
-	<div class="container section-padding">
-		<div class="story-row al-center">
-			<div class="story-content wow fadeInLeft">
-				<h2 style="font-size: 42px; font-weight: 700; margin-bottom: 25px;">Beyond the Raw Data</h2>
-				<p style="font-size: 18px; line-height: 1.8; color: #555;">Sunware Technologies empowers businesses to unlock the power of their data. We transform raw information into actionable insights through data mining, predictive analytics, and data visualization, allowing companies to make better decisions and drive innovation.</p>
-			</div>
-			<div class="story-image wow fadeInRight">
-				<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Data Analytics">
-			</div>
-		</div>
-	</div>
-
-    <section class="tailored-grid"><div class="container"><div class="row g-4">
-        <div class="col-lg-3"><div class="solution-card"><h4>Predictive Analytics</h4><p>Use statistical models and machine learning to predict future trends.</p></div></div>
-        <div class="col-lg-3"><div class="solution-card"><h4>Data Visualization</h4><p>Create intuitive visual representations of data for better understanding.</p></div></div>
-        <div class="col-lg-3"><div class="solution-card"><h4>Real-Time Analytics</h4><p>Analyze data in real-time to make timely decisions.</p></div></div>
-        <div class="col-lg-3"><div class="solution-card"><h4>Business Intelligence</h4><p>Transform raw data into strategic insights that drive growth.</p></div></div>
-    </div></div></section>
-
-	<section style="padding:100px 0;background:#fff;">
+	<section class="hc-intro">
 		<div class="container">
-			<div class="text-center mb-60">
-				<p style="font-size:16px;color:#EF7F1A;font-weight:600;margin-bottom:10px;">Who is this service for?</p>
-				<h2 style="font-size:42px;font-weight:700;">Designed For</h2>
-			</div>
-			<div class="row g-4">
-				<div class="col-lg-4">
-					<div class="solution-card text-center">
-						<i class="fas fa-chart-line" style="font-size:40px;color:#EF7F1A;margin-bottom:20px;"></i>
-						<h4>Data-Driven Decision Makers</h4>
-						<p>Organizations seeking to make strategic decisions based on data-backed insights.</p>
-					</div>
+			<div class="hc-intro-grid">
+				<div class="wow fadeInLeft" data-wow-delay=".1s">
+					<div class="hc-intro-label">Services / Data Analytics</div>
+					<h2>From Raw Data to Business Intelligence</h2>
+					<p>Most organisations are sitting on vast reserves of untapped data. Sunware's Data Analytics practice transforms that raw material into clear, actionable intelligence — giving your leaders the confidence to make faster, smarter decisions backed by evidence rather than intuition.</p>
+					<p>Our team of data analysts, BI engineers and data scientists works across your entire data estate to design and deliver analytics solutions that are intuitive for business users, scalable for enterprise volumes and rigorous enough to trust.</p>
+					<a href="#" class="default_button mt-20" onclick="openEnquireModal(event)" style="display:inline-flex;margin-top:20px;">Talk to a Data Expert <i class="flaticon-right-up"></i></a>
 				</div>
-				<div class="col-lg-4">
-					<div class="solution-card text-center">
-						<i class="fas fa-search" style="font-size:40px;color:#EF7F1A;margin-bottom:20px;"></i>
-						<h4>Hidden Potential Seekers</h4>
-						<p>Businesses looking to uncover hidden patterns and trends within their data.</p>
-					</div>
-				</div>
-				<div class="col-lg-4">
-					<div class="solution-card text-center">
-						<i class="fas fa-lightbulb" style="font-size:40px;color:#EF7F1A;margin-bottom:20px;"></i>
-						<h4>Insights Explorers</h4>
-						<p>Companies aiming to transform raw data into actionable knowledge.</p>
+				<div class="hc-intro-visual wow fadeInRight" data-wow-delay=".2s">
+					<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80&fit=crop" alt="Data Analytics">
+					<div class="hc-intro-badge">
+						<div class="hc-badge-icon"><i class="fal fa-chart-bar"></i></div>
+						<div class="hc-badge-text">
+							<strong>Real-Time Analytics</strong>
+							<span>BI to predictive models</span>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<div class="container">
+	<section class="hc-benefits">
+		<div class="container">
+			<div class="hc-section-head wow fadeInUp" data-wow-delay=".1s">
+				<div class="hc-pill">Why Partner With Us</div>
+				<h2>What Data Analytics Delivers<br>for Your Business</h2>
+				<p>Four outcomes that turn your data into a genuine competitive advantage.</p>
+			</div>
+			<div class="hc-benefits-grid">
+
+				<div class="hc-benefit-card wow fadeInUp" data-wow-delay=".1s">
+					<div class="hc-benefit-ghost">01</div>
+					<div class="hc-benefit-icon i1"><i class="fal fa-eye"></i></div>
+					<h4>Predictive Intelligence</h4>
+					<p>Move from describing what happened to predicting what will happen next — enabling proactive decisions on demand forecasting, churn prevention, risk management and revenue optimisation.</p>
+				</div>
+
+				<div class="hc-benefit-card wow fadeInUp" data-wow-delay=".2s">
+					<div class="hc-benefit-ghost">02</div>
+					<div class="hc-benefit-icon i2"><i class="fal fa-tachometer-alt"></i></div>
+					<h4>Real-Time Decisions</h4>
+					<p>With streaming analytics and live dashboards, your teams gain instant visibility into operations — responding to opportunities and threats in minutes rather than waiting for yesterday's reports.</p>
+				</div>
+
+				<div class="hc-benefit-card wow fadeInUp" data-wow-delay=".3s">
+					<div class="hc-benefit-ghost">03</div>
+					<div class="hc-benefit-icon i3"><i class="fal fa-chart-line"></i></div>
+					<h4>Revenue Growth</h4>
+					<p>Customer segmentation, pricing analytics and campaign attribution models help your commercial teams identify the highest-value growth levers and allocate resources with precision.</p>
+				</div>
+
+				<div class="hc-benefit-card wow fadeInUp" data-wow-delay=".4s">
+					<div class="hc-benefit-ghost">04</div>
+					<div class="hc-benefit-icon i4"><i class="fal fa-users"></i></div>
+					<h4>Self-Service Analytics</h4>
+					<p>We build governed data products and semantic layers that empower business users to explore and answer their own questions — reducing the analytics backlog and accelerating time to insight.</p>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<section class="hc-solutions">
+		<div class="container">
+			<div class="hc-section-head wow fadeInUp" data-wow-delay=".1s">
+				<div class="hc-pill">Our Services</div>
+				<h2>Our Data Analytics<br>Capabilities</h2>
+				<p>End-to-end analytics services from data foundations to advanced modelling.</p>
+			</div>
+			<div class="hc-sol-grid">
+
+				<div class="hc-sol-item wow fadeInUp" data-wow-delay=".1s">
+					<div class="hc-sol-num">01 / 05</div>
+					<div class="hc-sol-icon" aria-hidden="true"><i class="fal fa-chart-pie"></i></div>
+					<h4>Business Intelligence &amp; Dashboards</h4>
+					<p>We design and build enterprise BI platforms and interactive dashboards — from executive KPI scorecards to granular operational reports — using Power BI, Tableau, Looker and custom solutions.</p>
+				</div>
+
+				<div class="hc-sol-item wow fadeInUp" data-wow-delay=".15s">
+					<div class="hc-sol-num">02 / 05</div>
+					<div class="hc-sol-icon" aria-hidden="true"><i class="fal fa-brain"></i></div>
+					<h4>Predictive Analytics</h4>
+					<p>Our data scientists build statistical and ML models that forecast demand, identify at-risk customers, optimise inventory and surface operational anomalies before they become costly incidents.</p>
+				</div>
+
+				<div class="hc-sol-item wow fadeInUp" data-wow-delay=".2s">
+					<div class="hc-sol-num">03 / 05</div>
+					<div class="hc-sol-icon" aria-hidden="true"><i class="fal fa-bolt"></i></div>
+					<h4>Real-Time Analytics</h4>
+					<p>We implement streaming data pipelines and real-time dashboards using Apache Kafka, Flink, Spark Streaming and cloud-native event processing — delivering sub-second insight on live operations.</p>
+				</div>
+
+				<div class="hc-sol-item wow fadeInUp" data-wow-delay=".25s">
+					<div class="hc-sol-num">04 / 05</div>
+					<div class="hc-sol-icon" aria-hidden="true"><i class="fal fa-user-chart"></i></div>
+					<h4>Customer Analytics</h4>
+					<p>From 360-degree customer profiles and lifetime value modelling to next-best-action engines and personalisation frameworks — we help you understand, acquire and retain customers more effectively.</p>
+				</div>
+
+				<div class="hc-sol-item wow fadeInUp" data-wow-delay=".3s">
+					<div class="hc-sol-num">05 / 05</div>
+					<div class="hc-sol-icon" aria-hidden="true"><i class="fal fa-shield-check"></i></div>
+					<h4>Data Quality &amp; Governance</h4>
+					<p>We implement data catalogues, quality monitoring, lineage tracking and governance policies that ensure your analytics are built on reliable, trustworthy and well-documented data assets.</p>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<section class="hc-why" aria-labelledby="why-heading-da">
+		<div class="hc-why-stripe" aria-hidden="true"></div>
+		<div class="container" style="position:relative;z-index:2;">
+			<div class="hc-section-head wow fadeInUp" data-wow-delay=".1s">
+				<div class="hc-pill" role="text">Why Choose Sunware</div>
+				<h2 id="why-heading-da">Why Data Teams Choose Us</h2>
+				<p>Three differentiators that define our Data Analytics practice.</p>
+			</div>
+			<div class="hc-why-grid" role="list">
+
+				<article class="hc-why-card wow fadeInUp" data-wow-delay=".1s" role="listitem">
+					<div class="hc-why-icon-wrap" aria-hidden="true"><i class="fal fa-layer-group"></i></div>
+					<div class="hc-why-divider" aria-hidden="true"></div>
+					<h3>Full Data Stack</h3>
+					<p>We cover the entire analytics stack — ingestion, transformation, modelling, visualisation and governance — so you get a cohesive solution rather than disconnected point tools.</p>
+				</article>
+
+				<article class="hc-why-card wow fadeInUp" data-wow-delay=".2s" role="listitem">
+					<div class="hc-why-icon-wrap" aria-hidden="true"><i class="fal fa-briefcase"></i></div>
+					<div class="hc-why-divider" aria-hidden="true"></div>
+					<h3>Business-First Approach</h3>
+					<p>We always start with the business question, not the technology. Every dashboard and model we build is tied to a decision you need to make and a metric you need to move.</p>
+				</article>
+
+				<article class="hc-why-card wow fadeInUp" data-wow-delay=".3s" role="listitem">
+					<div class="hc-why-icon-wrap" aria-hidden="true"><i class="fal fa-certificate"></i></div>
+					<div class="hc-why-divider" aria-hidden="true"></div>
+					<h3>Certified BI Expertise</h3>
+					<p>Our team holds certifications across Microsoft Power BI, Tableau, dbt, Databricks and major cloud analytics platforms — bringing verified expertise to every engagement.</p>
+				</article>
+
+			</div>
+		</div>
+	</section>
+
+	<div class="container" style="padding:80px 15px;">
 		<div class="row">
 			<div class="col-xl-12">
 				<div class="footer__cta-area mb-60">
 					<div class="row al-center">
 						<div class="col-xl-6 col-lg-7 lg-mb-40">
 							<div class="footer__cta-area-left lg-t-center">
-								<h2>Unlock the Power of Your Data ? Let's Talk</h2>
+								<h2>Turn Your Data Into a Competitive Advantage</h2>
 							</div>
 						</div>
 						<div class="col-xl-6 col-lg-5">
 							<div class="footer__cta-area-right d-flex al-center flex-wrap jc-end lg-jc-center gap-25">
-								<a class="default_button" href="#" onclick="openEnquireModal(event)">Start Today<i class="flaticon-right-up"></i></a>
-
-
-
-								</div>
+								<a class="default_button" href="#" onclick="openEnquireModal(event)">Get Started Today <i class="flaticon-right-up"></i></a>
 							</div>
 						</div>
 					</div>
@@ -95,7 +188,8 @@ const content = `<div class="banner__one" style="position: relative; overflow: h
 			</div>
 		</div>
 	</div>
-					</div>`;
+
+</div>`;
 
 export default function Page() {
   return <HtmlPage content={content} />;
