@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 const content = `<!-- Page Hero Start -->
-        <section class="story-hero" style="background: linear-gradient(rgba(10,15,30,0.3), rgba(10,15,30,0.55)), url('images/Industries/Sunware_Industries_Banking_and_Financial_Services_Banner.png'); background-size: cover; background-position: center; padding: 40px 0 100px 0;">
+        <section class="story-hero" style="background: linear-gradient(rgba(10,15,30,0.3), rgba(10,15,30,0.55)), url('/images/Industries/Sunware_Industries_Banking_and_Financial_Services_Banner.png'); background-size: cover; background-position: center; padding: 40px 0 100px 0;">
                 <div class="container text-center">
                         <div class="wow fadeInUp" data-wow-delay=".2s" style="margin-bottom: 30px;">
                                 <a href="/" class="default_button" style="padding: 10px 25px; font-size: 14px; background: transparent; border: 1px solid #fff; color: #fff;"><i class="fal fa-long-arrow-left" style="margin-right: 8px;"></i> Back to Home</a>
@@ -31,7 +31,7 @@ const content = `<!-- Page Hero Start -->
                                         <p style="font-size: 18px; line-height: 1.8; color: #555;">In today's fast-paced digital world, where 80% of financial transactions are now conducted online, the banking and financial services industry is experiencing a profound transformation. We empower banks and financial institutions to embrace this digital revolution and thrive in the new financial landscape.</p>
                                 </div>
                                 <div class="col-lg-6 wow fadeInRight">
-                                        <img src="images/Industries/Sunware_Industries_Banking-and-Financial_Services_Our_Tailored_Solutions.png" alt="Banking Transformation" style="width:100%; border-radius: 24px;">
+                                        <img src="/images/Industries/Sunware_Industries_Banking-and-Financial_Services_Our_Tailored_Solutions.png" alt="Banking Transformation" style="width:100%; border-radius: 24px;">
                                 </div>
                         </div>
                 </div>

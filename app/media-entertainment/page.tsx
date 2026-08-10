@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 const content = `<!-- Page Hero Start -->
-        <section class="story-hero" style="background: linear-gradient(rgba(10,15,30,0.3), rgba(10,15,30,0.6)), url('https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1400&q=80&fit=crop'); background-size: cover; background-position: center center; min-height: 320px; padding: 60px 0 60px 0;">
+        <section class="story-hero" style="background: linear-gradient(rgba(10,15,30,0.3), rgba(10,15,30,0.6)), url('/images/Industries/Sunware_Industries_Media-and-Entertainment_Banner.png'); background-size: cover; background-position: center center; min-height: 320px; padding: 60px 0 60px 0;">
                 <div class="container text-center">
                         <div class="wow fadeInUp" data-wow-delay=".2s" style="margin-bottom: 30px;">
                                 <a href="/" class="default_button" style="padding: 10px 25px; font-size: 14px; background: transparent; border: 1px solid #fff; color: #fff;"><i class="fal fa-long-arrow-left" style="margin-right: 8px;"></i> Back to Home</a>
@@ -31,7 +31,7 @@ const content = `<!-- Page Hero Start -->
                                         <p style="font-size: 18px; line-height: 1.8; color: #555;">In the fast-paced and ever-evolving world of media and entertainment, staying ahead of the curve is essential for success. With over 70% of consumers now preferring streaming services to traditional television, and social media engagement driving 50% of content discovery, the industry is undergoing a digital revolution. We empower media and entertainment companies to harness these trends and thrive in the digital age.</p>
                                 </div>
                                 <div class="col-lg-6 wow fadeInRight">
-                                        <img src="images/Industries/Sunware_Industries_Media-and-Entertainment_Our_Tailored_Solutions.png" alt="Media Transformation" style="width:100%; border-radius: 24px;">
+                                        <img src="/images/Industries/Sunware_Industries_Media-and-Entertainment_Our_Tailored_Solutions.png" alt="Media Transformation" style="width:100%; border-radius: 24px;">
                                 </div>
                         </div>
                 </div>

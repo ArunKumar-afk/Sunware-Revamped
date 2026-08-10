@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 const content = `<!-- --- BANNER HERO (matches site pattern) --- -->
-	<section class="story-hero" style="background: linear-gradient(rgba(10,15,30,0.3), rgba(10,15,30,0.55)), url('images/Industries/Sunware_Industries_Healthcare_and_Life_Sciences_Banner.png'); background-size: cover; background-position: center; padding: 40px 0 100px 0;">
+	<section class="story-hero" style="background: linear-gradient(rgba(10,15,30,0.3), rgba(10,15,30,0.55)), url('/images/Industries/Sunware_Industries_Healthcare_and_Life_Sciences_Banner.png'); background-size: cover; background-position: center; padding: 40px 0 100px 0;">
                 <div class="container text-center">
                         <div class="wow fadeInUp" data-wow-delay=".2s" style="margin-bottom: 30px;">
                                 <a href="/" class="default_button" style="padding: 10px 25px; font-size: 14px; background: transparent; border: 1px solid #fff; color: #fff;"><i class="fal fa-long-arrow-left" style="margin-right: 8px;"></i> Back to Home</a>
@@ -32,7 +32,7 @@ const content = `<!-- --- BANNER HERO (matches site pattern) --- -->
 					<a href="#" class="default_button mt-20" onclick="openEnquireModal(event)" style="display:inline-flex;margin-top:20px;">Talk to an Expert <i class="flaticon-right-up"></i></a>
 				</div>
 				<div class="hc-intro-visual wow fadeInRight" data-wow-delay=".2s">
-					<img src="images/Industries/Sunware_Industries_Healthcare_and_Life_Sciences_Our-tailored-IT-solutions.png" alt="Healthcare IT Solutions">
+					<img src="/images/Industries/Sunware_Industries_Healthcare_and_Life_Sciences_Our-tailored-IT-solutions.png" alt="Healthcare IT Solutions">
 					<div class="hc-intro-badge">
 						<div class="hc-badge-icon"><i class="fal fa-shield-check"></i></div>
 						<div class="hc-badge-text">

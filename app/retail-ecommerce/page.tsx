@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 const content = `<!-- Page Hero Start -->
-        <section class="story-hero" style="background: linear-gradient(rgba(10,15,30,0.3), rgba(10,15,30,0.55)), url('images/Industries/Sunware_Industries_Retail-and-E-Commerce_Banner.png'); background-size: cover; background-position: center; padding: 40px 0 100px 0;">
+        <section class="story-hero" style="background: linear-gradient(rgba(10,15,30,0.3), rgba(10,15,30,0.55)), url('/images/Industries/Sunware_Industries_Retail-and-E-Commerce_Banner.png'); background-size: cover; background-position: center; padding: 40px 0 100px 0;">
                 <div class="container text-center">
                         <div class="wow fadeInUp" data-wow-delay=".2s" style="margin-bottom: 30px;">
                                 <a href="/" class="default_button" style="padding: 10px 25px; font-size: 14px; background: transparent; border: 1px solid #fff; color: #fff;"><i class="fal fa-long-arrow-left" style="margin-right: 8px;"></i> Back to Home</a>
@@ -31,7 +31,7 @@ const content = `<!-- Page Hero Start -->
                                         <p style="font-size: 18px; line-height: 1.8; color: #555;">The retail landscape is undergoing a seismic shift, with online sales projected to account for 24% of total retail sales by 2026. In this dynamic environment, we empower retailers to not only survive but thrive. We specialize in delivering IT solutions that transform online shopping experiences, optimize supply chains, and drive customer engagement.</p>
                                 </div>
                                 <div class="col-lg-6 wow fadeInRight">
-                                        <img src="images/Industries/Sunware_Industries_Retail-and-E-Commerce_Our_Tailored_Solutions.png" alt="Retail Transformation" style="width:100%; border-radius: 24px;">
+                                        <img src="/images/Industries/Sunware_Industries_Retail-and-E-Commerce_Our_Tailored_Solutions.png" alt="Retail Transformation" style="width:100%; border-radius: 24px;">
                                 </div>
                         </div>
                 </div>
