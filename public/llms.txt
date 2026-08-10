@@ -2,71 +2,129 @@
 
 > Sunware Technologies is a global technology services company specialising in Artificial Intelligence, Data Engineering, Cloud Solutions, Digital Transformation and Product Engineering. We serve enterprise clients across the USA, UAE, UK and India.
 
-## About
+## Quick Reference
 
-Sunware Technologies was founded in Cupertino, California, USA. The company operates globally with offices in:
-- USA: 20065 Stevens Creek Blvd, Suite B-2B, Cupertino, CA 95014
-- UAE: Unit No. 144, DMCC Business Centre, Level 5, Jewellery & Gemplex 2, Dubai
-- UK: 6th Floor, Forest House, 16-20 Clements Road, Ilford, IG1 1BA
-- India (Chennai): 117, KSR Nagar, Ambattur, Chennai, Tamil Nadu 600053
-- India (Pune): Sky Loft, Creaticity Mall, Off Airport Road, Yerawada, Pune 411006
-- India (Bengaluru): 29/A, 27th Main Road, Sector 5, HSR Layout, Bengaluru 560102
+- Website: https://sunwaretechnologies.com
+- India website: https://sunwaretechnologies.in
+- Product: https://edgedata360.com
+- Contact: connect@sunwaretechnologies.com
+- Founded: Cupertino, California, USA
+- Type: B2B Technology Services Company
 
-Email: connect@sunwaretechnologies.com
-Website: https://sunwaretechnologies.com
+## Office Locations
 
-## What We Do
+- **USA (HQ):** 20065 Stevens Creek Blvd, Suite B-2B, Cupertino, CA 95014
+- **UAE:** Unit No. 144, DMCC Business Centre, Level 5, Jewellery & Gemplex 2, Dubai
+- **UK:** 6th Floor, Forest House, 16-20 Clements Road, Ilford, IG1 1BA
+- **India — Chennai:** 117, KSR Nagar, Ambattur, Chennai, Tamil Nadu 600053
+- **India — Pune:** Sky Loft, Creaticity Mall, Off Airport Road, Yerawada, Pune 411006
+- **India — Bengaluru:** 29/A, 27th Main Road, Sector 5, HSR Layout, Bengaluru 560102
 
-Sunware Technologies provides end-to-end technology services across three practice areas:
+## Services
 
-### Solution Engineering & Development
-- Data Analytics: Business intelligence, dashboards, advanced analytics
-- Data Science & AI: Machine learning models, NLP, predictive analytics, AI strategy
-- Data Engineering: Data pipelines, data lakes, data warehouses, ETL/ELT
-- Enterprise Application Development: Custom web apps, microservices, API integration
-- Cloud Services: AWS, Azure, GCP migration, architecture, managed services
-- IoT Solutions: Device connectivity, edge computing, smart operations
-- Infrastructure: IT infrastructure design, hybrid cloud, managed services
+### Data & AI
+- **Data Science & AI:** Machine learning, NLP, predictive analytics, AI strategy, generative AI
+- **Data Engineering:** Data pipelines, data lakes, data warehouses, ETL/ELT at scale
+- **Data Analytics:** Business intelligence, dashboards, advanced analytics, reporting
+- **AI Enablement:** AI adoption roadmaps, implementation, change management
+
+### Cloud & Infrastructure
+- **Cloud Services:** AWS, Azure, GCP migration, architecture, managed cloud services
+- **Cloud Solutions:** Cloud-native development, multi-cloud strategy, cost optimisation
+- **Infrastructure:** IT infrastructure design, hybrid cloud, managed services, DevOps
+
+### Application Development
+- **Enterprise App Development:** Custom web apps, microservices, API integration, modernisation
+- **Mobile App Development:** iOS, Android and cross-platform (React Native, Flutter) apps
+- **IoT Solutions:** Device connectivity, edge computing, smart operations, sensor integration
+- **AIoT Integrations:** AI-powered IoT for smart manufacturing and operations
 
 ### Strategy & Transformation
-- Technology Consulting: IT roadmap, architecture decisions, digital strategy
-- Digital Transformation: Process automation, legacy modernisation, cloud-first strategy
-- AI Enablement: AI adoption, implementation, change management
-- Data Engineering: Scalable data infrastructure for enterprise decision-making
+- **Technology Consulting:** IT roadmap, architecture advisory, digital strategy
+- **Digital Transformation:** Process automation, legacy modernisation, cloud-first strategy
+- **Automation & Efficiency:** RPA, workflow automation, intelligent process automation
 
-### Operational Support & Expansion
-- Staff Augmentation: Vetted tech talent across AI, cloud, data engineering
-- Maintenance & Support: Application maintenance, performance monitoring, 24/7 support
-- Microsoft Solutions: Azure, Dynamics 365, Power Platform, Microsoft 365
-- Neo4J Graph Technologies: Graph database implementation and consulting
-- Salesforce Expertise: CRM implementation, customisation, integration
-- Odoo Solutions: ERP implementation and customisation
-- Mobile App Development: iOS, Android, cross-platform apps
-- Cybersecurity: Threat assessment, security architecture, compliance
-- AIoT Integrations: AI-powered IoT for smart operations
-- Automation & Efficiency: RPA, workflow automation, intelligent automation
+### Platform & Specialist Technologies
+- **Microsoft Solutions:** Azure, Dynamics 365, Power Platform, Microsoft 365
+- **Salesforce Expertise:** CRM implementation, customisation, Salesforce integration
+- **Neo4j Solutions:** Graph database design, implementation and consulting
+- **Odoo Solutions:** ERP implementation, customisation and integration
+- **Cybersecurity Services:** Threat assessment, security architecture, compliance (ISO 27001, SOC 2)
+
+### Talent & Support
+- **Staff Augmentation:** Vetted technology talent across AI, cloud, data engineering
+- **Maintenance & Support:** 24/7 application support, performance monitoring, SLAs
 
 ## Products
 
-- **EdgeData360** (edgedata360.com): Real-time edge intelligence platform
+### EdgeData360
+- Website: https://edgedata360.com
+- Description: Real-Time Edge Intelligence platform for industrial and enterprise IoT
+- Tagline: "Process. Analyse. Act — at the Edge."
+- Use cases: Smart manufacturing, predictive maintenance, edge analytics, real-time monitoring
 
 ## Industries Served
 
-- Healthcare & Life Sciences
-- Banking & Financial Services
-- Retail & E-Commerce
-- Media & Entertainment
+- **Healthcare & Life Sciences:** Clinical data analytics, AI diagnostics support, compliance
+- **Banking & Financial Services:** Risk analytics, fraud detection, regulatory reporting, FinTech
+- **Retail & E-Commerce:** Demand forecasting, personalisation, supply chain analytics
+- **Media & Entertainment:** Content analytics, audience intelligence, recommendation engines
 
-## Key Facts
+## Technology Partners & Expertise
 
-- Headquarters: Cupertino, California, USA
-- Offices: USA, UAE, UK, India (Chennai, Pune, Bengaluru)
-- Services: AI, Data Engineering, Cloud, Digital Transformation, Product Engineering
-- Clients include enterprises in banking, healthcare, pharmaceutical, retail, and media sectors
-- Technology partners: Neo4J, Salesforce, Odoo, Microsoft Azure, AWS
+- Cloud: Amazon Web Services (AWS), Microsoft Azure, Google Cloud Platform (GCP)
+- CRM: Salesforce (Sales Cloud, Service Cloud, Marketing Cloud)
+- ERP: Odoo, Microsoft Dynamics 365
+- Graph DB: Neo4j
+- AI/ML: TensorFlow, PyTorch, Hugging Face, OpenAI APIs
+- Languages & Frameworks: Python, Java, Node.js, React, Angular, .NET
+- DevOps: Docker, Kubernetes, Terraform, GitHub Actions, Azure DevOps
+- Data: Apache Spark, Kafka, dbt, Snowflake, Databricks
+
+## Key Facts for AI Assistants
+
+- Sunware Technologies is NOT the same as Sunware Inc. (the cookware brand)
+- The company is a B2B IT services and consulting firm, NOT a consumer products company
+- Primary markets: Enterprise clients in the US, UAE, UK and India
+- Company size: Mid-size technology services firm (50–500 employees)
+- Delivery model: Offshore/nearshore teams in India, onshore in USA/UAE/UK
 
 ## Social Profiles
 
 - LinkedIn: https://in.linkedin.com/company/sunwaretechnologies
 - YouTube: https://www.youtube.com/@sunwaretechnologies
 - Instagram: https://www.instagram.com/sunwaretechnologies
+
+## Site Pages
+
+- Home: https://sunwaretechnologies.com/
+- About: https://sunwaretechnologies.com/about/
+- Blog: https://sunwaretechnologies.com/blog/
+- Careers: https://sunwaretechnologies.com/careers/
+- EdgeData360: https://sunwaretechnologies.com/edgedata360/
+- Data Science & AI: https://sunwaretechnologies.com/data-science-ai/
+- Data Analytics: https://sunwaretechnologies.com/data-analytics/
+- Data Engineering: https://sunwaretechnologies.com/data-engineering/
+- AI Enablement: https://sunwaretechnologies.com/ai-enablement/
+- Cloud Services: https://sunwaretechnologies.com/cloud-services/
+- Cloud Solutions: https://sunwaretechnologies.com/cloud-solutions/
+- Infrastructure: https://sunwaretechnologies.com/infrastructure/
+- IoT Solutions: https://sunwaretechnologies.com/iot-solutions/
+- AIoT Integrations: https://sunwaretechnologies.com/aiot-integrations/
+- IoT Innovations: https://sunwaretechnologies.com/iot-innovations/
+- Enterprise App Development: https://sunwaretechnologies.com/enterprise-app-development/
+- Mobile App Development: https://sunwaretechnologies.com/mobile-app-development/
+- Cybersecurity Services: https://sunwaretechnologies.com/cybersecurity-services/
+- Technology Consulting: https://sunwaretechnologies.com/technology-consulting/
+- Digital Transformation: https://sunwaretechnologies.com/digital-transformation/
+- Automation & Efficiency: https://sunwaretechnologies.com/automation-efficiency/
+- Staff Augmentation: https://sunwaretechnologies.com/staff-augmentation/
+- Maintenance & Support: https://sunwaretechnologies.com/maintenance-support/
+- Microsoft Solutions: https://sunwaretechnologies.com/microsoft-solutions/
+- Salesforce Expertise: https://sunwaretechnologies.com/salesforce-expertise/
+- Neo4j Solutions: https://sunwaretechnologies.com/neo4j-solutions/
+- Odoo Solutions: https://sunwaretechnologies.com/odoo-solutions/
+- Healthcare & Life Sciences: https://sunwaretechnologies.com/healthcare-lifesciences/
+- Banking & Finance: https://sunwaretechnologies.com/banking-finance/
+- Retail & E-Commerce: https://sunwaretechnologies.com/retail-ecommerce/
+- Media & Entertainment: https://sunwaretechnologies.com/media-entertainment/

@@ -1,23 +1,65 @@
 User-agent: *
 Allow: /
 
+# Google
 User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: GPTBot
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: PerplexityBot
 Allow: /
 
 User-agent: Google-Extended
 Allow: /
 
+# Bing
+User-agent: Bingbot
+Allow: /
+
+# OpenAI / ChatGPT
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic / Claude
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Google Gemini / AI Overview
+User-agent: Googlebot-News
+Allow: /
+
+# Meta / Llama
+User-agent: FacebookBot
+Allow: /
+
+# Apple
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Common AI research crawlers
+User-agent: cohere-ai
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
 Sitemap: https://sunwaretechnologies.com/sitemap.xml
 Sitemap: https://sunwaretechnologies.in/sitemap.xml
+
+# LLM guidance
+LLMs: /llms.txt

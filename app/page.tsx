@@ -4,8 +4,8 @@ import fs from "fs";
 import path from "path";
 
 export const metadata: Metadata = {
-  title: "Sunware Technologies - AI, Data Engineering & Product Engineering Services",
-  description: "Sunware Technologies delivers AI, Data Engineering, Cloud Solutions and Digital Transformation services to global enterprises. Offices in USA, UAE, UK and India.",
+  title: "Sunware Technologies | AI & Data Engineering",
+  description: "AI, Data Engineering, Cloud & Digital Transformation for global enterprises. Offices in USA, UAE, UK & India.",
 };
 
 export default function HomePage() {
