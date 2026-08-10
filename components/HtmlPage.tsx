@@ -28,6 +28,27 @@ export default function HtmlPage({ content }: { content: string }) {
       }
     }, 500);
 
+    // Handle iframe resizing for careers portal (message-based)
+    const portalIframe = ref.current.querySelector<HTMLIFrameElement>("#careers-portal-iframe");
+    if (portalIframe) {
+      let lastSetH = 0;
+      let resizeTimer: ReturnType<typeof setTimeout> | null = null;
+      const onMessage = (e: MessageEvent) => {
+        if (!e.data || e.data.type !== "portal-resize") return;
+        const h = parseInt(e.data.height, 10);
+        if (isNaN(h) || h <= 0) return;
+        const finalH = Math.min(Math.max(h + 60, 500), 4000);
+        if (Math.abs(finalH - lastSetH) > 20) {
+          if (resizeTimer) clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(() => {
+            lastSetH = finalH;
+            portalIframe.style.height = finalH + "px";
+          }, 100);
+        }
+      };
+      window.addEventListener("message", onMessage);
+    }
+
     // Handle iframe resizing for careers
     const iframe = ref.current.querySelector<HTMLIFrameElement>(".careers-iframe, iframe");
     if (iframe) {

@@ -51,30 +51,6 @@ const content = `<!-- Careers Hero Start -->
         </div>
     </section>
 
-    <script>
-    var portalIframe = document.getElementById('careers-portal-iframe');
-    var PADDING = 60;
-    var MIN_HEIGHT = 500;
-    var MAX_HEIGHT = 4000;
-    var resizeTimer = null;
-    var lastSetH = 0;
-
-    window.addEventListener('message', function(e) {
-        if (!portalIframe) return;
-        if (!e.data || e.data.type !== 'portal-resize') return;
-        var h = parseInt(e.data.height, 10);
-        if (isNaN(h) || h <= 0) return;
-        var finalH = Math.min(Math.max(h + PADDING, MIN_HEIGHT), MAX_HEIGHT);
-        if (Math.abs(finalH - lastSetH) > 20) {
-            clearTimeout(resizeTimer);
-            resizeTimer = setTimeout(function() {
-                lastSetH = finalH;
-                portalIframe.style.height = finalH + 'px';
-            }, 100);
-        }
-    });
-    </script>
-
     <!-- Humans First & Culture -->
     <section class="section-padding" style="background: #f8faff;">
         <div class="container">
