@@ -179,6 +179,22 @@
                 </div>
         </section>
         <!-- End Global Offices -->
+
+<script>
+(function() {
+  var row = document.getElementById('offices-row');
+  if (!row) return;
+  var host = window.location.hostname.toLowerCase();
+  var isIndia = host.endsWith('.in');
+  if (isIndia) {
+    // Move India card first, then reattach the rest
+    var india = row.querySelector('[data-country="india"]');
+    if (india) row.insertBefore(india, row.firstChild);
+  }
+  // On .com / other: USA is already first (default DOM order), nothing to do
+})();
+</script>
+
 <!-- Footer CTA Area Start -->
 	<div class="container">
 		<div class="row">

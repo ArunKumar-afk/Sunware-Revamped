@@ -1,137 +1,151 @@
 "use client";
-import { useEffect, useState } from "react";
 
 export default function Footer() {
-  const [isIndia, setIsIndia] = useState(false);
-
-  useEffect(() => {
-    const host = window.location.hostname.toLowerCase();
-    setIsIndia(host.endsWith(".in"));
-  }, []);
-
   return (
     <footer className="site-footer">
-      <div className="footer__one" style={{ padding: "15px 0", backgroundColor: "#0a0f1e" }}>
+      <div className="footer__one" style={{ padding: "40px 0 20px", backgroundColor: "#0a0f1e" }}>
         <div className="bg_shape" style={{ backgroundImage: "url('/assets/img/shape/footer.png')" }}></div>
         <div className="container">
           <div className="row">
 
             {/* Logo + tagline */}
-            <div className="col-lg-3 col-sm-6">
+            <div className="col-lg-4 col-sm-6 mb-30">
               <div className="footer__one-widget">
                 <a className="logo" href="/"><img src="/white Logo.png" alt="Sunware Technologies" /></a>
-                <p style={{ fontStyle: "italic", color: "#EF7F1A", margin: "15px 0 4px 0", fontSize: "14px", fontWeight: 500 }}>Advanced Data &amp; AI Solutions Tailored to Your Needs.</p>
+                <p style={{ fontStyle: "italic", color: "#EF7F1A", margin: "18px 0 8px 0", fontSize: "14px", fontWeight: 500 }}>
+                  Advanced Data &amp; AI Solutions Tailored to Your Needs.
+                </p>
+                <p style={{ color: "#aaa", fontSize: "13px", lineHeight: "1.8", margin: "0" }}>
+                  Offices in USA · UAE · UK · India
+                </p>
+                {/* Social icons */}
+                <div style={{ display: "flex", gap: "12px", marginTop: "20px" }}>
+                  <a href="https://in.linkedin.com/company/sunwaretechnologies" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
+                    style={{ width: "40px", height: "40px", borderRadius: "50%", background: "rgba(255,255,255,0.1)", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "16px", transition: "background 0.25s ease" }}
+                    onMouseEnter={e => (e.currentTarget.style.background = "rgba(239,127,26,0.7)")}
+                    onMouseLeave={e => (e.currentTarget.style.background = "rgba(255,255,255,0.1)")}
+                  ><i className="fab fa-linkedin-in"></i></a>
+                  <a href="https://www.youtube.com/@sunwaretechnologies" target="_blank" rel="noopener noreferrer" aria-label="YouTube"
+                    style={{ width: "40px", height: "40px", borderRadius: "50%", background: "rgba(255,255,255,0.1)", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "16px", transition: "background 0.25s ease" }}
+                    onMouseEnter={e => (e.currentTarget.style.background = "rgba(239,127,26,0.7)")}
+                    onMouseLeave={e => (e.currentTarget.style.background = "rgba(255,255,255,0.1)")}
+                  ><i className="fab fa-youtube"></i></a>
+                  <a href="https://www.instagram.com/sunwaretechnologies" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+                    style={{ width: "40px", height: "40px", borderRadius: "50%", background: "rgba(255,255,255,0.1)", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "16px", transition: "background 0.25s ease" }}
+                    onMouseEnter={e => (e.currentTarget.style.background = "rgba(239,127,26,0.7)")}
+                    onMouseLeave={e => (e.currentTarget.style.background = "rgba(255,255,255,0.1)")}
+                  ><i className="fab fa-instagram"></i></a>
+                </div>
               </div>
             </div>
 
             {/* Quick links */}
-            <div className="col-lg-3 col-sm-6 sm-mt-30">
-              <div className="footer__one-widget ml-40 xl-ml-0">
-                <h5>Quick Links</h5>
+            <div className="col-lg-3 col-sm-6 mb-30">
+              <div className="footer__one-widget">
+                <h5 style={{ color: "#fff", fontWeight: 700, marginBottom: "20px" }}>Quick Links</h5>
                 <div className="footer-widget-menu">
-                  <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About Us</a></li>
-                    <li><a href="/data-analytics">Services</a></li>
-                    <li><a href="/careers">Careers</a></li>
-                    <li><a href="/blog">Blog</a></li>
-                    <li><a href="/edgedata360">EdgeData360</a></li>
+                  <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                    {[
+                      { label: "Home", href: "/" },
+                      { label: "About Us", href: "/about" },
+                      { label: "Services", href: "/data-analytics" },
+                      { label: "Industries", href: "/healthcare-lifesciences" },
+                      { label: "EdgeData360", href: "/edgedata360" },
+                      { label: "Careers", href: "/careers" },
+                      { label: "Blog", href: "/blog" },
+                    ].map(({ label, href }) => (
+                      <li key={label} style={{ marginBottom: "10px" }}>
+                        <a href={href} style={{ color: "#aaa", fontSize: "14px", textDecoration: "none", transition: "color 0.2s, paddingLeft 0.2s" }}
+                          onMouseEnter={e => { e.currentTarget.style.color = "#EF7F1A"; e.currentTarget.style.paddingLeft = "6px"; }}
+                          onMouseLeave={e => { e.currentTarget.style.color = "#aaa"; e.currentTarget.style.paddingLeft = "0"; }}
+                        >{label}</a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Services links */}
+            <div className="col-lg-2 col-sm-6 mb-30">
+              <div className="footer__one-widget">
+                <h5 style={{ color: "#fff", fontWeight: 700, marginBottom: "20px" }}>Services</h5>
+                <div className="footer-widget-menu">
+                  <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                    {[
+                      { label: "AI Enablement", href: "/ai-enablement" },
+                      { label: "Data Engineering", href: "/data-engineering" },
+                      { label: "Cloud Solutions", href: "/cloud-solutions" },
+                      { label: "Cybersecurity", href: "/cybersecurity-services" },
+                      { label: "Data Science", href: "/data-science-ai" },
+                      { label: "Mobile Apps", href: "/mobile-app-development" },
+                    ].map(({ label, href }) => (
+                      <li key={label} style={{ marginBottom: "10px" }}>
+                        <a href={href} style={{ color: "#aaa", fontSize: "14px", textDecoration: "none", transition: "color 0.2s, paddingLeft 0.2s" }}
+                          onMouseEnter={e => { e.currentTarget.style.color = "#EF7F1A"; e.currentTarget.style.paddingLeft = "6px"; }}
+                          onMouseLeave={e => { e.currentTarget.style.color = "#aaa"; e.currentTarget.style.paddingLeft = "0"; }}
+                        >{label}</a>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
             </div>
 
             {/* Contact */}
-            <div className="col-lg-3 col-sm-6 lg-mt-30">
-              <div className="footer__one-widget contact ml-40 xl-ml-0">
-                <h5>Contact</h5>
-
-                {/* Email — always visible */}
-                <div className="contact-item mb-15">
-                  <div className="contact-item-icon"><i className="flaticon-email"></i></div>
-                  <div className="contact-item-info">
-                    <span>Email</span>
-                    <h6>
-                      <a
-                        href="#"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          window.location.href = "mailto:connect@sunwaretechnologies.com";
-                        }}
-                        style={{ color: "#fff", wordBreak: "break-all" }}
-                      >
-                        connect@sunwaretechnologies.com
-                      </a>
-                    </h6>
+            <div className="col-lg-3 col-sm-6 mb-30">
+              <div className="footer__one-widget">
+                <h5 style={{ color: "#fff", fontWeight: 700, marginBottom: "20px" }}>Contact</h5>
+                <div className="contact-item mb-20" style={{ display: "flex", gap: "12px", alignItems: "flex-start" }}>
+                  <div style={{ color: "#EF7F1A", fontSize: "18px", marginTop: "2px", flexShrink: 0 }}>
+                    <i className="flaticon-email"></i>
+                  </div>
+                  <div>
+                    <span style={{ color: "#888", fontSize: "12px", display: "block", marginBottom: "4px", textTransform: "uppercase", letterSpacing: "0.5px" }}>Email</span>
+                    <a
+                      href="#"
+                      onClick={(e) => { e.preventDefault(); window.location.href = "mailto:connect@sunwaretechnologies.com"; }}
+                      style={{ color: "#fff", fontSize: "14px", wordBreak: "break-all", textDecoration: "none", transition: "color 0.2s" }}
+                      onMouseEnter={e => (e.currentTarget.style.color = "#EF7F1A")}
+                      onMouseLeave={e => (e.currentTarget.style.color = "#fff")}
+                    >
+                      connect@sunwaretechnologies.com
+                    </a>
                   </div>
                 </div>
-
-                {/* Address — domain-aware */}
-                <div className="contact-item mb-15">
-                  <div className="contact-item-icon"><i className="flaticon-location"></i></div>
-                  <div className="contact-item-info">
-                    <span>Office</span>
-                    {isIndia ? (
-                      <h6 style={{ color: "#ccc", fontSize: "13px", lineHeight: "1.6" }}>
-                        117, KSR Nagar, Ambattur<br />Chennai, Tamil Nadu 600053<br />India
-                      </h6>
-                    ) : (
-                      <h6 style={{ color: "#ccc", fontSize: "13px", lineHeight: "1.6" }}>
-                        20065 Stevens Creek Blvd,<br />Suite B-2B, Cupertino<br />CA 95014, USA
-                      </h6>
-                    )}
+                <div className="contact-item" style={{ display: "flex", gap: "12px", alignItems: "flex-start" }}>
+                  <div style={{ color: "#EF7F1A", fontSize: "18px", marginTop: "2px", flexShrink: 0 }}>
+                    <i className="flaticon-location"></i>
+                  </div>
+                  <div>
+                    <span style={{ color: "#888", fontSize: "12px", display: "block", marginBottom: "4px", textTransform: "uppercase", letterSpacing: "0.5px" }}>Offices</span>
+                    <span style={{ color: "#aaa", fontSize: "13px", lineHeight: "1.7" }}>
+                      USA · UAE · UK · India
+                    </span>
                   </div>
                 </div>
-
-                {/* Social icons */}
-                <div style={{ display: "flex", gap: "12px", marginTop: "20px" }}>
-                  <a href="https://in.linkedin.com/company/sunwaretechnologies" target="_blank" rel="noopener noreferrer" style={{ width: "40px", height: "40px", borderRadius: "50%", background: "rgba(255,255,255,0.1)", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "16px" }}><i className="fab fa-linkedin-in"></i></a>
-                  <a href="https://www.youtube.com/@sunwaretechnologies" target="_blank" rel="noopener noreferrer" style={{ width: "40px", height: "40px", borderRadius: "50%", background: "rgba(255,255,255,0.1)", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "16px" }}><i className="fab fa-youtube"></i></a>
-                  <a href="https://www.instagram.com/sunwaretechnologies" target="_blank" rel="noopener noreferrer" style={{ width: "40px", height: "40px", borderRadius: "50%", background: "rgba(255,255,255,0.1)", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "16px" }}><i className="fab fa-instagram"></i></a>
-                </div>
-              </div>
-            </div>
-
-            {/* Address column — domain-aware full address block */}
-            <div className="col-lg-3 col-sm-6 lg-mt-30">
-              <div className="footer__one-widget ml-40 xl-ml-0">
-                <h5>Our Offices</h5>
-                {isIndia ? (
-                  <>
-                    <p style={{ color: "#aaa", fontSize: "13px", lineHeight: "1.8", marginBottom: "14px" }}>
-                      <strong style={{ color: "#fff" }}>India (HQ)</strong><br />
-                      117, KSR Nagar, Ambattur<br />
-                      Chennai, Tamil Nadu 600053
-                    </p>
-                    <p style={{ color: "#aaa", fontSize: "13px", lineHeight: "1.8", marginBottom: "14px" }}>
-                      <strong style={{ color: "#fff" }}>USA</strong><br />
-                      20065 Stevens Creek Blvd,<br />
-                      Suite B-2B, Cupertino, CA 95014
-                    </p>
-                  </>
-                ) : (
-                  <>
-                    <p style={{ color: "#aaa", fontSize: "13px", lineHeight: "1.8", marginBottom: "14px" }}>
-                      <strong style={{ color: "#fff" }}>USA (HQ)</strong><br />
-                      20065 Stevens Creek Blvd,<br />
-                      Suite B-2B, Cupertino, CA 95014
-                    </p>
-                    <p style={{ color: "#aaa", fontSize: "13px", lineHeight: "1.8", marginBottom: "14px" }}>
-                      <strong style={{ color: "#fff" }}>India</strong><br />
-                      117, KSR Nagar, Ambattur<br />
-                      Chennai, Tamil Nadu 600053
-                    </p>
-                  </>
-                )}
-                <p style={{ color: "#aaa", fontSize: "13px", lineHeight: "1.8" }}>
-                  <strong style={{ color: "#fff" }}>UAE</strong><br />
-                  DMCC Business Centre, Level 5<br />
-                  Jewellery &amp; Gemplex 2, Dubai
-                </p>
               </div>
             </div>
 
           </div>
+
+          {/* Bottom bar */}
+          <div style={{ borderTop: "1px solid rgba(255,255,255,0.08)", marginTop: "30px", paddingTop: "20px", display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center", gap: "12px" }}>
+            <p style={{ color: "#666", fontSize: "13px", margin: 0 }}>
+              © {new Date().getFullYear()} Sunware Technologies. All rights reserved.
+            </p>
+            <div style={{ display: "flex", gap: "20px" }}>
+              <a href="/about" style={{ color: "#666", fontSize: "13px", textDecoration: "none", transition: "color 0.2s" }}
+                onMouseEnter={e => (e.currentTarget.style.color = "#EF7F1A")}
+                onMouseLeave={e => (e.currentTarget.style.color = "#666")}
+              >Privacy Policy</a>
+              <a href="/about" style={{ color: "#666", fontSize: "13px", textDecoration: "none", transition: "color 0.2s" }}
+                onMouseEnter={e => (e.currentTarget.style.color = "#EF7F1A")}
+                onMouseLeave={e => (e.currentTarget.style.color = "#666")}
+              >Terms of Use</a>
+            </div>
+          </div>
+
         </div>
       </div>
     </footer>
