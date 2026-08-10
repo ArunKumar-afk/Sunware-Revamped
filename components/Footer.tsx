@@ -40,45 +40,17 @@ export default function Footer() {
             </div>
 
             {/* Quick links */}
-            <div className="col-lg-3 col-sm-6 mb-30">
+            <div className="col-lg-4 col-sm-6 mb-30">
               <div className="footer__one-widget">
                 <h5 style={{ color: "#fff", fontWeight: 700, marginBottom: "20px" }}>Quick Links</h5>
                 <div className="footer-widget-menu">
                   <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
                     {[
                       { label: "Home", href: "/" },
-                      { label: "About Us", href: "/about" },
-                      { label: "Services", href: "/data-analytics" },
-                      { label: "Industries", href: "/healthcare-lifesciences" },
                       { label: "EdgeData360", href: "/edgedata360" },
-                      { label: "Careers", href: "/careers" },
                       { label: "Blog", href: "/blog" },
-                    ].map(({ label, href }) => (
-                      <li key={label} style={{ marginBottom: "10px" }}>
-                        <a href={href} style={{ color: "#aaa", fontSize: "14px", textDecoration: "none", transition: "color 0.2s, paddingLeft 0.2s" }}
-                          onMouseEnter={e => { e.currentTarget.style.color = "#EF7F1A"; e.currentTarget.style.paddingLeft = "6px"; }}
-                          onMouseLeave={e => { e.currentTarget.style.color = "#aaa"; e.currentTarget.style.paddingLeft = "0"; }}
-                        >{label}</a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            {/* Services links */}
-            <div className="col-lg-2 col-sm-6 mb-30">
-              <div className="footer__one-widget">
-                <h5 style={{ color: "#fff", fontWeight: 700, marginBottom: "20px" }}>Services</h5>
-                <div className="footer-widget-menu">
-                  <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-                    {[
-                      { label: "AI Enablement", href: "/ai-enablement" },
-                      { label: "Data Engineering", href: "/data-engineering" },
-                      { label: "Cloud Solutions", href: "/cloud-solutions" },
-                      { label: "Cybersecurity", href: "/cybersecurity-services" },
-                      { label: "Data Science", href: "/data-science-ai" },
-                      { label: "Mobile Apps", href: "/mobile-app-development" },
+                      { label: "About Us", href: "/about" },
+                      { label: "Careers", href: "/careers" },
                     ].map(({ label, href }) => (
                       <li key={label} style={{ marginBottom: "10px" }}>
                         <a href={href} style={{ color: "#aaa", fontSize: "14px", textDecoration: "none", transition: "color 0.2s, paddingLeft 0.2s" }}
@@ -93,7 +65,7 @@ export default function Footer() {
             </div>
 
             {/* Contact */}
-            <div className="col-lg-3 col-sm-6 mb-30">
+            <div className="col-lg-4 col-sm-6 mb-30">
               <div className="footer__one-widget">
                 <h5 style={{ color: "#fff", fontWeight: 700, marginBottom: "20px" }}>Contact</h5>
                 <div className="contact-item mb-20" style={{ display: "flex", gap: "12px", alignItems: "flex-start" }}>
