@@ -4,7 +4,7 @@ import HtmlPage from "@/components/HtmlPage";
 export const metadata: Metadata = {
   title: "Data Science & AI - Sunware Technologies",
   description: "Advanced data science and artificial intelligence solutions from Sunware Technologies. Machine learning, predictive analytics and AI strategy.",
-  alternates: { canonical: "https://sunwaretechnologies.com/data-science-ai" },
+  alternates: { canonical: "https://sunwaretechnologies.com/data-science-ai/" },
 };
 
 const content = `
@@ -177,3 +177,4 @@ const content = `
 export default function Page() {
   return <HtmlPage content={content} />;
 }
+

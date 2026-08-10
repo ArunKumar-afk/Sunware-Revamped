@@ -4,7 +4,7 @@ import HtmlPage from "@/components/HtmlPage";
 export const metadata: Metadata = {
   title: "Healthcare and Life Sciences - Sunware Technologies",
   description: "Technology solutions for healthcare and life sciences from Sunware Technologies. EHR integration, clinical analytics and regulatory compliance.",
-  alternates: { canonical: "https://sunwaretechnologies.com/healthcare-lifesciences" },
+  alternates: { canonical: "https://sunwaretechnologies.com/healthcare-lifesciences/" },
 };
 
 const content = `<!-- --- BANNER HERO (matches site pattern) --- -->

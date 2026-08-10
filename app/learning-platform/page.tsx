@@ -4,7 +4,7 @@ import HtmlPage from "@/components/HtmlPage";
 export const metadata: Metadata = {
   title: "Learning Platform - Sunware Technologies",
   description: "Digital learning ecosystems that upskill your workforce and drive measurable performance improvement with Sunware Technologies.",
-  alternates: { canonical: "https://sunwaretechnologies.com/learning-platform" },
+  alternates: { canonical: "https://sunwaretechnologies.com/learning-platform/" },
 };
 
 const content = `

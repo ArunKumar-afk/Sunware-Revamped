@@ -4,7 +4,7 @@ import HtmlPage from "@/components/HtmlPage";
 export const metadata: Metadata = {
   title: "Digital Transformation Services - Sunware Technologies",
   description: "Reimagine how your organisation operates, serves customers and competes in the digital era with Sunware Technologies digital transformation services.",
-  alternates: { canonical: "https://sunwaretechnologies.com/digital-transformation" },
+  alternates: { canonical: "https://sunwaretechnologies.com/digital-transformation/" },
 };
 
 const content = `

@@ -4,7 +4,7 @@ import HtmlPage from "@/components/HtmlPage";
 export const metadata: Metadata = {
   title: "Neo4J Graph Technologies - Sunware Technologies",
   description: "Neo4j graph database solutions from Sunware Technologies. Knowledge graphs, recommendation engines, fraud detection and connected data analytics.",
-  alternates: { canonical: "https://sunwaretechnologies.com/neo4j-solutions" },
+  alternates: { canonical: "https://sunwaretechnologies.com/neo4j-solutions/" },
 };
 
 const content = `
@@ -171,3 +171,4 @@ const content = `
 export default function Page() {
   return <HtmlPage content={content} />;
 }
+

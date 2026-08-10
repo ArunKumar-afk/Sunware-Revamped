@@ -4,7 +4,7 @@ import HtmlPage from "@/components/HtmlPage";
 export const metadata: Metadata = {
   title: "Data Engineering Services - Sunware Technologies",
   description: "Build the data foundations that power AI, analytics and intelligent operations with Sunware Technologies data engineering services.",
-  alternates: { canonical: "https://sunwaretechnologies.com/data-engineering" },
+  alternates: { canonical: "https://sunwaretechnologies.com/data-engineering/" },
 };
 
 const content = `

@@ -4,7 +4,7 @@ import HtmlPage from "@/components/HtmlPage";
 export const metadata: Metadata = {
   title: "Infrastructure Solutions - Sunware Technologies",
   description: "Resilient, scalable and secure IT infrastructure that keeps your business running at peak performance with Sunware Technologies.",
-  alternates: { canonical: "https://sunwaretechnologies.com/infrastructure" },
+  alternates: { canonical: "https://sunwaretechnologies.com/infrastructure/" },
 };
 
 const content = `

@@ -1,10 +1,10 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import HtmlPage from "@/components/HtmlPage";
 
 export const metadata: Metadata = {
   title: "Careers - Sunware Technologies | Join Our Team",
   description: "Explore career opportunities at Sunware Technologies. Join a global team building AI, cloud and data engineering solutions across USA, UAE, UK and India.",
-  alternates: { canonical: "https://sunwaretechnologies.com/careers" },
+  alternates: { canonical: "https://sunwaretechnologies.com/careers/" },
 };
 
 const content = `<!-- Careers Hero Start -->

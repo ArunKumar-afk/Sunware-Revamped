@@ -11,9 +11,10 @@ export const metadata: Metadata = {
     url: "https://sunwaretechnologies.com/edgedata360",
     images: [{ url: "https://sunwaretechnologies.com/images/edlogo.png" }],
   },
-  alternates: { canonical: "https://sunwaretechnologies.com/edgedata360" },
+  alternates: { canonical: "https://sunwaretechnologies.com/edgedata360/" },
 };
 
 export default function EdgeData360Page() {
   return <EdgeDataClient />;
 }
+

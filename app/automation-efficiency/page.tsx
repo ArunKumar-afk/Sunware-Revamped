@@ -4,7 +4,7 @@ import HtmlPage from "@/components/HtmlPage";
 export const metadata: Metadata = {
   title: "Automation & Operations - Sunware Technologies",
   description: "Intelligent automation and operational excellence solutions from Sunware Technologies. RPA, process automation and AI-driven workflows.",
-  alternates: { canonical: "https://sunwaretechnologies.com/automation-efficiency" },
+  alternates: { canonical: "https://sunwaretechnologies.com/automation-efficiency/" },
 };
 
 const content = `
@@ -171,3 +171,4 @@ const content = `
 export default function Page() {
   return <HtmlPage content={content} />;
 }
+

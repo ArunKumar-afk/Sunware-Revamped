@@ -4,7 +4,7 @@ import HtmlPage from "@/components/HtmlPage";
 export const metadata: Metadata = {
   title: "IoT Innovations - Sunware Technologies",
   description: "IoT solutions and innovations from Sunware Technologies. Connected devices, smart systems, and real-time monitoring for industrial and commercial applications.",
-  alternates: { canonical: "https://sunwaretechnologies.com/iot-innovations" },
+  alternates: { canonical: "https://sunwaretechnologies.com/iot-innovations/" },
 };
 
 const content = `
@@ -171,3 +171,4 @@ const content = `
 export default function Page() {
   return <HtmlPage content={content} />;
 }
+

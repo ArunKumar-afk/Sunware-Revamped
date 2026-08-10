@@ -4,7 +4,7 @@ import HtmlPage from "@/components/HtmlPage";
 export const metadata: Metadata = {
   title: "Mobile App Development - Sunware Technologies",
   description: "Native and cross-platform mobile app development from Sunware Technologies. iOS, Android and React Native solutions for enterprises.",
-  alternates: { canonical: "https://sunwaretechnologies.com/mobile-app-development" },
+  alternates: { canonical: "https://sunwaretechnologies.com/mobile-app-development/" },
 };
 
 const content = `
@@ -171,3 +171,4 @@ const content = `
 export default function Page() {
   return <HtmlPage content={content} />;
 }
+

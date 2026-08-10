@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     url: "https://sunwaretechnologies.com/about",
     images: [{ url: "https://sunwaretechnologies.com/main logo.png" }],
   },
-  alternates: { canonical: "https://sunwaretechnologies.com/about" },
+  alternates: { canonical: "https://sunwaretechnologies.com/about/" },
 };
 
 export default function AboutPage() {
@@ -21,3 +21,4 @@ export default function AboutPage() {
   const content = fs.readFileSync(htmlPath, "utf-8");
   return <HtmlPage content={content} />;
 }
+

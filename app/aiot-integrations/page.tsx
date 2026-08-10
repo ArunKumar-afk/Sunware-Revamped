@@ -4,7 +4,7 @@ import HtmlPage from "@/components/HtmlPage";
 export const metadata: Metadata = {
   title: "AIoT Integrations - Sunware Technologies",
   description: "AI-powered IoT solutions from Sunware Technologies. AIoT platform integration, edge intelligence, predictive maintenance and smart operations.",
-  alternates: { canonical: "https://sunwaretechnologies.com/aiot-integrations" },
+  alternates: { canonical: "https://sunwaretechnologies.com/aiot-integrations/" },
 };
 
 const content = `
@@ -171,3 +171,4 @@ const content = `
 export default function Page() {
   return <HtmlPage content={content} />;
 }
+

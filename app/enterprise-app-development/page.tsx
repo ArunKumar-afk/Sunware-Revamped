@@ -4,7 +4,7 @@ import HtmlPage from "@/components/HtmlPage";
 export const metadata: Metadata = {
   title: "Enterprise App Development - Sunware Technologies",
   description: "Bespoke enterprise applications built for scale, security and long-term business value by Sunware Technologies.",
-  alternates: { canonical: "https://sunwaretechnologies.com/enterprise-app-development" },
+  alternates: { canonical: "https://sunwaretechnologies.com/enterprise-app-development/" },
 };
 
 const content = `

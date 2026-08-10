@@ -4,7 +4,7 @@ import HtmlPage from "@/components/HtmlPage";
 export const metadata: Metadata = {
   title: "Maintenance & Support - Sunware Technologies",
   description: "Proactive, 24/7 application support that maximises uptime and protects your technology investment with Sunware Technologies.",
-  alternates: { canonical: "https://sunwaretechnologies.com/maintenance-support" },
+  alternates: { canonical: "https://sunwaretechnologies.com/maintenance-support/" },
 };
 
 const content = `
@@ -194,3 +194,4 @@ const content = `
 export default function Page() {
   return <HtmlPage content={content} />;
 }
+

@@ -4,7 +4,7 @@ import HtmlPage from "@/components/HtmlPage";
 export const metadata: Metadata = {
   title: "Staff Augmentation - Sunware Technologies",
   description: "Pre-vetted technology talent integrated seamlessly into your team with Sunware Technologies staff augmentation services.",
-  alternates: { canonical: "https://sunwaretechnologies.com/staff-augmentation" },
+  alternates: { canonical: "https://sunwaretechnologies.com/staff-augmentation/" },
 };
 
 const content = `
@@ -194,3 +194,4 @@ const content = `
 export default function Page() {
   return <HtmlPage content={content} />;
 }
+

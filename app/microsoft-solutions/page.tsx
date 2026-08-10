@@ -4,7 +4,7 @@ import HtmlPage from "@/components/HtmlPage";
 export const metadata: Metadata = {
   title: "Microsoft Solutions - Sunware Technologies",
   description: "Microsoft technology solutions from Sunware Technologies. Azure, Microsoft 365, Dynamics 365, Power Platform and Teams implementation for enterprises.",
-  alternates: { canonical: "https://sunwaretechnologies.com/microsoft-solutions" },
+  alternates: { canonical: "https://sunwaretechnologies.com/microsoft-solutions/" },
 };
 
 const content = `
@@ -177,3 +177,4 @@ const content = `
 export default function Page() {
   return <HtmlPage content={content} />;
 }
+

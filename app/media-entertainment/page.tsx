@@ -4,7 +4,7 @@ import HtmlPage from "@/components/HtmlPage";
 export const metadata: Metadata = {
   title: "Media and Entertainment - Sunware Technologies",
   description: "Technology solutions for media and entertainment from Sunware Technologies. Content delivery, streaming platforms and audience analytics.",
-  alternates: { canonical: "https://sunwaretechnologies.com/media-entertainment" },
+  alternates: { canonical: "https://sunwaretechnologies.com/media-entertainment/" },
 };
 
 const content = `<!-- Page Hero Start -->

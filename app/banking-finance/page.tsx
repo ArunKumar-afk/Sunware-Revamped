@@ -4,7 +4,7 @@ import HtmlPage from "@/components/HtmlPage";
 export const metadata: Metadata = {
   title: "Banking and Financial Services - Sunware Technologies",
   description: "Technology solutions for banking and financial services from Sunware Technologies. Fintech, risk analytics and digital banking.",
-  alternates: { canonical: "https://sunwaretechnologies.com/banking-finance" },
+  alternates: { canonical: "https://sunwaretechnologies.com/banking-finance/" },
 };
 
 const content = `<!-- Page Hero Start -->

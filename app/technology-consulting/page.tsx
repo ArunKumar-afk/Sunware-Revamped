@@ -4,7 +4,7 @@ import HtmlPage from "@/components/HtmlPage";
 export const metadata: Metadata = {
   title: "Technology Consulting - Sunware Technologies",
   description: "Strategic technology advisory that aligns your IT investments with business outcomes with Sunware Technologies technology consulting.",
-  alternates: { canonical: "https://sunwaretechnologies.com/technology-consulting" },
+  alternates: { canonical: "https://sunwaretechnologies.com/technology-consulting/" },
 };
 
 const content = `

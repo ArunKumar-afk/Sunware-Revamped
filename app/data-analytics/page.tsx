@@ -4,7 +4,7 @@ import HtmlPage from "@/components/HtmlPage";
 export const metadata: Metadata = {
   title: "Data Analytics Services - Sunware Technologies",
   description: "Transform raw data into actionable insights with Sunware Technologies data analytics services. Business intelligence, dashboards and reporting solutions.",
-  alternates: { canonical: "https://sunwaretechnologies.com/data-analytics" },
+  alternates: { canonical: "https://sunwaretechnologies.com/data-analytics/" },
 };
 
 const content = `

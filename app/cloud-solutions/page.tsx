@@ -4,7 +4,7 @@ import HtmlPage from "@/components/HtmlPage";
 export const metadata: Metadata = {
   title: "Cloud Solutions - Sunware Technologies",
   description: "End-to-end cloud solutions from Sunware Technologies. Multi-cloud strategy, migration, cloud-native development and managed services.",
-  alternates: { canonical: "https://sunwaretechnologies.com/cloud-solutions" },
+  alternates: { canonical: "https://sunwaretechnologies.com/cloud-solutions/" },
 };
 
 const content = `
@@ -177,3 +177,4 @@ const content = `
 export default function Page() {
   return <HtmlPage content={content} />;
 }
+

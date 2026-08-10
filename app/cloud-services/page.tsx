@@ -4,7 +4,7 @@ import HtmlPage from "@/components/HtmlPage";
 export const metadata: Metadata = {
   title: "Cloud Services - Sunware Technologies",
   description: "Comprehensive cloud management, optimisation and migration across AWS, Azure and GCP with Sunware Technologies cloud services.",
-  alternates: { canonical: "https://sunwaretechnologies.com/cloud-services" },
+  alternates: { canonical: "https://sunwaretechnologies.com/cloud-services/" },
 };
 
 const content = `

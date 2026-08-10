@@ -4,7 +4,7 @@ import HtmlPage from "@/components/HtmlPage";
 export const metadata: Metadata = {
   title: "IoT Solutions - Sunware Technologies",
   description: "End-to-end IoT ecosystems that connect your operations and unlock real-time intelligence with Sunware Technologies IoT solutions.",
-  alternates: { canonical: "https://sunwaretechnologies.com/iot-solutions" },
+  alternates: { canonical: "https://sunwaretechnologies.com/iot-solutions/" },
 };
 
 const content = `

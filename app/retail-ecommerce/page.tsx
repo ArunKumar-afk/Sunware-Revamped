@@ -4,7 +4,7 @@ import HtmlPage from "@/components/HtmlPage";
 export const metadata: Metadata = {
   title: "Retail and E-commerce - Sunware Technologies",
   description: "Technology solutions for retail and e-commerce from Sunware Technologies. Customer experience, inventory management and omnichannel platforms.",
-  alternates: { canonical: "https://sunwaretechnologies.com/retail-ecommerce" },
+  alternates: { canonical: "https://sunwaretechnologies.com/retail-ecommerce/" },
 };
 
 const content = `<!-- Page Hero Start -->

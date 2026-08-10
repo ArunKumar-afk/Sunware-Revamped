@@ -1,4 +1,4 @@
-i wcome to/* Page-specific styles */
+/* Page-specific styles */
 .story-row { display: flex; align-items: center; gap: 60px; margin-bottom: 100px; }
 .story-row:nth-child(even) { flex-direction: row-reverse; }
 .story-content { flex: 1; min-width: 0; }

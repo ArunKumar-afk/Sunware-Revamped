@@ -4,7 +4,7 @@ import HtmlPage from "@/components/HtmlPage";
 export const metadata: Metadata = {
   title: "Cybersecurity Services - Sunware Technologies",
   description: "Enterprise cybersecurity services from Sunware Technologies. Risk assessment, threat detection, compliance, and managed security operations.",
-  alternates: { canonical: "https://sunwaretechnologies.com/cybersecurity-services" },
+  alternates: { canonical: "https://sunwaretechnologies.com/cybersecurity-services/" },
 };
 
 const content = `
@@ -177,3 +177,4 @@ const content = `
 export default function Page() {
   return <HtmlPage content={content} />;
 }
+

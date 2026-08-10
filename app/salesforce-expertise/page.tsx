@@ -4,7 +4,7 @@ import HtmlPage from "@/components/HtmlPage";
 export const metadata: Metadata = {
   title: "Salesforce Implementation - Sunware Technologies",
   description: "Expert Salesforce implementation, customisation and integration services from Sunware Technologies. Sales Cloud, Service Cloud, Marketing Cloud and more.",
-  alternates: { canonical: "https://sunwaretechnologies.com/salesforce-expertise" },
+  alternates: { canonical: "https://sunwaretechnologies.com/salesforce-expertise/" },
 };
 
 const content = `
@@ -177,3 +177,4 @@ const content = `
 export default function Page() {
   return <HtmlPage content={content} />;
 }
+

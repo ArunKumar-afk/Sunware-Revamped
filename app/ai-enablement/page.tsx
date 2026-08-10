@@ -4,7 +4,7 @@ import HtmlPage from "@/components/HtmlPage";
 export const metadata: Metadata = {
   title: "AI Enablement Services - Sunware Technologies",
   description: "Accelerate your AI journey with Sunware Technologies AI enablement services. Strategy, implementation and scaling of AI solutions.",
-  alternates: { canonical: "https://sunwaretechnologies.com/ai-enablement" },
+  alternates: { canonical: "https://sunwaretechnologies.com/ai-enablement/" },
 };
 
 const content = `
@@ -201,3 +201,4 @@ const content = `
 export default function Page() {
   return <HtmlPage content={content} />;
 }
+

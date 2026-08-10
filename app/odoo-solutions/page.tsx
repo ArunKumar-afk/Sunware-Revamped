@@ -4,7 +4,7 @@ import HtmlPage from "@/components/HtmlPage";
 export const metadata: Metadata = {
   title: "Odoo Custom Solutions - Sunware Technologies",
   description: "Odoo ERP implementation, customisation and integration services from Sunware Technologies. End-to-end business management solutions for growing enterprises.",
-  alternates: { canonical: "https://sunwaretechnologies.com/odoo-solutions" },
+  alternates: { canonical: "https://sunwaretechnologies.com/odoo-solutions/" },
 };
 
 const content = `
@@ -171,3 +171,4 @@ const content = `
 export default function Page() {
   return <HtmlPage content={content} />;
 }
+
