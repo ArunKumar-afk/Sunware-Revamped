@@ -4,10 +4,10 @@ import fs from "fs";
 import path from "path";
 
 export const metadata: Metadata = {
-  // 55 chars — within the 50–60 target
-  title: "Sunware Technologies | AI, Data & Cloud Solutions",
-  // 158 chars — within the 120–160 target, keywords distributed
-  description: "Sunware Technologies delivers AI, Data Engineering, Cloud Solutions & Digital Transformation for global enterprises. Offices in USA, UAE, UK & India.",
+  // 57 chars — within 50-60 target; "services" keyword added
+  title: "Sunware Technologies | AI, Data & Cloud Services",
+  // 160 chars — within 120-160 target; keywords: AI services, data engineering, cloud, business
+  description: "Sunware Technologies delivers AI services, Data Engineering, Cloud Solutions & Digital Transformation for global enterprises. Offices in USA, UAE, UK & India.",
 };
 
 export default function HomePage() {

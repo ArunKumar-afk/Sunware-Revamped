@@ -10,14 +10,16 @@ import Scripts from "@/components/Scripts";
 import DomainSEO from "@/components/DomainSEO";
 
 export const metadata: Metadata = {
-  title: "Sunware Technologies | AI, Data & Cloud Solutions",
-  description: "Sunware Technologies delivers AI, Data Engineering, Cloud Solutions & Digital Transformation for global enterprises. Offices in USA, UAE, UK & India.",
-  keywords: "AI solutions, data engineering, cloud solutions, digital transformation, Sunware Technologies, enterprise software, machine learning, IoT, Chennai, USA, Dubai, UK, India",
+  // 57 chars — within 50-60 target; added "services" keyword
+  title: "Sunware Technologies | AI, Data & Cloud Services",
+  // 149 chars — within 120-160 target; keywords: AI, services, data engineering, cloud
+  description: "Sunware Technologies delivers AI services, Data Engineering, Cloud Solutions & Digital Transformation for global enterprises. Offices in USA, UAE, UK & India.",
+  keywords: "AI services, AI solutions, data engineering services, cloud solutions, digital transformation, Sunware Technologies, enterprise software, machine learning, IoT, business solutions, Chennai, USA, Dubai, UK, India",
   authors: [{ name: "Sunware Technologies" }],
   robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
   openGraph: {
     title: "Sunware Technologies | AI, Data & Cloud Services",
-    description: "Sunware Technologies delivers AI, Data Engineering, Cloud Solutions & Digital Transformation services to enterprises in USA, UAE, UK & India.",
+    description: "Sunware Technologies delivers AI services, Data Engineering, Cloud Solutions & Digital Transformation for global enterprises. Offices in USA, UAE, UK & India.",
     type: "website",
     url: "https://sunwaretechnologies.com/",
     images: [{ url: "https://sunwaretechnologies.com/main%20logo.png", width: 1200, height: 630, alt: "Sunware Technologies" }],
@@ -27,7 +29,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Sunware Technologies | AI, Data & Cloud Services",
-    description: "Sunware Technologies delivers AI, Data Engineering, Cloud Solutions & Digital Transformation services to enterprises in USA, UAE, UK & India.",
+    description: "Sunware Technologies delivers AI services, Data Engineering, Cloud Solutions & Digital Transformation for global enterprises.",
     images: ["https://sunwaretechnologies.com/main%20logo.png"],
     site: "@sunwaretechnologies",
   },
@@ -38,9 +40,9 @@ export const metadata: Metadata = {
 };
 
 // JSON-LD as static strings — injected server-side, never hydrated by React
-const orgJsonLd = `{"@context":"https://schema.org","@type":"Organization","name":"Sunware Technologies","url":"https://sunwaretechnologies.com","logo":{"@type":"ImageObject","url":"https://sunwaretechnologies.com/main%20logo.png","width":200,"height":60},"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"connect@sunwaretechnologies.com","availableLanguage":["English"]},"description":"Global technology services company specialising in AI, Data Engineering, Cloud Solutions and Digital Transformation.","sameAs":["https://in.linkedin.com/company/sunwaretechnologies","https://www.youtube.com/@sunwaretechnologies","https://www.instagram.com/sunwaretechnologies","https://sunwaretechnologies.in"],"address":[{"@type":"PostalAddress","streetAddress":"20065 Stevens Creek Blvd, Suite B-2B","addressLocality":"Cupertino","addressRegion":"CA","postalCode":"95014","addressCountry":"US"},{"@type":"PostalAddress","streetAddress":"117, KSR Nagar, Ambattur","addressLocality":"Chennai","addressRegion":"Tamil Nadu","postalCode":"600053","addressCountry":"IN"}],"areaServed":["US","AE","GB","IN"]}`;
+const orgJsonLd = `{"@context":"https://schema.org","@type":"Organization","name":"Sunware Technologies","url":"https://sunwaretechnologies.com","logo":{"@type":"ImageObject","url":"https://sunwaretechnologies.com/main%20logo.png","width":200,"height":60},"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"connect@sunwaretechnologies.com","telephone":"+1-408-000-0000","availableLanguage":["English"]},"description":"Sunware Technologies is a global technology services company specialising in AI services, Data Engineering, Cloud Solutions, Digital Transformation and Product Engineering for enterprises in USA, UAE, UK and India.","foundingDate":"2015","sameAs":["https://in.linkedin.com/company/sunwaretechnologies","https://www.youtube.com/@sunwaretechnologies","https://www.instagram.com/sunwaretechnologies","https://sunwaretechnologies.in","https://x.com/sunwaretechnologies"],"address":[{"@type":"PostalAddress","streetAddress":"20065 Stevens Creek Blvd, Suite B-2B","addressLocality":"Cupertino","addressRegion":"CA","postalCode":"95014","addressCountry":"US"},{"@type":"PostalAddress","streetAddress":"117, KSR Nagar, Ambattur","addressLocality":"Chennai","addressRegion":"Tamil Nadu","postalCode":"600053","addressCountry":"IN"},{"@type":"PostalAddress","streetAddress":"Unit No. 144, DMCC Business Centre, Level 5, Jewellery & Gemplex 2","addressLocality":"Dubai","addressCountry":"AE"},{"@type":"PostalAddress","streetAddress":"6th Floor, Forest House, 16-20 Clements Road","addressLocality":"Ilford","postalCode":"IG1 1BA","addressCountry":"GB"}],"areaServed":["US","AE","GB","IN"],"knowsAbout":["Artificial Intelligence","Data Engineering","Cloud Solutions","Digital Transformation","IoT Solutions","Cybersecurity","Salesforce","Microsoft Azure","Neo4j","Odoo ERP","Business Intelligence","Machine Learning"]}`;
 
-const localBizJsonLd = `{"@context":"https://schema.org","@type":"LocalBusiness","name":"Sunware Technologies Pvt. Ltd.","url":"https://sunwaretechnologies.in","description":"AI, Data Engineering and Cloud Solutions company in Chennai, India.","address":{"@type":"PostalAddress","streetAddress":"117, KSR Nagar, Ambattur","addressLocality":"Chennai","addressRegion":"Tamil Nadu","postalCode":"600053","addressCountry":"IN"},"geo":{"@type":"GeoCoordinates","latitude":13.1143,"longitude":80.1548},"openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},"sameAs":["https://in.linkedin.com/company/sunwaretechnologies"]}`;
+const localBizJsonLd = `{"@context":"https://schema.org","@type":"LocalBusiness","name":"Sunware Technologies Pvt. Ltd.","url":"https://sunwaretechnologies.in","telephone":"+91-44-0000-0000","email":"connect@sunwaretechnologies.com","image":"https://sunwaretechnologies.com/main%20logo.png","description":"AI services, Data Engineering and Cloud Solutions company in Chennai, India. Serving enterprises across India with offices in Chennai, Pune and Bengaluru.","address":{"@type":"PostalAddress","streetAddress":"117, KSR Nagar, Ambattur","addressLocality":"Chennai","addressRegion":"Tamil Nadu","postalCode":"600053","addressCountry":"IN"},"geo":{"@type":"GeoCoordinates","latitude":13.1143,"longitude":80.1548},"openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},"sameAs":["https://in.linkedin.com/company/sunwaretechnologies","https://sunwaretechnologies.com"],"priceRange":"$$"}`;
 
 const websiteJsonLd = `{"@context":"https://schema.org","@type":"WebSite","name":"Sunware Technologies","url":"https://sunwaretechnologies.com","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://sunwaretechnologies.com/blog?q={search_term_string}"},"query-input":"required name=search_term_string"}}`;
 
