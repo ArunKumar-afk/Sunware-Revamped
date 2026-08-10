@@ -112,27 +112,12 @@ export default function Footer() {
                   </div>
                 </div>
 
-                {/* Address — fixes "Add Business Address" recommendation */}
-                <div style={{ display: "flex", gap: "10px", marginBottom: "16px", alignItems: "flex-start" }}>
-                  <i className="flaticon-location" style={{ color: "#EF7F1A", fontSize: "16px", marginTop: "3px", flexShrink: 0 }}></i>
-                  <div>
-                    <span style={{ color: "#888", fontSize: "11px", display: "block", marginBottom: "3px", textTransform: "uppercase", letterSpacing: "0.5px" }}>USA (HQ)</span>
-                    <address style={{ color: "#ccc", fontSize: "13px", lineHeight: "1.7", fontStyle: "normal" }}>
-                      20065 Stevens Creek Blvd, Suite B-2B<br />
-                      Cupertino, CA 95014
-                    </address>
-                  </div>
-                </div>
-
-                {/* India address */}
+                {/* Offices — country names only */}
                 <div style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
                   <i className="flaticon-location" style={{ color: "#EF7F1A", fontSize: "16px", marginTop: "3px", flexShrink: 0 }}></i>
                   <div>
-                    <span style={{ color: "#888", fontSize: "11px", display: "block", marginBottom: "3px", textTransform: "uppercase", letterSpacing: "0.5px" }}>India</span>
-                    <address style={{ color: "#ccc", fontSize: "13px", lineHeight: "1.7", fontStyle: "normal" }}>
-                      117, KSR Nagar, Ambattur<br />
-                      Chennai, Tamil Nadu 600053
-                    </address>
+                    <span style={{ color: "#888", fontSize: "11px", display: "block", marginBottom: "6px", textTransform: "uppercase", letterSpacing: "0.5px" }}>Offices</span>
+                    <span style={{ color: "#ccc", fontSize: "14px" }}>USA &nbsp;·&nbsp; India &nbsp;·&nbsp; UAE &nbsp;·&nbsp; UK</span>
                   </div>
                 </div>
 
