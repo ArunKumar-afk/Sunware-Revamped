@@ -63,21 +63,14 @@ export default function Scripts() {
       });
     };
 
-    // Footer reveal
+    // Footer reveal — always relative, no margin-bottom gap
     const initFooterReveal = () => {
       const footer = document.querySelector<HTMLElement>(".site-footer");
       const mainWrapper = document.querySelector<HTMLElement>(".main-content-wrapper");
       if (!footer || !mainWrapper) return;
-      const adjust = () => {
-        const h = footer.offsetHeight;
-        if (window.innerWidth < 992) {
-          footer.style.position = "relative"; footer.style.visibility = "visible"; mainWrapper.style.marginBottom = "0";
-        } else {
-          footer.style.position = "fixed"; footer.style.visibility = "visible"; mainWrapper.style.marginBottom = h + "px";
-        }
-      };
-      adjust();
-      window.addEventListener("resize", adjust);
+      footer.style.position = "relative";
+      footer.style.visibility = "visible";
+      mainWrapper.style.marginBottom = "0";
     };
 
     // Sticky header - hide on scroll down, show on scroll up (desktop only)
