@@ -1,3 +1,5 @@
+"use client";
+
 export default function Footer() {
   return (
     <footer className="site-footer">
@@ -31,7 +33,10 @@ export default function Footer() {
                 <h5>Contact</h5>
                 <div className="contact-item mb-15">
                   <div className="contact-item-icon"><i className="flaticon-email"></i></div>
-                  <div className="contact-item-info"><span>Email</span><h6><a href="mailto:connect@sunwaretechnologies.com">connect@sunwaretechnologies.com</a></h6></div>
+                  <div className="contact-item-info">
+                    <span>Email</span>
+                    <h6><a href="/careers#contact" onClick={(e) => { e.preventDefault(); window.location.href = "mailto:" + "connect" + "@" + "sunwaretechnologies" + ".com"; }}>Get in Touch</a></h6>
+                  </div>
                 </div>
                 <div style={{ display: "flex", gap: "12px", marginTop: "20px" }}>
                   <a href="https://in.linkedin.com/company/sunwaretechnologies" target="_blank" style={{ width: "40px", height: "40px", borderRadius: "50%", background: "rgba(255,255,255,0.1)", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "16px" }}><i className="fab fa-linkedin-in"></i></a>

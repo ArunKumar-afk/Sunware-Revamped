@@ -12,7 +12,7 @@ export default function DomainSEO() {
 
       // Meta description
       const desc = document.querySelector('meta[name="description"]');
-      if (desc) desc.setAttribute("content", "Sunware Technologies — AI, Data Engineering and Cloud solutions company in Chennai, India. Serving enterprises across India with offices in Chennai, Pune and Bengaluru.");
+      if (desc) desc.setAttribute("content", "Sunware Technologies delivers AI, Data Engineering and Cloud Solutions to enterprises across India. Offices in Chennai, Pune and Bengaluru. Serving Banking, Healthcare, Retail & Media sectors.");
 
       // OG tags (no canonical manipulation — Next.js owns that)
       const ogUrl = document.querySelector('meta[property="og:url"]');

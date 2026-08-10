@@ -11,32 +11,37 @@ import DomainSEO from "@/components/DomainSEO";
 
 export const metadata: Metadata = {
   // 55 chars — within the 50–60 target
-  title: "Sunware Technologies | AI & Data Engineering",
-  description: "AI, Data Engineering, Cloud & Digital Transformation for global enterprises. Offices in USA, UAE, UK & India.",
-  keywords: "Sunware Technologies, AI services, data engineering, cloud solutions, product engineering, digital transformation, enterprise software, USA, Dubai, UK, India, Chennai",
+  title: "Sunware Technologies | AI, Data & Cloud Solutions",
+  // 150 chars — within the 120–160 target; keywords: AI, Data Engineering, Cloud Solutions, Digital Transformation
+  description: "Sunware Technologies delivers AI, Data Engineering, Cloud Solutions & Digital Transformation for global enterprises. Offices in USA, UAE, UK & India.",
+  keywords: "AI solutions, data engineering, cloud solutions, digital transformation, Sunware Technologies, enterprise software, machine learning, IoT, Chennai, USA, Dubai, UK, India",
   authors: [{ name: "Sunware Technologies" }],
-  robots: "index, follow",
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
   openGraph: {
-    title: "Sunware Technologies | AI & Data Engineering",
-    description: "AI, Data Engineering, Cloud & Digital Transformation for global enterprises. Offices in USA, UAE, UK & India.",
+    title: "Sunware Technologies | AI, Data & Cloud Services",
+    description: "Sunware Technologies delivers AI, Data Engineering, Cloud Solutions & Digital Transformation services to enterprises in USA, UAE, UK & India.",
     type: "website",
     url: "https://sunwaretechnologies.com/",
-    images: [{ url: "https://sunwaretechnologies.com/main%20logo.png" }],
+    images: [{ url: "https://sunwaretechnologies.com/main%20logo.png", width: 1200, height: 630, alt: "Sunware Technologies" }],
     siteName: "Sunware Technologies",
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sunware Technologies | AI & Data Engineering",
-    description: "AI, Data Engineering, Cloud & Digital Transformation for global enterprises. Offices in USA, UAE, UK & India.",
+    title: "Sunware Technologies | AI, Data & Cloud Services",
+    description: "Sunware Technologies delivers AI, Data Engineering, Cloud Solutions & Digital Transformation services to enterprises in USA, UAE, UK & India.",
     images: ["https://sunwaretechnologies.com/main%20logo.png"],
+    site: "@sunwaretechnologies",
   },
   alternates: {
-    // Single canonical — the DomainSEO component handles .in domain swap client-side
     canonical: "https://sunwaretechnologies.com/",
     languages: {
       en: "https://sunwaretechnologies.com/",
       "en-IN": "https://sunwaretechnologies.in/",
     },
+  },
+  verification: {
+    google: "google-site-verification-token-here",
   },
 };
 
@@ -46,6 +51,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link rel="apple-touch-icon" href="/favicon.png" />
+        {/* Google Analytics GA4 - tracks all three domains: sunwaretechnologies.com, sunwaretechnologies.in, sunware.in */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-698R671PW8"></script>
+        <script dangerouslySetInnerHTML={{ __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-698R671PW8', {
+            page_path: window.location.pathname,
+            linker: {
+              domains: ['sunwaretechnologies.com', 'sunwaretechnologies.in', 'sunware.in']
+            }
+          });
+        `}} />
         <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
         <link rel="stylesheet" href="/assets/css/fontawesome.css" />
         <link rel="stylesheet" href="/assets/font/flaticon_flexitype.css" />
