@@ -23,25 +23,28 @@ export default function Footer() {
                 <p style={{ fontStyle: "italic", color: "#EF7F1A", margin: "18px 0 8px 0", fontSize: "14px", fontWeight: 500 }}>
                   Advanced Data &amp; AI Services Tailored to Your Needs.
                 </p>
-                {/* Social icons */}
-                <div style={{ display: "flex", gap: "12px", marginTop: "20px", flexWrap: "wrap" }}>
-                  <a href="https://in.linkedin.com/company/sunwaretechnologies" target="_blank" rel="noopener noreferrer" aria-label="Sunware Technologies on LinkedIn" style={socialBtn}
+                {/* Social icons with visible text for crawlers */}
+                <div style={{ display: "flex", gap: "10px", marginTop: "20px", flexWrap: "wrap" }}>
+                  <a href="https://in.linkedin.com/company/sunwaretechnologies" target="_blank" rel="noopener noreferrer" aria-label="Sunware Technologies on LinkedIn"
+                    style={{ ...socialBtn, width: "auto", padding: "0 14px", borderRadius: "20px", gap: "7px", fontSize: "13px" }}
                     onMouseEnter={e => (e.currentTarget.style.background = "rgba(239,127,26,0.7)")}
                     onMouseLeave={e => (e.currentTarget.style.background = "rgba(255,255,255,0.1)")}
-                  ><i className="fab fa-linkedin-in"></i></a>
-                  <a href="https://www.youtube.com/@sunwaretechnologies" target="_blank" rel="noopener noreferrer" aria-label="Sunware Technologies on YouTube" style={socialBtn}
+                  ><i className="fab fa-linkedin-in"></i><span>LinkedIn</span></a>
+                  <a href="https://www.youtube.com/@sunwaretechnologies" target="_blank" rel="noopener noreferrer" aria-label="Sunware Technologies on YouTube"
+                    style={{ ...socialBtn, width: "auto", padding: "0 14px", borderRadius: "20px", gap: "7px", fontSize: "13px" }}
                     onMouseEnter={e => (e.currentTarget.style.background = "rgba(239,127,26,0.7)")}
                     onMouseLeave={e => (e.currentTarget.style.background = "rgba(255,255,255,0.1)")}
-                  ><i className="fab fa-youtube"></i></a>
-                  <a href="https://www.instagram.com/sunwaretechnologies" target="_blank" rel="noopener noreferrer" aria-label="Sunware Technologies on Instagram" style={socialBtn}
+                  ><i className="fab fa-youtube"></i><span>YouTube</span></a>
+                  <a href="https://www.instagram.com/sunwaretechnologies" target="_blank" rel="noopener noreferrer" aria-label="Sunware Technologies on Instagram"
+                    style={{ ...socialBtn, width: "auto", padding: "0 14px", borderRadius: "20px", gap: "7px", fontSize: "13px" }}
                     onMouseEnter={e => (e.currentTarget.style.background = "rgba(239,127,26,0.7)")}
                     onMouseLeave={e => (e.currentTarget.style.background = "rgba(255,255,255,0.1)")}
-                  ><i className="fab fa-instagram"></i></a>
-                  {/* Facebook — fixes "Create and link your Facebook Page" recommendation */}
-                  <a href="https://www.facebook.com/sunwaretechnologies" target="_blank" rel="noopener noreferrer" aria-label="Sunware Technologies on Facebook" style={socialBtn}
+                  ><i className="fab fa-instagram"></i><span>Instagram</span></a>
+                  <a href="https://www.facebook.com/sunwaretechnologies" target="_blank" rel="noopener noreferrer" aria-label="Sunware Technologies on Facebook"
+                    style={{ ...socialBtn, width: "auto", padding: "0 14px", borderRadius: "20px", gap: "7px", fontSize: "13px" }}
                     onMouseEnter={e => (e.currentTarget.style.background = "rgba(239,127,26,0.7)")}
                     onMouseLeave={e => (e.currentTarget.style.background = "rgba(255,255,255,0.1)")}
-                  ><i className="fab fa-facebook-f"></i></a>
+                  ><i className="fab fa-facebook-f"></i><span>Facebook</span></a>
                 </div>
               </div>
             </div>
@@ -132,11 +135,11 @@ export default function Footer() {
               © {new Date().getFullYear()} Sunware Technologies. All rights reserved.
             </p>
             <div style={{ display: "flex", gap: "20px" }}>
-              <a href="/about" style={{ color: "#666", fontSize: "13px", textDecoration: "none", transition: "color 0.2s" }}
+              <a href="/about/" style={{ color: "#666", fontSize: "13px", textDecoration: "none", transition: "color 0.2s" }}
                 onMouseEnter={e => (e.currentTarget.style.color = "#EF7F1A")}
                 onMouseLeave={e => (e.currentTarget.style.color = "#666")}
               >Privacy Policy</a>
-              <a href="/about" style={{ color: "#666", fontSize: "13px", textDecoration: "none", transition: "color 0.2s" }}
+              <a href="/about/" style={{ color: "#666", fontSize: "13px", textDecoration: "none", transition: "color 0.2s" }}
                 onMouseEnter={e => (e.currentTarget.style.color = "#EF7F1A")}
                 onMouseLeave={e => (e.currentTarget.style.color = "#666")}
               >Terms of Use</a>
@@ -148,3 +151,4 @@ export default function Footer() {
     </footer>
   );
 }
+
