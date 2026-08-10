@@ -10,9 +10,7 @@ export default function Footer() {
   } as React.CSSProperties;
 
   return (
-    <footer className="site-footer" itemScope itemType="https://schema.org/Organization">
-      <meta itemProp="name" content="Sunware Technologies" />
-      <meta itemProp="url" content="https://sunwaretechnologies.com" />
+    <footer className="site-footer">
       <div className="footer__one" style={{ padding: "40px 0 20px", backgroundColor: "#0a0f1e" }}>
         <div className="bg_shape" style={{ backgroundImage: "url('/assets/img/shape/footer.png')" }}></div>
         <div className="container">
@@ -115,25 +113,25 @@ export default function Footer() {
                 </div>
 
                 {/* Address — fixes "Add Business Address" recommendation */}
-                <div style={{ display: "flex", gap: "10px", marginBottom: "16px", alignItems: "flex-start" }} itemScope itemType="https://schema.org/PostalAddress">
+                <div style={{ display: "flex", gap: "10px", marginBottom: "16px", alignItems: "flex-start" }}>
                   <i className="flaticon-location" style={{ color: "#EF7F1A", fontSize: "16px", marginTop: "3px", flexShrink: 0 }}></i>
                   <div>
                     <span style={{ color: "#888", fontSize: "11px", display: "block", marginBottom: "3px", textTransform: "uppercase", letterSpacing: "0.5px" }}>USA (HQ)</span>
                     <address style={{ color: "#ccc", fontSize: "13px", lineHeight: "1.7", fontStyle: "normal" }}>
-                      <span itemProp="streetAddress">20065 Stevens Creek Blvd, Suite B-2B</span><br />
-                      <span itemProp="addressLocality">Cupertino</span>, <span itemProp="addressRegion">CA</span> <span itemProp="postalCode">95014</span>
+                      20065 Stevens Creek Blvd, Suite B-2B<br />
+                      Cupertino, CA 95014
                     </address>
                   </div>
                 </div>
 
                 {/* India address */}
-                <div style={{ display: "flex", gap: "10px", alignItems: "flex-start" }} itemScope itemType="https://schema.org/PostalAddress">
+                <div style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
                   <i className="flaticon-location" style={{ color: "#EF7F1A", fontSize: "16px", marginTop: "3px", flexShrink: 0 }}></i>
                   <div>
                     <span style={{ color: "#888", fontSize: "11px", display: "block", marginBottom: "3px", textTransform: "uppercase", letterSpacing: "0.5px" }}>India</span>
                     <address style={{ color: "#ccc", fontSize: "13px", lineHeight: "1.7", fontStyle: "normal" }}>
-                      <span itemProp="streetAddress">117, KSR Nagar, Ambattur</span><br />
-                      <span itemProp="addressLocality">Chennai</span>, <span itemProp="addressRegion">Tamil Nadu</span> <span itemProp="postalCode">600053</span>
+                      117, KSR Nagar, Ambattur<br />
+                      Chennai, Tamil Nadu 600053
                     </address>
                   </div>
                 </div>
