@@ -62,5 +62,5 @@ export default function HtmlPage({ content }: { content: string }) {
 
   }, [content]);
 
-  return <div ref={ref} dangerouslySetInnerHTML={{ __html: content }} />;
+  return <div ref={ref} suppressHydrationWarning dangerouslySetInnerHTML={{ __html: content }} />;
 }

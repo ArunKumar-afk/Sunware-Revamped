@@ -9,47 +9,6 @@ import EnquireModal from "@/components/EnquireModal";
 import Scripts from "@/components/Scripts";
 import DomainSEO from "@/components/DomainSEO";
 
-const orgSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Sunware Technologies",
-  "url": "https://sunwaretechnologies.com",
-  "logo": { "@type": "ImageObject", "url": "https://sunwaretechnologies.com/main%20logo.png", "width": 200, "height": 60 },
-  "contactPoint": { "@type": "ContactPoint", "contactType": "customer support", "email": "connect@sunwaretechnologies.com", "availableLanguage": ["English"] },
-  "description": "Sunware Technologies is a global technology services company specialising in AI, Data Engineering, Cloud Solutions, Digital Transformation and Product Engineering.",
-  "foundingLocation": "Cupertino, California, USA",
-  "sameAs": ["https://in.linkedin.com/company/sunwaretechnologies","https://www.youtube.com/@sunwaretechnologies","https://www.instagram.com/sunwaretechnologies","https://sunwaretechnologies.in"],
-  "address": [
-    {"@type":"PostalAddress","streetAddress":"20065 Stevens Creek Blvd, Suite B-2B","addressLocality":"Cupertino","addressRegion":"CA","postalCode":"95014","addressCountry":"US"},
-    {"@type":"PostalAddress","streetAddress":"Unit No. 144, DMCC Business Centre, Level 5, Jewellery & Gemplex 2","addressLocality":"Dubai","addressCountry":"AE"},
-    {"@type":"PostalAddress","streetAddress":"6th Floor, Forest House, 16-20 Clements Road","addressLocality":"Ilford","postalCode":"IG1 1BA","addressCountry":"GB"},
-    {"@type":"PostalAddress","streetAddress":"117, KSR Nagar, Ambattur","addressLocality":"Chennai","addressRegion":"Tamil Nadu","postalCode":"600053","addressCountry":"IN"}
-  ],
-  "areaServed": ["US","AE","GB","IN"],
-  "knowsAbout": ["Artificial Intelligence","Data Engineering","Cloud Computing","Digital Transformation","IoT Solutions","Cybersecurity","Salesforce","Microsoft Azure","Neo4j","Odoo ERP"]
-};
-
-const localBizSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Sunware Technologies Pvt. Ltd.",
-  "url": "https://sunwaretechnologies.in",
-  "image": "https://sunwaretechnologies.com/main%20logo.png",
-  "description": "AI, Data Engineering and Cloud Solutions company in Chennai, India.",
-  "address": { "@type": "PostalAddress", "streetAddress": "117, KSR Nagar, Ambattur", "addressLocality": "Chennai", "addressRegion": "Tamil Nadu", "postalCode": "600053", "addressCountry": "IN" },
-  "geo": { "@type": "GeoCoordinates", "latitude": 13.1143, "longitude": 80.1548 },
-  "openingHoursSpecification": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
-  "sameAs": ["https://in.linkedin.com/company/sunwaretechnologies"]
-};
-
-const websiteSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Sunware Technologies",
-  "url": "https://sunwaretechnologies.com",
-  "potentialAction": { "@type": "SearchAction", "target": { "@type": "EntryPoint", "urlTemplate": "https://sunwaretechnologies.com/blog?q={search_term_string}" }, "query-input": "required name=search_term_string" }
-};
-
 export const metadata: Metadata = {
   title: "Sunware Technologies | AI, Data & Cloud Solutions",
   description: "Sunware Technologies delivers AI, Data Engineering, Cloud Solutions & Digital Transformation for global enterprises. Offices in USA, UAE, UK & India.",
@@ -76,17 +35,18 @@ export const metadata: Metadata = {
     canonical: "https://sunwaretechnologies.com/",
     languages: { en: "https://sunwaretechnologies.com/", "en-IN": "https://sunwaretechnologies.in/" },
   },
-  // JSON-LD via metadata.other — avoids raw <script> in JSX and hydration warnings
-  other: {
-    "script:ld+json:org": JSON.stringify(orgSchema),
-    "script:ld+json:local": JSON.stringify(localBizSchema),
-    "script:ld+json:web": JSON.stringify(websiteSchema),
-  },
 };
+
+// JSON-LD as static strings — injected server-side, never hydrated by React
+const orgJsonLd = `{"@context":"https://schema.org","@type":"Organization","name":"Sunware Technologies","url":"https://sunwaretechnologies.com","logo":{"@type":"ImageObject","url":"https://sunwaretechnologies.com/main%20logo.png","width":200,"height":60},"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"connect@sunwaretechnologies.com","availableLanguage":["English"]},"description":"Global technology services company specialising in AI, Data Engineering, Cloud Solutions and Digital Transformation.","sameAs":["https://in.linkedin.com/company/sunwaretechnologies","https://www.youtube.com/@sunwaretechnologies","https://www.instagram.com/sunwaretechnologies","https://sunwaretechnologies.in"],"address":[{"@type":"PostalAddress","streetAddress":"20065 Stevens Creek Blvd, Suite B-2B","addressLocality":"Cupertino","addressRegion":"CA","postalCode":"95014","addressCountry":"US"},{"@type":"PostalAddress","streetAddress":"117, KSR Nagar, Ambattur","addressLocality":"Chennai","addressRegion":"Tamil Nadu","postalCode":"600053","addressCountry":"IN"}],"areaServed":["US","AE","GB","IN"]}`;
+
+const localBizJsonLd = `{"@context":"https://schema.org","@type":"LocalBusiness","name":"Sunware Technologies Pvt. Ltd.","url":"https://sunwaretechnologies.in","description":"AI, Data Engineering and Cloud Solutions company in Chennai, India.","address":{"@type":"PostalAddress","streetAddress":"117, KSR Nagar, Ambattur","addressLocality":"Chennai","addressRegion":"Tamil Nadu","postalCode":"600053","addressCountry":"IN"},"geo":{"@type":"GeoCoordinates","latitude":13.1143,"longitude":80.1548},"openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},"sameAs":["https://in.linkedin.com/company/sunwaretechnologies"]}`;
+
+const websiteJsonLd = `{"@context":"https://schema.org","@type":"WebSite","name":"Sunware Technologies","url":"https://sunwaretechnologies.com","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://sunwaretechnologies.com/blog?q={search_term_string}"},"query-input":"required name=search_term_string"}}`;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link rel="apple-touch-icon" href="/favicon.png" />
@@ -97,8 +57,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
         <link rel="stylesheet" href="/assets/css/magnific-popup.css" />
         <link rel="stylesheet" href="/assets/css/style.css" />
+        {/* JSON-LD Schemas — static, server-rendered only */}
+        <script type="application/ld+json" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: orgJsonLd }} />
+        <script type="application/ld+json" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: localBizJsonLd }} />
+        <script type="application/ld+json" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: websiteJsonLd }} />
       </head>
-      <body>
+      <body suppressHydrationWarning>
         <DomainSEO />
         <Preloader />
         <div className="cursor">
@@ -113,7 +77,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         <EnquireModal />
         <Scripts />
-        {/* All scripts afterInteractive — compatible with App Router */}
+        {/* All scripts use afterInteractive — App Router compatible */}
         <Script src="/assets/js/jquery-3.7.1.min.js" strategy="afterInteractive" />
         <Script src="/assets/js/bootstrap.min.js" strategy="afterInteractive" />
         <Script src="/assets/js/wow.min.js" strategy="afterInteractive" />
