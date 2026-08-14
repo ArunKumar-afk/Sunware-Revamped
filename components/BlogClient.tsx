@@ -57,7 +57,11 @@ export default function BlogClient() {
 
   // Single post view
   if (selectedPost) {
-    // Remove ALL images from content to avoid duplicates (we show featured image separately)
+    const currentIndex = posts.findIndex((p) => p.link === selectedPost.link);
+    const prevPost = currentIndex > 0 ? posts[currentIndex - 1] : null;
+    const nextPost = currentIndex < posts.length - 1 ? posts[currentIndex + 1] : null;
+
+    // Remove ALL images from content to avoid duplicates
     let cleanContent = selectedPost.content;
     cleanContent = cleanContent.replace(/<a[^>]*>\s*<img[^>]*>\s*<\/a>/gi, '');
     cleanContent = cleanContent.replace(/<img[^>]*>/gi, '');
@@ -66,7 +70,7 @@ export default function BlogClient() {
       <>
         <section style={{ padding: "60px 0 40px" }}>
           <div className="container">
-            <a href="/blog" className="default_button" style={{ marginBottom: "30px", display: "inline-flex", background: "rgba(0,0,0,0.05)", color: "var(--primary-color-1)", border: "1px solid #eee" }}>
+            <a href="/blog/" className="default_button" style={{ marginBottom: "30px", display: "inline-flex", background: "rgba(0,0,0,0.05)", color: "var(--primary-color-1)", border: "1px solid #eee" }}>
               <i className="fal fa-arrow-left" style={{ marginRight: "8px" }}></i> Back to Blog
             </a>
             <h1 style={{ color: "var(--primary-color-1)", fontSize: "clamp(24px, 5vw, 42px)", fontWeight: 800, lineHeight: 1.3, marginBottom: "16px" }}>{selectedPost.title}</h1>
@@ -76,7 +80,44 @@ export default function BlogClient() {
                 <img src={selectedPost.thumb} alt={selectedPost.title} style={{ width: "100%", height: "auto", maxHeight: "500px", objectFit: "cover" }} />
               </div>
             )}
-            <div className="blog-content" style={{ fontSize: "17px", lineHeight: 1.9, color: "#444", maxWidth: "800px" }} dangerouslySetInnerHTML={{ __html: cleanContent }} />
+            {/* Full-width content — no maxWidth cap */}
+            <div className="blog-content" style={{ fontSize: "17px", lineHeight: 1.9, color: "#444" }} dangerouslySetInnerHTML={{ __html: cleanContent }} />
+
+            {/* Prev / Next navigation */}
+            <div style={{ borderTop: "1px solid #eee", marginTop: "60px", paddingTop: "40px", display: "flex", gap: "20px", justifyContent: "space-between", flexWrap: "wrap" }}>
+              {/* Previous article */}
+              {prevPost ? (
+                <a href={`/blog?post=${encodeURIComponent(prevPost.link)}`}
+                  onClick={(e) => { e.preventDefault(); window.history.pushState({}, "", `/blog?post=${encodeURIComponent(prevPost.link)}`); setSelectedPost(prevPost); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+                  style={{ flex: "1 1 45%", minWidth: "240px", background: "#f8faff", border: "1.5px solid #edf0f3", borderRadius: "16px", padding: "24px", textDecoration: "none", transition: "all 0.25s ease", display: "flex", flexDirection: "column", gap: "8px" }}
+                  onMouseEnter={e => { e.currentTarget.style.borderColor = "var(--primary-color-1)"; e.currentTarget.style.boxShadow = "0 8px 24px rgba(0,0,0,0.07)"; }}
+                  onMouseLeave={e => { e.currentTarget.style.borderColor = "#edf0f3"; e.currentTarget.style.boxShadow = "none"; }}
+                >
+                  <span style={{ fontSize: "12px", fontWeight: 700, color: "#EF7F1A", textTransform: "uppercase", letterSpacing: "0.5px", display: "flex", alignItems: "center", gap: "6px" }}>
+                    <i className="fal fa-arrow-left"></i> Previous Article
+                  </span>
+                  <span style={{ fontSize: "16px", fontWeight: 700, color: "var(--primary-color-1)", lineHeight: 1.4 }}>{prevPost.title}</span>
+                  <span style={{ fontSize: "12px", color: "#999" }}>{prevPost.date}</span>
+                </a>
+              ) : <div style={{ flex: "1 1 45%" }} />}
+
+              {/* Next article */}
+              {nextPost ? (
+                <a href={`/blog?post=${encodeURIComponent(nextPost.link)}`}
+                  onClick={(e) => { e.preventDefault(); window.history.pushState({}, "", `/blog?post=${encodeURIComponent(nextPost.link)}`); setSelectedPost(nextPost); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+                  style={{ flex: "1 1 45%", minWidth: "240px", background: "#f8faff", border: "1.5px solid #edf0f3", borderRadius: "16px", padding: "24px", textDecoration: "none", transition: "all 0.25s ease", display: "flex", flexDirection: "column", gap: "8px", alignItems: "flex-end", textAlign: "right" }}
+                  onMouseEnter={e => { e.currentTarget.style.borderColor = "var(--primary-color-1)"; e.currentTarget.style.boxShadow = "0 8px 24px rgba(0,0,0,0.07)"; }}
+                  onMouseLeave={e => { e.currentTarget.style.borderColor = "#edf0f3"; e.currentTarget.style.boxShadow = "none"; }}
+                >
+                  <span style={{ fontSize: "12px", fontWeight: 700, color: "#EF7F1A", textTransform: "uppercase", letterSpacing: "0.5px", display: "flex", alignItems: "center", gap: "6px" }}>
+                    Next Article <i className="fal fa-arrow-right"></i>
+                  </span>
+                  <span style={{ fontSize: "16px", fontWeight: 700, color: "var(--primary-color-1)", lineHeight: 1.4 }}>{nextPost.title}</span>
+                  <span style={{ fontSize: "12px", color: "#999" }}>{nextPost.date}</span>
+                </a>
+              ) : <div style={{ flex: "1 1 45%" }} />}
+            </div>
+
           </div>
         </section>
       </>
