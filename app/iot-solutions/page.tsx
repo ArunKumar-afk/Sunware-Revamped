@@ -1,9 +1,27 @@
 ﻿import type { Metadata } from "next";
 import HtmlPage from "@/components/HtmlPage";
+import BreadcrumbLD from "@/components/BreadcrumbLD";
 
 export const metadata: Metadata = {
   title: "IoT Solutions - Sunware Technologies",
   description: "End-to-end IoT ecosystems that connect your operations and unlock real-time intelligence with Sunware Technologies IoT solutions.",
+  keywords: "IoT solutions, Internet of Things, connected devices, smart operations, industrial IoT, Sunware Technologies IoT",
+  openGraph: {
+    title: "IoT Solutions - Sunware Technologies",
+    description: "End-to-end IoT ecosystems that connect your operations and unlock real-time intelligence with Sunware Technologies IoT solutions.",
+    url: "https://sunwaretechnologies.com/iot-solutions/",
+    images: [{ url: "https://sunwaretechnologies.com/hero.png", width: 1200, height: 630, alt: "IoT Solutions — Sunware Technologies" }],
+    type: "website",
+    siteName: "Sunware Technologies",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "IoT Solutions - Sunware Technologies",
+    description: "End-to-end IoT ecosystems that connect your operations and unlock real-time intelligence with Sunware Technologies IoT solutions.",
+    images: ["https://sunwaretechnologies.com/hero.png"],
+    site: "@sunwaretechnologies",
+  },
   alternates: { canonical: "https://sunwaretechnologies.com/iot-solutions/" },
 };
 
@@ -153,8 +171,8 @@ const content = `
 				<article class="hc-why-card wow fadeInUp" data-wow-delay=".2s" role="listitem">
 					<div class="hc-why-icon-wrap" aria-hidden="true"><i class="fal fa-database"></i></div>
 					<div class="hc-why-divider" aria-hidden="true"></div>
-					<h3>EdgeData360 Platform</h3>
-					<p>Our proprietary EdgeData360 platform accelerates IoT deployments with pre-built connectors, device management, edge AI runtime and analytics modules — reducing time-to-value significantly.</p>
+					<h3>Relim.ai Platform</h3>
+					<p>Our proprietary Relim.ai platform (formerly EdgeData360) accelerates IoT deployments with pre-built connectors, device management, edge AI runtime and analytics modules — reducing time-to-value significantly.</p>
 				</article>
 
 				<article class="hc-why-card wow fadeInUp" data-wow-delay=".3s" role="listitem">
@@ -192,5 +210,13 @@ const content = `
 </div>`;
 
 export default function Page() {
-  return <HtmlPage content={content} />;
+  return (
+    <>
+      <BreadcrumbLD items={[
+        { name: "Home", url: "https://sunwaretechnologies.com" },
+        { name: "IoT Solutions", url: "https://sunwaretechnologies.com/iot-solutions/" },
+      ]} />
+      <HtmlPage content={content} />
+    </>
+  );
 }

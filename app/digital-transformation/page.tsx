@@ -1,9 +1,27 @@
 ﻿import type { Metadata } from "next";
 import HtmlPage from "@/components/HtmlPage";
+import BreadcrumbLD from "@/components/BreadcrumbLD";
 
 export const metadata: Metadata = {
   title: "Digital Transformation Services - Sunware Technologies",
   description: "Reimagine how your organisation operates, serves customers and competes in the digital era with Sunware Technologies digital transformation services.",
+  keywords: "digital transformation services, enterprise digital, business transformation, technology modernisation, Sunware Technologies",
+  openGraph: {
+    title: "Digital Transformation Services - Sunware Technologies",
+    description: "Reimagine how your organisation operates, serves customers and competes in the digital era with Sunware Technologies digital transformation services.",
+    url: "https://sunwaretechnologies.com/digital-transformation/",
+    images: [{ url: "https://sunwaretechnologies.com/hero.png", width: 1200, height: 630, alt: "Digital Transformation Services — Sunware Technologies" }],
+    type: "website",
+    siteName: "Sunware Technologies",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Digital Transformation Services - Sunware Technologies",
+    description: "Reimagine how your organisation operates, serves customers and competes in the digital era with Sunware Technologies digital transformation services.",
+    images: ["https://sunwaretechnologies.com/hero.png"],
+    site: "@sunwaretechnologies",
+  },
   alternates: { canonical: "https://sunwaretechnologies.com/digital-transformation/" },
 };
 
@@ -192,5 +210,13 @@ const content = `
 </div>`;
 
 export default function Page() {
-  return <HtmlPage content={content} />;
+  return (
+    <>
+      <BreadcrumbLD items={[
+        { name: "Home", url: "https://sunwaretechnologies.com" },
+        { name: "Digital Transformation", url: "https://sunwaretechnologies.com/digital-transformation/" },
+      ]} />
+      <HtmlPage content={content} />
+    </>
+  );
 }

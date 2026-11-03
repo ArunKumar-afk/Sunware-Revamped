@@ -10,8 +10,13 @@ export default function EdgeDataClient() {
           <div className="row al-center jc-between">
             <div className="col-xl-7 col-lg-7">
               <div className="banner__one-content">
+                {/* Relim.ai logo */}
                 <div className="wow fadeInUp" style={{ marginBottom: "8px", marginLeft: "-8px" }}>
-                  <img src="/images/edlogo.png" alt="EdgeData360" style={{ height: "72px", width: "auto" }} />
+                  <img src="/images/relim dark png.png" alt="Relim.ai" style={{ height: "120px", width: "auto" }} />
+                </div>
+                {/* "Formerly EdgeData360" badge */}
+                <div className="wow fadeInUp" style={{ display: "inline-flex", alignItems: "center", gap: "6px", marginBottom: "10px", marginLeft: "8px", background: "rgba(0,0,0,0.05)", border: "1px solid rgba(0,0,0,0.12)", borderRadius: "50px", padding: "5px 14px" }}>
+                  <span style={{ fontSize: "11px", fontWeight: 500, color: "#666", letterSpacing: "0.2px" }}>Formerly EdgeData360</span>
                 </div>
                 <div className="wow fadeInLeft" style={{ display: "inline-flex", alignItems: "center", gap: "8px", marginBottom: "12px", marginLeft: "8px", background: "rgba(239,127,26,0.08)", border: "1px solid rgba(239,127,26,0.2)", borderRadius: "50px", padding: "6px 16px" }}>
                   <span style={{ display: "inline-block", width: "6px", height: "6px", borderRadius: "50%", background: "#EF7F1A", flexShrink: 0 }}></span>
@@ -20,7 +25,7 @@ export default function EdgeDataClient() {
                 <h1 className="wow fadeInUp" style={{ color: "var(--primary-color-1)", fontSize: "64px", fontWeight: 900, lineHeight: 1.2, marginBottom: "16px" }}>Turn Enterprise Data Into <span style={{ color: "#EF7F1A" }}>Instant AI Intelligence.</span></h1>
                 <p className="wow fadeInUp" data-wow-delay=".4s" style={{ fontSize: "18px", color: "rgba(0,0,0,0.75)", marginBottom: "35px", lineHeight: 1.7, maxWidth: "650px" }}>Seamlessly unify 250+ data sources, create AI-ready pipelines in 10 minutes, and enable real-time decision-making powered by AI.</p>
                 <div className="wow fadeInUp" data-wow-delay=".6s" style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}>
-                  <a className="default_button" href="https://edgedata360.com" target="_blank">Visit EdgeData <i className="flaticon-right-up"></i></a>
+                  <a className="default_button" href="https://relim.ai" target="_blank" rel="noopener noreferrer">Visit Relim.ai <i className="flaticon-right-up"></i></a>
                 </div>
               </div>
             </div>
@@ -33,7 +38,7 @@ export default function EdgeDataClient() {
               <div className="wow fadeInRight ed-stats-card" data-wow-delay=".6s">
                 <div style={{ marginBottom: "24px" }}>
                   <div style={{ fontSize: "28px", color: "#EF7F1A", marginBottom: "10px", lineHeight: 1 }}><i className="fas fa-quote-left"></i></div>
-                  <p className="ed-stats-quote" style={{ margin: 0 }}>Deploy on-premises or in your cloud. EdgeData360 centralises edge operations with real-time visibility - turning raw industrial data into actionable intelligence.</p>
+                  <p className="ed-stats-quote" style={{ margin: 0 }}>Deploy on-premises or in your cloud. Relim.ai centralises edge operations with real-time visibility — turning raw industrial data into actionable intelligence.</p>
                 </div>
                 <div className="ed-stats-grid">
                   <div className="ed-stat-item"><div className="ed-stat-value">250+</div><div className="ed-stat-label">Data Connectors</div></div>
@@ -50,14 +55,14 @@ export default function EdgeDataClient() {
       <div className="container section-padding">
         <div className="story-row al-center">
           <div className="story-content wow fadeInLeft">
-            <span className="subtitle">About EdgeData360</span>
+            <span className="subtitle">About Relim.ai</span>
             <h2 style={{ fontSize: "42px", fontWeight: 800, margin: "16px 0 24px", color: "var(--primary-color-1)" }}>Data Unified. AI Unleashed.</h2>
-            <p style={{ fontSize: "18px", lineHeight: 1.8, color: "#555", marginBottom: "20px" }}>EdgeData360 is Sunware Technologies&apos; enterprise product - a unified data platform that connects every source, powers real-time intelligence, and transforms operational data into business outcomes.</p>
-            <p style={{ fontSize: "18px", lineHeight: 1.8, color: "#555", marginBottom: "32px" }}>Deploy on-premises or in your customer cloud. EdgeData360 delivers centralized edge operations with real-time visibility, turning raw industrial data into actionable intelligence - without writing a single line of custom integration code.</p>
-            <a className="default_button" href="https://edgedata360.com" target="_blank">Read More <i className="flaticon-right-up"></i></a>
+            <p style={{ fontSize: "18px", lineHeight: 1.8, color: "#555", marginBottom: "20px" }}>Relim.ai is Sunware Technologies&apos; enterprise product — a unified data platform that connects every source, powers real-time intelligence, and transforms operational data into business outcomes.</p>
+            <p style={{ fontSize: "18px", lineHeight: 1.8, color: "#555", marginBottom: "32px" }}>Deploy on-premises or in your customer cloud. Relim.ai delivers centralised edge operations with real-time visibility, turning raw industrial data into actionable intelligence — without writing a single line of custom integration code.</p>
+            <a className="default_button" href="https://relim.ai" target="_blank" rel="noopener noreferrer">Read More <i className="flaticon-right-up"></i></a>
           </div>
           <div className="story-image wow fadeInRight">
-            <img src="/edgedata360/ed laptop mock latest.png" alt="EdgeData360 Platform Dashboard" style={{ width: "100%", height: "auto", borderRadius: 0, boxShadow: "none" }} />
+            <img src="/images/image.png" alt="Relim.ai Platform Dashboard" style={{ width: "100%", height: "auto", borderRadius: 0, boxShadow: "none" }} />
           </div>
         </div>
       </div>
@@ -67,7 +72,7 @@ export default function EdgeDataClient() {
         <div className="container">
           <div className="section-title t-center mb-60">
             <span className="subtitle">Platform Capabilities</span>
-            <h2 style={{ fontWeight: 800 }}>The EdgeData360 Engine</h2>
+            <h2 style={{ fontWeight: 800 }}>The Relim.ai Engine</h2>
             <p style={{ maxWidth: "680px", margin: "0 auto", color: "#666", fontSize: "18px" }}>Built for Speed. Engineered for Scale.</p>
           </div>
           <div className="row justify-content-center">
@@ -76,7 +81,7 @@ export default function EdgeDataClient() {
               { icon: "fa-brain", title: "Agentic AI", desc: "Embed autonomous AI agents directly into live pipelines for split-second, automated decisions at the edge." },
               { icon: "fa-chart-line", title: "Visual AI Analytics Dashboard", desc: "Build and share dynamic real-time dashboards fueled by continuous AI-driven insights and visual intelligence." },
               { icon: "fa-robot", title: "AI Chatbot", desc: "Conversational AI interface for querying operational data, triggering actions, and getting real-time insights naturally." },
-              { icon: "fa-user-cog", title: "Skill Agent", desc: "Specialized AI agents trained on domain-specific tasks to automate complex operational workflows autonomously." },
+              { icon: "fa-user-cog", title: "Skill Agent", desc: "Specialised AI agents trained on domain-specific tasks to automate complex operational workflows autonomously." },
               { icon: "fa-calendar-check", title: "Autonomous Execution", desc: "Configure AI to execute workflows automatically on schedules or events, delivering reliable results without manual intervention." },
             ].map((item, i) => (
               <div className={`col-lg-4 col-md-6 mb-40 wow fadeInUp`} data-wow-delay={`${i * 0.1}s`} key={item.title}>
@@ -95,7 +100,7 @@ export default function EdgeDataClient() {
       <div className="container section-padding">
         <div className="story-row al-center">
           <div className="story-image wow fadeInLeft" style={{ paddingTop: "70px" }}>
-            <img src="/edgedata360/image.png" alt="EdgeData360 Data Challenge" style={{ width: "100%", height: "auto", borderRadius: 0, boxShadow: "none" }} />
+            <img src="/edgedata360/image.png" alt="Relim.ai Data Challenge" style={{ width: "100%", height: "auto", borderRadius: 0, boxShadow: "none" }} />
           </div>
           <div className="story-content wow fadeInRight">
             <span className="subtitle">The Challenge</span>
@@ -105,7 +110,7 @@ export default function EdgeDataClient() {
                 { icon: "fa-layer-group", title: "The Silo Effect", desc: "Critical operational data trapped across disparate, legacy systems." },
                 { icon: "fa-hourglass-half", title: "Sluggish Timelines", desc: "Complex integration cycles dragging for months, not days." },
                 { icon: "fa-eye-slash", title: "Operational Blind Spots", desc: "Zero real-time visibility into your live OT networks and environments." },
-                { icon: "fa-times-circle", title: "Failed AI Initiatives", desc: "Powerful algorithms starved by poor, unstandardized data quality." },
+                { icon: "fa-times-circle", title: "Failed AI Initiatives", desc: "Powerful algorithms starved by poor, unstandardised data quality." },
               ].map((item) => (
                 <div key={item.title} style={{ display: "flex", alignItems: "flex-start", gap: "16px" }}>
                   <i className={`fas ${item.icon}`} style={{ color: "#EF7F1A", fontSize: "22px", marginTop: "3px", flexShrink: 0 }}></i>
@@ -122,8 +127,8 @@ export default function EdgeDataClient() {
         <div className="container">
           <div className="section-title t-center mb-60">
             <span className="subtitle">Powered by Sunware Technologies</span>
-            <h2 style={{ fontWeight: 800 }}>EdgeData360 is backed by deep expertise in</h2>
-            <p style={{ maxWidth: "600px", margin: "0 auto", color: "#666", fontSize: "18px" }}>Every layer of EdgeData360 is built on Sunware&apos;s proven services - connecting your edge to the enterprise.</p>
+            <h2 style={{ fontWeight: 800 }}>Relim.ai is backed by deep expertise in</h2>
+            <p style={{ maxWidth: "600px", margin: "0 auto", color: "#666", fontSize: "18px" }}>Every layer of Relim.ai is built on Sunware&apos;s proven services — connecting your edge to the enterprise.</p>
           </div>
           <div className="row justify-content-center">
             {[

@@ -1,9 +1,27 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import HtmlPage from "@/components/HtmlPage";
+import BreadcrumbLD from "@/components/BreadcrumbLD";
 
 export const metadata: Metadata = {
   title: "Odoo Custom Solutions - Sunware Technologies",
   description: "Odoo ERP implementation, customisation and integration services from Sunware Technologies. End-to-end business management solutions for growing enterprises.",
+  keywords: "Odoo ERP, ERP implementation, Odoo customisation, business management software, Odoo partner, Sunware Technologies",
+  openGraph: {
+    title: "Odoo Custom Solutions - Sunware Technologies",
+    description: "Odoo ERP implementation, customisation and integration services from Sunware Technologies. End-to-end business management solutions for growing enterprises.",
+    url: "https://sunwaretechnologies.com/odoo-solutions/",
+    images: [{ url: "https://sunwaretechnologies.com/hero.png", width: 1200, height: 630, alt: "Odoo Custom Solutions — Sunware Technologies" }],
+    type: "website",
+    siteName: "Sunware Technologies",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Odoo Custom Solutions - Sunware Technologies",
+    description: "Odoo ERP implementation, customisation and integration services from Sunware Technologies. End-to-end business management solutions for growing enterprises.",
+    images: ["https://sunwaretechnologies.com/hero.png"],
+    site: "@sunwaretechnologies",
+  },
   alternates: { canonical: "https://sunwaretechnologies.com/odoo-solutions/" },
 };
 
@@ -169,6 +187,14 @@ const content = `
 </div>`;
 
 export default function Page() {
-  return <HtmlPage content={content} />;
+  return (
+    <>
+      <BreadcrumbLD items={[
+        { name: "Home", url: "https://sunwaretechnologies.com" },
+        { name: "Odoo Solutions", url: "https://sunwaretechnologies.com/odoo-solutions/" },
+      ]} />
+      <HtmlPage content={content} />
+    </>
+  );
 }
 

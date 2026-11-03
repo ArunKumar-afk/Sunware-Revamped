@@ -1,9 +1,27 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import HtmlPage from "@/components/HtmlPage";
+import BreadcrumbLD from "@/components/BreadcrumbLD";
 
 export const metadata: Metadata = {
   title: "Mobile App Development - Sunware Technologies",
   description: "Native and cross-platform mobile app development from Sunware Technologies. iOS, Android and React Native solutions for enterprises.",
+  keywords: "mobile app development, iOS app development, Android app development, React Native, cross-platform apps, Sunware Technologies",
+  openGraph: {
+    title: "Mobile App Development - Sunware Technologies",
+    description: "Native and cross-platform mobile app development from Sunware Technologies. iOS, Android and React Native solutions for enterprises.",
+    url: "https://sunwaretechnologies.com/mobile-app-development/",
+    images: [{ url: "https://sunwaretechnologies.com/hero.png", width: 1200, height: 630, alt: "Mobile App Development — Sunware Technologies" }],
+    type: "website",
+    siteName: "Sunware Technologies",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mobile App Development - Sunware Technologies",
+    description: "Native and cross-platform mobile app development from Sunware Technologies. iOS, Android and React Native solutions for enterprises.",
+    images: ["https://sunwaretechnologies.com/hero.png"],
+    site: "@sunwaretechnologies",
+  },
   alternates: { canonical: "https://sunwaretechnologies.com/mobile-app-development/" },
 };
 
@@ -169,6 +187,14 @@ const content = `
 </div>`;
 
 export default function Page() {
-  return <HtmlPage content={content} />;
+  return (
+    <>
+      <BreadcrumbLD items={[
+        { name: "Home", url: "https://sunwaretechnologies.com" },
+        { name: "Mobile App Development", url: "https://sunwaretechnologies.com/mobile-app-development/" },
+      ]} />
+      <HtmlPage content={content} />
+    </>
+  );
 }
 

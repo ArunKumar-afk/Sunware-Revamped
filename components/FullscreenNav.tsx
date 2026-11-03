@@ -18,8 +18,8 @@ export default function FullscreenNav() {
       </button>
       <div className="nav-brand"><a href="/"><img src="/white Logo.png" alt="Sunware Technologies" /></a></div>
       <ul>
-        <li className="nav-item has-sub"><a href="/edgedata360/" onClick={(e) => toggleNavSub(e, e.currentTarget)}>Products <span className="nav-toggle"><i className="fal fa-chevron-down"></i></span></a>
-          <div className="nav-sub"><a href="/edgedata360/">EdgeData360</a></div>
+        <li className="nav-item has-sub"><a href="/relim-ai/" onClick={(e) => toggleNavSub(e, e.currentTarget)}>Products <span className="nav-toggle"><i className="fal fa-chevron-down"></i></span></a>
+          <div className="nav-sub"><a href="/relim-ai/">Relim.ai</a></div>
         </li>
         <li className="nav-item has-sub"><a href="#" onClick={(e) => toggleNavSub(e, e.currentTarget)}>Services <span className="nav-toggle"><i className="fal fa-chevron-down"></i></span></a>
           <div className="nav-sub">

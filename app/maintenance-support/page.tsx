@@ -1,9 +1,27 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import HtmlPage from "@/components/HtmlPage";
+import BreadcrumbLD from "@/components/BreadcrumbLD";
 
 export const metadata: Metadata = {
   title: "Maintenance & Support - Sunware Technologies",
   description: "Proactive, 24/7 application support that maximises uptime and protects your technology investment with Sunware Technologies.",
+  keywords: "application maintenance, managed support, 24/7 support, application support services, IT support, Sunware Technologies",
+  openGraph: {
+    title: "Maintenance & Support - Sunware Technologies",
+    description: "Proactive, 24/7 application support that maximises uptime and protects your technology investment with Sunware Technologies.",
+    url: "https://sunwaretechnologies.com/maintenance-support/",
+    images: [{ url: "https://sunwaretechnologies.com/hero.png", width: 1200, height: 630, alt: "Maintenance & Support — Sunware Technologies" }],
+    type: "website",
+    siteName: "Sunware Technologies",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Maintenance & Support - Sunware Technologies",
+    description: "Proactive, 24/7 application support that maximises uptime and protects your technology investment with Sunware Technologies.",
+    images: ["https://sunwaretechnologies.com/hero.png"],
+    site: "@sunwaretechnologies",
+  },
   alternates: { canonical: "https://sunwaretechnologies.com/maintenance-support/" },
 };
 
@@ -192,6 +210,14 @@ const content = `
 </div>`;
 
 export default function Page() {
-  return <HtmlPage content={content} />;
+  return (
+    <>
+      <BreadcrumbLD items={[
+        { name: "Home", url: "https://sunwaretechnologies.com" },
+        { name: "Maintenance & Support", url: "https://sunwaretechnologies.com/maintenance-support/" },
+      ]} />
+      <HtmlPage content={content} />
+    </>
+  );
 }
 

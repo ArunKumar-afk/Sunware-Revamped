@@ -1,9 +1,27 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import HtmlPage from "@/components/HtmlPage";
+import BreadcrumbLD from "@/components/BreadcrumbLD";
 
 export const metadata: Metadata = {
   title: "Automation & Operations - Sunware Technologies",
   description: "Intelligent automation and operational excellence solutions from Sunware Technologies. RPA, process automation and AI-driven workflows.",
+  keywords: "automation services, RPA, robotic process automation, process automation, AI workflows, Sunware Technologies automation",
+  openGraph: {
+    title: "Automation & Operations - Sunware Technologies",
+    description: "Intelligent automation and operational excellence solutions from Sunware Technologies. RPA, process automation and AI-driven workflows.",
+    url: "https://sunwaretechnologies.com/automation-efficiency/",
+    images: [{ url: "https://sunwaretechnologies.com/hero.png", width: 1200, height: 630, alt: "Automation & Operations — Sunware Technologies" }],
+    type: "website",
+    siteName: "Sunware Technologies",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Automation & Operations - Sunware Technologies",
+    description: "Intelligent automation and operational excellence solutions from Sunware Technologies. RPA, process automation and AI-driven workflows.",
+    images: ["https://sunwaretechnologies.com/hero.png"],
+    site: "@sunwaretechnologies",
+  },
   alternates: { canonical: "https://sunwaretechnologies.com/automation-efficiency/" },
 };
 
@@ -169,6 +187,14 @@ const content = `
 </div>`;
 
 export default function Page() {
-  return <HtmlPage content={content} />;
+  return (
+    <>
+      <BreadcrumbLD items={[
+        { name: "Home", url: "https://sunwaretechnologies.com" },
+        { name: "Automation & Operations", url: "https://sunwaretechnologies.com/automation-efficiency/" },
+      ]} />
+      <HtmlPage content={content} />
+    </>
+  );
 }
 

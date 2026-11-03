@@ -1,9 +1,27 @@
 ﻿import type { Metadata } from "next";
 import HtmlPage from "@/components/HtmlPage";
+import BreadcrumbLD from "@/components/BreadcrumbLD";
 
 export const metadata: Metadata = {
   title: "Enterprise App Development - Sunware Technologies",
   description: "Bespoke enterprise applications built for scale, security and long-term business value by Sunware Technologies.",
+  keywords: "enterprise app development, custom enterprise software, bespoke applications, scalable software, Sunware Technologies",
+  openGraph: {
+    title: "Enterprise App Development - Sunware Technologies",
+    description: "Bespoke enterprise applications built for scale, security and long-term business value by Sunware Technologies.",
+    url: "https://sunwaretechnologies.com/enterprise-app-development/",
+    images: [{ url: "https://sunwaretechnologies.com/hero.png", width: 1200, height: 630, alt: "Enterprise App Development — Sunware Technologies" }],
+    type: "website",
+    siteName: "Sunware Technologies",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Enterprise App Development - Sunware Technologies",
+    description: "Bespoke enterprise applications built for scale, security and long-term business value by Sunware Technologies.",
+    images: ["https://sunwaretechnologies.com/hero.png"],
+    site: "@sunwaretechnologies",
+  },
   alternates: { canonical: "https://sunwaretechnologies.com/enterprise-app-development/" },
 };
 
@@ -199,5 +217,13 @@ const content = `
 </div>`;
 
 export default function Page() {
-  return <HtmlPage content={content} />;
+  return (
+    <>
+      <BreadcrumbLD items={[
+        { name: "Home", url: "https://sunwaretechnologies.com" },
+        { name: "Enterprise App Development", url: "https://sunwaretechnologies.com/enterprise-app-development/" },
+      ]} />
+      <HtmlPage content={content} />
+    </>
+  );
 }

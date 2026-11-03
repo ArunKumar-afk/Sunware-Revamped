@@ -1,9 +1,28 @@
 import type { Metadata } from "next";
 import HtmlPage from "@/components/HtmlPage";
 
+import BreadcrumbLD from "@/components/BreadcrumbLD";
+
 export const metadata: Metadata = {
   title: "AI Enablement Services - Sunware Technologies",
   description: "Accelerate your AI journey with Sunware Technologies AI enablement services. Strategy, implementation and scaling of AI solutions.",
+  keywords: "AI enablement services, enterprise AI, machine learning solutions, generative AI, AI strategy, Sunware Technologies AI",
+  openGraph: {
+    title: "AI Enablement Services - Sunware Technologies",
+    description: "Accelerate your AI journey with Sunware Technologies AI enablement services. Strategy, implementation and scaling of AI solutions.",
+    url: "https://sunwaretechnologies.com/ai-enablement/",
+    images: [{ url: "https://sunwaretechnologies.com/hero.png", width: 1200, height: 630, alt: "AI Enablement Services — Sunware Technologies" }],
+    type: "website",
+    siteName: "Sunware Technologies",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI Enablement Services - Sunware Technologies",
+    description: "Accelerate your AI journey with Sunware Technologies AI enablement services. Strategy, implementation and scaling of AI solutions.",
+    images: ["https://sunwaretechnologies.com/hero.png"],
+    site: "@sunwaretechnologies",
+  },
   alternates: { canonical: "https://sunwaretechnologies.com/ai-enablement/" },
 };
 
@@ -199,6 +218,14 @@ const content = `
 </div>`;
 
 export default function Page() {
-  return <HtmlPage content={content} />;
+  return (
+    <>
+      <BreadcrumbLD items={[
+        { name: "Home", url: "https://sunwaretechnologies.com" },
+        { name: "AI Enablement", url: "https://sunwaretechnologies.com/ai-enablement/" },
+      ]} />
+      <HtmlPage content={content} />
+    </>
+  );
 }
 

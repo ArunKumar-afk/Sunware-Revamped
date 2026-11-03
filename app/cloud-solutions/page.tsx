@@ -1,9 +1,27 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import HtmlPage from "@/components/HtmlPage";
+import BreadcrumbLD from "@/components/BreadcrumbLD";
 
 export const metadata: Metadata = {
   title: "Cloud Solutions - Sunware Technologies",
   description: "End-to-end cloud solutions from Sunware Technologies. Multi-cloud strategy, migration, cloud-native development and managed services.",
+  keywords: "cloud solutions, multi-cloud, cloud migration, cloud-native, managed cloud services, Sunware Technologies cloud",
+  openGraph: {
+    title: "Cloud Solutions - Sunware Technologies",
+    description: "End-to-end cloud solutions from Sunware Technologies. Multi-cloud strategy, migration, cloud-native development and managed services.",
+    url: "https://sunwaretechnologies.com/cloud-solutions/",
+    images: [{ url: "https://sunwaretechnologies.com/hero.png", width: 1200, height: 630, alt: "Cloud Solutions — Sunware Technologies" }],
+    type: "website",
+    siteName: "Sunware Technologies",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Cloud Solutions - Sunware Technologies",
+    description: "End-to-end cloud solutions from Sunware Technologies. Multi-cloud strategy, migration, cloud-native development and managed services.",
+    images: ["https://sunwaretechnologies.com/hero.png"],
+    site: "@sunwaretechnologies",
+  },
   alternates: { canonical: "https://sunwaretechnologies.com/cloud-solutions/" },
 };
 
@@ -175,6 +193,14 @@ const content = `
 </div>`;
 
 export default function Page() {
-  return <HtmlPage content={content} />;
+  return (
+    <>
+      <BreadcrumbLD items={[
+        { name: "Home", url: "https://sunwaretechnologies.com" },
+        { name: "Cloud Solutions", url: "https://sunwaretechnologies.com/cloud-solutions/" },
+      ]} />
+      <HtmlPage content={content} />
+    </>
+  );
 }
 

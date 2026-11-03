@@ -28,11 +28,11 @@ export default function Header() {
                       <a href="#">Products <i className="fal fa-chevron-down" style={{ fontSize: "12px", marginLeft: "4px" }}></i></a>
                       <div className="dropdown-small dropdown-align-left" style={{ width: "380px", padding: "20px" }}>
                         <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
-                          <a href="/edgedata360/" className="megamenu-item-nested" style={{ fontSize: "15px", fontWeight: 600, padding: "14px 18px" }}>
+                          <a href="/relim-ai/" className="megamenu-item-nested" style={{ fontSize: "15px", fontWeight: 600, padding: "14px 18px" }}>
                             <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-                              <img src="/images/edlogo.png" alt="EdgeData360" style={{ height: "28px", width: "auto" }} />
+                              <img src="/images/relim dark png.png" alt="Relim.ai" style={{ height: "28px", width: "auto" }} />
                               <div>
-                                <div style={{ fontWeight: 700, color: "var(--primary-color-1)" }}>EdgeData360</div>
+                                <div style={{ fontWeight: 700, color: "var(--primary-color-1)" }}>Relim.ai</div>
                                 <div style={{ fontSize: "12px", color: "#666", fontWeight: 400 }}>Real-time edge intelligence platform</div>
                               </div>
                             </div>

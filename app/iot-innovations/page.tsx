@@ -1,9 +1,27 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import HtmlPage from "@/components/HtmlPage";
+import BreadcrumbLD from "@/components/BreadcrumbLD";
 
 export const metadata: Metadata = {
   title: "IoT Innovations - Sunware Technologies",
   description: "IoT solutions and innovations from Sunware Technologies. Connected devices, smart systems, and real-time monitoring for industrial and commercial applications.",
+  keywords: "IoT innovations, connected devices, smart systems, real-time monitoring, industrial IoT, Sunware Technologies IoT",
+  openGraph: {
+    title: "IoT Innovations - Sunware Technologies",
+    description: "IoT solutions and innovations from Sunware Technologies. Connected devices, smart systems, and real-time monitoring for industrial and commercial applications.",
+    url: "https://sunwaretechnologies.com/iot-innovations/",
+    images: [{ url: "https://sunwaretechnologies.com/hero.png", width: 1200, height: 630, alt: "IoT Innovations — Sunware Technologies" }],
+    type: "website",
+    siteName: "Sunware Technologies",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "IoT Innovations - Sunware Technologies",
+    description: "IoT solutions and innovations from Sunware Technologies. Connected devices, smart systems, and real-time monitoring for industrial and commercial applications.",
+    images: ["https://sunwaretechnologies.com/hero.png"],
+    site: "@sunwaretechnologies",
+  },
   alternates: { canonical: "https://sunwaretechnologies.com/iot-innovations/" },
 };
 
@@ -169,6 +187,14 @@ const content = `
 </div>`;
 
 export default function Page() {
-  return <HtmlPage content={content} />;
+  return (
+    <>
+      <BreadcrumbLD items={[
+        { name: "Home", url: "https://sunwaretechnologies.com" },
+        { name: "IoT Innovations", url: "https://sunwaretechnologies.com/iot-innovations/" },
+      ]} />
+      <HtmlPage content={content} />
+    </>
+  );
 }
 

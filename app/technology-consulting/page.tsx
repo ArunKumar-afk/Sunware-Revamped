@@ -1,9 +1,27 @@
 ﻿import type { Metadata } from "next";
 import HtmlPage from "@/components/HtmlPage";
+import BreadcrumbLD from "@/components/BreadcrumbLD";
 
 export const metadata: Metadata = {
   title: "Technology Consulting - Sunware Technologies",
   description: "Strategic technology advisory that aligns your IT investments with business outcomes with Sunware Technologies technology consulting.",
+  keywords: "technology consulting, IT consulting, technology advisory, technology strategy, Sunware Technologies consulting",
+  openGraph: {
+    title: "Technology Consulting - Sunware Technologies",
+    description: "Strategic technology advisory that aligns your IT investments with business outcomes with Sunware Technologies technology consulting.",
+    url: "https://sunwaretechnologies.com/technology-consulting/",
+    images: [{ url: "https://sunwaretechnologies.com/hero.png", width: 1200, height: 630, alt: "Technology Consulting — Sunware Technologies" }],
+    type: "website",
+    siteName: "Sunware Technologies",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Technology Consulting - Sunware Technologies",
+    description: "Strategic technology advisory that aligns your IT investments with business outcomes with Sunware Technologies technology consulting.",
+    images: ["https://sunwaretechnologies.com/hero.png"],
+    site: "@sunwaretechnologies",
+  },
   alternates: { canonical: "https://sunwaretechnologies.com/technology-consulting/" },
 };
 
@@ -192,5 +210,13 @@ const content = `
 </div>`;
 
 export default function Page() {
-  return <HtmlPage content={content} />;
+  return (
+    <>
+      <BreadcrumbLD items={[
+        { name: "Home", url: "https://sunwaretechnologies.com" },
+        { name: "Technology Consulting", url: "https://sunwaretechnologies.com/technology-consulting/" },
+      ]} />
+      <HtmlPage content={content} />
+    </>
+  );
 }

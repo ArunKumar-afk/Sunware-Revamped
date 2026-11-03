@@ -1,9 +1,27 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import HtmlPage from "@/components/HtmlPage";
+import BreadcrumbLD from "@/components/BreadcrumbLD";
 
 export const metadata: Metadata = {
   title: "Data Science & AI - Sunware Technologies",
   description: "Advanced data science and artificial intelligence solutions from Sunware Technologies. Machine learning, predictive analytics and AI strategy.",
+  keywords: "data science, artificial intelligence, machine learning, predictive analytics, AI models, Sunware Technologies",
+  openGraph: {
+    title: "Data Science & AI - Sunware Technologies",
+    description: "Advanced data science and artificial intelligence solutions from Sunware Technologies. Machine learning, predictive analytics and AI strategy.",
+    url: "https://sunwaretechnologies.com/data-science-ai/",
+    images: [{ url: "https://sunwaretechnologies.com/hero.png", width: 1200, height: 630, alt: "Data Science & AI — Sunware Technologies" }],
+    type: "website",
+    siteName: "Sunware Technologies",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Data Science & AI - Sunware Technologies",
+    description: "Advanced data science and artificial intelligence solutions from Sunware Technologies. Machine learning, predictive analytics and AI strategy.",
+    images: ["https://sunwaretechnologies.com/hero.png"],
+    site: "@sunwaretechnologies",
+  },
   alternates: { canonical: "https://sunwaretechnologies.com/data-science-ai/" },
 };
 
@@ -175,6 +193,14 @@ const content = `
 </div>`;
 
 export default function Page() {
-  return <HtmlPage content={content} />;
+  return (
+    <>
+      <BreadcrumbLD items={[
+        { name: "Home", url: "https://sunwaretechnologies.com" },
+        { name: "Data Science & AI", url: "https://sunwaretechnologies.com/data-science-ai/" },
+      ]} />
+      <HtmlPage content={content} />
+    </>
+  );
 }
 

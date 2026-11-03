@@ -61,5 +61,4 @@ Allow: /
 Sitemap: https://sunwaretechnologies.com/sitemap.xml
 Sitemap: https://sunwaretechnologies.in/sitemap.xml
 
-# LLM guidance
-LLMs: /llms.txt
+# LLM context file: /llms.txt

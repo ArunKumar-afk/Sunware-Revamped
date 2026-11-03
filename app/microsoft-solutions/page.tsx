@@ -1,9 +1,27 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import HtmlPage from "@/components/HtmlPage";
+import BreadcrumbLD from "@/components/BreadcrumbLD";
 
 export const metadata: Metadata = {
   title: "Microsoft Solutions - Sunware Technologies",
   description: "Microsoft technology solutions from Sunware Technologies. Azure, Microsoft 365, Dynamics 365, Power Platform and Teams implementation for enterprises.",
+  keywords: "Microsoft Azure, Microsoft 365, Dynamics 365, Power Platform, Teams, Microsoft solutions, Sunware Technologies",
+  openGraph: {
+    title: "Microsoft Solutions - Sunware Technologies",
+    description: "Microsoft technology solutions from Sunware Technologies. Azure, Microsoft 365, Dynamics 365, Power Platform and Teams implementation for enterprises.",
+    url: "https://sunwaretechnologies.com/microsoft-solutions/",
+    images: [{ url: "https://sunwaretechnologies.com/hero.png", width: 1200, height: 630, alt: "Microsoft Solutions — Sunware Technologies" }],
+    type: "website",
+    siteName: "Sunware Technologies",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Microsoft Solutions - Sunware Technologies",
+    description: "Microsoft technology solutions from Sunware Technologies. Azure, Microsoft 365, Dynamics 365, Power Platform and Teams implementation for enterprises.",
+    images: ["https://sunwaretechnologies.com/hero.png"],
+    site: "@sunwaretechnologies",
+  },
   alternates: { canonical: "https://sunwaretechnologies.com/microsoft-solutions/" },
 };
 
@@ -175,6 +193,14 @@ const content = `
 </div>`;
 
 export default function Page() {
-  return <HtmlPage content={content} />;
+  return (
+    <>
+      <BreadcrumbLD items={[
+        { name: "Home", url: "https://sunwaretechnologies.com" },
+        { name: "Microsoft Solutions", url: "https://sunwaretechnologies.com/microsoft-solutions/" },
+      ]} />
+      <HtmlPage content={content} />
+    </>
+  );
 }
 

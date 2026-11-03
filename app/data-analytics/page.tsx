@@ -1,9 +1,27 @@
 ﻿import type { Metadata } from "next";
 import HtmlPage from "@/components/HtmlPage";
+import BreadcrumbLD from "@/components/BreadcrumbLD";
 
 export const metadata: Metadata = {
   title: "Data Analytics Services - Sunware Technologies",
   description: "Transform raw data into actionable insights with Sunware Technologies data analytics services. Business intelligence, dashboards and reporting solutions.",
+  keywords: "data analytics, business intelligence, dashboards, reporting, data visualisation, Sunware Technologies analytics",
+  openGraph: {
+    title: "Data Analytics Services - Sunware Technologies",
+    description: "Transform raw data into actionable insights with Sunware Technologies data analytics services. Business intelligence, dashboards and reporting solutions.",
+    url: "https://sunwaretechnologies.com/data-analytics/",
+    images: [{ url: "https://sunwaretechnologies.com/hero.png", width: 1200, height: 630, alt: "Data Analytics Services — Sunware Technologies" }],
+    type: "website",
+    siteName: "Sunware Technologies",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Data Analytics Services - Sunware Technologies",
+    description: "Transform raw data into actionable insights with Sunware Technologies data analytics services. Business intelligence, dashboards and reporting solutions.",
+    images: ["https://sunwaretechnologies.com/hero.png"],
+    site: "@sunwaretechnologies",
+  },
   alternates: { canonical: "https://sunwaretechnologies.com/data-analytics/" },
 };
 
@@ -192,5 +210,13 @@ const content = `
 </div>`;
 
 export default function Page() {
-  return <HtmlPage content={content} />;
+  return (
+    <>
+      <BreadcrumbLD items={[
+        { name: "Home", url: "https://sunwaretechnologies.com" },
+        { name: "Data Analytics", url: "https://sunwaretechnologies.com/data-analytics/" },
+      ]} />
+      <HtmlPage content={content} />
+    </>
+  );
 }

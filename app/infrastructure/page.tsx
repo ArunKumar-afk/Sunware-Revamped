@@ -1,9 +1,27 @@
 ﻿import type { Metadata } from "next";
 import HtmlPage from "@/components/HtmlPage";
+import BreadcrumbLD from "@/components/BreadcrumbLD";
 
 export const metadata: Metadata = {
   title: "Infrastructure Solutions - Sunware Technologies",
   description: "Resilient, scalable and secure IT infrastructure that keeps your business running at peak performance with Sunware Technologies.",
+  keywords: "IT infrastructure, cloud infrastructure, network infrastructure, servers, data centres, infrastructure solutions, Sunware Technologies",
+  openGraph: {
+    title: "Infrastructure Solutions - Sunware Technologies",
+    description: "Resilient, scalable and secure IT infrastructure that keeps your business running at peak performance with Sunware Technologies.",
+    url: "https://sunwaretechnologies.com/infrastructure/",
+    images: [{ url: "https://sunwaretechnologies.com/hero.png", width: 1200, height: 630, alt: "Infrastructure Solutions — Sunware Technologies" }],
+    type: "website",
+    siteName: "Sunware Technologies",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Infrastructure Solutions - Sunware Technologies",
+    description: "Resilient, scalable and secure IT infrastructure that keeps your business running at peak performance with Sunware Technologies.",
+    images: ["https://sunwaretechnologies.com/hero.png"],
+    site: "@sunwaretechnologies",
+  },
   alternates: { canonical: "https://sunwaretechnologies.com/infrastructure/" },
 };
 
@@ -192,5 +210,13 @@ const content = `
 </div>`;
 
 export default function Page() {
-  return <HtmlPage content={content} />;
+  return (
+    <>
+      <BreadcrumbLD items={[
+        { name: "Home", url: "https://sunwaretechnologies.com" },
+        { name: "Infrastructure Solutions", url: "https://sunwaretechnologies.com/infrastructure/" },
+      ]} />
+      <HtmlPage content={content} />
+    </>
+  );
 }

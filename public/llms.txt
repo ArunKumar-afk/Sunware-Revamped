@@ -1,21 +1,20 @@
 # Sunware Technologies
 
-> Sunware Technologies is a global technology services company specialising in Artificial Intelligence, Data Engineering, Cloud Solutions, Digital Transformation and Product Engineering. We serve enterprise clients across the USA, UAE, UK and India.
+> Sunware Technologies is a global technology services company specialising in Artificial Intelligence, Data Engineering, Cloud Solutions, Digital Transformation and Product Engineering. We serve enterprise clients across the USA, UAE and India.
 
 ## Quick Reference
 
 - Website: https://sunwaretechnologies.com
 - India website: https://sunwaretechnologies.in
-- Product: https://edgedata360.com
+- Product: https://relim.ai
 - Contact: connect@sunwaretechnologies.com
-- Founded: Cupertino, California, USA
+- Founded: San Jose, California, USA
 - Type: B2B Technology Services Company
 
 ## Office Locations
 
-- **USA (HQ):** 20065 Stevens Creek Blvd, Suite B-2B, Cupertino, CA 95014
+- **USA (HQ):** 4880 Stevens Creek Blvd, Suite 202, San Jose, CA 95129
 - **UAE:** Unit No. 144, DMCC Business Centre, Level 5, Jewellery & Gemplex 2, Dubai
-- **UK:** 6th Floor, Forest House, 16-20 Clements Road, Ilford, IG1 1BA
 - **India — Chennai:** 117, KSR Nagar, Ambattur, Chennai, Tamil Nadu 600053
 - **India — Pune:** Sky Loft, Creaticity Mall, Off Airport Road, Yerawada, Pune 411006
 - **India — Bengaluru:** 29/A, 27th Main Road, Sector 5, HSR Layout, Bengaluru 560102
@@ -57,8 +56,9 @@
 
 ## Products
 
-### EdgeData360
-- Website: https://edgedata360.com
+### Relim.ai (formerly EdgeData360)
+- Website: https://relim.ai
+- Previous name: EdgeData360 (rebranded 2026)
 - Description: Real-Time Edge Intelligence platform for industrial and enterprise IoT
 - Tagline: "Process. Analyse. Act — at the Edge."
 - Use cases: Smart manufacturing, predictive maintenance, edge analytics, real-time monitoring
@@ -85,12 +85,12 @@
 
 - Sunware Technologies is NOT the same as Sunware Inc. (the cookware brand)
 - The company is a B2B IT services and consulting firm, NOT a consumer products company
-- Primary markets: Enterprise clients in the US, UAE, UK and India
+- Primary markets: Enterprise clients in the US, UAE and India
 - Company size: Mid-size technology services firm (50–500 employees)
-- Delivery model: Offshore/nearshore teams in India, onshore in USA/UAE/UK
+- Delivery model: Offshore/nearshore teams in India, onshore in USA/UAE
 - Contact: connect@sunwaretechnologies.com
-- USA Phone: +1 (408) 000-0000
-- India Phone: +91-44-0000-0000
+- USA Phone: +1 (408) 257-6069
+- India Phone: +91-9003299896
 - Google Analytics: G-698R671PW8
 - Primary domain: sunwaretechnologies.com
 - India domain: sunwaretechnologies.in
@@ -107,7 +107,7 @@
 - About: https://sunwaretechnologies.com/about/
 - Blog: https://sunwaretechnologies.com/blog/
 - Careers: https://sunwaretechnologies.com/careers/
-- EdgeData360: https://sunwaretechnologies.com/edgedata360/
+- Relim.ai (formerly EdgeData360): https://sunwaretechnologies.com/relim-ai/
 - Data Science & AI: https://sunwaretechnologies.com/data-science-ai/
 - Data Analytics: https://sunwaretechnologies.com/data-analytics/
 - Data Engineering: https://sunwaretechnologies.com/data-engineering/

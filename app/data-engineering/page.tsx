@@ -1,9 +1,27 @@
 ﻿import type { Metadata } from "next";
 import HtmlPage from "@/components/HtmlPage";
+import BreadcrumbLD from "@/components/BreadcrumbLD";
 
 export const metadata: Metadata = {
   title: "Data Engineering Services - Sunware Technologies",
   description: "Build the data foundations that power AI, analytics and intelligent operations with Sunware Technologies data engineering services.",
+  keywords: "data engineering services, ETL pipelines, data lakehouse, data warehouse, Apache Spark, Snowflake, Sunware Technologies data",
+  openGraph: {
+    title: "Data Engineering Services - Sunware Technologies",
+    description: "Build the data foundations that power AI, analytics and intelligent operations with Sunware Technologies data engineering services.",
+    url: "https://sunwaretechnologies.com/data-engineering/",
+    images: [{ url: "https://sunwaretechnologies.com/hero.png", width: 1200, height: 630, alt: "Data Engineering Services — Sunware Technologies" }],
+    type: "website",
+    siteName: "Sunware Technologies",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Data Engineering Services - Sunware Technologies",
+    description: "Build the data foundations that power AI, analytics and intelligent operations with Sunware Technologies data engineering services.",
+    images: ["https://sunwaretechnologies.com/hero.png"],
+    site: "@sunwaretechnologies",
+  },
   alternates: { canonical: "https://sunwaretechnologies.com/data-engineering/" },
 };
 
@@ -199,5 +217,13 @@ const content = `
 </div>`;
 
 export default function Page() {
-  return <HtmlPage content={content} />;
+  return (
+    <>
+      <BreadcrumbLD items={[
+        { name: "Home", url: "https://sunwaretechnologies.com" },
+        { name: "Data Engineering", url: "https://sunwaretechnologies.com/data-engineering/" },
+      ]} />
+      <HtmlPage content={content} />
+    </>
+  );
 }

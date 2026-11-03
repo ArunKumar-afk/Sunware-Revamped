@@ -1,16 +1,33 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import HtmlPage from "@/components/HtmlPage";
 
 export const metadata: Metadata = {
   title: "Careers - Sunware Technologies | Join Our Team",
-  description: "Explore career opportunities at Sunware Technologies. Join a global team building AI, cloud and data engineering solutions across USA, UAE, UK and India.",
+  description: "Explore career opportunities at Sunware Technologies. Join a global team building AI, cloud and data engineering solutions across USA, UAE & India.",
+  keywords: "Sunware Technologies careers, technology jobs, AI jobs, data engineering jobs, cloud jobs, join Sunware",
+  openGraph: {
+    title: "Careers - Sunware Technologies | Join Our Team",
+    description: "Explore career opportunities at Sunware Technologies. Join a global team building AI, cloud and data engineering solutions across USA, UAE & India.",
+    url: "https://sunwaretechnologies.com/careers/",
+    images: [{ url: "https://sunwaretechnologies.com/hero.png", width: 1200, height: 630, alt: "Careers at Sunware Technologies" }],
+    type: "website",
+    siteName: "Sunware Technologies",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Careers - Sunware Technologies | Join Our Team",
+    description: "Explore career opportunities at Sunware Technologies. Join a global team building AI, cloud and data engineering solutions across USA, UAE & India.",
+    images: ["https://sunwaretechnologies.com/hero.png"],
+    site: "@sunwaretechnologies",
+  },
   alternates: { canonical: "https://sunwaretechnologies.com/careers/" },
 };
 
 const content = `<!-- Careers Hero Start -->
         <div class="banner__one" style="position: relative; overflow: hidden; background: #fff;">
                 <video autoplay loop muted playsinline style="position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; object-fit: cover; transform: translate(-50%, -50%); z-index: 0; opacity: 0.6;">
-                        <source src="waves_2.mp4" type="video/mp4">
+                        <source src="/waves_2.mp4" type="video/mp4">
                 </video>
                 <div class="container" style="position: relative; z-index: 5; padding: 120px 0;">
                         <div class="row al-center">

@@ -1,9 +1,27 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import HtmlPage from "@/components/HtmlPage";
+import BreadcrumbLD from "@/components/BreadcrumbLD";
 
 export const metadata: Metadata = {
   title: "Staff Augmentation - Sunware Technologies",
   description: "Pre-vetted technology talent integrated seamlessly into your team with Sunware Technologies staff augmentation services.",
+  keywords: "staff augmentation, IT staffing, tech talent, technology resources, dedicated developers, Sunware Technologies",
+  openGraph: {
+    title: "Staff Augmentation - Sunware Technologies",
+    description: "Pre-vetted technology talent integrated seamlessly into your team with Sunware Technologies staff augmentation services.",
+    url: "https://sunwaretechnologies.com/staff-augmentation/",
+    images: [{ url: "https://sunwaretechnologies.com/hero.png", width: 1200, height: 630, alt: "Staff Augmentation — Sunware Technologies" }],
+    type: "website",
+    siteName: "Sunware Technologies",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Staff Augmentation - Sunware Technologies",
+    description: "Pre-vetted technology talent integrated seamlessly into your team with Sunware Technologies staff augmentation services.",
+    images: ["https://sunwaretechnologies.com/hero.png"],
+    site: "@sunwaretechnologies",
+  },
   alternates: { canonical: "https://sunwaretechnologies.com/staff-augmentation/" },
 };
 
@@ -192,6 +210,14 @@ const content = `
 </div>`;
 
 export default function Page() {
-  return <HtmlPage content={content} />;
+  return (
+    <>
+      <BreadcrumbLD items={[
+        { name: "Home", url: "https://sunwaretechnologies.com" },
+        { name: "Staff Augmentation", url: "https://sunwaretechnologies.com/staff-augmentation/" },
+      ]} />
+      <HtmlPage content={content} />
+    </>
+  );
 }
 

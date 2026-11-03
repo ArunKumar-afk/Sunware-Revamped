@@ -1,9 +1,27 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import HtmlPage from "@/components/HtmlPage";
+import BreadcrumbLD from "@/components/BreadcrumbLD";
 
 export const metadata: Metadata = {
   title: "Media and Entertainment - Sunware Technologies",
   description: "Technology solutions for media and entertainment from Sunware Technologies. Content delivery, streaming platforms and audience analytics.",
+  keywords: "media technology, entertainment technology, streaming platform, content delivery, audience analytics, Sunware Technologies",
+  openGraph: {
+    title: "Media and Entertainment - Sunware Technologies",
+    description: "Technology solutions for media and entertainment from Sunware Technologies. Content delivery, streaming platforms and audience analytics.",
+    url: "https://sunwaretechnologies.com/media-entertainment/",
+    images: [{ url: "https://sunwaretechnologies.com/hero.png", width: 1200, height: 630, alt: "Media & Entertainment — Sunware Technologies" }],
+    type: "website",
+    siteName: "Sunware Technologies",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Media and Entertainment - Sunware Technologies",
+    description: "Technology solutions for media and entertainment from Sunware Technologies. Content delivery, streaming platforms and audience analytics.",
+    images: ["https://sunwaretechnologies.com/hero.png"],
+    site: "@sunwaretechnologies",
+  },
   alternates: { canonical: "https://sunwaretechnologies.com/media-entertainment/" },
 };
 
@@ -183,5 +201,13 @@ const content = `<!-- Page Hero Start -->
         </div>`;
 
 export default function Page() {
-  return <HtmlPage content={content} />;
+  return (
+    <>
+      <BreadcrumbLD items={[
+        { name: "Home", url: "https://sunwaretechnologies.com" },
+        { name: "Media & Entertainment", url: "https://sunwaretechnologies.com/media-entertainment/" },
+      ]} />
+      <HtmlPage content={content} />
+    </>
+  );
 }

@@ -1,9 +1,27 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import HtmlPage from "@/components/HtmlPage";
+import BreadcrumbLD from "@/components/BreadcrumbLD";
 
 export const metadata: Metadata = {
   title: "Salesforce Implementation - Sunware Technologies",
   description: "Expert Salesforce implementation, customisation and integration services from Sunware Technologies. Sales Cloud, Service Cloud, Marketing Cloud and more.",
+  keywords: "Salesforce implementation, Sales Cloud, Service Cloud, Marketing Cloud, CRM, Salesforce partner, Sunware Technologies",
+  openGraph: {
+    title: "Salesforce Implementation - Sunware Technologies",
+    description: "Expert Salesforce implementation, customisation and integration services from Sunware Technologies. Sales Cloud, Service Cloud, Marketing Cloud and more.",
+    url: "https://sunwaretechnologies.com/salesforce-expertise/",
+    images: [{ url: "https://sunwaretechnologies.com/hero.png", width: 1200, height: 630, alt: "Salesforce Implementation — Sunware Technologies" }],
+    type: "website",
+    siteName: "Sunware Technologies",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Salesforce Implementation - Sunware Technologies",
+    description: "Expert Salesforce implementation, customisation and integration services from Sunware Technologies. Sales Cloud, Service Cloud, Marketing Cloud and more.",
+    images: ["https://sunwaretechnologies.com/hero.png"],
+    site: "@sunwaretechnologies",
+  },
   alternates: { canonical: "https://sunwaretechnologies.com/salesforce-expertise/" },
 };
 
@@ -175,6 +193,14 @@ const content = `
 </div>`;
 
 export default function Page() {
-  return <HtmlPage content={content} />;
+  return (
+    <>
+      <BreadcrumbLD items={[
+        { name: "Home", url: "https://sunwaretechnologies.com" },
+        { name: "Salesforce", url: "https://sunwaretechnologies.com/salesforce-expertise/" },
+      ]} />
+      <HtmlPage content={content} />
+    </>
+  );
 }
 

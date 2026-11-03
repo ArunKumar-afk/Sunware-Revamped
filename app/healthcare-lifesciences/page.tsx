@@ -1,9 +1,27 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import HtmlPage from "@/components/HtmlPage";
+import BreadcrumbLD from "@/components/BreadcrumbLD";
 
 export const metadata: Metadata = {
   title: "Healthcare and Life Sciences - Sunware Technologies",
   description: "Technology solutions for healthcare and life sciences from Sunware Technologies. EHR integration, clinical analytics and regulatory compliance.",
+  keywords: "healthcare technology, life sciences technology, EHR integration, clinical analytics, health IT, Sunware Technologies",
+  openGraph: {
+    title: "Healthcare and Life Sciences - Sunware Technologies",
+    description: "Technology solutions for healthcare and life sciences from Sunware Technologies. EHR integration, clinical analytics and regulatory compliance.",
+    url: "https://sunwaretechnologies.com/healthcare-lifesciences/",
+    images: [{ url: "https://sunwaretechnologies.com/hero.png", width: 1200, height: 630, alt: "Healthcare & Life Sciences — Sunware Technologies" }],
+    type: "website",
+    siteName: "Sunware Technologies",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Healthcare and Life Sciences - Sunware Technologies",
+    description: "Technology solutions for healthcare and life sciences from Sunware Technologies. EHR integration, clinical analytics and regulatory compliance.",
+    images: ["https://sunwaretechnologies.com/hero.png"],
+    site: "@sunwaretechnologies",
+  },
   alternates: { canonical: "https://sunwaretechnologies.com/healthcare-lifesciences/" },
 };
 
@@ -28,7 +46,7 @@ const content = `<!-- --- BANNER HERO (matches site pattern) --- -->
 					<div class="hc-intro-label">Industries / Healthcare</div>
 					<h2>Empowering Pharmaceutical &amp; Life Sciences Organizations</h2>
 					<p>In the fast-paced world of pharmaceutical and life sciences, where a single breakthrough can transform millions of lives, staying ahead of the curve is paramount.</p>
-					<p>We understand the unique challenges you face ? from accelerating drug development timelines to ensuring strict regulatory compliance. Our tailored IT solutions are designed to empower your organization to achieve its goals and make a real impact.</p>
+					<p>We understand the unique challenges you face — from accelerating drug development timelines to ensuring strict regulatory compliance. Our tailored IT solutions are designed to empower your organization to achieve its goals and make a real impact.</p>
 					<a href="#" class="default_button mt-20" onclick="openEnquireModal(event)" style="display:inline-flex;margin-top:20px;">Talk to an Expert <i class="flaticon-right-up"></i></a>
 				</div>
 				<div class="hc-intro-visual wow fadeInRight" data-wow-delay=".2s">
@@ -101,7 +119,7 @@ const content = `<!-- --- BANNER HERO (matches site pattern) --- -->
 					<div class="hc-sol-num">01 / 05</div>
 					<div class="hc-sol-icon" aria-hidden="true"><i class="fal fa-code"></i></div>
 					<h4>Custom Software Development</h4>
-					<p>We create bespoke applications that perfectly align with your unique research, clinical trial, or manufacturing needs ? built to scale as your requirements evolve.</p>
+					<p>We create bespoke applications that perfectly align with your unique research, clinical trial, or manufacturing needs — built to scale as your requirements evolve.</p>
 				</div>
 
 				<div class="hc-sol-item wow fadeInUp" data-wow-delay=".2s">
@@ -122,7 +140,7 @@ const content = `<!-- --- BANNER HERO (matches site pattern) --- -->
 					<div class="hc-sol-num">04 / 05</div>
 					<div class="hc-sol-icon" aria-hidden="true"><i class="fal fa-clipboard-check"></i></div>
 					<h4>Regulatory Compliance Consulting</h4>
-					<p>Stay ahead of evolving FDA, HIPAA, and GxP regulations ? ensuring your systems and processes meet the highest global standards at every stage.</p>
+					<p>Stay ahead of evolving FDA, HIPAA, and GxP regulations — ensuring your systems and processes meet the highest global standards at every stage.</p>
 				</div>
 
 				<div class="hc-sol-item wow fadeInUp" data-wow-delay=".35s">
@@ -151,7 +169,7 @@ const content = `<!-- --- BANNER HERO (matches site pattern) --- -->
 					<div class="hc-why-icon-wrap" aria-hidden="true"><i class="fal fa-microscope"></i></div>
 					<div class="hc-why-divider" aria-hidden="true"></div>
 					<h3>Deep Industry Expertise</h3>
-					<p>We understand the nuances of the pharmaceutical and life sciences landscape ? delivering tailored solutions that address your specific technical and regulatory challenges with precision.</p>
+					<p>We understand the nuances of the pharmaceutical and life sciences landscape — delivering tailored solutions that address your specific technical and regulatory challenges with precision.</p>
 				</article>
 
 				<article class="hc-why-card wow fadeInUp" data-wow-delay=".2s" role="listitem">
@@ -165,7 +183,7 @@ const content = `<!-- --- BANNER HERO (matches site pattern) --- -->
 					<div class="hc-why-icon-wrap" aria-hidden="true"><i class="fal fa-handshake"></i></div>
 					<div class="hc-why-divider" aria-hidden="true"></div>
 					<h3>Client-Centric Approach</h3>
-					<p>We prioritize your goals and work collaboratively to develop solutions that align perfectly with your unique vision ? acting as a true technology partner, not just a vendor.</p>
+					<p>We prioritize your goals and work collaboratively to develop solutions that align perfectly with your unique vision — acting as a true technology partner, not just a vendor.</p>
 				</article>
 
 			</div>
@@ -197,5 +215,13 @@ const content = `<!-- --- BANNER HERO (matches site pattern) --- -->
 </div>`;
 
 export default function Page() {
-  return <HtmlPage content={content} />;
+  return (
+    <>
+      <BreadcrumbLD items={[
+        { name: "Home", url: "https://sunwaretechnologies.com" },
+        { name: "Healthcare & Life Sciences", url: "https://sunwaretechnologies.com/healthcare-lifesciences/" },
+      ]} />
+      <HtmlPage content={content} />
+    </>
+  );
 }

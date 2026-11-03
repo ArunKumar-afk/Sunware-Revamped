@@ -1,9 +1,27 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import HtmlPage from "@/components/HtmlPage";
+import BreadcrumbLD from "@/components/BreadcrumbLD";
 
 export const metadata: Metadata = {
   title: "Banking and Financial Services - Sunware Technologies",
   description: "Technology solutions for banking and financial services from Sunware Technologies. Fintech, risk analytics and digital banking.",
+  keywords: "banking technology, fintech solutions, financial services IT, risk analytics, digital banking, Sunware Technologies",
+  openGraph: {
+    title: "Banking and Financial Services - Sunware Technologies",
+    description: "Technology solutions for banking and financial services from Sunware Technologies. Fintech, risk analytics and digital banking.",
+    url: "https://sunwaretechnologies.com/banking-finance/",
+    images: [{ url: "https://sunwaretechnologies.com/hero.png", width: 1200, height: 630, alt: "Banking & Financial Services — Sunware Technologies" }],
+    type: "website",
+    siteName: "Sunware Technologies",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Banking and Financial Services - Sunware Technologies",
+    description: "Technology solutions for banking and financial services from Sunware Technologies. Fintech, risk analytics and digital banking.",
+    images: ["https://sunwaretechnologies.com/hero.png"],
+    site: "@sunwaretechnologies",
+  },
   alternates: { canonical: "https://sunwaretechnologies.com/banking-finance/" },
 };
 
@@ -137,7 +155,7 @@ const content = `<!-- Page Hero Start -->
                                         <div class="culture-card" style="height:100%; text-align:center;">
                                                 <div style="width:60px; height:60px; background:rgba(239,127,26,0.1); border-radius:14px; display:flex; align-items:center; justify-content:center; margin:0 auto 20px;"><i class="fal fa-microscope" style="font-size:28px; color:#EF7F1A;"></i></div>
                                                 <h4 style="font-weight:800; margin-bottom:15px;">Deep Industry Expertise</h4>
-                                                <p style="color:#666;">We understand the nuances of your industry landscape ? delivering tailored solutions that address your specific technical and regulatory challenges with precision.</p>
+                                                <p style="color:#666;">We understand the nuances of your industry landscape — delivering tailored solutions that address your specific technical and regulatory challenges with precision.</p>
                                         </div>
                                 </div>
                                 <div class="col-lg-4 mb-30 wow fadeInUp" data-wow-delay=".2s">
@@ -151,7 +169,7 @@ const content = `<!-- Page Hero Start -->
                                         <div class="culture-card" style="height:100%; text-align:center;">
                                                 <div style="width:60px; height:60px; background:rgba(239,127,26,0.1); border-radius:14px; display:flex; align-items:center; justify-content:center; margin:0 auto 20px;"><i class="fal fa-handshake" style="font-size:28px; color:#EF7F1A;"></i></div>
                                                 <h4 style="font-weight:800; margin-bottom:15px;">Client-Centric Approach</h4>
-                                                <p style="color:#666;">We prioritize your goals and work collaboratively to develop solutions that align perfectly with your unique vision ? acting as a true technology partner, not just a vendor.</p>
+                                                <p style="color:#666;">We prioritize your goals and work collaboratively to develop solutions that align perfectly with your unique vision — acting as a true technology partner, not just a vendor.</p>
                                         </div>
                                 </div>
                         </div>
@@ -183,5 +201,13 @@ const content = `<!-- Page Hero Start -->
         </div>`;
 
 export default function Page() {
-  return <HtmlPage content={content} />;
+  return (
+    <>
+      <BreadcrumbLD items={[
+        { name: "Home", url: "https://sunwaretechnologies.com" },
+        { name: "Banking & Financial Services", url: "https://sunwaretechnologies.com/banking-finance/" },
+      ]} />
+      <HtmlPage content={content} />
+    </>
+  );
 }

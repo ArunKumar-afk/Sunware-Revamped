@@ -1,9 +1,27 @@
 ﻿import type { Metadata } from "next";
 import HtmlPage from "@/components/HtmlPage";
+import BreadcrumbLD from "@/components/BreadcrumbLD";
 
 export const metadata: Metadata = {
   title: "Learning Platform - Sunware Technologies",
   description: "Digital learning ecosystems that upskill your workforce and drive measurable performance improvement with Sunware Technologies.",
+  keywords: "digital learning platform, LMS, workforce training, e-learning, corporate training, Sunware Technologies",
+  openGraph: {
+    title: "Learning Platform - Sunware Technologies",
+    description: "Digital learning ecosystems that upskill your workforce and drive measurable performance improvement with Sunware Technologies.",
+    url: "https://sunwaretechnologies.com/learning-platform/",
+    images: [{ url: "https://sunwaretechnologies.com/hero.png", width: 1200, height: 630, alt: "Learning Platform — Sunware Technologies" }],
+    type: "website",
+    siteName: "Sunware Technologies",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Learning Platform - Sunware Technologies",
+    description: "Digital learning ecosystems that upskill your workforce and drive measurable performance improvement with Sunware Technologies.",
+    images: ["https://sunwaretechnologies.com/hero.png"],
+    site: "@sunwaretechnologies",
+  },
   alternates: { canonical: "https://sunwaretechnologies.com/learning-platform/" },
 };
 
@@ -192,5 +210,13 @@ const content = `
 </div>`;
 
 export default function Page() {
-  return <HtmlPage content={content} />;
+  return (
+    <>
+      <BreadcrumbLD items={[
+        { name: "Home", url: "https://sunwaretechnologies.com" },
+        { name: "Learning Platform", url: "https://sunwaretechnologies.com/learning-platform/" },
+      ]} />
+      <HtmlPage content={content} />
+    </>
+  );
 }

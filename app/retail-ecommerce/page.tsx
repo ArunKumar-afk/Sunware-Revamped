@@ -1,9 +1,27 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import HtmlPage from "@/components/HtmlPage";
+import BreadcrumbLD from "@/components/BreadcrumbLD";
 
 export const metadata: Metadata = {
   title: "Retail and E-commerce - Sunware Technologies",
   description: "Technology solutions for retail and e-commerce from Sunware Technologies. Customer experience, inventory management and omnichannel platforms.",
+  keywords: "retail technology, e-commerce solutions, omnichannel platform, customer experience, inventory management, Sunware Technologies",
+  openGraph: {
+    title: "Retail and E-commerce - Sunware Technologies",
+    description: "Technology solutions for retail and e-commerce from Sunware Technologies. Customer experience, inventory management and omnichannel platforms.",
+    url: "https://sunwaretechnologies.com/retail-ecommerce/",
+    images: [{ url: "https://sunwaretechnologies.com/hero.png", width: 1200, height: 630, alt: "Retail & E-commerce — Sunware Technologies" }],
+    type: "website",
+    siteName: "Sunware Technologies",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Retail and E-commerce - Sunware Technologies",
+    description: "Technology solutions for retail and e-commerce from Sunware Technologies. Customer experience, inventory management and omnichannel platforms.",
+    images: ["https://sunwaretechnologies.com/hero.png"],
+    site: "@sunwaretechnologies",
+  },
   alternates: { canonical: "https://sunwaretechnologies.com/retail-ecommerce/" },
 };
 
@@ -183,5 +201,13 @@ const content = `<!-- Page Hero Start -->
         </div>`;
 
 export default function Page() {
-  return <HtmlPage content={content} />;
+  return (
+    <>
+      <BreadcrumbLD items={[
+        { name: "Home", url: "https://sunwaretechnologies.com" },
+        { name: "Retail & E-commerce", url: "https://sunwaretechnologies.com/retail-ecommerce/" },
+      ]} />
+      <HtmlPage content={content} />
+    </>
+  );
 }

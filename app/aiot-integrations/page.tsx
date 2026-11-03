@@ -1,9 +1,27 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import HtmlPage from "@/components/HtmlPage";
+import BreadcrumbLD from "@/components/BreadcrumbLD";
 
 export const metadata: Metadata = {
   title: "AIoT Integrations - Sunware Technologies",
   description: "AI-powered IoT solutions from Sunware Technologies. AIoT platform integration, edge intelligence, predictive maintenance and smart operations.",
+  keywords: "AIoT, AI-powered IoT, edge intelligence, predictive maintenance, smart operations, industrial AI, Sunware Technologies",
+  openGraph: {
+    title: "AIoT Integrations - Sunware Technologies",
+    description: "AI-powered IoT solutions from Sunware Technologies. AIoT platform integration, edge intelligence, predictive maintenance and smart operations.",
+    url: "https://sunwaretechnologies.com/aiot-integrations/",
+    images: [{ url: "https://sunwaretechnologies.com/hero.png", width: 1200, height: 630, alt: "AIoT Integrations — Sunware Technologies" }],
+    type: "website",
+    siteName: "Sunware Technologies",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AIoT Integrations - Sunware Technologies",
+    description: "AI-powered IoT solutions from Sunware Technologies. AIoT platform integration, edge intelligence, predictive maintenance and smart operations.",
+    images: ["https://sunwaretechnologies.com/hero.png"],
+    site: "@sunwaretechnologies",
+  },
   alternates: { canonical: "https://sunwaretechnologies.com/aiot-integrations/" },
 };
 
@@ -137,8 +155,8 @@ const content = `
       <article class="hc-why-card wow fadeInUp" data-wow-delay=".2s">
         <div class="hc-why-icon-wrap"><i class="fal fa-trophy"></i></div>
         <div class="hc-why-divider"></div>
-        <h3>EdgeData360 Platform</h3>
-        <p>Our proprietary AIoT platform — EdgeData360 — provides 250+ pre-built connectors, visual AI dashboards, and agentic automation out of the box.</p>
+        <h3>Relim.ai Platform</h3>
+        <p>Our proprietary AIoT platform — Relim.ai (formerly EdgeData360) — provides 250+ pre-built connectors, visual AI dashboards, and agentic automation out of the box.</p>
       </article>
       <article class="hc-why-card wow fadeInUp" data-wow-delay=".3s">
         <div class="hc-why-icon-wrap"><i class="fal fa-handshake"></i></div>
@@ -169,6 +187,14 @@ const content = `
 </div>`;
 
 export default function Page() {
-  return <HtmlPage content={content} />;
+  return (
+    <>
+      <BreadcrumbLD items={[
+        { name: "Home", url: "https://sunwaretechnologies.com" },
+        { name: "AIoT Integrations", url: "https://sunwaretechnologies.com/aiot-integrations/" },
+      ]} />
+      <HtmlPage content={content} />
+    </>
+  );
 }
 

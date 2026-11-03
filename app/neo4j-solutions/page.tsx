@@ -1,9 +1,27 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import HtmlPage from "@/components/HtmlPage";
+import BreadcrumbLD from "@/components/BreadcrumbLD";
 
 export const metadata: Metadata = {
   title: "Neo4J Graph Technologies - Sunware Technologies",
   description: "Neo4j graph database solutions from Sunware Technologies. Knowledge graphs, recommendation engines, fraud detection and connected data analytics.",
+  keywords: "Neo4j graph database, knowledge graphs, recommendation engine, fraud detection, graph analytics, Sunware Technologies",
+  openGraph: {
+    title: "Neo4J Graph Technologies - Sunware Technologies",
+    description: "Neo4j graph database solutions from Sunware Technologies. Knowledge graphs, recommendation engines, fraud detection and connected data analytics.",
+    url: "https://sunwaretechnologies.com/neo4j-solutions/",
+    images: [{ url: "https://sunwaretechnologies.com/hero.png", width: 1200, height: 630, alt: "Neo4j Graph Technologies — Sunware Technologies" }],
+    type: "website",
+    siteName: "Sunware Technologies",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Neo4J Graph Technologies - Sunware Technologies",
+    description: "Neo4j graph database solutions from Sunware Technologies. Knowledge graphs, recommendation engines, fraud detection and connected data analytics.",
+    images: ["https://sunwaretechnologies.com/hero.png"],
+    site: "@sunwaretechnologies",
+  },
   alternates: { canonical: "https://sunwaretechnologies.com/neo4j-solutions/" },
 };
 
@@ -169,6 +187,14 @@ const content = `
 </div>`;
 
 export default function Page() {
-  return <HtmlPage content={content} />;
+  return (
+    <>
+      <BreadcrumbLD items={[
+        { name: "Home", url: "https://sunwaretechnologies.com" },
+        { name: "Neo4j Solutions", url: "https://sunwaretechnologies.com/neo4j-solutions/" },
+      ]} />
+      <HtmlPage content={content} />
+    </>
+  );
 }
 

@@ -1,9 +1,27 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import HtmlPage from "@/components/HtmlPage";
+import BreadcrumbLD from "@/components/BreadcrumbLD";
 
 export const metadata: Metadata = {
   title: "Cybersecurity Services - Sunware Technologies",
   description: "Enterprise cybersecurity services from Sunware Technologies. Risk assessment, threat detection, compliance, and managed security operations.",
+  keywords: "cybersecurity services, enterprise security, threat detection, risk assessment, compliance, managed security, Sunware Technologies",
+  openGraph: {
+    title: "Cybersecurity Services - Sunware Technologies",
+    description: "Enterprise cybersecurity services from Sunware Technologies. Risk assessment, threat detection, compliance, and managed security operations.",
+    url: "https://sunwaretechnologies.com/cybersecurity-services/",
+    images: [{ url: "https://sunwaretechnologies.com/hero.png", width: 1200, height: 630, alt: "Cybersecurity Services — Sunware Technologies" }],
+    type: "website",
+    siteName: "Sunware Technologies",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Cybersecurity Services - Sunware Technologies",
+    description: "Enterprise cybersecurity services from Sunware Technologies. Risk assessment, threat detection, compliance, and managed security operations.",
+    images: ["https://sunwaretechnologies.com/hero.png"],
+    site: "@sunwaretechnologies",
+  },
   alternates: { canonical: "https://sunwaretechnologies.com/cybersecurity-services/" },
 };
 
@@ -175,6 +193,14 @@ const content = `
 </div>`;
 
 export default function Page() {
-  return <HtmlPage content={content} />;
+  return (
+    <>
+      <BreadcrumbLD items={[
+        { name: "Home", url: "https://sunwaretechnologies.com" },
+        { name: "Cybersecurity Services", url: "https://sunwaretechnologies.com/cybersecurity-services/" },
+      ]} />
+      <HtmlPage content={content} />
+    </>
+  );
 }
 
