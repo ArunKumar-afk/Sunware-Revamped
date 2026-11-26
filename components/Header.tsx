@@ -142,7 +142,7 @@ export default function Header() {
                 <div className="header__area-menubar-right-tel lg-display-n">
                   <a className="default_button" href="#" onClick={(e) => { e.preventDefault(); (window as any).openEnquireModal?.(e); }} style={{ background: "#EF7F1A", color: "#fff" }}>Enquire Now<i className="flaticon-right-up"></i></a>
                 </div>
-                <button className="menu js-menu"><span></span><span></span><span></span></button>
+                <button className="menu js-menu" aria-label="Open navigation menu"><span></span><span></span><span></span></button>
               </div>
             </div>
           </div>

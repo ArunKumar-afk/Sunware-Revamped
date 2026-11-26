@@ -146,8 +146,8 @@ export default function HomePageClient({ content }: { content: string }) {
 
     setTimeout(() => loadBlogFeed(), 800);
     const slides = [
-      { h1: "Real-Time Edge Intelligence for a Smarter World", h3: "Process. Analyze. Act - at the Edge.", btn: "Explore Relim.ai", href: "/relim-ai/", img: "/images/relimheroimage.png", imgWidth: "130%", blend: "normal" },
-      { h1: "Advanced Data & AI Solutions Tailored to Your Needs", h3: "Data. Intelligence. Engineered.", btn: "Get Started", href: "/about/", img: "/about hero.png", imgWidth: "100%", blend: "multiply" },
+      { h1: "Real-Time Edge Intelligence for a Smarter World", h3: "Process. Analyze. Act - at the Edge.", btn: "Explore Relim.ai", href: "/relim-ai/", img: "/images/relimheroimage.webp", imgWidth: "130%", blend: "normal" },
+      { h1: "Advanced Data & AI Solutions Tailored to Your Needs", h3: "Data. Intelligence. Engineered.", btn: "Get Started", href: "/about/", img: "/about hero.webp", imgWidth: "100%", blend: "multiply" },
     ];
     let idx = 0;
     const h1El = document.getElementById("hero-h1");

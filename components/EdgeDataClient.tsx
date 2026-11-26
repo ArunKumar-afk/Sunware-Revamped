@@ -12,7 +12,7 @@ export default function EdgeDataClient() {
               <div className="banner__one-content">
                 {/* Relim.ai logo */}
                 <div className="wow fadeInUp" style={{ marginBottom: "8px", marginLeft: "-8px" }}>
-                  <img src="/images/relim dark png.png" alt="Relim.ai" style={{ height: "120px", width: "auto" }} />
+                  <img src="/images/relim dark png.webp" alt="Relim.ai" style={{ height: "120px", width: "auto" }} />
                 </div>
                 {/* "Formerly EdgeData360" badge */}
                 <div className="wow fadeInUp" style={{ display: "inline-flex", alignItems: "center", gap: "6px", marginBottom: "10px", marginLeft: "8px", background: "rgba(0,0,0,0.05)", border: "1px solid rgba(0,0,0,0.12)", borderRadius: "50px", padding: "5px 14px" }}>
@@ -62,7 +62,7 @@ export default function EdgeDataClient() {
             <a className="default_button" href="https://relim.ai" target="_blank" rel="noopener noreferrer">Read More <i className="flaticon-right-up"></i></a>
           </div>
           <div className="story-image wow fadeInRight">
-            <img src="/images/image.png" alt="Relim.ai Platform Dashboard" style={{ width: "100%", height: "auto", borderRadius: 0, boxShadow: "none" }} />
+            <img src="/images/image.webp" alt="Relim.ai Platform Dashboard" style={{ width: "100%", height: "auto", borderRadius: 0, boxShadow: "none" }} />
           </div>
         </div>
       </div>

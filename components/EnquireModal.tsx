@@ -77,7 +77,7 @@ export default function EnquireModal() {
   return (
     <div id="enquire-modal" className="modal-overlay">
       <div className="modal-content-wrapper">
-        <button className="modal-close" onClick={() => (window as any).closeEnquireModal()}>
+        <button className="modal-close" aria-label="Close enquiry form" onClick={() => (window as any).closeEnquireModal()}>
           <i className="fal fa-times"></i>
         </button>
         <div className="modal-header" style={{ textAlign: "center", marginBottom: "25px" }}>

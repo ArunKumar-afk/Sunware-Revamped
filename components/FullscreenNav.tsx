@@ -13,7 +13,7 @@ function toggleNavSub(e: React.MouseEvent, el: HTMLAnchorElement) {
 export default function FullscreenNav() {
   return (
     <div className="js-nav" role="dialog" aria-modal="true" aria-label="Site Navigation">
-      <button className="nav-close-btn" onClick={() => document.querySelector<HTMLButtonElement>(".js-menu")?.click()} style={{ position: "absolute", top: "30px", right: "30px", background: "none", border: "none", color: "#fff", fontSize: "28px", cursor: "pointer", zIndex: 99999, width: "44px", height: "44px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+      <button className="nav-close-btn" aria-label="Close navigation menu" onClick={() => document.querySelector<HTMLButtonElement>(".js-menu")?.click()} style={{ position: "absolute", top: "30px", right: "30px", background: "none", border: "none", color: "#fff", fontSize: "28px", cursor: "pointer", zIndex: 99999, width: "44px", height: "44px", display: "flex", alignItems: "center", justifyContent: "center" }}>
         <i className="fal fa-times"></i>
       </button>
       <div className="nav-brand"><a href="/"><img src="/white Logo.png" alt="Sunware Technologies" /></a></div>
