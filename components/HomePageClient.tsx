@@ -146,8 +146,8 @@ export default function HomePageClient({ content }: { content: string }) {
 
     setTimeout(() => loadBlogFeed(), 800);
     const slides = [
-      { h1: "Advanced Data & AI Solutions Tailored to Your Needs", h3: "Data. Intelligence. Engineered.", btn: "Get Started", href: "/about/", img: "/about hero.png", imgWidth: "100%" },
-      { h1: "Real-Time Edge Intelligence for a Smarter World", h3: "Process. Analyze. Act - at the Edge.", btn: "Explore Relim.ai", href: "/relim-ai/", img: "/images/relimheroimage.png", imgWidth: "130%" },
+      { h1: "Real-Time Edge Intelligence for a Smarter World", h3: "Process. Analyze. Act - at the Edge.", btn: "Explore Relim.ai", href: "/relim-ai/", img: "/images/relimheroimage.png", imgWidth: "130%", blend: "normal" },
+      { h1: "Advanced Data & AI Solutions Tailored to Your Needs", h3: "Data. Intelligence. Engineered.", btn: "Get Started", href: "/about/", img: "/about hero.png", imgWidth: "100%", blend: "multiply" },
     ];
     let idx = 0;
     const h1El = document.getElementById("hero-h1");
@@ -165,6 +165,7 @@ export default function HomePageClient({ content }: { content: string }) {
         if (btnEl) { btnEl.textContent = s.btn; btnEl.href = s.href; }
         imgEl.src = s.img;
         imgEl.style.width = (s as any).imgWidth || "100%";
+        imgEl.style.mixBlendMode = (s as any).blend || "multiply";
         h1El.style.opacity = "1"; h3El!.style.opacity = "1"; imgEl.style.opacity = "1"; imgEl.style.transform = "scale(1)";
       }, 500);
       // Update dots
