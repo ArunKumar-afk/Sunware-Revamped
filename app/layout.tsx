@@ -101,6 +101,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script type="application/ld+json" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: servicesJsonLd }} />
       </head>
       <body suppressHydrationWarning>
+        <a href="#main-content" className="skip-to-main">Skip to main content</a>
         <DomainSEO />
         <Preloader />
         {/* Defer non-critical CSS after page load — removes render-blocking */}
@@ -117,7 +118,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <FullscreenNav />
         <div className="main-content-wrapper">
           <Header />
-          {children}
+          <main id="main-content">
+            {children}
+          </main>
         </div>
         <Footer />
         <EnquireModal />

@@ -9,6 +9,51 @@
   .story-content, .story-image { flex: none; width: 100%; }
 }
 
+/* ── Accessibility: skip-to-main link ── */
+.skip-to-main {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  z-index: 999999;
+  padding: 12px 20px;
+  background: #EF7F1A;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  border-radius: 0 0 8px 0;
+  transition: top 0.2s;
+}
+.skip-to-main:focus { top: 0; }
+
+/* ── Accessibility: touch target minimum size (mobile) ── */
+@media (max-width: 768px) {
+  a, button, [role="button"] {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+  .footer__one-widget ul li a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    padding: 4px 0;
+  }
+  .industry-nav-item {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* ── Industry nav label (replaces h5) ── */
+.industry-nav-label {
+  font-weight: 700;
+  font-size: inherit;
+  color: inherit;
+  margin: 0;
+}
+
 /* Main content wrapper */
 .main-content-wrapper {
   position: relative;

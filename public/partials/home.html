@@ -1,6 +1,6 @@
 ﻿<!-- Banner Area Start -->
         <div class="banner__one" style="position: relative; overflow: hidden; background: #fff;">
-                <video autoplay loop muted playsinline aria-hidden="true" style="position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; object-fit: cover; transform: translate(-50%, -50%); z-index: 0; opacity: 0.6;">
+                <video autoplay loop muted playsinline preload="none" aria-hidden="true" style="position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; object-fit: cover; transform: translate(-50%, -50%); z-index: 0; opacity: 0.6;">
                         <source src="/waves_2.mp4" type="video/mp4">
                 </video>
                 <div class="container" style="position: relative; z-index: 5; padding: 120px 0;">
@@ -8,9 +8,9 @@
                                 <div class="col-xl-7 col-lg-7">
                                         <div id="hero-text-area">
                                                 <h1 id="hero-h1" style="color: var(--primary-color-1); font-size: 64px; line-height: 1.2; margin-bottom: 20px; transition: opacity 0.5s ease;">Advanced Data &amp; AI Solutions Tailored to Your Needs</h1>
-                                                <h3 id="hero-h3" style="color: #EF7F1A; font-size: 32px; font-weight: 700; margin-bottom: 35px; line-height: 1.4; transition: opacity 0.5s ease;">Data. Intelligence. Engineered.</h3>
+                                                <h2 id="hero-h3" style="font-size:inherit;font-weight:inherit;margin:inherit;" style="color: #EF7F1A; font-size: 32px; font-weight: 700; margin-bottom: 35px; line-height: 1.4; transition: opacity 0.5s ease;">Data. Intelligence. Engineered.</h3>
                                                 <div id="hero-cta" style="transition: opacity 0.5s ease;">
-                                                        <a id="hero-btn" class="default_button" href="/about/" style="background: #EF7F1A; border-radius: 50px; padding: 15px 40px; color: #fff; font-weight: 700; font-size: 18px;">Get Started</a>
+                                                        <a id="hero-btn" class="default_button" href="/about/" aria-label="Get started with Sunware Technologies" style="background: #EF7F1A; border-radius: 50px; padding: 15px 40px; color: #fff; font-weight: 700; font-size: 18px;">Get Started</a>
                                                 </div>
                                                 <div style="display: flex; gap: 12px; margin-top: 40px;">
                                                         <span class="hero-dot active" data-slide="0" style="width: 32px; height: 12px; border-radius: 6px; background: #EF7F1A; cursor: pointer; transition: all 0.3s;"></span>
@@ -70,7 +70,7 @@
 						<h2 class="title_split_anim" style="color:var(--primary-color-1);">Industries We Serve</h2>
 					</div>
 					<div class="t-center mt-30 mb-50" style="max-width: 900px; margin-left: auto; margin-right: auto;">
-						<h4 style="font-weight: 700; color: var(--primary-color-1); margin-bottom: 20px;">Driving Business Innovation: Through Intelligent Data</h4>
+						<h3 style="font-weight: 700; color: var(--primary-color-1); margin-bottom: 20px; font-size:inherit;">Driving Business Innovation: Through Intelligent Data</h3>
 						<p style="font-size: 18px; line-height: 1.8; color: #555;">At Sunware Technologies, we transform business challenges into technological opportunities. We're experts in cloud data engineering, analytics, machine learning, and AI solutions tailored specifically for the Banking, Financial Services, Insurance, Utilities, Retail, Manufacturing, and Healthcare sectors. Our specialized approach and frameworks help organizations manage and leverage their data to drive innovation, efficiency, and competitive advantage. We don't just implement technology — we engineer strategic solutions that deliver measurable business outcomes.</p>
 					</div>
 				</div>
@@ -81,16 +81,16 @@
 				<div class="col-lg-4 col-md-5">
 					<div class="industry-nav">
 						<div class="industry-nav-item active" data-target="healthcare">
-							<h5>Healthcare & Life Sciences <i class="fas fa-chevron-right"></i></h5>
+							<div class="industry-nav-label">Healthcare & Life Sciences <i class="fas fa-chevron-right"></i></div>
 						</div>
 						<div class="industry-nav-item" data-target="banking">
-							<h5>Banking & Financial Services <i class="fas fa-chevron-right"></i></h5>
+							<div class="industry-nav-label">Banking & Financial Services <i class="fas fa-chevron-right"></i></div>
 						</div>
 						<div class="industry-nav-item" data-target="retail">
-							<h5>Retail & E-commerce <i class="fas fa-chevron-right"></i></h5>
+							<div class="industry-nav-label">Retail & E-commerce <i class="fas fa-chevron-right"></i></div>
 						</div>
 						<div class="industry-nav-item" data-target="media">
-							<h5>Media & Entertainment <i class="fas fa-chevron-right"></i></h5>
+							<div class="industry-nav-label">Media & Entertainment <i class="fas fa-chevron-right"></i></div>
 						</div>
 					</div>
 				</div>
@@ -104,13 +104,13 @@
 							
 							<div class="industry-stats-container">
 								<div class="stat-item">
-									<h2 class="stat-value">$67.82 bln</h2>
+									<p class="stat-value" style="font-size:clamp(2rem,5vw,3rem);font-weight:900;color:var(--primary-color-1);line-height:1;margin:0;">$67.82 bln</p>
 									<p class="stat-year">by 2025</p>
 									<span class="stat-desc">The healthcare analytics market is expected to reach.</span>
 								</div>
 								<div class="stat-divider"></div>
 								<div class="stat-item">
-									<h2 class="stat-value">46.2%</h2>
+									<p class="stat-value" style="font-size:clamp(2rem,5vw,3rem);font-weight:900;color:var(--primary-color-1);line-height:1;margin:0;">46.2%</p>
 									<p class="stat-year">by 2028</p>
 									<span class="stat-desc">The global AI in healthcare market is expected to grow</span>
 								</div>
@@ -126,13 +126,13 @@
 							<p>In today's fast-paced digital world, where 80% of financial transactions are now conducted online, the banking and financial services industry is experiencing a profound transformation. We empower banks and financial institutions to embrace this digital revolution and thrive in the new financial landscape.</p>
 							<div class="industry-stats-container">
 								<div class="stat-item">
-									<h2 class="stat-value">$332.5 bln</h2>
+									<p class="stat-value" style="font-size:clamp(2rem,5vw,3rem);font-weight:900;color:var(--primary-color-1);line-height:1;margin:0;">$332.5 bln</p>
 									<p class="stat-year">by 2028</p>
 									<span class="stat-desc">The global fintech market is expected to reach.</span>
 								</div>
 								<div class="stat-divider"></div>
 								<div class="stat-item">
-									<h2 class="stat-value">60%</h2>
+									<p class="stat-value" style="font-size:clamp(2rem,5vw,3rem);font-weight:900;color:var(--primary-color-1);line-height:1;margin:0;">60%</p>
 									<p class="stat-year">by 2025</p>
 									<span class="stat-desc">Banks will offer open banking services.</span>
 								</div>
@@ -147,13 +147,13 @@
 							<p>The retail landscape is undergoing a seismic shift, with online sales projected to account for 24% of total retail sales by 2026. In this dynamic environment, we empower retailers to not only survive but thrive. We specialize in delivering IT solutions that transform online shopping experiences, optimize supply chains, and drive customer engagement.</p>
 							<div class="industry-stats-container">
 								<div class="stat-item">
-									<h2 class="stat-value">$17.86 bln</h2>
+									<p class="stat-value" style="font-size:clamp(2rem,5vw,3rem);font-weight:900;color:var(--primary-color-1);line-height:1;margin:0;">$17.86 bln</p>
 									<p class="stat-year">by 2028</p>
 									<span class="stat-desc">The global augmented reality (AR) and virtual reality (VR) in the retail market is expected to reach.</span>
 								</div>
 								<div class="stat-divider"></div>
 								<div class="stat-item">
-									<h2 class="stat-value">80%</h2>
+									<p class="stat-value" style="font-size:clamp(2rem,5vw,3rem);font-weight:900;color:var(--primary-color-1);line-height:1;margin:0;">80%</p>
 									<p class="stat-year">Customer Success</p>
 									<span class="stat-desc">Of consumers are more likely to purchase from a brand that provides personalized experiences.</span>
 								</div>
@@ -168,13 +168,13 @@
 							<p>In the fast-paced and ever-evolving world of media and entertainment, staying ahead of the curve is essential for success. With over 70% of consumers now preferring streaming services to traditional television, and social media engagement driving 50% of content discovery, the industry is undergoing a digital revolution. We empower media and entertainment companies to harness these trends and thrive in the digital age.</p>
 							<div class="industry-stats-container">
 								<div class="stat-item">
-									<h2 class="stat-value">80%</h2>
+									<p class="stat-value" style="font-size:clamp(2rem,5vw,3rem);font-weight:900;color:var(--primary-color-1);line-height:1;margin:0;">80%</p>
 									<p class="stat-year">Strategic Impact</p>
 									<span class="stat-desc">Of media executives believe that AI will significantly impact their industry in the next five years.</span>
 								</div>
 								<div class="stat-divider"></div>
 								<div class="stat-item">
-									<h2 class="stat-value">63%</h2>
+									<p class="stat-value" style="font-size:clamp(2rem,5vw,3rem);font-weight:900;color:var(--primary-color-1);line-height:1;margin:0;">63%</p>
 									<p class="stat-year">Efficiency Gains</p>
 									<span class="stat-desc">Of media companies are using AI to automate at least one part of their content production process.</span>
 								</div>
@@ -199,7 +199,7 @@
 							<span class="subtitle wow fadeInLeft" data-wow-delay=".4s">Our Core Values</span>
 							<h2 class="title_split_anim mb-20" style="color: var(--primary-color-1);">Value & Ethos</h2>
 							<div style="width: 100px; height: 1px; background: #EF7F1A; margin: 15px auto 30px auto;"></div>
-							<h4 style="font-weight: 700; color: var(--primary-color-1); margin-bottom: 20px; max-width: 850px; margin-left: auto; margin-right: auto;">We engineer innovative solutions to empower business.</h4>
+							<h3 style="font-weight: 700; color: var(--primary-color-1); margin-bottom: 20px; max-width: 850px; margin-left: auto; margin-right: auto;">We engineer innovative solutions to empower business.</h3>
 							<p class="wow fadeInUp" data-wow-delay=".4s" style="font-size: 18px; line-height: 1.8; color: #555; max-width: 850px; margin: 0 auto;">Our specialized 'SWORD' framework is built on the principles of synergy, wisdom, and excellence, ensuring we deliver data-driven integrity in every strategic solution we engineer for our global clients.</p>							
 						</div>
 						<div class="sword-values-container mt-40" style="margin-top: 60px !important;">
@@ -257,18 +257,18 @@
                                                                 <img src="images/Technologies/Sunware_Technologies_Cloud.png" style="width:100%;height:100%;object-fit:cover;" alt="Solution Engineering">
                                                                 <div class="portfolio__one-item-content">
                                                                         <span>Services</span>
-                                                                        <h4>Solution Engineering &amp; Development</h4>
+                                                                        <h3>Solution Engineering &amp; Development</h3>
                                                                         <p style="color:rgba(255,255,255,0.6); font-size:13px; margin-top:8px;">Click to see services</p>
                                                                 </div>
                                                         </div>
                                                         <div class="stack-flip-back">
-                                                                <h4 style="color:var(--primary-color-1); font-weight:800; margin-bottom:20px; padding-bottom:15px; border-bottom:2px solid #EF7F1A;">Solution Engineering &amp; Development</h4>
+                                                                <h3 style="color:var(--primary-color-1); font-weight:800; margin-bottom:20px; padding-bottom:15px; border-bottom:2px solid #EF7F1A;">Solution Engineering &amp; Development</h3>
                                                                 <div class="stack-flip-links">
-                                                                        <a href="/data-analytics/" onclick="event.stopPropagation()"><i class="fas fa-chart-bar"></i> Data Analytics</a>
-                                                                        <a href="/enterprise-app-development/" onclick="event.stopPropagation()"><i class="fas fa-laptop-code"></i> Enterprise Application Development</a>
-                                                                        <a href="/infrastructure/" onclick="event.stopPropagation()"><i class="fas fa-server"></i> Infrastructure</a>
-                                                                        <a href="/cloud-services/" onclick="event.stopPropagation()"><i class="fas fa-cloud"></i> Cloud Services</a>
-                                                                        <a href="/iot-solutions/" onclick="event.stopPropagation()"><i class="fas fa-microchip"></i> IOT Solutions</a>
+                                                                        <a href="/data-analytics/" aria-label="Explore Data Analytics Services" onclick="event.stopPropagation()"><i class="fas fa-chart-bar"></i> Data Analytics</a>
+                                                                        <a href="/enterprise-app-development/" aria-label="Explore Enterprise App Development" onclick="event.stopPropagation()"><i class="fas fa-laptop-code"></i> Enterprise Application Development</a>
+                                                                        <a href="/infrastructure/" aria-label="Explore Infrastructure Solutions" onclick="event.stopPropagation()"><i class="fas fa-server"></i> Infrastructure</a>
+                                                                        <a href="/cloud-services/" aria-label="Explore Cloud Services" onclick="event.stopPropagation()"><i class="fas fa-cloud"></i> Cloud Services</a>
+                                                                        <a href="/iot-solutions/" aria-label="Explore IoT Solutions" onclick="event.stopPropagation()"><i class="fas fa-microchip"></i> IOT Solutions</a>
                                                                 </div>
                                                         </div>
                                                 </div>
@@ -281,17 +281,17 @@
                                                                 <img src="images/Technologies/Sunware_Technologies_Data_Science.png" style="width:100%;height:100%;object-fit:cover;" alt="Strategy & Transformation">
                                                                 <div class="portfolio__one-item-content">
                                                                         <span>Services</span>
-                                                                        <h4>Strategy &amp; Transformation</h4>
+                                                                        <h3>Strategy &amp; Transformation</h3>
                                                                         <p style="color:rgba(255,255,255,0.6); font-size:13px; margin-top:8px;">Click to see services</p>
                                                                 </div>
                                                         </div>
                                                         <div class="stack-flip-back">
-                                                                <h4 style="color:var(--primary-color-1); font-weight:800; margin-bottom:20px; padding-bottom:15px; border-bottom:2px solid #EF7F1A;">Strategy &amp; Transformation</h4>
+                                                                <h3 style="color:var(--primary-color-1); font-weight:800; margin-bottom:20px; padding-bottom:15px; border-bottom:2px solid #EF7F1A;">Strategy &amp; Transformation</h3>
                                                                 <div class="stack-flip-links">
-                                                                        <a href="/technology-consulting/" onclick="event.stopPropagation()"><i class="fas fa-cogs"></i> Technology Consulting</a>
-                                                                        <a href="/digital-transformation/" onclick="event.stopPropagation()"><i class="fas fa-sync-alt"></i> Digital Transformation</a>
-                                                                        <a href="/ai-enablement/" onclick="event.stopPropagation()"><i class="fas fa-robot"></i> AI Enablement</a>
-                                                                        <a href="/data-engineering/" onclick="event.stopPropagation()"><i class="fas fa-database"></i> Data Engineering</a>
+                                                                        <a href="/technology-consulting/" aria-label="Explore Technology Consulting" onclick="event.stopPropagation()"><i class="fas fa-cogs"></i> Technology Consulting</a>
+                                                                        <a href="/digital-transformation/" aria-label="Explore Digital Transformation Services" onclick="event.stopPropagation()"><i class="fas fa-sync-alt"></i> Digital Transformation</a>
+                                                                        <a href="/ai-enablement/" aria-label="Explore AI Enablement Services" onclick="event.stopPropagation()"><i class="fas fa-robot"></i> AI Enablement</a>
+                                                                        <a href="/data-engineering/" aria-label="Explore Data Engineering Services" onclick="event.stopPropagation()"><i class="fas fa-database"></i> Data Engineering</a>
                                                                 </div>
                                                         </div>
                                                 </div>
@@ -304,16 +304,16 @@
                                                                 <img src="images/Technologies/Sunware_Technologies_Automation.png" style="width:100%;height:100%;object-fit:cover;" alt="Operational Support">
                                                                 <div class="portfolio__one-item-content">
                                                                         <span>Services</span>
-                                                                        <h4>Operational Support &amp; Expansion</h4>
+                                                                        <h3>Operational Support &amp; Expansion</h3>
                                                                         <p style="color:rgba(255,255,255,0.6); font-size:13px; margin-top:8px;">Click to see services</p>
                                                                 </div>
                                                         </div>
                                                         <div class="stack-flip-back">
-                                                                <h4 style="color:var(--primary-color-1); font-weight:800; margin-bottom:20px; padding-bottom:15px; border-bottom:2px solid #EF7F1A;">Operational Support &amp; Expansion</h4>
+                                                                <h3 style="color:var(--primary-color-1); font-weight:800; margin-bottom:20px; padding-bottom:15px; border-bottom:2px solid #EF7F1A;">Operational Support &amp; Expansion</h3>
                                                                 <div class="stack-flip-links">
-                                                                        <a href="/staff-augmentation/" onclick="event.stopPropagation()"><i class="fas fa-users"></i> Staff Augmentation Solution</a>
-                                                                        <a href="/maintenance-support/" onclick="event.stopPropagation()"><i class="fas fa-tools"></i> Maintenance and Support</a>
-                                                                        <a href="/learning-platform/" onclick="event.stopPropagation()"><i class="fas fa-graduation-cap"></i> Learning Platform</a>
+                                                                        <a href="/staff-augmentation/" aria-label="Explore Staff Augmentation Services" onclick="event.stopPropagation()"><i class="fas fa-users"></i> Staff Augmentation Solution</a>
+                                                                        <a href="/maintenance-support/" aria-label="Explore Maintenance and Support Services" onclick="event.stopPropagation()"><i class="fas fa-tools"></i> Maintenance and Support</a>
+                                                                        <a href="/learning-platform/" aria-label="Explore Learning Platform" onclick="event.stopPropagation()"><i class="fas fa-graduation-cap"></i> Learning Platform</a>
                                                                 </div>
                                                         </div>
                                                 </div>
@@ -343,100 +343,100 @@
                     <div class="swiper team_slider">
                         <div class="swiper-wrapper data_cursor" data-cursor-text="Drag">
                            <div class="swiper-slide">
-                              <a href="/cloud-solutions/" class="team__one-item" style="display: block; cursor: pointer;">
+                              <a href="/cloud-solutions/" aria-label="Explore Cloud Solutions" class="team__one-item" style="display: block; cursor: pointer;">
                                     <img src="images/Technologies/Sunware_Technologies_Cloud.png" alt="Cloud">
                                     <div class="team__one-item-content">
-                                        <h4>Cloud Solutions</h4>
+                                        <h3>Cloud Solutions</h3>
                                         <span>Expertise in hybrid cloud systems</span>
                                     </div>
                                 </a>
                            </div>
                            <div class="swiper-slide">
-                              <a href="/automation-efficiency/" class="team__one-item" style="display: block; cursor: pointer;">
+                              <a href="/automation-efficiency/" aria-label="Explore Automation and Efficiency" class="team__one-item" style="display: block; cursor: pointer;">
                                     <img src="images/Technologies/Sunware_Technologies_Automation.png" alt="Automation">
                                     <div class="team__one-item-content">
-                                        <h4>Automation</h4>
+                                        <h3>Automation</h3>
                                         <span>Streamlining operations & efficiency</span>
                                     </div>
                                 </a>
                            </div>
                            <div class="swiper-slide">
-                              <a href="/data-science-ai/" class="team__one-item" style="display: block; cursor: pointer;">
+                              <a href="/data-science-ai/" aria-label="Explore Data Science and AI" class="team__one-item" style="display: block; cursor: pointer;">
                                     <img src="images/Technologies/Sunware_Technologies_Data_Science.png" alt="AI">
                                     <div class="team__one-item-content">
-                                        <h4>Data Science & AI</h4>
+                                        <h3>Data Science & AI</h3>
                                         <span>Generative AI & predictive analytics</span>
                                     </div>
                                 </a>
                            </div>
                            <div class="swiper-slide">
-                              <a href="/salesforce-expertise/" class="team__one-item" style="display: block; cursor: pointer;">
+                              <a href="/salesforce-expertise/" aria-label="Explore Salesforce Solutions" class="team__one-item" style="display: block; cursor: pointer;">
                                     <img src="images/Technologies/Sunware_Technologies_Sales_force.png" alt="Salesforce">
                                     <div class="team__one-item-content">
-                                        <h4>Salesforce</h4>
+                                        <h3>Salesforce</h3>
                                         <span>Implementation & customization</span>
                                     </div>
                                 </a>
                            </div>
                            <div class="swiper-slide">
-                              <a href="/microsoft-solutions/" class="team__one-item" style="display: block; cursor: pointer;">
+                              <a href="/microsoft-solutions/" aria-label="Explore Microsoft Solutions" class="team__one-item" style="display: block; cursor: pointer;">
                                     <img src="images/Technologies/Sunware_Technologies_Microsoft_Technologies.png" alt="Microsoft">
                                     <div class="team__one-item-content">
-                                        <h4>Microsoft Solutions</h4>
+                                        <h3>Microsoft Solutions</h3>
                                         <span>Enterprise technology stack experts</span>
                                     </div>
                                 </a>
                            </div>
                            <div class="swiper-slide">
-                              <a href="/odoo-solutions/" class="team__one-item" style="display: block; cursor: pointer;">
+                              <a href="/odoo-solutions/" aria-label="Explore Odoo ERP Solutions" class="team__one-item" style="display: block; cursor: pointer;">
                                     <img src="images/Technologies/Sunware_Technologies_Odoo.png" alt="Odoo">
                                     <div class="team__one-item-content">
-                                        <h4>Odoo Solutions</h4>
+                                        <h3>Odoo Solutions</h3>
                                         <span>Custom ERP & business applications</span>
                                     </div>
                                 </a>
                            </div>
                            <div class="swiper-slide">
-                              <a href="/iot-innovations/" class="team__one-item" style="display: block; cursor: pointer;">
+                              <a href="/iot-innovations/" aria-label="Explore IoT Innovations" class="team__one-item" style="display: block; cursor: pointer;">
                                     <img src="images/Technologies/Sunware_Technologies_IoT.png" alt="IoT">
                                     <div class="team__one-item-content">
-                                        <h4>IoT Innovations</h4>
+                                        <h3>IoT Innovations</h3>
                                         <span>Connected smart device ecosystems</span>
                                     </div>
                                 </a>
                            </div>
                            <div class="swiper-slide">
-                              <a href="/cybersecurity-services/" class="team__one-item" style="display: block; cursor: pointer;">
+                              <a href="/cybersecurity-services/" aria-label="Explore Cybersecurity Services" class="team__one-item" style="display: block; cursor: pointer;">
                                     <img src="images/Technologies/Sunware_Technologies_Cybersecurity.png" alt="Security">
                                     <div class="team__one-item-content">
-                                        <h4>Cybersecurity</h4>
+                                        <h3>Cybersecurity</h3>
                                         <span>Advanced threat protection & audit</span>
                                     </div>
                                 </a>
                            </div>
                            <div class="swiper-slide">
-                              <a href="/aiot-integrations/" class="team__one-item" style="display: block; cursor: pointer;">
+                              <a href="/aiot-integrations/" aria-label="Explore AIoT Integrations" class="team__one-item" style="display: block; cursor: pointer;">
                                     <img src="images/Technologies/Sunware_Technologies_AIoT.png" alt="AIoT">
                                     <div class="team__one-item-content">
-                                        <h4>AIoT Integrations</h4>
+                                        <h3>AIoT Integrations</h3>
                                         <span>Merging intelligence with physical IoT</span>
                                     </div>
                                 </a>
                            </div>
                            <div class="swiper-slide">
-                              <a href="/mobile-app-development/" class="team__one-item" style="display: block; cursor: pointer;">
+                              <a href="/mobile-app-development/" aria-label="Explore Mobile App Development" class="team__one-item" style="display: block; cursor: pointer;">
                                     <img src="images/Technologies/Sunware_Technologies_Mobile_Development.png" alt="Mobile App">
                                     <div class="team__one-item-content">
-                                        <h4>Mobile Development</h4>
+                                        <h3>Mobile Development</h3>
                                         <span>iOS, Android & cross-platform apps</span>
                                     </div>
                                 </a>
                            </div>
                            <div class="swiper-slide">
-                              <a href="/data-science-ai/" class="team__one-item" style="display: block; cursor: pointer;">
+                              <a href="/data-science-ai/" aria-label="Explore Data Science and AI" class="team__one-item" style="display: block; cursor: pointer;">
                                          <img src="images/Technologies/Sunware_Technologies_Data_Science.png" alt="Neo4J">
                                          <div class="team__one-item-content">
-                                         <h4>Neo4J</h4>
+                                         <h3>Neo4J</h3>
                                          <span>Graph database & knowledge graphs</span>
                                          </div>
                                  </a>
@@ -468,7 +468,7 @@
 							<span>01</span>
 							<div class="process__area-item-area">
 								<i class="flaticon-strategy"></i>
-								<h5>Core Focus Unleashed</h5>
+								<h3>Core Focus Unleashed</h3>
 								<p>Focus on your core business while we handle project execution seamlessly.</p>
 							</div>
 						</div>
@@ -476,7 +476,7 @@
 							<span>02</span>
 							<div class="process__area-item-area">
 								<i class="flaticon-repair"></i>
-								<h5>Always-On Maintenance</h5>
+								<h3>Always-On Maintenance</h3>
 								<p>We prioritize user experience with ongoing maintenance, ensuring market relevance.</p>
 							</div>
 						</div>
@@ -484,7 +484,7 @@
 							<span>03</span>
 							<div class="process__area-item-area">
 								<i class="flaticon-cyber-security"></i>
-								<h5>Security Built-In</h5>
+								<h3>Security Built-In</h3>
 								<p>Robust security at every step of development, protecting your sensitive data.</p>
 							</div>
 						</div>
@@ -492,7 +492,7 @@
 							<span>04</span>
 							<div class="process__area-item-area">
 								<i class="flaticon-paper-plane"></i>
-								<h5>Faster Launch, Bigger Impact</h5>
+								<h3>Faster Launch, Bigger Impact</h3>
 								<p>Experienced team and vast talent pool get your project to market quickly.</p>
 							</div>
 						</div>
@@ -500,7 +500,7 @@
 							<span>05</span>
 							<div class="process__area-item-area">
 								<i class="flaticon-artificial-intelligence"></i>
-								<h5>AI-Powered Efficiency</h5>
+								<h3>AI-Powered Efficiency</h3>
 								<p>Leverage AI and analytics to optimize resources and automating tasks.</p>
 							</div>
 						</div>
@@ -557,7 +557,7 @@
 						</div>
 						<div class="col-xl-6 col-lg-5">
 							<div class="footer__cta-area-right d-flex al-center flex-wrap jc-end lg-jc-center gap-25">
-								<a class="default_button" href="#" onclick="openEnquireModal(event)">Start Today<i class="flaticon-right-up"></i></a>
+								<a class="default_button" href="#" aria-label="Start your project today - contact Sunware Technologies" onclick="openEnquireModal(event)">Start Today<i class="flaticon-right-up"></i></a>
 							</div>
 						</div>
 					</div>
