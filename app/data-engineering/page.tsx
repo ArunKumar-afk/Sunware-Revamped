@@ -1,6 +1,7 @@
 ﻿import type { Metadata } from "next";
 import HtmlPage from "@/components/HtmlPage";
 import BreadcrumbLD from "@/components/BreadcrumbLD";
+import FaqLD from "@/components/FaqLD";
 
 export const metadata: Metadata = {
   title: "Data Engineering Services - Sunware Technologies",
@@ -219,6 +220,12 @@ const content = `
 export default function Page() {
   return (
     <>
+      <FaqLD items={[
+        { q: "What data engineering services does Sunware Technologies provide?", a: "Sunware Technologies provides data architecture and strategy, ETL/ELT pipeline development using dbt, Airflow, and Spark, data lakehouse and warehouse implementation on Snowflake, Databricks, and BigQuery, real-time streaming with Kafka and Flink, and DataOps automation." },
+        { q: "What data platforms does Sunware Technologies specialise in?", a: "Sunware's data engineers are certified practitioners on Snowflake, Databricks, BigQuery, Azure Synapse, dbt, Apache Spark, Kafka, and Airflow, with cloud-agnostic expertise across AWS, Azure, and GCP." },
+        { q: "How does Sunware Technologies handle data quality?", a: "Sunware implements automated data quality frameworks using Great Expectations, Monte Carlo, and custom validation rules to monitor freshness, completeness, accuracy, and schema drift — alerting teams before issues reach production." },
+        { q: "Can Sunware Technologies migrate a legacy data warehouse to a modern platform?", a: "Yes. Sunware specialises in migrating legacy data warehouses to modern lakehouse architectures on Databricks or Snowflake, with full data lineage tracking and zero downtime migration approaches." },
+      ]} />
       <BreadcrumbLD items={[
         { name: "Home", url: "https://sunwaretechnologies.com" },
         { name: "Data Engineering", url: "https://sunwaretechnologies.com/data-engineering/" },

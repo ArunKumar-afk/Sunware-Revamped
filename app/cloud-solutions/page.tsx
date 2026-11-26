@@ -1,6 +1,7 @@
 ﻿import type { Metadata } from "next";
 import HtmlPage from "@/components/HtmlPage";
 import BreadcrumbLD from "@/components/BreadcrumbLD";
+import FaqLD from "@/components/FaqLD";
 
 export const metadata: Metadata = {
   title: "Cloud Solutions - Sunware Technologies",
@@ -195,6 +196,12 @@ const content = `
 export default function Page() {
   return (
     <>
+      <FaqLD items={[
+        { q: "What cloud solutions does Sunware Technologies offer?", a: "Sunware Technologies offers multi-cloud strategy, cloud migration, cloud-native application development, serverless architecture, containerisation with Kubernetes, FinOps, and managed cloud services across AWS, Microsoft Azure, and Google Cloud Platform." },
+        { q: "Does Sunware Technologies support multi-cloud environments?", a: "Yes. Sunware designs cloud-portable architectures that work across AWS, Azure, and GCP, avoiding vendor lock-in and ensuring your cloud strategy can evolve over time." },
+        { q: "How does Sunware Technologies handle cloud migration?", a: "Sunware follows a structured cloud migration methodology covering assessment, planning, pilot migration, full migration, and optimisation. The team handles lift-and-shift, re-platforming, and full re-architecting depending on the client's needs." },
+        { q: "Where are Sunware Technologies' cloud offices?", a: "Sunware Technologies' cloud practice serves clients from its offices in San Jose, California (USA), Dubai (UAE), and delivery centres in Chennai and Pune, India." },
+      ]} />
       <BreadcrumbLD items={[
         { name: "Home", url: "https://sunwaretechnologies.com" },
         { name: "Cloud Solutions", url: "https://sunwaretechnologies.com/cloud-solutions/" },

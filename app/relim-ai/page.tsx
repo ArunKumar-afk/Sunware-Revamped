@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import EdgeDataClient from "@/components/EdgeDataClient";
 import BreadcrumbLD from "@/components/BreadcrumbLD";
+import FaqLD from "@/components/FaqLD";
 
 export const metadata: Metadata = {
   title: "Relim.ai - Data Unified. AI Unleashed. | Sunware Technologies",
@@ -29,6 +30,12 @@ export const metadata: Metadata = {
 export default function RelimAIPage() {
   return (
     <>
+      <FaqLD items={[
+        { q: "What is Relim.ai?", a: "Relim.ai (formerly EdgeData360) is an enterprise real-time edge intelligence platform by Sunware Technologies. It connects 250+ industrial and enterprise data sources without custom code and deploys agentic AI directly at the edge, enabling AI-ready pipelines in under 10 minutes." },
+        { q: "What was Relim.ai previously called?", a: "Relim.ai was formerly known as EdgeData360. It was rebranded in 2026. The platform, capabilities, and team behind it remain the same under Sunware Technologies." },
+        { q: "What industries use Relim.ai?", a: "Relim.ai is used in smart manufacturing, industrial operations, oil and gas, utilities, healthcare operations, and any industry requiring real-time edge data processing and AI inferencing." },
+        { q: "How many data connectors does Relim.ai support?", a: "Relim.ai supports 250+ pre-built data connectors including PLCs, Historian systems, databases, REST APIs, MQTT/Sparkplug servers, and industrial protocols — all without writing custom integration code." },
+      ]} />
       <BreadcrumbLD items={[
         { name: "Home", url: "https://sunwaretechnologies.com" },
         { name: "Relim.ai", url: "https://sunwaretechnologies.com/relim-ai/" },

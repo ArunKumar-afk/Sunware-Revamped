@@ -69,6 +69,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="icon" type="image/png" sizes="512x512" href="/favicon_io/android-chrome-512x512.png" />
         <link rel="manifest" href="/favicon_io/site.webmanifest" />
         <meta name="theme-color" content="#0a0f1e" />
+        {/* Mobile/PWA */}
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="format-detection" content="telephone=no" />
         {/* Geo optimisation — primary HQ: San Jose, CA, USA */}
         <meta name="geo.region" content="US-CA" />
         <meta name="geo.placename" content="San Jose, California, USA" />
@@ -76,13 +80,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="ICBM" content="37.3861, -121.9552" />
         {/* Rich snippet allowances */}
         <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        {/* Preconnect to external origins — reduces DNS + TCP time */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://www.google-analytics.com" />
+        <link rel="dns-prefetch" href="https://images.unsplash.com" />
+        <link rel="dns-prefetch" href="https://flagcdn.com" />
+        {/* Preload LCP image — first hero slide */}
+        <link rel="preload" as="image" href="/images/relimheroimage.png" fetchPriority="high" />
+        {/* Critical CSS — synchronous, needed for first paint */}
         <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
         <link rel="stylesheet" href="/assets/css/fontawesome.css" />
         <link rel="stylesheet" href="/assets/font/flaticon_flexitype.css" />
-        <link rel="stylesheet" href="/assets/css/animate.css" />
         <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
-        <link rel="stylesheet" href="/assets/css/magnific-popup.css" />
         <link rel="stylesheet" href="/assets/css/style.css" />
+        {/* Non-critical CSS — deferred, no visible impact on first paint */}
         {/* JSON-LD Schemas — static, server-rendered only */}
         <script type="application/ld+json" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: orgJsonLd }} />
         <script type="application/ld+json" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: localBizJsonLd }} />
@@ -92,6 +103,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body suppressHydrationWarning>
         <DomainSEO />
         <Preloader />
+        {/* Defer non-critical CSS after page load — removes render-blocking */}
+        <Script id="deferred-css" strategy="afterInteractive">{`
+          ['animate','magnific-popup'].forEach(function(c){
+            var l=document.createElement('link');l.rel='stylesheet';
+            l.href='/assets/css/'+c+'.css';document.head.appendChild(l);
+          });
+        `}</Script>
         <div className="cursor">
           <div className="hide"><div id="cursor-ball"></div></div>
           <div id="cursor-text"></div>

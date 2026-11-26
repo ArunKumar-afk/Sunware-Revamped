@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import HtmlPage from "@/components/HtmlPage";
 
 import BreadcrumbLD from "@/components/BreadcrumbLD";
+import FaqLD from "@/components/FaqLD";
 
 export const metadata: Metadata = {
   title: "AI Enablement Services - Sunware Technologies",
@@ -220,6 +221,12 @@ const content = `
 export default function Page() {
   return (
     <>
+      <FaqLD items={[
+        { q: "What AI enablement services does Sunware Technologies offer?", a: "Sunware Technologies offers end-to-end AI enablement including AI readiness assessments, AI strategy and roadmap development, custom ML model development, Generative AI and LLM integration, AI governance frameworks, and building AI Centres of Excellence for enterprises." },
+        { q: "How long does it take to implement an AI solution with Sunware Technologies?", a: "Using Sunware's proven AI delivery framework, most AI solutions move from business problem to production deployment in weeks, not months, with structured sprints and rapid prototyping at each stage." },
+        { q: "Does Sunware Technologies work with Generative AI and LLMs?", a: "Yes. Sunware designs and deploys production-grade Generative AI solutions including RAG pipelines, fine-tuned LLMs, AI agents, and enterprise copilots, integrated securely into existing enterprise applications." },
+        { q: "Where is Sunware Technologies' AI team located?", a: "Sunware Technologies has AI specialists across its offices in San Jose, California (USA), Chennai and Pune (India), and Dubai (UAE), with global delivery capabilities." },
+      ]} />
       <BreadcrumbLD items={[
         { name: "Home", url: "https://sunwaretechnologies.com" },
         { name: "AI Enablement", url: "https://sunwaretechnologies.com/ai-enablement/" },

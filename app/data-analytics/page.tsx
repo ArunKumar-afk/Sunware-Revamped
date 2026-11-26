@@ -1,6 +1,7 @@
 ﻿import type { Metadata } from "next";
 import HtmlPage from "@/components/HtmlPage";
 import BreadcrumbLD from "@/components/BreadcrumbLD";
+import FaqLD from "@/components/FaqLD";
 
 export const metadata: Metadata = {
   title: "Data Analytics Services - Sunware Technologies",
@@ -212,6 +213,11 @@ const content = `
 export default function Page() {
   return (
     <>
+      <FaqLD items={[
+        { q: "What data analytics services does Sunware Technologies provide?", a: "Sunware Technologies provides business intelligence, interactive dashboards, self-service analytics, advanced analytics, reporting automation, and data visualisation using tools like Power BI, Tableau, and Looker — transforming raw data into actionable insights." },
+        { q: "What BI tools does Sunware Technologies use?", a: "Sunware's analytics team works with Power BI, Tableau, Looker, Qlik, and cloud-native analytics services on AWS, Azure, and GCP, alongside custom dashboard development." },
+        { q: "Can Sunware Technologies build real-time analytics dashboards?", a: "Yes. Sunware builds real-time analytics dashboards connected to live data pipelines using streaming technologies like Kafka and Flink, delivering up-to-the-second insights for operational decision-making." },
+      ]} />
       <BreadcrumbLD items={[
         { name: "Home", url: "https://sunwaretechnologies.com" },
         { name: "Data Analytics", url: "https://sunwaretechnologies.com/data-analytics/" },

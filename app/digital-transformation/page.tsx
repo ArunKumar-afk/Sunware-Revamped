@@ -1,6 +1,7 @@
 ﻿import type { Metadata } from "next";
 import HtmlPage from "@/components/HtmlPage";
 import BreadcrumbLD from "@/components/BreadcrumbLD";
+import FaqLD from "@/components/FaqLD";
 
 export const metadata: Metadata = {
   title: "Digital Transformation Services - Sunware Technologies",
@@ -212,6 +213,11 @@ const content = `
 export default function Page() {
   return (
     <>
+      <FaqLD items={[
+        { q: "What digital transformation services does Sunware Technologies offer?", a: "Sunware Technologies offers process automation, legacy system modernisation, cloud-first strategy, enterprise application re-platforming, change management, and digital operating model redesign to help enterprises compete in the digital era." },
+        { q: "How long does a digital transformation project take?", a: "Digital transformation timelines vary by scope. Sunware typically delivers quick wins in 8–12 weeks and broader transformations over 6–18 months, with an agile delivery model that shows measurable results at each phase." },
+        { q: "Does Sunware Technologies have digital transformation expertise in India and USA?", a: "Yes. Sunware Technologies delivers digital transformation services from its US headquarters in San Jose, California, and from delivery centres in Chennai and Pune, India, serving enterprise clients globally." },
+      ]} />
       <BreadcrumbLD items={[
         { name: "Home", url: "https://sunwaretechnologies.com" },
         { name: "Digital Transformation", url: "https://sunwaretechnologies.com/digital-transformation/" },
